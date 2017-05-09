@@ -1,0 +1,18 @@
+{
+  "name": "constantinescu.io",
+  "version": "0.0.1",
+  "description": "My personal website.",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": "git@github.com:andreiconstantinescu/constantinescu.io.git",
+  "author": "Andrei Constantinescu <andrei@constantinescu.io>",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^2.3.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}
