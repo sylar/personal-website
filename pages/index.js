@@ -1,3 +1,7 @@
+// @flow
+
+import React from 'react'
+
 export default () => (<div>
   <h3>These aren't the Droids your looking for.</h3>
   <style jsx>{`
