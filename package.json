@@ -4,6 +4,7 @@
   "private": true,
   "description": "My personal website.",
   "scripts": {
+    "prestart": "npm run build",
     "dev": "next",
     "build": "next build",
     "eslint": "eslint '*.js' 'pages/**/*.js'",
