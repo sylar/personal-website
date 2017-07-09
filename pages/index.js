@@ -4,7 +4,7 @@ import React from 'react'
 
 export default () =>
   <div>
-    <h3>These aren't the Droids your looking for.</h3>
+    <h3>These aren't the Droids you're looking for.</h3>
     <style jsx>
       {`
         h3 {
