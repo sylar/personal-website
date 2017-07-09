@@ -5,12 +5,14 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": ""
   },
   "repository": "git@github.com:andreiconstantinescu/constantinescu.io.git",
   "author": "Andrei Constantinescu <andrei@constantinescu.io>",
   "license": "MIT",
   "dependencies": {
+    "babel-preset-flow": "^6.23.0",
     "flow-bin": "^0.49.1",
     "next": "^3.0.1-beta.10",
     "react": "^16.0.0-alpha.13",
@@ -19,7 +21,6 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
-    "babel-preset-flow": "^6.23.0",
     "eslint": "^4.1.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-react": "^5.0.0",
@@ -28,9 +29,6 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.1.0",
     "eslint-plugin-standard": "^3.0.1",
-    "husky": "^0.14.3",
-    "lint-staged": "^4.0.1",
-    "npm-run-all": "^4.0.2",
     "prettier-eslint-cli": "^4.1.1"
   }
 }
