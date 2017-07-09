@@ -1,6 +1,7 @@
 {
   "name": "constantinescu.io",
   "version": "0.0.1",
+  "private": true,
   "description": "My personal website.",
   "scripts": {
     "dev": "next",
@@ -12,7 +13,7 @@
     "lint": "run-p eslint 'flow -- check'",
     "precommit": "npm run lint-staged",
     "prettier-eslint": "prettier-eslint --write 'pages/**/*.js'",
-    "start": "next start",
+    "start": "next start --port=$PORT",
     "test": "npm run lint"
   },
   "repository": "git@github.com:andreiconstantinescu/constantinescu.io.git",
@@ -44,9 +45,7 @@
   },
   "lint-staged": {
     "linters": {
-      "**/*.js": [
-        "prettier-eslint --write"
-      ]
+      "**/*.js": ["prettier-eslint --write"]
     }
   }
 }
