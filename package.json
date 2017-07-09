@@ -5,8 +5,14 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "eslint": "eslint '*.js' 'pages/**/*.js'",
+    "flow": "flow",
+    "lint-staged": "lint-staged",
+    "lint": "run-p eslint 'flow -- check'",
+    "precommit": "npm run lint-staged",
+    "prettier-eslint": "prettier-eslint --write 'pages/**/*.js'",
     "start": "next start",
-    "lint": ""
+    "test": "npm run lint"
   },
   "repository": "git@github.com:andreiconstantinescu/constantinescu.io.git",
   "author": "Andrei Constantinescu <andrei@constantinescu.io>",
@@ -30,5 +36,10 @@
     "eslint-plugin-react": "^7.1.0",
     "eslint-plugin-standard": "^3.0.1",
     "prettier-eslint-cli": "^4.1.1"
+  },
+  "lint-staged": {
+    "linters": {
+      "**/*.js": ["prettier-eslint --write"]
+    }
   }
 }
