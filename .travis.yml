@@ -5,9 +5,12 @@ cache: yarn
 before_install:
   - openssl aes-256-cbc -K $encrypted_33b1ef91d91b_key -iv $encrypted_33b1ef91d91b_iv -in .travis/deploy_key.pem.enc -out .travis/deploy_key.pem -d
   - echo -e "Host $HOST_URL\n\tStrictHostKeyChecking no\nLogLevel ERROR\n" >> ~/.ssh/config
+  - yarn global add greenkeeper-lockfile@1
+before_script: greenkeeper-lockfile-update
 script:
   - yarn check --integrity
   - yarn test
+after_script: greenkeeper-lockfile-upload
 deploy:
   provider: script
   script: ./deploy.sh
