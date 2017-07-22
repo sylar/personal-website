@@ -21,7 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "babel-preset-flow": "^7.0.0-alpha.15",
-    "flow-bin": "^0.50.0",
+    "flow-bin": "^0.51.0",
     "flow-coverage-report": "^0.3.0",
     "next": "beta",
     "react": "^15.6.1",
