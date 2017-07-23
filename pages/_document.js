@@ -29,16 +29,16 @@ export default class MyDocument extends Document {
     return (
       <html lang='en'>
         <TheHead />
-        <style>{`
+        <style jsx>{`
           body {
-            font-family: -apple-system, BlinkMacSystemFont, 'helvetica neue',
-            helvetica, ubuntu, roboto, sans-serif;
+            font-family: --apple-system, BlinkMacSystemFont, helvetica, ubuntu,
+              roboto, sans-serif;
+            margin: 0;
           }
 
           @media print {
             body {
-              font-family: 'helvetica neue', helvetica, ubuntu,
-              roboto, sans-serif;
+              font-family: helvetica, ubuntu, roboto, sans-serif;
             }
           }
         `}</style>
