@@ -8,5 +8,8 @@
   "plugins": [
     "flowtype",
     "react"
-  ]
+  ],
+  "rules": {
+    "max-len": [1, 80]
+  }
 }
