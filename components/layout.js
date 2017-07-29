@@ -6,7 +6,7 @@ type props = {
   children?: React$Element<*>
 }
 
-export default ({ children }: props) =>
+export default ({children}: props) =>
   <div>
     <Header />
     <main>
@@ -20,6 +20,7 @@ export default ({ children }: props) =>
 
       main {
         margin: 3rem 0;
+        padding: 0 0.5rem;
       }
     `}</style>
   </div>
