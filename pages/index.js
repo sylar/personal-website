@@ -7,12 +7,12 @@ export default () =>
   <Layout>
     <ul>
       <li>
-        Email:{' '}
-        <a href='mailto:andrei@constantinescu.io'>andrei@constantinescu.io</a>
-      </li>
-      <li>
         CV:{' '}
         <a href='//andreiconstantinescu.github.io/cv'>constantinescu.io/cv</a>
+      </li>
+      <li>
+        Email:{' '}
+        <a href='mailto:andrei@constantinescu.io'>andrei@constantinescu.io</a>
       </li>
       <li>
         Github:{' '}
@@ -20,28 +20,22 @@ export default () =>
           github.com/andreiconstantinescu
         </a>
       </li>
-      <li>
-        Linkedin:{' '}
-        <a href='//linkedin.com/in/constantinescuio'>
-          linkedin.com/in/constantinescuio
-        </a>
-      </li>
     </ul>
     <style jsx>{`
       ul {
         list-style-type: none;
         padding: 0;
-        font-size: 1.5rem;
         font-weight: 300;
+        font-size: 1.2rem;
       }
-
       ul li {
-        padding: 1rem;
-        margin: 0.5rem;
+        margin: 1rem 0;
       }
 
-      ul li:hover {
-        background: #fff;
+      @media (min-width: 30rem) {
+        ul {
+          font-size: 1.5rem;
+        }
       }
     `}</style>
   </Layout>
