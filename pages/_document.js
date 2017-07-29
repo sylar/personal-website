@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import Document, { Head, Main, NextScript } from 'next/document'
+import Document, {Head, Main, NextScript} from 'next/document'
 import flush from 'styled-jsx/server'
 
 type ctx = {
@@ -20,10 +20,10 @@ const TheHead = () =>
   </Head>
 
 export default class MyDocument extends Document {
-  static getInitialProps ({ renderPage }: ctx) {
-    const { html, head, errorHtml, chunks } = renderPage()
+  static getInitialProps ({renderPage}: ctx) {
+    const {html, head, errorHtml, chunks} = renderPage()
     const styles = flush()
-    return { html, head, errorHtml, chunks, styles }
+    return {html, head, errorHtml, chunks, styles}
   }
   render () {
     return (
@@ -33,13 +33,12 @@ export default class MyDocument extends Document {
           body {
             font-family: --apple-system, BlinkMacSystemFont, helvetica, ubuntu,
               roboto, sans-serif;
-            margin: 0;
-            background: #ececec;
+            margin: 10px;
           }
 
-          @media print {
+          @media (min-width: 30rem) {
             body {
-              font-family: helvetica, ubuntu, roboto, sans-serif;
+              margin: 0;
             }
           }
         `}</style>
