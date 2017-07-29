@@ -7,8 +7,7 @@ export default () =>
     <LogoSVG />
     <style jsx>{`
       .logo {
-        width: 8em;
-        margin-bottom: 3rem;
+        width: 6.5rem;
       }
     `}</style>
   </div>

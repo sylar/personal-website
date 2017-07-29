@@ -1,24 +1,25 @@
 // @flow
 import React from 'react'
-import Logo from './logo.js'
+import Header from './header.js'
 
 type props = {
   children?: React$Element<*>
 }
 
 export default ({ children }: props) =>
-  <div className='layout'>
-    <Logo />
+  <div>
+    <Header />
     <main>
       {children}
     </main>
     <style jsx>{`
-      .layout {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
+      div {
+        max-width: 28rem;
+        margin: 4rem auto;
+      }
+
+      main {
+        margin: 3rem 0;
       }
     `}</style>
   </div>
