@@ -34,6 +34,7 @@ export default class MyDocument extends Document {
             font-family: --apple-system, BlinkMacSystemFont, helvetica, ubuntu,
               roboto, sans-serif;
             margin: 0;
+            background: #ececec;
           }
 
           @media print {

@@ -36,7 +36,12 @@ export default () =>
       }
 
       ul li {
-        margin: 1rem 0;
+        padding: 1rem;
+        margin: 0.5rem;
+      }
+
+      ul li:hover {
+        background: #fff;
       }
     `}</style>
   </Layout>
