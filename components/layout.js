@@ -14,7 +14,7 @@ export default ({ children }: props) =>
     </main>
     <style jsx>{`
       div {
-        max-width: 28rem;
+        max-width: 30rem;
         margin: 4rem auto;
       }
 
