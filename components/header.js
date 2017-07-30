@@ -8,7 +8,7 @@ type props = {
 
 const tech = ['JavaScript', 'Node.js', 'React.js']
 
-const B = ({ children }: props) =>
+const B = ({children}: props) =>
   <strong>
     {children}
     <style jsx>{`

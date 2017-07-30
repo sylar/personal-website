@@ -31,8 +31,7 @@ export default class MyDocument extends Document {
         <TheHead />
         <style jsx>{`
           body {
-            font-family: --apple-system, BlinkMacSystemFont, helvetica, ubuntu,
-              roboto, sans-serif;
+            font-family: --apple-system, BlinkMacSystemFont, helvetica, ubuntu, roboto, sans-serif;
             margin: 10px;
           }
 
