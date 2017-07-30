@@ -5,7 +5,7 @@ import next from 'next'
 type appHandler = (req: express$Request, res: express$Response) => void
 
 const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
+const app = next({dev})
 const handle: appHandler = app.getRequestHandler()
 
 app.prepare().then((): void => {
