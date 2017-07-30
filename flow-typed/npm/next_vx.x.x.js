@@ -3,7 +3,7 @@
 declare module "next" {
   declare type NextApp = {
     prepare(): Promise<void>;
-    getRequestHandler(): any;
+    getRequestHandler(): (req: any, res: any) => any;
     render(req: any, res: any, pathname: string, query: any): any;
     renderToHTML(req: any, res: any, pathname: string, query: string): string;
     renderError(err: Error, req: any, res: any, pathname: any, query: any): any;
