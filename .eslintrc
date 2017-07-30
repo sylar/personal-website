@@ -10,6 +10,6 @@
     "react"
   ],
   "rules": {
-    "max-len": [1, 80]
+    "max-len": [1, 120]
   }
 }
