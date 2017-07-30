@@ -7,18 +7,13 @@ export default () =>
   <Layout>
     <ul>
       <li>
-        CV:{' '}
-        <a href='//andreiconstantinescu.github.io/cv'>constantinescu.io/cv</a>
+        CV: <a href='//andreiconstantinescu.github.io/cv'>constantinescu.io/cv</a>
       </li>
       <li>
-        Email:{' '}
-        <a href='mailto:andrei@constantinescu.io'>andrei@constantinescu.io</a>
+        Email: <a href='mailto:andrei@constantinescu.io'>andrei@constantinescu.io</a>
       </li>
       <li>
-        Github:{' '}
-        <a href='//github.com/andreiconstantinescu'>
-          github.com/andreiconstantinescu
-        </a>
+        Github: <a href='//github.com/andreiconstantinescu'>github.com/andreiconstantinescu</a>
       </li>
     </ul>
     <style jsx>{`
