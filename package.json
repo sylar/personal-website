@@ -5,7 +5,7 @@
   "description": "My personal website.",
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build; babel server/server.flux.js --out-file .next/server.js",
     "eslint": "eslint '*.js' 'pages/**/*.js'",
     "flow": "flow",
     "flow-coverage": "flow-coverage-report -i 'pages/**/*.js' -t html -o coverage/flow",
@@ -13,7 +13,7 @@
     "lint": "run-p eslint 'flow -- check'",
     "precommit": "npm run lint-staged",
     "prettier-eslint": "prettier-eslint --write 'pages/**/*.js'",
-    "start": "next start --port=$PORT",
+    "start": "npm run build; NODE_ENV=production node .next/server.js --port=$PORT",
     "test": "npm run lint"
   },
   "repository": "git@github.com:andreiconstantinescu/constantinescu.io.git",
