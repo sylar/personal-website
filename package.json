@@ -22,13 +22,16 @@
   "dependencies": {
     "babel-preset-flow": "^7.0.0-alpha.15",
     "flow-bin": "^0.52.0",
+    "express": "^4.15.3",
     "flow-coverage-report": "^0.3.0",
     "next": "beta",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-eslint": "^8.0.0-alpha.15",
+    "babel-preset-env": "^1.6.0",
     "eslint": "^4.1.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-react": "^5.0.0",
