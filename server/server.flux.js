@@ -15,9 +15,7 @@ app.prepare().then((): void => {
     res.redirect(301, 'https://github.com/andreiconstantinescu')
   )
 
-  server.get('*', (req: express$Request, res: express$Response) =>
-    handle(req, res)
-  )
+  server.get('*', (req: express$Request, res: express$Response) => handle(req, res))
 
   server.listen(3000, err => {
     if (err) throw err
