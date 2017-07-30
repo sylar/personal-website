@@ -21,8 +21,13 @@
   "license": "MIT",
   "dependencies": {
     "babel-preset-flow": "^7.0.0-alpha.15",
+<<<<<<< HEAD
     "flow-bin": "^0.52.0",
     "express": "^4.15.3",
+=======
+    "express": "^4.15.3",
+    "flow-bin": "^0.51.0",
+>>>>>>> Add expressjs and babelcli as dev dep.
     "flow-coverage-report": "^0.3.0",
     "next": "beta",
     "react": "^15.6.1",
