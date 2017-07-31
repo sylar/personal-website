@@ -22,7 +22,7 @@ export default () =>
   <div>
     <Logo />
     <h2>
-      <B>Andrei</B>Constantinescu
+      <B>Andrei Constantinescu</B>
     </h2>
     <ul>
       {tech.map((item, key) =>
