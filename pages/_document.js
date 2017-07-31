@@ -17,6 +17,18 @@ const TheHead = () =>
     <title>Andrei Constantinescu.</title>
     <meta name='viewport' content='width=device-width, minimum-scale=1' />
     <meta name='description' content="Andrei Constantinescu's website." />
+    <style>{`
+      body {
+        font-family: --apple-system, BlinkMacSystemFont, helvetica, ubuntu, roboto, sans-serif;
+        margin: 10px;
+      }
+
+      @media (min-width: 30rem) {
+        body {
+          margin: 0;
+        }
+      }
+      `}</style>
   </Head>
 
 export default class MyDocument extends Document {
@@ -29,18 +41,6 @@ export default class MyDocument extends Document {
     return (
       <html lang='en'>
         <TheHead />
-        <style jsx>{`
-          body {
-            font-family: --apple-system, BlinkMacSystemFont, helvetica, ubuntu, roboto, sans-serif;
-            margin: 10px;
-          }
-
-          @media (min-width: 30rem) {
-            body {
-              margin: 0;
-            }
-          }
-        `}</style>
         <body>
           <Main />
           <NextScript />
