@@ -47,7 +47,6 @@ for page in ${PAGES[*]}; do
     git add .
     git commit -m "Realease v1.0.5"
     git push $CURRENT_REMOTE $CURRENT_BRANCH;
-    git checkout $CURRENT_BRANCH;
   fi
 
   cd ../

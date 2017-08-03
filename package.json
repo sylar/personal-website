@@ -15,7 +15,9 @@
     "precommit": "npm run lint-staged",
     "prettier-eslint": "prettier-eslint --write --no-bracket-spacing 'pages/**/*.js' 'server/**/*.js' 'components/**/*.js'",
     "start": "npm run build; NODE_ENV=production node .next/server.js --port=$PORT",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "submodule:update": "git submodule update --remote; git submodule foreach -q --recursive 'branch=\"$(git config -f $toplevel/.gitmodules submodule.$name.branch)\"; git checkout $branch'"
+
   },
   "repository": "git@github.com:andreiconstantinescu/constantinescu.io.git",
   "author": "Andrei Constantinescu <andrei@constantinescu.io>",
