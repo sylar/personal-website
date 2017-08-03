@@ -45,7 +45,7 @@ for page in ${PAGES[*]}; do
     echo "branch: $CURRENT_BRANCH"
 
     git add .
-    git commit -m "Realease v1.0.2"
+    git commit -m "Realease v1.0.4"
     git push $CURRENT_REMOTE $CURRENT_BRANCH;
   fi
 
