@@ -1,6 +1,8 @@
 [submodule "out/cv"]
 	path = out/cv
 	url = git@github.com:andreiconstantinescu/cv.git
+	branch = gh-pages
 [submodule "out/home"]
 	path = out/home
 	url = git@github.com:andreiconstantinescu/andreiconstantinescu.github.io.git
+	branch = master
