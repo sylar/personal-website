@@ -6,7 +6,7 @@ import Layout from '../components/layout.js'
 export default () =>
   <Layout>
     <div>
-      <a href='//andreiconstantinescu.github.io/cv'>Resume</a>
+      <a href='/cv'>Resume</a>
       <a href='mailto:andrei@constantinescu.io'>Email me</a>
       <a href='//github.com/andreiconstantinescu'>Github</a>
     </div>

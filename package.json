@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build; babel server/server.flux.js --out-file .next/server.js",
+    "export": "echo 'sss'; echo $EXTERNAL_PATH | xargs next export -o",
     "eslint": "eslint '*.js' 'pages/**/*.js' 'server/**/*.js' 'components/**/*.js'",
     "flow": "flow",
     "flow-coverage": "flow-coverage-report -i 'pages/**/*.js' -i 'server/**/*.js' -i 'components/**/*.js' -t html -o coverage/flow",
