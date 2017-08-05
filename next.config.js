@@ -1,4 +1,3 @@
-// @flow
 // next.config.js
 const fs = require('fs')
 const Readme = require('./metadata/Readme.md.js')

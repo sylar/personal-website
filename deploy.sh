@@ -1,14 +1,4 @@
 #!/bin/bash
-# eval "$(ssh-agent -s)"
-# chmod 600 .travis/deploy_key.pem
-# ssh-add .travis/deploy_key.pem
-# git remote add deploy $HOST_REMOTE
-# git push --quiet deploy
-# ssh-agent -k
-
-# build the project
-# yarn build
-
 # change directory to pages
 cd pages
 
@@ -29,7 +19,7 @@ for page in ${PAGES[*]}; do
   cd $CURRENT_SUBMODULE
 
   echo "exporting page: $page"
-  export CURRENT_ITEM=$page EXTERNAL_PATH=$EXTERNAL_PATH; npm run export
+  export CURRENT_ITEM=$page EXTERNAL_PATH=$EXTERNAL_PATH; yarn export
 
 
   CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
@@ -45,7 +35,7 @@ for page in ${PAGES[*]}; do
     echo "branch: $CURRENT_BRANCH"
 
     git add .
-    git commit -m "Realease v1.0.5"
+    git commit -m "Release $RELEASE_VERSION."
     git push $CURRENT_REMOTE $CURRENT_BRANCH;
   fi
 
