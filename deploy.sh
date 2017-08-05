@@ -23,7 +23,7 @@ for page in ${PAGES[*]}; do
 
 
   CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-  CURRENT_REMOTE=https://andreiconstantinescu:$GITHUB_TOKEN@github.com/andreiconstantinescu/$page
+  CURRENT_REMOTE=$(git config --get remote.origin.url)
 
   if [[ -z $(git status -s) ]]
   then
@@ -34,9 +34,10 @@ for page in ${PAGES[*]}; do
     echo "repo: $CURRENT_REMOTE"
     echo "branch: $CURRENT_BRANCH"
 
-    git add .
+    git add -A .
     git commit -m "Release $RELEASE_VERSION."
-    git push $CURRENT_REMOTE $CURRENT_BRANCH;
+    git push -q $CURRENT_REMOTE $CURRENT_BRANCH
+    git pull
   fi
 
   cd ../
