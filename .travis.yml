@@ -2,27 +2,30 @@ language: node_js
 node_js:
 - '8'
 cache: yarn
+git:
+  submodules: false
 before_install:
-- openssl aes-256-cbc -K $encrypted_33b1ef91d91b_key -iv $encrypted_33b1ef91d91b_iv
-  -in .travis/deploy_key.pem.enc -out .travis/deploy_key.pem -d
-- echo -e "Host $HOST_URL\n\tStrictHostKeyChecking no\nLogLevel ERROR\n" >> ~/.ssh/config
 - yarn global add greenkeeper-lockfile@1
+- sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+- git submodule update --init --recursive
 before_script: greenkeeper-lockfile-update
 script:
 - yarn check --integrity
 - yarn test
+- yarn build
+- yarn submodule:update
 after_script: greenkeeper-lockfile-upload
 before_deploy:
-  - git config --global user.email "andrei+travis@constantinescu.io"
-  - git config --global user.name "Travis CI"
-  - yarn build
-  - export RELEASE_VERSION=0.1.$TRAVIS_BUILD_NUMBER
-  - export GIT_TAG=v$RELEASE_VERSION
-  - git tag $GIT_TAG -a -m "Realease $TRAVIS_BUILD_NUMBER."
-  - git push -q https://andreiconstantinescu:$GITHUB_TOKEN@github.com/andreiconstantinescu/constantinescu.io --tags
+- git config --global user.email "andrei+travis@constantinescu.io"
+- git config --global user.name "Travis CI"
+- export RELEASE_VERSION=1.0.$TRAVIS_BUILD_NUMBER
+- yarn config set version-git-message "Release v%s."
+- yarn version --new-version $RELEASE_VERSION
 deploy:
   provider: script
   script: "./deploy.sh"
   skip_cleanup: true
   on:
     branch: master
+after_deploy:
+  - git push -q https://andreiconstantinescu:$GITHUB_TOKEN@github.com/andreiconstantinescu/constantinescu.io --tags
