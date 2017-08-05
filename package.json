@@ -17,7 +17,6 @@
     "start": "npm run build; NODE_ENV=production node .next/server.js --port=$PORT",
     "test": "npm run lint",
     "submodule:update": "git submodule update --remote; git submodule foreach -q --recursive 'branch=\"$(git config -f $toplevel/.gitmodules submodule.$name.branch)\"; git checkout $branch'"
-
   },
   "repository": "git@github.com:andreiconstantinescu/constantinescu.io.git",
   "author": "Andrei Constantinescu <andrei@constantinescu.io>",
@@ -27,6 +26,7 @@
     "express": "^4.15.3",
     "flow-bin": "^0.51.0",
     "flow-coverage-report": "^0.3.0",
+    "lodash.template": "^4.4.0",
     "next": "beta",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
@@ -51,7 +51,9 @@
   },
   "lint-staged": {
     "linters": {
-      "**/*.js": ["prettier-eslint --no-bracket-spacing --write"]
+      "**/*.js": [
+        "prettier-eslint --no-bracket-spacing --write"
+      ]
     }
   },
   "engines": {
