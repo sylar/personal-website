@@ -1,14 +1,4 @@
 #!/bin/bash
-# eval "$(ssh-agent -s)"
-# chmod 600 .travis/deploy_key.pem
-# ssh-add .travis/deploy_key.pem
-# git remote add deploy $HOST_REMOTE
-# git push --quiet deploy
-# ssh-agent -k
-
-# build the project
-# yarn build
-
 # change directory to pages
 cd pages
 
@@ -33,7 +23,7 @@ for page in ${PAGES[*]}; do
 
 
   CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-  CURRENT_REMOTE=$(git remote get-url origin)
+  CURRENT_REMOTE=https://andreiconstantinescu:$GITHUB_TOKEN@github.com/andreiconstantinescu/$page
 
   if [[ -z $(git status -s) ]]
   then
@@ -45,7 +35,7 @@ for page in ${PAGES[*]}; do
     echo "branch: $CURRENT_BRANCH"
 
     git add .
-    git commit -m "Realease v1.0.5"
+    git commit -m "Release $RELEASE_VERSION."
     git push $CURRENT_REMOTE $CURRENT_BRANCH;
   fi
 
