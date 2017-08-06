@@ -39,21 +39,24 @@ for page in ${PAGES[*]}; do
     echo "repo: $CURRENT_REMOTE"
     echo "branch: $CURRENT_BRANCH"
 
-    # git add -A .
-    # git commit -m "Release $RELEASE_VERSION."
-    # git push -q $CURRENT_REMOTE $CURRENT_BRANCH
-    # git pull
+    git add -A .
+    git commit -m "Release $RELEASE_VERSION."
+    git push -q $CURRENT_REMOTE $CURRENT_BRANCH
+    git pull
   fi
 
   cd ../
 done;
 
+# go to the project root
+cd ../
+
 # update and checkout to the default branch of each submodule.
 yarn submodule:update
 
 # # pull the latest changes of each submodule.
-# for page in ${PAGES[*]}; do
-#   CURRENT_SUBMODULE=$page
-#   cd $CURRENT_SUBMODULE
-#   git pull
-# done;
+for page in ${PAGES[*]}; do
+  CURRENT_SUBMODULE=$page
+  cd $CURRENT_SUBMODULE
+  git pull
+done;
