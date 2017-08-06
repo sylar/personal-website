@@ -30,9 +30,15 @@ for page in ${PAGES[*]}; do
   CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
   CURRENT_REMOTE=$(git config --get remote.origin.url)
 
+  if [ $page = 'home' ]
+  then
+    echo 'constantinescu.io' > CNAME
+  fi
+
   if [[ -z $(git status -s) ]]
   then
     echo "Nothing to push"
+
   else
     echo "pushing"
     echo "page: $page"
