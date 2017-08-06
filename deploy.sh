@@ -1,17 +1,18 @@
 #!/bin/bash
-# change directory to pages
+# change directory to pages.
 cd pages
 
-# get all the available pages
+# get all the available pages.
 PAGES=($(ls -d */ | cut -f1 -d'/'))
 PAGES_TOTAL=${#PAGES[@]}
 
-# add the home page as last entry
+# add the home page as last entry.
 PAGES[${PAGES_TOTAL}]='home'
 
-# go back
+# go back.
 cd ../out
 
+# deploy each page to its corresponding repo.
 for page in ${PAGES[*]}; do
   EXTERNAL_PATH="./out/$page"
   CURRENT_SUBMODULE=$page
@@ -20,7 +21,6 @@ for page in ${PAGES[*]}; do
 
   echo "exporting page: $page"
   export CURRENT_ITEM=$page EXTERNAL_PATH=$EXTERNAL_PATH; npm run export
-
 
   CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
   CURRENT_REMOTE=$(git config --get remote.origin.url)
@@ -43,8 +43,10 @@ for page in ${PAGES[*]}; do
   cd ../
 done;
 
+# update and checkout to the default branch of each submodule.
 yarn submodule:update
 
+# pull the latest changes of each submodule.
 for page in ${PAGES[*]}; do
   CURRENT_SUBMODULE=$page
   cd $CURRENT_SUBMODULE

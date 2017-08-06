@@ -1,6 +1,6 @@
 // next.config.js
 const fs = require('fs')
-const Readme = require('./metadata/Readme.md.js')
+const Readme = require('./.next/metadata/Readme.md.js')
 
 exports.exportPathMap = () => {
   fs.writeFileSync(
@@ -11,5 +11,9 @@ exports.exportPathMap = () => {
     })
   )
 
-  return {'/': {page: process.env.CURRENT_ITEM === 'home' ? '/' : `/${process.env.CURRENT_ITEM}`}}
+  return {
+    '/': {
+      page: process.env.CURRENT_ITEM === 'home' ? '/' : `/${process.env.CURRENT_ITEM}`
+    }
+  }
 }

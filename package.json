@@ -5,7 +5,7 @@
   "description": "My personal website.",
   "scripts": {
     "dev": "next",
-    "build": "babel metadata/Readme.md.flux.js --out-file metadata/Readme.md.js;next build; babel server/server.flux.js --out-file .next/server.js",
+    "build": "babel metadata/Readme.md.flux.js --out-file .next/metadata/Readme.md.js;next build;",
     "export": "echo $EXTERNAL_PATH | xargs next export -o",
     "eslint": "eslint '*.js' 'pages/**/*.js' 'server/**/*.js' 'components/**/*.js'",
     "flow": "flow",
@@ -23,7 +23,6 @@
   "license": "MIT",
   "dependencies": {
     "babel-preset-flow": "^7.0.0-alpha.15",
-    "express": "^4.15.3",
     "flow-bin": "^0.51.0",
     "flow-coverage-report": "^0.3.0",
     "lodash.template": "^4.4.0",
@@ -51,7 +50,9 @@
   },
   "lint-staged": {
     "linters": {
-      "**/*.js": ["prettier-eslint --no-bracket-spacing --write"]
+      "**/*.js": [
+        "prettier-eslint --no-bracket-spacing --write"
+      ]
     }
   },
   "engines": {
