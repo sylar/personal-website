@@ -1,9 +1,7 @@
 #  constantinescu.io
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/andreiconstantinescu/constantinescu.io.svg)](https://greenkeeper.io/)
-
 [![Build Status](https://travis-ci.org/andreiconstantinescu/constantinescu.io.svg?branch=master)](https://travis-ci.org/andreiconstantinescu/constantinescu.io)
-
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 # Description
