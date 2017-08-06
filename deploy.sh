@@ -1,4 +1,9 @@
 #!/bin/bash
+#check the RELEASE_VERSION
+if [ ! -n "${RELEASE_VERSION+set}" ]; then
+  export RELEASE_VERSION='vX.X.X-dev'
+fi
+
 # change directory to pages.
 cd pages
 
@@ -34,10 +39,10 @@ for page in ${PAGES[*]}; do
     echo "repo: $CURRENT_REMOTE"
     echo "branch: $CURRENT_BRANCH"
 
-    git add -A .
-    git commit -m "Release $RELEASE_VERSION."
-    git push -q $CURRENT_REMOTE $CURRENT_BRANCH
-    git pull
+    # git add -A .
+    # git commit -m "Release $RELEASE_VERSION."
+    # git push -q $CURRENT_REMOTE $CURRENT_BRANCH
+    # git pull
   fi
 
   cd ../
@@ -46,9 +51,9 @@ done;
 # update and checkout to the default branch of each submodule.
 yarn submodule:update
 
-# pull the latest changes of each submodule.
-for page in ${PAGES[*]}; do
-  CURRENT_SUBMODULE=$page
-  cd $CURRENT_SUBMODULE
-  git pull
-done;
+# # pull the latest changes of each submodule.
+# for page in ${PAGES[*]}; do
+#   CURRENT_SUBMODULE=$page
+#   cd $CURRENT_SUBMODULE
+#   git pull
+# done;
