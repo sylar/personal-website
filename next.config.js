@@ -1,19 +1,22 @@
 // next.config.js
 const fs = require('fs')
-const Readme = require('./.next/metadata/Readme.md.js')
+const Readme = require('./.out/Readme.md.js')
+
+const getCorrectPage = currentPage => (currentPage === 'home' ? '/' : `/${currentPage}`)
+const getCorrectUrl = currentRepo => (currentRepo === 'andreiconstantinescu.github.io' ? '' : currentRepo)
 
 exports.exportPathMap = () => {
   fs.writeFileSync(
-    `./out/${process.env.CURRENT_ITEM}/Readme.md`,
+    `./out/${process.env.CURRENT_PAGE}/Readme.md`,
     Readme({
-      repo: 'THE REPO YO',
-      deployUrl: 'https://constantinescu.io/cv'
+      repo: process.env.CURRENT_REPO,
+      deployUrl: `https://constantinescu.io/${getCorrectUrl(process.env.CURRENT_REPO)}`
     })
   )
 
   return {
     '/': {
-      page: process.env.CURRENT_ITEM === 'home' ? '/' : `/${process.env.CURRENT_ITEM}`
+      page: getCorrectPage(process.env.CURRENT_PAGE)
     }
   }
 }

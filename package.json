@@ -4,8 +4,9 @@
   "private": true,
   "description": "My personal website.",
   "scripts": {
-    "dev": "next",
-    "build": "babel metadata/Readme.md.flux.js --out-file .next/metadata/Readme.md.js;next build;",
+    "prepare": "mkdir .out; babel ./metadata/Readme.md.flux.js --out-file .out/Readme.md.js;",
+    "dev": "npm run prepare; next",
+    "build": "npm run prepare; next build;",
     "export": "echo $EXTERNAL_PATH | xargs next export -o",
     "eslint": "eslint '*.js' 'pages/**/*.js' 'server/**/*.js' 'components/**/*.js'",
     "flow": "flow",
@@ -50,9 +51,7 @@
   },
   "lint-staged": {
     "linters": {
-      "**/*.js": [
-        "prettier-eslint --no-bracket-spacing --write"
-      ]
+      "**/*.js": ["prettier-eslint --no-bracket-spacing --write"]
     }
   },
   "engines": {

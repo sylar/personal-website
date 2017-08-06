@@ -11,7 +11,7 @@ const Template = `
 
   Deployed here: [{{ repo }}]({{ deployUrl }})
 
-  This is an export from the parent: (constantinescu.io)[https://github.com/andreiconstantinescu/constantinescu.io]
+  This is an export from the parent: [constantinescu.io](https://github.com/andreiconstantinescu/constantinescu.io)
 `
 
 module.exports = (props: Object) => template(Template, options)(props)
