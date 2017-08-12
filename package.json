@@ -1,6 +1,6 @@
 {
   "name": "constantinescu.io",
-  "version": "1.0.0",
+  "version": "1.0.98",
   "private": true,
   "description": "My personal website.",
   "scripts": {
@@ -52,7 +52,9 @@
   },
   "lint-staged": {
     "linters": {
-      "**/*.js": ["prettier-eslint --no-bracket-spacing --write"]
+      "**/*.js": [
+        "prettier-eslint --no-bracket-spacing --write"
+      ]
     }
   },
   "engines": {
