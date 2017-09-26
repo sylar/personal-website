@@ -30,7 +30,7 @@
     "lodash.template": "^4.4.0",
     "next": "^3.0.3",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^16.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
