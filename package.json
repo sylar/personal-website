@@ -7,7 +7,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "flow": "flow"
+    "flow": "flow",
+    "test": "npm run flow"
   },
   "repository": "git@github.com:andreiconstantinescu/constantinescu.io.git",
   "author": "Andrei Constantinescu <andrei@constantinescu.io>",
@@ -22,11 +23,11 @@
     "babel-plugin-transform-flow-strip-types": "^7.0.0-beta.3",
     "babel-preset-flow": "^7.0.0-beta.3",
     "flow-bin": "^0.73.0",
-    "husky": "^0.14.3"
+    "husky": "^1.0.0-rc.8"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm flow"
+      "pre-commit": "npm test"
     }
   }
 }
