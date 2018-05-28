@@ -29,6 +29,7 @@ deploy:
 after_deploy:
   - git add out/
   - git commit -m 'Update submodules.'
+  - git push -q https://andreiconstantinescu:$GITHUB_TOKEN@github.com/andreiconstantinescu/constantinescu.io
   - yarn version --new-version $RELEASE_VERSION
   - git push -q https://andreiconstantinescu:$GITHUB_TOKEN@github.com/andreiconstantinescu/constantinescu.io --tags
 branches:
