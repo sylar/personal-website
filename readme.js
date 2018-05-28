@@ -1,6 +1,4 @@
-// @flow
-
-import template from 'lodash/template'
+const template = require('lodash/template')
 
 const options = {
   interpolate: /{{([\s\S]+?)}}/g,
@@ -12,4 +10,4 @@ const ReadmeTeamplate = `
   This is an export from the monorepo: [constantinescu.io](https://github.com/andreiconstantinescu/constantinescu.io)
 `
 
-module.exports = (props: Object) => template(ReadmeTeamplate, options)(props)
+module.exports = props => template(ReadmeTeamplate, options)(props)

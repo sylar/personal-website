@@ -1,14 +1,14 @@
 // @flow
 
 import React from 'react'
-import Layout from '../components/layout.js'
+import Layout from '../components/layout'
 
-export default () =>
+export default () => (
   <Layout>
     <div>
-      <a href='/cv'>Resume</a>
-      <a href='mailto:andrei@constantinescu.io'>Email me</a>
-      <a href='//github.com/andreiconstantinescu'>Github</a>
+      <a href="/cv">Resume</a>
+      <a href="mailto:andrei@constantinescu.io">Email me</a>
+      <a href="//github.com/andreiconstantinescu">Github</a>
     </div>
     <style jsx>{`
       a {
@@ -42,3 +42,4 @@ export default () =>
       }
     `}</style>
   </Layout>
+)

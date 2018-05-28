@@ -1,17 +1,15 @@
 // @flow
 import * as React from 'react'
-import Header from './header.js'
+import Header from './header'
 
 type Props = {
-  children?: React.Node
+  children?: React.Node,
 }
 
-export default (props: Props) =>
+export default (props: Props) => (
   <React.Fragment>
     <Header />
-    <main>
-      {props.children}
-    </main>
+    <main>{props.children}</main>
     <style jsx>{`
       div {
         max-width: 30rem;
@@ -24,3 +22,4 @@ export default (props: Props) =>
       }
     `}</style>
   </React.Fragment>
+)

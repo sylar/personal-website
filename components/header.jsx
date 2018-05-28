@@ -1,14 +1,14 @@
 // @flow
 import * as React from 'react'
-import Logo from './logo.js'
+import Logo from './logo'
 
 type Props = {
-  children?: React.Node
+  children?: React.Node,
 }
 
 const tech = ['JavaScript', 'Node.js', 'React.js']
 
-const B = (props: Props) =>
+const B = (props: Props) => (
   <strong>
     {props.children}
     <style jsx>{`
@@ -17,20 +17,15 @@ const B = (props: Props) =>
       }
     `}</style>
   </strong>
+)
 
-export default () =>
+export default () => (
   <div>
     <Logo />
     <h2>
       <B>Andrei Constantinescu</B>
     </h2>
-    <ul>
-      {tech.map((item, key) =>
-        <li key={key}>
-          {item}
-        </li>
-      )}
-    </ul>
+    <ul>{tech.map((item, key) => <li key={key}>{item}</li>)}</ul>
     <style jsx>{`
       div {
         display: flex;
@@ -48,7 +43,7 @@ export default () =>
         list-style-type: none;
         padding: 0;
         margin: 0.5rem 0;
-        font-size: .8rem;
+        font-size: 0.8rem;
         font-weight: 300;
       }
       ul li:not(:last-child):after {
@@ -57,3 +52,4 @@ export default () =>
       }
     `}</style>
   </div>
+)
