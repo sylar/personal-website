@@ -1,15 +1,4 @@
 {
-  "presets": [
-    "next/babel",
-    "flow",
-    [
-      "env",
-      {
-        "targets": {
-          "node": "6",
-          "browsers": ["last 2 versions", "safari >= 7"]
-        }
-      }
-    ]
-  ]
+  "presets": ["next/babel", "flow"],
+  "retainLines": true
 }

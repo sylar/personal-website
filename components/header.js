@@ -1,16 +1,16 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import Logo from './logo.js'
 
-type props = {
-  children?: React$Element<*>
+type Props = {
+  children?: React.Node
 }
 
 const tech = ['JavaScript', 'Node.js', 'React.js']
 
-const B = ({children}: props) =>
+const B = (props: Props) =>
   <strong>
-    {children}
+    {props.children}
     <style jsx>{`
       strong {
         font-weight: 300;

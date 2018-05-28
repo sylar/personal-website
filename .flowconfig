@@ -1,12 +1,5 @@
 [ignore]
-.*/node_modules/fbjs/.*
-.*/node_modules/babel-plugin-transform-react-remove-prop-types/.*
-.*/out/.*
-.*/next.config.js
-
-[include]
+.*/node_modules/*
 
 [libs]
 flow-typed/
-
-[options]

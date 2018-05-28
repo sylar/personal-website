@@ -1,15 +1,3 @@
 {
-  "extends": [
-    "standard",
-    "standard-react",
-    "plugin:flowtype/recommended"
-  ],
-  "parser": "babel-eslint",
-  "plugins": [
-    "flowtype",
-    "react"
-  ],
-  "rules": {
-    "max-len": [1, 120]
-  }
+    "parser": "babel-eslint"
 }

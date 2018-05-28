@@ -4,62 +4,25 @@
   "private": true,
   "description": "My personal website.",
   "scripts": {
-    "prepare": "mkdir .out; babel ./metadata/Readme.md.flux.js --out-file .out/Readme.md.js;",
-    "dev": "npm run prepare; next",
-    "build": "npm run prepare; next build;",
-    "export": "echo $EXTERNAL_PATH | xargs next export -o",
-    "eslint": "eslint '*.js' 'pages/**/*.js' 'server/**/*.js' 'components/**/*.js'",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
     "flow": "flow",
-    "flow-coverage": "flow-coverage-report -i 'pages/**/*.js' -i 'server/**/*.js' -i 'components/**/*.js' -t html -o coverage/flow",
-    "lint-staged": "lint-staged",
-    "lint": "run-p eslint 'flow -- check'",
-    "precommit": "npm run lint-staged",
-    "prettier-eslint": "prettier-eslint --write --no-bracket-spacing 'pages/**/*.js' 'server/**/*.js' 'components/**/*.js'",
-    "start": "npm run build; NODE_ENV=production node .next/server.js --port=$PORT",
-    "test": "npm run lint",
-    "submodule:update": "git submodule update --remote; git submodule foreach -q --recursive 'branch=\"$(git config -f $toplevel/.gitmodules submodule.$name.branch)\"; git checkout $branch'",
-    "deploy": "./deploy.sh"
+    "pre-commit": "npm flow"
   },
   "repository": "git@github.com:andreiconstantinescu/constantinescu.io.git",
   "author": "Andrei Constantinescu <andrei@constantinescu.io>",
   "license": "MIT",
   "dependencies": {
-    "babel-preset-flow": "^7.0.0-alpha.15",
-    "flow-bin": "^0.52.0",
-    "flow-coverage-report": "^0.3.0",
-    "lodash.template": "^4.4.0",
-    "next": "^3.0.3",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "next": "^6.0.4-canary.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-eslint": "^8.0.0-alpha.15",
-    "babel-preset-env": "^1.6.0",
-    "eslint": "^4.1.1",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-config-standard-react": "^5.0.0",
-    "eslint-plugin-flowtype": "^2.35.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.1.0",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-react": "^7.1.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "husky": "^0.14.3",
-    "lint-staged": "^4.0.1",
-    "npm-run-all": "^4.0.2",
-    "prettier-eslint-cli": "^4.1.1"
-  },
-  "lint-staged": {
-    "linters": {
-      "**/*.js": [
-        "prettier-eslint --no-bracket-spacing --write"
-      ]
-    }
-  },
-  "engines": {
-    "node": "^8.1.4",
-    "npm": "^5.3.0",
-    "yarn": "^0.28.1"
+    "babel-eslint": "^8.2.3",
+    "babel-plugin-transform-flow-strip-types": "^7.0.0-beta.3",
+    "babel-preset-flow": "^7.0.0-beta.3",
+    "flow-bin": "^0.73.0",
+    "husky": "^0.14.3"
   }
 }

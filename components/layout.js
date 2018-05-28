@@ -1,16 +1,16 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import Header from './header.js'
 
-type props = {
-  children?: React$Element<*>
+type Props = {
+  children?: React.Node
 }
 
-export default ({children}: props) =>
-  <div>
+export default (props: Props) =>
+  <React.Fragment>
     <Header />
     <main>
-      {children}
+      {props.children}
     </main>
     <style jsx>{`
       div {
@@ -23,4 +23,4 @@ export default ({children}: props) =>
         padding: 0 0.5rem;
       }
     `}</style>
-  </div>
+  </React.Fragment>
