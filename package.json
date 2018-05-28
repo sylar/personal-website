@@ -7,8 +7,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "flow": "flow",
-    "pre-commit": "npm flow"
+    "flow": "flow"
   },
   "repository": "git@github.com:andreiconstantinescu/constantinescu.io.git",
   "author": "Andrei Constantinescu <andrei@constantinescu.io>",
@@ -24,5 +23,10 @@
     "babel-preset-flow": "^7.0.0-beta.3",
     "flow-bin": "^0.73.0",
     "husky": "^0.14.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm flow"
+    }
   }
 }
