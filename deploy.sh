@@ -25,7 +25,7 @@ for page in ${PAGES[*]}; do
   cd $CURRENT_SUBMODULE
 
   echo "exporting page: $page"
-  export CURRENT_PAGE=$CURRENT_SUBMODULE EXTERNAL_PATH=$EXTERNAL_PATH CURRENT_REPO=$(basename `git rev-parse --show-toplevel`); npm run export
+  export CURRENT_PAGE=$CURRENT_SUBMODULE EXTERNAL_PATH=$EXTERNAL_PATH CURRENT_REPO=$(basename `git rev-parse --show-toplevel`); yarn export
 
   CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
   CURRENT_REMOTE=$(git config --get remote.origin.url)
