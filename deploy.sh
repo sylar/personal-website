@@ -65,4 +65,5 @@ for page in ${PAGES[*]}; do
   CURRENT_SUBMODULE=$page
   cd out/$CURRENT_SUBMODULE
   git pull
+  cd ..
 done;
