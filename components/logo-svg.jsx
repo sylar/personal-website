@@ -8,6 +8,7 @@ type props = {
 }
 
 export default ({fillColor = '#231f20'}: props) =>
+<React.Fragment>
   <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
     <g>
       <path style={{fill: fillColor}} d='M33.24,44.32v2.2L22.75,53.19l10.49,6.64V62L19.35,53.19Z' />
@@ -132,3 +133,10 @@ export default ({fillColor = '#231f20'}: props) =>
       <path style={{fill: fillColor}} d='M2.87,53.73a.94.94,0,0,1-.11-1.88.93.93,0,0,1,1,.88A1,1,0,0,1,2.87,53.73Z' />
     </g>
   </svg>
+  <style jsx> {`
+    svg {
+      width: 100%;
+    }
+  `}
+</style>
+</React.Fragment>

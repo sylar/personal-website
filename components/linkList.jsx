@@ -1,23 +1,23 @@
 // @flow
+import * as React from 'react'
+import Link from 'next/link'
 
-import React from 'react'
-import Layout from '../components/layout'
-import LinkList from '../components/linkList'
+type LinkListItem = {
+  url: string,
+  label: string,
+}
 
-const links = [{
-  url: '/cv',
-  label: 'Resumé'
-}, {
-    url: "mailto:andrei@constantinescu.io",
-    label: 'Email'
-}, {
-    url: "//github.com/andreiconstantinescu",
-    label: 'Github'
-}]
+type Props = {
+  links: Array<LinkListItem>,
+}
 
-export default () => (
-  <Layout>
-    <LinkList links={links} />
+export default (props: Props) => (
+  <>
+    {props.links.map((item, key) => (
+      <Link key={key} href={item.url}>
+        <a>{item.label}</a>
+      </Link>
+    ))}
     <style jsx>{`
       a {
         padding: 0.5rem 1rem;
@@ -43,11 +43,11 @@ export default () => (
 
         div {
           text-align: center;
-          flex-basis: 5rem;
+          flex-basis: 6rem;
           flex-direction: row;
           justify-content space-between;
         }
       }
     `}</style>
-  </Layout>
+  </>
 )

@@ -8,15 +8,16 @@ type Props = {
 
 export default (props: Props) => (
   <React.Fragment>
-    <Header />
-    <main>{props.children}</main>
+    <main>
+      <Header />
+      <div>{props.children}</div>
+    </main>
     <style jsx>{`
-      div {
+      main {
         max-width: 30rem;
         margin: 4rem auto;
       }
-
-      main {
+      div {
         margin: 3rem 0;
         padding: 0 0.5rem;
       }
