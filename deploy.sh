@@ -63,6 +63,6 @@ yarn submodule:update
 # # pull the latest changes of each submodule.
 for page in ${PAGES[*]}; do
   CURRENT_SUBMODULE=$page
-  cd $CURRENT_SUBMODULE
+  cd out/$CURRENT_SUBMODULE
   git pull
 done;
