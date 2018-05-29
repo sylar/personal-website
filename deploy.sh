@@ -4,6 +4,8 @@ if [ ! -n "${RELEASE_VERSION+set}" ]; then
   export RELEASE_VERSION='vX.X.X-dev'
 fi
 
+export NODE_ENV=production
+
 # change directory to pages.
 cd pages
 
