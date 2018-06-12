@@ -1,6 +1,6 @@
 {
   "name": "constantinescu.io",
-  "version": "1.0.0",
+  "version": "1.0.215",
   "private": true,
   "description": "My personal website.",
   "scripts": {
@@ -9,8 +9,7 @@
     "start": "next start",
     "flow": "flow",
     "test": "npm run flow",
-    "submodule:update":
-      "git submodule update --remote; git submodule foreach -q --recursive 'branch=\"$(git config -f $toplevel/.gitmodules submodule.$name.branch)\"; git checkout $branch'",
+    "submodule:update": "git submodule update --remote; git submodule foreach -q --recursive 'branch=\"$(git config -f $toplevel/.gitmodules submodule.$name.branch)\"; git checkout $branch'",
     "export": "echo $EXTERNAL_PATH | xargs next export -o"
   },
   "repository": "git@github.com:andreiconstantinescu/constantinescu.io.git",
