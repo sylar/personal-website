@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import LinkList from '../components/linkList'
 
 const links = [{
-  url: '/cv',
+  url: '//constantinescu.io/cv',
   label: 'Resumé'
 }, {
     url: "mailto:andrei@constantinescu.io",
