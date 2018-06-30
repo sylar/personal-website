@@ -9,8 +9,7 @@
     "start": "next start",
     "flow": "flow",
     "test": "npm run flow",
-    "submodule:update":
-      "git submodule update --remote; git submodule foreach -q --recursive 'branch=\"$(git config -f $toplevel/.gitmodules submodule.$name.branch)\"; git checkout $branch'",
+    "submodule:update": "git submodule update --remote; git submodule foreach -q --recursive 'branch=\"$(git config -f $toplevel/.gitmodules submodule.$name.branch)\"; git checkout $branch'",
     "export": "echo $EXTERNAL_PATH | xargs next export -o"
   },
   "repository": "git@github.com:andreiconstantinescu/constantinescu.io.git",
@@ -18,13 +17,22 @@
   "license": "MIT",
   "dependencies": {
     "next": "^6.0.4-canary.1",
+    "prismic-dom": "^2.1.0",
+    "prismic-javascript": "^1.5.0-beta.4",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react-dom": "^16.4.0",
+    "unstated": "^2.1.1"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.3",
+    "babel-eslint": "^8.2.5",
     "babel-plugin-transform-flow-strip-types": "^7.0.0-beta.3",
     "babel-preset-flow": "^7.0.0-beta.3",
+    "eslint": "^5.0.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
     "flow-bin": "^0.75.0",
     "husky": "^1.0.0-rc.8"
   },
