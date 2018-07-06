@@ -4,18 +4,22 @@ import React from 'react'
 import Layout from '../components/layout'
 import LinkList from '../components/linkList'
 
-const links = [{
-  url: '//constantinescu.io/cv',
-  label: 'Resumé'
-}, {
-    url: "mailto:andrei@constantinescu.io",
+const links = [
+  {
+    url: '//constantinescu.io/cv',
+    label: 'Resumé'
+  },
+  {
+    url: 'mailto:andrei@constantinescu.io',
     label: 'Email'
-}, {
-    url: "//github.com/andreiconstantinescu",
+  },
+  {
+    url: '//github.com/andreiconstantinescu',
     label: 'Github'
-}]
+  }
+]
 
-export default () => (
+const Homepage = () => (
   <Layout>
     <LinkList links={links} />
     <style jsx>{`
@@ -51,3 +55,6 @@ export default () => (
     `}</style>
   </Layout>
 )
+
+Homepage.displayName = 'Homepage'
+export default Homepage
