@@ -1,4 +1,4 @@
-import {PureComponent} from 'react'
+import React, {PureComponent} from 'react'
 import Prismic from '../lib/prismic'
 
 class NewHome extends PureComponent {
@@ -7,7 +7,7 @@ class NewHome extends PureComponent {
   }
 
   render () {
-    return <div>Salut</div>
+    return <div>hey there</div>
   }
 }
 
