@@ -19,14 +19,14 @@ module.exports = {
         repo: process.env.CURRENT_REPO,
         deployUrl: `https://constantinescu.io/${getCorrectUrl(
           process.env.CURRENT_REPO
-        )}`,
+        )}`
       })
     )
 
     return {
       '/': {
-        page: getCorrectPage(process.env.CURRENT_PAGE),
-      },
+        page: getCorrectPage(process.env.CURRENT_PAGE)
+      }
     }
-  },
+  }
 }
