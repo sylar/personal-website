@@ -1,6 +1,5 @@
 const Prismic = require('prismic-javascript')
 const {PRISMIC_API} = require('../constants')
-const prismicIds = require('./prismic-ids.json')
 const PrismicDOM = require('prismic-dom')
 const TurndownService = require('turndown')
 const {noop} = require('lodash')
@@ -74,7 +73,7 @@ const getContent = async function (pageUid) {
       }`
     })
     // console.log(content.data.body)
-    console.log(content.data.body[0])
+    console.log(content.data.body)
     // console.log(content.data.body[0].items[0].job_item.data)
     // console.log(content.data.body[0].items[0].job_item.data.body[0].items)
     // console.log(content.data.body[0].items[0].job_item.data.body[0].primary)
