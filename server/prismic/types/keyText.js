@@ -1,5 +1,3 @@
-const {getMarkdown} = require('../utils')
-
-const getKeyText = text => getMarkdown(text)
+const getKeyText = text => text
 
 module.exports = getKeyText
