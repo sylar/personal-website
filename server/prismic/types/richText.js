@@ -1,5 +1,5 @@
-const { RichText } = require('prismic-dom')
-const { getMarkdown } = require('../utils')
+const {RichText} = require('prismic-dom')
+const {getMarkdown} = require('../utils')
 
 const getHTML = elem => RichText.asHtml(elem)
 

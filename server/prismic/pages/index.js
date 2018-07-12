@@ -1,7 +1,4 @@
-const homepage = require('./homepage')
-const resume = require('./resume')
-
 module.exports = {
-  homepage,
-  resume
+  homepageResolver: require('./homepage'),
+  resumeResolver: require('./resume')
 }
