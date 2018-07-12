@@ -7,12 +7,21 @@ const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({dev})
 const handle = app.getRequestHandler()
-const server = new GraphQLServer({typeDefs: types, resolvers})
 
 app.prepare().then(() => {
+  const server = new GraphQLServer({typeDefs: types, resolvers})
   const {express} = server
+  const whitelistedEndpoints = ['/graphql']
 
-  express.get('*', (req, res) => {
+  if (dev) {
+    whitelistedEndpoints.push('/playground')
+  }
+
+  express.use((req, res, next) => {
+    if (whitelistedEndpoints.includes(req.originalUrl)) {
+      return next()
+    }
+
     return handle(req, res)
   })
 
@@ -20,7 +29,7 @@ app.prepare().then(() => {
     {
       port,
       endpoint: '/graphql',
-      // playground: '/playground',
+      playground: dev ? '/playground' : false,
       cacheControl: false
     },
     ({port}) => console.log(`Listening on ${port}`)
