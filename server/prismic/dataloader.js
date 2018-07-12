@@ -73,8 +73,15 @@ const getContent = async function (pageUid) {
       }`
     })
     // console.log(content.data.body)
-    console.log(content.data.body)
+    // console.log(content.data.body[0])
+    // console.log(content.data.body[0].items)
     // console.log(content.data.body[0].items[0].job_item.data)
+    // console.log(content.data.body[0].items[0].job_item.data.body[0])
+    // console.log(content.data.body[0].items[0].job_item.data.body[2])
+    // console.log(content.data.body[0].items[0].job_item.data.body[2].primary)
+    console.log(content.data.body[1].items[0].side_project.data)
+    // console.log(content.data.body[0].items[0].job_item.data.body[0].items[0].tech_stack_item.data.url)
+    // console.log(content.data.body[0].items[0])
     // console.log(content.data.body[0].items[0].job_item.data.body[0].items)
     // console.log(content.data.body[0].items[0].job_item.data.body[0].primary)
     // const markdown = turndownService.turndown(

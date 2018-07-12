@@ -1,6 +1,66 @@
 const query = `
+  type Stack {
+    name: String
+    url: String
+  }
+
+  type Task {
+    description: String
+    stack: [Stack]
+  }
+
+  type Company {
+    name: String
+    description: String
+  }
+
+  type ExperienceSliceItem {
+    title: String
+    company: Company
+    startDate: String
+    endDate: String
+    currentJob: String
+    type: String
+    tasks: [Task]
+  }
+
+  type SideProjectsSliceItem {
+    title: String
+    url: String
+    description: String
+  }
+
+  type ExperienceSlice {
+    title: String
+    content: [ExperienceSliceItem]
+  }
+
+  type SideProjectsSlice {
+    title: String
+    content: [SideProjectsSliceItem]
+
+  }
+
+  type HobbiesSlice {
+    title: String
+    description: String
+  }
+
+  type Slices {
+    experience: ExperienceSlice
+    sideProjects: SideProjectsSlice
+    hobbies: HobbiesSlice
+  }
+
+  type ResumePage {
+    title: String
+    email: String
+    slices: Slices
+  }
+
   type Query {
-    hello(name: String): String!
+    hello(name: String): String
+    page: ResumePage
   }
 `
 

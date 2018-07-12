@@ -1,33 +1,23 @@
 const Prismic = require('prismic-javascript')
-const pages = require('./pages')
 const {PRISMIC_API} = require('../constants')
+const {resume} = require('./pages')
 
-const getRawContent = ({page, pagePayload}) => {
-  const mapper = pages[page].mapper(pagePayload)
-  const out = {
-    title: 'replace'
+const getPagePayload = async ({page = 'resume', pageType = 'resume', query = resume.query}) => {
+  const api = await Prismic.api(PRISMIC_API)
+  // Prismic's fault :(
+  // eslint-disable-next-line
+  const {data, last_publication_date} = await api.getByUID(
+    pageType,
+    page,
+    {graphQuery: query}
+  )
+
+  return {
+    lastUpdate: last_publication_date,
+    data: resume.handler(data)
   }
 }
 
-class Fetcher {
-  constructor () {
-    this.api = Prismic.api(PRISMIC_API)
-  }
-
-  getPagePayload = async (page, pageType, query) => {
-    // Prismic's fault :(
-    // eslint-disable-next-line
-    const {data, last_publication_date} = await this.api.getByUID(
-      pageType,
-      page,
-      {graphQuery: pages[page].query}
-    )
-
-    return {
-      lastUpdate: last_publication_date,
-      data
-    }
-  }
+module.exports = {
+  getPagePayload
 }
-
-module.exports = Fetcher

@@ -1,5 +1,3 @@
-const {getMarkdown} = require('../utils')
-
-const getSelectValue = value => getMarkdown(value)
+const getSelectValue = value => value
 
 module.exports = getSelectValue
