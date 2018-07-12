@@ -52,15 +52,32 @@ const query = `
     hobbies: HobbiesSlice
   }
 
-  type ResumePage {
+  type ResumePage implements Page {
+    lastUpdate: String!
     title: String
     email: String
     slices: Slices
   }
 
+  type Url {
+    name: String
+    url: String
+  }
+
+  interface Page {
+    lastUpdate: String!
+  }
+
+  type HomePage implements Page {
+    lastUpdate: String!
+    title: String
+    description: String
+    urlsBlock: [Url]
+  }
+
   type Query {
-    hello(name: String): String
-    page: ResumePage
+    resume: ResumePage
+    homepage: HomePage
   }
 `
 

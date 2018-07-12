@@ -1,9 +1,10 @@
-// PAGE: resume
-
 const TITLE = 'title'
 const EMAIL = 'email'
 const LOCATION = 'location'
 const DESCRIPTION = 'description'
+
+const HOMEPAGE = 'homepage'
+const RESUMEPAGE = 'resume'
 
 // SLICE: experience
 const SLICE_EXPERIENCE = 'experience'
@@ -67,5 +68,7 @@ module.exports = {
   SLICE_HOBBIES,
   SLICE_HOBBIES_TITLE,
   URLS_BLOCK,
-  KEY
+  KEY,
+  HOMEPAGE,
+  RESUMEPAGE
 }

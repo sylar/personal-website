@@ -3,7 +3,7 @@ const resolvers = require('./resolvers')
 const types = require('./types')
 const {GraphQLServer} = require('graphql-yoga')
 
-const port = parseInt(process.env.PORT, 10) || 3000
+const port = parseInt(process.env.PORT, 10) || 4000
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({dev})
 const handle = app.getRequestHandler()
