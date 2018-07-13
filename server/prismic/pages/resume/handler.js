@@ -104,7 +104,6 @@ const handler = data => {
     }
   }
 
-  console.log({title, email, slices: slicesContent});
   return {title, email, slices: slicesContent}
 }
 
