@@ -9,7 +9,10 @@ const app = next({dev})
 const {renderAndCache} = require('./caching')
 
 app.prepare().then(() => {
-  const server = new GraphQLServer({typeDefs: types, resolvers})
+  const server = new GraphQLServer({
+    typeDefs: types,
+    resolvers
+  })
   const {express} = server
   const whitelistedEndpoints = ['/graphql']
 
