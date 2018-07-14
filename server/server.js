@@ -6,7 +6,7 @@ const {GraphQLServer} = require('graphql-yoga')
 const port = parseInt(process.env.PORT, 10) || 4000
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({dev})
-const handle = app.getRequestHandler()
+const {renderAndCache} = require('./caching')
 
 app.prepare().then(() => {
   const server = new GraphQLServer({typeDefs: types, resolvers})
@@ -22,7 +22,7 @@ app.prepare().then(() => {
       return next()
     }
 
-    return handle(req, res)
+    return renderAndCache({req, res, app})
   })
 
   server.start(
@@ -30,7 +30,7 @@ app.prepare().then(() => {
       port,
       endpoint: '/graphql',
       playground: dev ? '/playground' : false,
-      cacheControl: false
+      cacheControl: true
     },
     ({port}) => console.log(`Listening on ${port}`)
   )
