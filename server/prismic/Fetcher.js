@@ -1,7 +1,7 @@
 const Prismic = require('prismic-javascript')
-const {PRISMIC_API, PRISMIC_API_KEY} = process.env
 
 const getPagePayload = async ({page, pageType, query, handler}) => {
+  const {PRISMIC_API, PRISMIC_API_KEY} = process.env
   const api = await Prismic.api(PRISMIC_API, {
     accessToken: PRISMIC_API_KEY
   })
