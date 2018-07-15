@@ -1,8 +1,11 @@
 // @flow
 
 import React from 'react'
+import {graphql} from 'react-apollo'
+import Header from '../components/header'
 import Layout from '../components/layout'
 import LinkList from '../components/linkList'
+import {homepageQuery} from '../lib/gql'
 
 const links = [
   {
@@ -14,15 +17,18 @@ const links = [
     label: 'Email'
   },
   {
-    url: '//github.com/andreiconstantinescu',
+    url: '//github.com/andreiconstantinescudsa',
     label: 'Github'
   }
 ]
 
-const Homepage = () => (
-  <Layout>
-    <LinkList links={links} />
-    <style jsx>{`
+const Homepage = ({data}) => {
+  console.log({data})
+  return (
+    <Layout>
+      <Header />
+      <LinkList links={links} />
+      <style jsx>{`
       a {
         padding: 0.5rem 1rem;
         border: 1px solid #000;
@@ -53,8 +59,10 @@ const Homepage = () => (
         }
       }
     `}</style>
-  </Layout>
-)
+    </Layout>
+  )
+}
+
+export default graphql(homepageQuery)(Homepage)
 
 Homepage.displayName = 'Homepage'
-export default Homepage

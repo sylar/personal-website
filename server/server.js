@@ -7,6 +7,7 @@ const port = parseInt(process.env.PORT, 10) || 4000
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({dev})
 const {renderAndCache} = require('./caching')
+const handle = app.getRequestHandler()
 
 app.prepare().then(() => {
   const server = new GraphQLServer({
@@ -25,7 +26,7 @@ app.prepare().then(() => {
       return next()
     }
 
-    return renderAndCache({req, res, app})
+    return dev ? handle(req, res) : renderAndCache({req, res, app})
   })
 
   server.start(

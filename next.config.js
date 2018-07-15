@@ -33,9 +33,10 @@ module.exports = {
     }
   },
   serverRuntimeConfig: {
-    PRISMIC_API_KEY: env.PRISMIC_API_KEY || null
+    PRISMIC_API_KEY: process.env.PRISMIC_API_KEY || env.PRISMIC_API_KEY || null,
+    PRISMIC_API: process.env.PRISMIC_API || env.PRISMIC_API || null
   },
   publicRuntimeConfig: {
-    PRISMIC_API: env.PRISMIC_API || null
+    GRAPHQL_ENDPOINT: env.GRAPHQL_ENDPOINT || 'http://localhost:4000/graphql'
   }
 }
