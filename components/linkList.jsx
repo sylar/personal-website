@@ -4,18 +4,18 @@ import Link from 'next/link'
 
 type LinkListItem = {
   url: string,
-  label: string,
+  name: string
 }
 
 type Props = {
-  links: Array<LinkListItem>,
+  links: Array<LinkListItem>
 }
 
 export default (props: Props) => (
   <>
     {props.links.map((item, key) => (
       <Link key={key} href={item.url}>
-        <a>{item.label}</a>
+        <a>{item.name}</a>
       </Link>
     ))}
     <style jsx>{`

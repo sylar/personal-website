@@ -7,27 +7,13 @@ import Layout from '../components/layout'
 import LinkList from '../components/linkList'
 import {homepageQuery} from '../lib/gql'
 
-const links = [
-  {
-    url: '//constantinescu.io/cv',
-    label: 'Resumé'
-  },
-  {
-    url: 'mailto:andrei@constantinescu.io',
-    label: 'Email'
-  },
-  {
-    url: '//github.com/andreiconstantinescudsa',
-    label: 'Github'
-  }
-]
-
 const Homepage = ({data}) => {
-  console.log({data})
+  console.log(data.loading, data.homepage)
+  const {urlsBlock, logo, title, description} = data.homepage
   return (
     <Layout>
-      <Header />
-      <LinkList links={links} />
+      <Header logo={logo} title={title} description={description} />
+      <LinkList links={urlsBlock} />
       <style jsx>{`
       a {
         padding: 0.5rem 1rem;

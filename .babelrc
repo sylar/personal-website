@@ -1,4 +1,5 @@
 {
   "presets": ["next/babel", "flow"],
-  "retainLines": true
+  "retainLines": true,
+  "plugins": ["markdown-in-js/babel"]
 }
