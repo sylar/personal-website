@@ -1,7 +1,7 @@
 // next.config.js
-require('dotenv').config()
 const fs = require('fs')
 const generateReadme = require('./readme.js')
+const env = require('./env.json')
 
 const getCorrectPage = currentPage =>
   currentPage === 'home' ? '/' : `/${currentPage}`
@@ -33,7 +33,9 @@ module.exports = {
     }
   },
   serverRuntimeConfig: {
-    PRISMIC_API_KEY: process.env.PRISMIC_API_KEY,
-    PRISMIC_API: process.env.PRISMIC_API
+    PRISMIC_API_KEY: env.PRISMIC_API_KEY || null
+  },
+  publicRuntimeConfig: {
+    PRISMIC_API: env.PRISMIC_API || null
   }
 }

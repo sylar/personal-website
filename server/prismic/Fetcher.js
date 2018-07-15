@@ -1,7 +1,17 @@
 const Prismic = require('prismic-javascript')
+const getConfig = require('next/config').default
+
+// const {
+//   serverRuntimeConfig: {PRISMIC_API_KEY},
+//   publicRuntimeConfig: {PRISMIC_API}
+// } = getConfig()
 
 const getPagePayload = async ({page, pageType, query, handler}) => {
-  const {PRISMIC_API, PRISMIC_API_KEY} = process.env
+  const {
+    publicRuntimeConfig: {PRISMIC_API},
+    serverRuntimeConfig: {PRISMIC_API_KEY}
+  } = getConfig()
+
   const api = await Prismic.api(PRISMIC_API, {
     accessToken: PRISMIC_API_KEY
   })
