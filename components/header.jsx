@@ -3,7 +3,7 @@ import * as React from 'react'
 import Logo from './logo'
 
 type Props = {
-  children?: React.Node,
+  children?: React.Node
 }
 
 const tech = ['JavaScript', 'Node.js', 'React.js']

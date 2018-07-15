@@ -19,7 +19,6 @@ const getPagePayload = async ({page, pageType, query, handler}) => {
   const {data, last_publication_date} = await api.getByUID(pageType, page, {
     graphQuery: query
   })
-
   return {
     lastUpdate: last_publication_date,
     ...handler(data)
