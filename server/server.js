@@ -21,7 +21,7 @@ app.prepare().then(() => {
   }
 
   express.use((req, res, next) => {
-    if (whitelistedEndpoints.includes(req.originalUrl)) {
+    if (whitelistedEndpoints.includes(req.path)) {
       return next()
     }
 

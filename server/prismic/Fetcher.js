@@ -8,8 +8,7 @@ const getConfig = require('next/config').default
 
 const getPagePayload = async ({page, pageType, query, handler}) => {
   const {
-    publicRuntimeConfig: {PRISMIC_API},
-    serverRuntimeConfig: {PRISMIC_API_KEY}
+    serverRuntimeConfig: {PRISMIC_API_KEY, PRISMIC_API}
   } = getConfig()
 
   const api = await Prismic.api(PRISMIC_API, {

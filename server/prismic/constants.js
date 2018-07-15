@@ -41,6 +41,7 @@ const SLICE_HOBBIES_TITLE = 'hobbies_title'
 // PAGE: homepage
 const URLS_BLOCK = 'urls_block'
 const KEY = 'key'
+const LOGO = 'logo'
 
 module.exports = {
   TITLE,
@@ -70,5 +71,6 @@ module.exports = {
   URLS_BLOCK,
   KEY,
   HOMEPAGE,
-  RESUMEPAGE
+  RESUMEPAGE,
+  LOGO
 }
