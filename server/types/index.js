@@ -73,6 +73,7 @@ const query = `
     title: String
     description: String
     urlsBlock: [Url]
+    logo: String
   }
 
   type Query {
