@@ -1,7 +1,8 @@
-import * as headings from './headings'
-import * as content from './content'
-import * as list from './list'
-import * as image from './image'
-import * as link from './link'
+import * as Headings from './headings'
+import * as Content from './content'
+import * as List from './list'
+import * as Image from './image'
+import * as Link from './link'
+import Main from './main'
 
-export {headings, content, list, image, link}
+export {Headings, Content, List, Image, Link, Main}

@@ -8,22 +8,18 @@ const Heading = props => {
   const {level, children} = props
   const HeadingRenderer = ReactMarkdown.renderers.heading
 
-  const C = components.headings[`H${level}`]
+  const C = components.Headings[`H${level}`]
 
-  const ToRender = <C style={{color: 'red'}}>{children}</C> || (
+  const ToRender = <C customStyle={{color: 'red'}}>{children}</C> || (
     <HeadingRenderer {...props} />
   )
 
   return ToRender
 }
 
-const MarkdownElem = ({text, customStyle}) =>
-  console.log(text) || (
-    <ReactMarkdown
-      source={text}
-      renderers={{root: Fragment, heading: Heading}}
-    />
-  )
+const MarkdownElem = ({text, customStyle}) => (
+  <ReactMarkdown source={text} renderers={{root: Fragment, heading: Heading}} />
+)
 
 MarkdownElem.displayName = 'MarkdownElement'
 
