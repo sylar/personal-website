@@ -1,7 +1,7 @@
 // @flow
-import React from 'react'
+import React, {Fragment} from 'react'
 import Document, {Head, Main, NextScript} from 'next/document'
-import flush from 'styled-jsx/server'
+import {extractCritical} from 'emotion-server'
 
 type ctx = {
   renderPage: () => {
@@ -11,36 +11,42 @@ type ctx = {
     errorHtml: string
   }
 }
-
-const TheHead = () =>
-  <Head>
-    <title>Andrei Constantinescu.</title>
-    <meta name='viewport' content='width=device-width, minimum-scale=1' />
-    <meta name='description' content="Andrei Constantinescu's website." />
-    <style>{`
-      body {
-        font-family: --apple-system, BlinkMacSystemFont, helvetica, ubuntu, roboto, sans-serif;
-        margin: 10px;
-      }
-
-      @media (min-width: 30rem) {
-        body {
-          margin: 0;
-        }
-      }
-      `}</style>
-  </Head>
-
+// {/* <style>{`
+//   body {
+//   font-family: --apple-system, BlinkMacSystemFont, helvetica, ubuntu, roboto, sans-serif;
+//   margin: 10px;
+// }
+//
+// @media (min-width: 30rem) {
+// body {
+// margin: 0;
+// }
+// }
+// `}</style> */}
 export default class MyDocument extends Document {
   static getInitialProps ({renderPage}: ctx) {
-    const {html, head, errorHtml, chunks} = renderPage()
-    const styles = flush()
-    return {html, head, errorHtml, chunks, styles}
+    const page = renderPage()
+    const styles = extractCritical(page.html)
+    return {...page, ...styles}
   }
+
+  constructor (props) {
+    super(props)
+    const {__NEXT_DATA__, ids} = props
+    if (ids) {
+      __NEXT_DATA__.ids = ids
+    }
+  }
+
   render () {
     return (
-      <html lang='en'>
-        <TheHead />
+      <html lang="en">
+        <Head>
+          <title>Andrei Constantinescu.</title>
+          <meta name="viewport" content="width=device-width, minimum-scale=1" />
+          <meta name="description" content="Andrei Constantinescu's website." />
+          <style dangerouslySetInnerHTML={{__html: this.props.css}} />
+        </Head>
         <body>
           <Main />
           <NextScript />

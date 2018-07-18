@@ -1,5 +1,5 @@
 {
   "presets": ["next/babel", "flow"],
   "retainLines": true,
-  "plugins": ["markdown-in-js/babel", ["emotion", { "inline": true }]]
+  "plugins": ["markdown-in-js/babel", "emotion"]
 }
