@@ -1,15 +1,13 @@
 // @flow
 import * as React from 'react'
-import Header from './header'
+import {Main} from './styled'
 
 type Props = {
   children?: React.Node
 }
 
-export default (props: Props) => (
-  <React.Fragment>
-    <main>
-      <div>{props.children}</div>
-    </main>
-  </React.Fragment>
-)
+const Layout = (props: Props) => <Main>{props.children}</Main>
+
+Layout.displayName = 'Layout'
+
+export default Layout

@@ -13,7 +13,7 @@ if (typeof window !== 'undefined') {
 injectGlobal`
   html, body {
     background: whitesmoke;
-    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    font-family: --apple-system, BlinkMacSystemFont, helvetica, sans-serif;
     font-size: 24px;
   }
 `
