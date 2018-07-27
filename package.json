@@ -16,7 +16,7 @@
   "author": "Andrei Constantinescu <andrei@constantinescu.io>",
   "license": "MIT",
   "dependencies": {
-    "apollo-boost": "^0.1.10",
+    "apollo-boost": "^0.2.0-alpha.10",
     "babel-plugin-emotion": "^9.2.6",
     "dotenv": "^6.0.0",
     "emotion": "^9.2.6",
@@ -24,7 +24,7 @@
     "express": "^5.0.0-alpha.6",
     "graphql-tag": "^2.9.2",
     "graphql-yoga": "^1.15.0-beta.1",
-    "isomorphic-unfetch": "^2.0.0",
+    "isomorphic-unfetch": "^2.1.0",
     "lodash": "^4.17.10",
     "next": "^6.1.1",
     "prismic-dom": "^2.1.0",
@@ -33,23 +33,22 @@
     "react-apollo": "^2.1.9",
     "react-dom": "^16.4.1",
     "react-emotion": "^9.2.6",
-    "react-markdown": "^3.3.4",
-    "turndown": "^4.0.2",
-    "unstated": "^2.1.1"
+    "react-markdown": "^3.4.1",
+    "turndown": "^4.0.2"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-export-default-from": "^7.0.0-beta.54",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0-beta.54",
     "babel-eslint": "^9.0.0-beta.3",
-    "babel-plugin-transform-flow-strip-types": "^7.0.0-beta.3",
-    "babel-preset-env": "^7.0.0-beta.3",
-    "babel-preset-flow": "^7.0.0-beta.3",
-    "eslint": "^5.1.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "eslint": "^5.2.0",
     "eslint-config-standard": "^12.0.0-alpha.0",
     "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-standard": "^3.1.0",
-    "flow-bin": "^0.76.0",
+    "flow-bin": "^0.77.0",
     "husky": "^1.0.0-rc.13"
   }
 }
