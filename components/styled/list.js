@@ -1,9 +1,9 @@
 import styled from 'react-emotion'
 
-const UL = ({style}) => styled('ul')(style)
+const UL = styled('ul')(({style}) => ({...style}))
 
-const OL = ({style}) => styled('ol')(style)
+const OL = styled('ol')(({style}) => ({...style}))
 
-const LI = ({style}) => styled('li')(style)
+const LI = styled('li')(({style}) => ({...style}))
 
 export {UL, OL, LI}

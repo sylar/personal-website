@@ -1,5 +1,5 @@
 import styled from 'react-emotion'
 
-const Image = ({style}) => styled('img')(style)
+const Image = styled('img')(({style}) => ({...style}))
 
-export {Image}
+export default Image
