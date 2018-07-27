@@ -1,23 +1,24 @@
-// @flow
 import * as React from 'react'
-import MarkdownElement from './MarkdownElem'
+import {Image, Paragraph, Heading} from './styled'
 
-type Props = {
-  children?: React.Node
-}
-
-export default ({title, logo, description}) => {
-  console.log('KUIII', {title, logo, description})
+const Header = ({title, logo, description}) => {
   return (
-    <React.Fragment>
-      <MarkdownElement
-        text={title}
-        customStyle={`h2 {
-        font-weight: 200;
-        margin-bottom: 0;
-        margin-top: 1.5rem;
-      }`}
+    <div style={{display: 'flex', flexDirection: 'column'}}>
+      <Image src={logo} style={{width: '4rem', alignSelf: 'center'}} />
+      <Heading
+        md={title}
+        customCss={{
+          fontWeight: 200,
+          alignSelf: 'center',
+          marginTop: '.5rem',
+          color: 'salmon'
+        }}
       />
-    </React.Fragment>
+      <Paragraph md={description} />
+    </div>
   )
 }
+
+Header.displayName = 'Header'
+
+export default Header

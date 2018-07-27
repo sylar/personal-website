@@ -8,7 +8,6 @@ import LinkList from '../components/linkList'
 import {homepageQuery} from '../lib/gql'
 
 const Homepage = ({data}) => {
-  console.log(data.loading, data.homepage)
   const {urlsBlock, logo, title, description} = data.homepage
   return (
     <Layout>
