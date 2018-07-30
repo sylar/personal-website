@@ -45,7 +45,12 @@ export default class MyDocument extends Document {
           <title>Andrei Constantinescu.</title>
           <meta name="viewport" content="width=device-width, minimum-scale=1" />
           <meta name="description" content="Andrei Constantinescu's website." />
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/normalize.css@8.0.0/normalize.css"
+          />
           <style dangerouslySetInnerHTML={{__html: this.props.css}} />
+          {/* <link rel="stylesheet" href="//basehold.it/24" /> */}
         </Head>
         <body>
           <Main />

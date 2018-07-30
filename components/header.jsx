@@ -1,19 +1,39 @@
 import * as React from 'react'
 import {Image, Paragraph, Heading} from './styled'
+import {css} from 'react-emotion'
+
+const hrStyle = css`
+  width: 50%;
+  margin: -1px auto;
+`
 
 const Header = ({title, logo, description}) => (
   <div style={{display: 'flex', flexDirection: 'column'}}>
-    <Image src={logo} style={{width: '4rem', alignSelf: 'center'}} />
-    <Heading
+    <Image
+      src={logo}
+      customCss={{width: '6rem', alignSelf: 'center', marginBottom: '3rem'}}
+    />
+    {/* <Heading
       md={title}
       customCss={{
         fontWeight: 200,
         alignSelf: 'center',
-        marginTop: '.5rem',
-        color: 'salmon'
+        marginTop: '.8rem',
+        fontSize: '1.3rem'
+      }}
+    /> */}
+    <hr css={hrStyle} />
+    <Paragraph
+      md={description}
+      customCss={{
+        fontWeight: 300,
+        letterSpacing: '1px',
+        fontSize: '20px',
+        lineHeight: '1.2em',
+        margin: '2.4em 0'
       }}
     />
-    <Paragraph md={description} />
+    <hr css={hrStyle} />
   </div>
 )
 

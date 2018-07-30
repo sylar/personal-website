@@ -41,4 +41,4 @@ const Heading = ({md, customCss}) => (
   />
 )
 
-export {Heading, components}
+export {Heading, H1, H2, H3}
