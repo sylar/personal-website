@@ -12,9 +12,10 @@ if (typeof window !== 'undefined') {
 
 injectGlobal`
   html, body {
-    background: whitesmoke;
+    background: white;
     font-family: --apple-system, BlinkMacSystemFont, helvetica, sans-serif;
-    font-size: 24px;
+    font-size: 16px;
+    line-height: 1.5;
   }
 `
 
