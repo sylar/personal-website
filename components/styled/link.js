@@ -1,5 +1,5 @@
 import styled from 'react-emotion'
 
-const Link = ({style}) => styled('a')(style)
+const A = styled('a')(({css}) => css)
 
-export default Link
+export default A
