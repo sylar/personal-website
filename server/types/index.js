@@ -62,6 +62,7 @@ const query = `
   type Url {
     name: String
     url: String
+    target: String
   }
 
   interface Page {
