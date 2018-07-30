@@ -33,8 +33,7 @@ const effect = `
     transition: opacity 0.3s, transform 0.3s;
     transform: translateY(5px);
   }
-  &:hover::after,
-  &:focus::after {
+  &:hover::after {
     opacity: 1;
     transform: translateY(0px);
   }
