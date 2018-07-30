@@ -1,18 +1,22 @@
 // next.config.js
 const fs = require('fs')
 const generateReadme = require('./readme.js')
-const env = require('./env.json')
 
 const getCorrectPage = currentPage =>
   currentPage === 'home' ? '/' : `/${currentPage}`
 const getCorrectUrl = currentRepo =>
   currentRepo === 'andreiconstantinescu.github.io' ? '' : currentRepo
 
-const isProd = process.env.NODE_ENV === 'production'
+const isDev = process.env.NODE_ENV !== 'production'
+let env = {}
+
+if (isDev) {
+  env = require('./env.json')
+}
 
 module.exports = {
   exportPathMap: () => {
-    if (!isProd) {
+    if (isDev) {
       return
     }
 
@@ -33,10 +37,12 @@ module.exports = {
     }
   },
   serverRuntimeConfig: {
-    PRISMIC_API_KEY: process.env.PRISMIC_API_KEY || env.PRISMIC_API_KEY || null,
-    PRISMIC_API: process.env.PRISMIC_API || env.PRISMIC_API || null
+    PRISMIC_API_KEY:
+      process.env.PRISMIC_API_KEY || env ? env.PRISMIC_API_KEY : null,
+    PRISMIC_API: process.env.PRISMIC_API || env ? env.PRISMIC_API : null
   },
   publicRuntimeConfig: {
-    GRAPHQL_ENDPOINT: env.GRAPHQL_ENDPOINT || 'http://localhost:4000/graphql'
+    GRAPHQL_ENDPOINT:
+      process.env.GRAPHQL_ENDPOINT || 'http://localhost:4000/graphql'
   }
 }
