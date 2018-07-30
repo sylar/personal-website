@@ -16,6 +16,7 @@ app.prepare().then(() => {
   })
   const {express} = server
   const whitelistedEndpoints = ['/graphql']
+  const cacheableEndpoints = ['/', '/cv']
 
   if (dev) {
     whitelistedEndpoints.push('/playground')
@@ -26,7 +27,11 @@ app.prepare().then(() => {
       return next()
     }
 
-    return dev ? handle(req, res) : renderAndCache({req, res, app})
+    if (cacheableEndpoints.includes(req.path) && !dev) {
+      return renderAndCache({req, res, app})
+    }
+
+    return handle(req, res)
   })
 
   server.start(
