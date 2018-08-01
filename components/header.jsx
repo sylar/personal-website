@@ -13,15 +13,6 @@ const Header = ({title, logo, description}) => (
       src={logo}
       customCss={{width: '6rem', alignSelf: 'center', marginBottom: '3rem'}}
     />
-    {/* <Heading
-      md={title}
-      customCss={{
-        fontWeight: 200,
-        alignSelf: 'center',
-        marginTop: '.8rem',
-        fontSize: '1.3rem'
-      }}
-    /> */}
     <hr css={hrStyle} />
     <Paragraph
       md={description}
