@@ -41,4 +41,8 @@ const Heading = ({md, customCss}) => (
   />
 )
 
+H1.displayName = 'H1'
+H2.displayName = 'H2'
+H3.displayName = 'H3'
+
 export {Heading, H1, H2, H3}

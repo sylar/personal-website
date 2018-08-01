@@ -5,4 +5,6 @@ const Image = styled('img')(({customCss}) => ({
   minWidth: customCss.width
 }))
 
+Image.displayName = 'Image'
+
 export default Image
