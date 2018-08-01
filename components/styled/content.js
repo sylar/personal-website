@@ -25,5 +25,9 @@ const Paragraph = ({md, customCss}) => (
 
 Paragraph.displayName = 'Paragraph'
 ParagraphRenderer.displayName = 'ParagraphRenderer'
+Bold.displayName = 'Bold'
+Italic.displayName = 'Italic'
+P.displayName = 'P'
+Span.displayName = 'Span'
 
 export {Bold, Italic, P, Span, Paragraph}
