@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import {A} from './styled'
+import {A} from '../styled'
 import {css} from 'react-emotion'
 
 const common = `

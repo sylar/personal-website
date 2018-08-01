@@ -2,13 +2,9 @@
 
 import React from 'react'
 import {graphql} from 'react-apollo'
-import {css} from 'react-emotion'
-import Header from '../components/header'
-import Layout from '../components/layout'
-import LinkList from '../components/linkList'
-import Logo from '../components/logo'
+import {Layout, LinkList, Logo, Paragraph, HR} from '../components'
 import {homepageQuery} from '../lib/gql'
-import {Paragraph, HR} from '../components/styled'
+
 const Homepage = ({data}) => {
   const {urlsBlock, logo, description} = data.homepage
   return (
