@@ -1,7 +1,6 @@
-// @flow
 import * as React from 'react'
 import Link from './link'
-import {UL, LI} from './styled'
+import {UL, LI} from '../styled'
 
 const LinkList = ({links}) => (
   <UL
