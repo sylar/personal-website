@@ -10,7 +10,7 @@ const types = require('../../constants')
 
 const handler = data => {
   const title = getRichText(get(data, types.TITLE))
-  const email = getLink(get(data, types.EMAIL))
+  const email = getLink(get(data, types.EMAIL)).url
   const slices = {
     [types.SLICE_EXPERIENCE]: find(data.body, {
       slice_type: types.SLICE_EXPERIENCE
@@ -64,7 +64,7 @@ const handler = data => {
             url: getLink(
               get(techItem, `${types.TECH_STACK_ITEM}.data.${types.URL}`),
               get(techItem, `${types.TECH_STACK_ITEM}.data.${types.URL}`)
-            )
+            ).url
           }))
         }))
       }))
