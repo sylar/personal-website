@@ -1,12 +1,7 @@
-// @flow
 import * as React from 'react'
 import {Main} from './styled'
 
-type Props = {
-  children?: React.Node
-}
-
-const Layout = (props: Props) => <Main>{props.children}</Main>
+const Layout = ({customCss, children}) => <Main customCss={customCss}>{children}</Main>
 
 Layout.displayName = 'Layout'
 

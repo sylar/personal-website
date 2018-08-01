@@ -1,18 +1,9 @@
 // @flow
 import * as React from 'react'
-import Link from './Link'
+import Link from './link'
 import {UL, LI} from './styled'
 
-type LinkListItem = {
-  url: string,
-  name: string
-}
-
-type Props = {
-  links: Array<LinkListItem>
-}
-
-export default (props: Props) => (
+const LinkList = ({links}) => (
   <UL
     customCss={{
       padding: 0,
@@ -22,7 +13,7 @@ export default (props: Props) => (
       justifyContent: 'space-between'
     }}
   >
-    {props.links.map((item, key) => (
+    {links.map((item, key) => (
       <LI
         key={key}
         customCss={{
@@ -34,3 +25,7 @@ export default (props: Props) => (
     ))}
   </UL>
 )
+
+LinkList.displayName = 'LinkList'
+
+export default LinkList

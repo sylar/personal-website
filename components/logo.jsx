@@ -1,9 +1,11 @@
-// @flow
 import React from 'react'
-import LogoSVG from './logo-svg'
+import {Image} from './styled'
 
-export default () => (
-  <div className="logo">
-    <LogoSVG />
-  </div>
-)
+const Logo = ({src, customCss}) => <Image
+  src={src}
+  customCss={{...customCss, width: '6rem', alignSelf: 'center', marginBottom: '3rem'}}
+/>
+
+Logo.displayName = 'Logo'
+
+export default Logo
