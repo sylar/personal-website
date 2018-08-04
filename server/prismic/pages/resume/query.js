@@ -2,6 +2,8 @@ module.exports = `{
   resume {
     title
     email
+    logo
+    location
     body {
       ...on experience {
         non-repeat {

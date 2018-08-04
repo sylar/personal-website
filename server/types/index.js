@@ -57,6 +57,8 @@ const query = `
     title: String
     email: String
     slices: Slices
+    logo: String
+    location: String
   }
 
   type Url {

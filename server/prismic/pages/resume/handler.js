@@ -11,6 +11,8 @@ const types = require('../../constants')
 const handler = data => {
   const title = getRichText(get(data, types.TITLE))
   const email = getLink(get(data, types.EMAIL)).url
+  const logo = getLink(get(data, types.LOGO)).url
+  const location = getKeyText(get(data, types.LOCATION))
   const slices = {
     [types.SLICE_EXPERIENCE]: find(data.body, {
       slice_type: types.SLICE_EXPERIENCE
@@ -104,7 +106,7 @@ const handler = data => {
     }
   }
 
-  return {title, email, slices: slicesContent}
+  return {title, email, logo, location, slices: slicesContent}
 }
 
 module.exports = handler
