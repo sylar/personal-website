@@ -1,3 +1,3 @@
-const getKeyText = text => text
+const getKeyText = text => console.log(text) || text
 
 module.exports = getKeyText
