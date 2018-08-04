@@ -8,11 +8,11 @@ import {homepageQuery} from '../lib/gql'
 const Homepage = ({data}) => {
   const {urlsBlock, logo, description} = data.homepage
   return (
-    <Layout customCss={{display: 'flex', flexDirection: 'column'}}>
+    <Layout customCss={{display: 'flex', flexDirection: 'column', boxShadow: '0px 0px 2px 0px rgba(0,0,0,0.15)'}}>
       <Logo src={logo} />
       <HR />
       <Paragraph
-        md={description}
+        md={description + description + description}
         customCss={{
           fontWeight: 300,
           letterSpacing: '1px',

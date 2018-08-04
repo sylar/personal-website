@@ -50,7 +50,7 @@ export default class MyDocument extends Document {
             href="https://unpkg.com/normalize.css@8.0.0/normalize.css"
           />
           <style dangerouslySetInnerHTML={{__html: this.props.css}} />
-          {/* <link rel="stylesheet" href="//basehold.it/24" /> */}
+          <link rel="stylesheet" href="//basehold.it/24" />
         </Head>
         <body>
           <Main />
