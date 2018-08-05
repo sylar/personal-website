@@ -4,11 +4,18 @@ import styled from 'react-emotion'
 import ReactMarkdown from 'react-markdown'
 import MarkdownElement from '../MarkdownElement'
 
-const H1 = styled('h1')(({customCss}) => ({...customCss}))
+const commonStyle = {
+  fontSize: '2rem',
+  marginTop: '3rem',
+  marginBottom: '1.5rem',
+  fontWeight: 300
+}
 
-const H2 = styled('h2')(({customCss}) => ({...customCss}))
+const H1 = styled('h1')(({customCss}) => ({...commonStyle, ...customCss}))
 
-const H3 = styled('h3')(({customCss}) => ({...customCss}))
+const H2 = styled('h2')(({customCss}) => ({...commonStyle, ...customCss}))
+
+const H3 = styled('h3')(({customCss}) => ({...commonStyle, ...customCss}))
 
 const components = {
   H1,
