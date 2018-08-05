@@ -10,6 +10,8 @@ const P = styled('p')(({customCss}) => ({margin: '1.5rem 0', ...customCss}))
 
 const Span = styled('span')(({customCss}) => ({...customCss}))
 
+const Div = styled('div')(({customCss}) => ({...customCss}))
+
 const ParagraphRenderer = ({children, customCss}) => (
   <P customCss={customCss}>{children}</P>
 )
@@ -30,4 +32,4 @@ Italic.displayName = 'Italic'
 P.displayName = 'P'
 Span.displayName = 'Span'
 
-export {Bold, Italic, P, Span, Paragraph}
+export {Bold, Italic, P, Span, Paragraph, Div}

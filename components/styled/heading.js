@@ -5,17 +5,28 @@ import ReactMarkdown from 'react-markdown'
 import MarkdownElement from '../MarkdownElement'
 
 const commonStyle = {
-  fontSize: '2rem',
-  marginTop: '3rem',
+  marginTop: '1.5rem',
   marginBottom: '1.5rem',
   fontWeight: 300
 }
 
-const H1 = styled('h1')(({customCss}) => ({...commonStyle, ...customCss}))
+const H1 = styled('h1')(({customCss}) => ({
+  ...commonStyle,
+  fontSize: '3rem',
+  ...customCss
+}))
 
-const H2 = styled('h2')(({customCss}) => ({...commonStyle, ...customCss}))
+const H2 = styled('h2')(({customCss}) => ({
+  ...commonStyle,
+  fontSize: '2rem',
+  ...customCss
+}))
 
-const H3 = styled('h3')(({customCss}) => ({...commonStyle, ...customCss}))
+const H3 = styled('h3')(({customCss}) => ({
+  ...commonStyle,
+  fontSize: '1rem',
+  ...customCss
+}))
 
 const components = {
   H1,

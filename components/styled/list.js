@@ -1,8 +1,14 @@
 import styled from 'react-emotion'
 
-const UL = styled('ul')(({customCss}) => ({...customCss}))
+const commonStyle = {
+  marginTop: '1.5rem',
+  fontSize: '1rem',
+  marginBottom: '1.5rem'
+}
 
-const OL = styled('ol')(({customCss}) => ({...customCss}))
+const UL = styled('ul')(({customCss}) => ({...commonStyle, ...customCss}))
+
+const OL = styled('ol')(({customCss}) => ({...commonStyle, ...customCss}))
 
 const LI = styled('li')(({customCss}) => ({...customCss}))
 
