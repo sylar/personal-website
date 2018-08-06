@@ -12,6 +12,8 @@ const query = `
   type Company {
     name: String
     description: String
+    url: Url
+    logo: String
   }
 
   type ExperienceSliceItem {

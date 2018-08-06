@@ -16,6 +16,8 @@ module.exports = `{
               company {
                 name
                 description
+                url
+                logo
               }
               start_date
               current_job
