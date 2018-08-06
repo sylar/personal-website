@@ -20,6 +20,7 @@ module.exports = `{
                 logo
               }
               start_date
+              end_date
               current_job
               type
               body {
