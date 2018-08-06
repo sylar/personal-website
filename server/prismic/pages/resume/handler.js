@@ -45,7 +45,19 @@ const handler = data => {
                 types.DESCRIPTION
               }`
             )
-          )
+          ),
+          url: getLink(
+            get(
+              item,
+              `${types.JOB_ITEM}.data.${types.COMPANY}.data.${types.URL}`
+            )
+          ),
+          logo: getLink(
+            get(
+              item,
+              `${types.JOB_ITEM}.data.${types.COMPANY}.data.${types.LOGO}`
+            )
+          ).url
         },
         startDate: getDate(
           get(item, `${types.JOB_ITEM}.data.${types.START_DATE}`)
