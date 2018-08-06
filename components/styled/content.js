@@ -12,6 +12,8 @@ const Span = styled('span')(({customCss}) => ({...customCss}))
 
 const Div = styled('div')(({customCss}) => ({...customCss}))
 
+const Article = styled('article')(({customCss}) => ({...customCss}))
+
 const ParagraphRenderer = ({children, customCss}) => (
   <P customCss={customCss}>{children}</P>
 )
@@ -31,5 +33,7 @@ Bold.displayName = 'Bold'
 Italic.displayName = 'Italic'
 P.displayName = 'P'
 Span.displayName = 'Span'
+Div.displayName = 'Div'
+Article.displayName = 'Article'
 
-export {Bold, Italic, P, Span, Paragraph, Div}
+export {Bold, Italic, P, Span, Paragraph, Div, Article}

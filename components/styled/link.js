@@ -4,8 +4,8 @@ import Link from 'next/link'
 
 const A = styled('a')(({customCss}) => ({...customCss}))
 
-const NextLink = ({children, url, passHref = false}) => (
-  <Link href={url} passHref={passHref}>
+const NextLink = ({children, url}) => (
+  <Link href={url} passHref={true} prefetch={true}>
     {children}
   </Link>
 )
