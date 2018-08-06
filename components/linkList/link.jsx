@@ -1,6 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
-import {A} from '../styled'
+import {A, Link} from '../styled'
 import {css} from 'react-emotion'
 
 const common = `
@@ -45,7 +44,7 @@ const customStyle = `
 `
 
 const LinkComponent = ({item: {name, url, target}}) => (
-  <Link href={url} passHref>
+  <Link url={url} passHref={true}>
     <A
       css={css`
         ${customStyle};
