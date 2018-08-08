@@ -6,13 +6,22 @@ const Bold = styled('strong')(({customCss}) => ({...customCss}))
 
 const Italic = styled('em')(({customCss}) => ({...customCss}))
 
-const P = styled('p')(({customCss}) => ({margin: '1.5rem 0', ...customCss}))
+const P = styled('p')(({customCss}) => ({
+  marginTop: '0rem',
+  marginBottom: '1.5rem',
+  ...customCss
+}))
 
 const Span = styled('span')(({customCss}) => ({...customCss}))
 
 const Div = styled('div')(({customCss}) => ({...customCss}))
 
 const Article = styled('article')(({customCss}) => ({...customCss}))
+
+const HR = styled('hr')({
+  border: '1px solid',
+  margin: '-1px 0'
+})
 
 const ParagraphRenderer = ({children, customCss}) => (
   <P customCss={customCss}>{children}</P>
@@ -35,5 +44,6 @@ P.displayName = 'P'
 Span.displayName = 'Span'
 Div.displayName = 'Div'
 Article.displayName = 'Article'
+HR.displayName = 'HR'
 
-export {Bold, Italic, P, Span, Paragraph, Div, Article}
+export {Bold, Italic, P, Span, Paragraph, Div, Article, HR}
