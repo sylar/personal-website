@@ -3,6 +3,7 @@ import React from 'react'
 import {withApollo} from '../lib/apollo'
 import {ApolloProvider} from 'react-apollo'
 import {injectGlobal, hydrate} from 'react-emotion'
+import {print} from '../lib/style'
 
 // Adds server generated styles to emotion cache.
 // '__NEXT_DATA__.ids' is set in '_document.js'
@@ -11,11 +12,13 @@ if (typeof window !== 'undefined') {
 }
 
 injectGlobal`
+  ${print}
   html, body {
     background: white;
     font-family: --apple-system, BlinkMacSystemFont, helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    margin: 0;
   }
 `
 
