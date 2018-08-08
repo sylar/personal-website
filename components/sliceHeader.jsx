@@ -1,7 +1,12 @@
 import React from 'react'
 import {Heading} from './styled'
 
-const SliceHeader = ({md}) => <Heading md={md} />
+const SliceHeader = ({headerText}) => (
+  <Heading
+    md={headerText}
+    customCss={{margin: '.75rem 0', '@media print': {marginTop: '1.5rem'}}}
+  />
+)
 
 SliceHeader.displayName = 'SliceHeader'
 

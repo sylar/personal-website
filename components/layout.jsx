@@ -1,7 +1,15 @@
 import * as React from 'react'
 import {Main} from './styled'
 
-const Layout = ({customCss, children}) => <Main customCss={customCss}>{children}</Main>
+const Layout = ({customCss, children}) => (
+  <Main
+    customCss={{
+      ...customCss
+    }}
+  >
+    {children}
+  </Main>
+)
 
 Layout.displayName = 'Layout'
 
