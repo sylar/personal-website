@@ -38,7 +38,7 @@ const CvPage = ({data: {resume}}) => {
             flexDirection: 'column'
           },
           '@media print': {
-            margin: 0
+            marginBottom: '1.5rem'
           }
         }}
       >
