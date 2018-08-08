@@ -98,7 +98,8 @@ const handler = data => {
           title: getKeyText(
             get(item, `${types.SIDE_PROJECT}.data.${types.NAME}`)
           ),
-          url: getLink(get(item, `${types.SIDE_PROJECT}.data.${types.URL}`)),
+          url: getLink(get(item, `${types.SIDE_PROJECT}.data.${types.URL}`))
+            .url,
           description: getRichText(
             get(item, `${types.SIDE_PROJECT}.data.${types.DESCRIPTION}`)
           )
