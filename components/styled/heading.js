@@ -5,33 +5,44 @@ import ReactMarkdown from 'react-markdown'
 import MarkdownElement from '../MarkdownElement'
 
 const commonStyle = {
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
-  fontWeight: 300
+  '@media print': {
+    margin: 0
+  }
 }
 
 const H1 = styled('h1')(({customCss}) => ({
+  fontSize: '4.25rem',
+  lineHeight: '4.5rem',
+  marginTop: '1.5rem',
+  marginBottom: '3rem',
   ...commonStyle,
-  fontSize: '3rem',
   ...customCss
 }))
 
 const H2 = styled('h2')(({customCss}) => ({
+  fontSize: '2.625rem',
+  lineHeight: '3rem',
+  marginTop: '1.5rem',
+  marginBottom: '1.5rem',
   ...commonStyle,
-  fontSize: '2rem',
   ...customCss
 }))
 
 const H3 = styled('h3')(({customCss}) => ({
+  fontSize: '1.625rem',
+  lineHeight: '3rem',
+  marginTop: '1.5rem',
+  marginBottom: '0rem',
   ...commonStyle,
-  fontSize: '1rem',
   ...customCss
 }))
 
-const H4 = styled('h3')(({customCss}) => ({
-  ...commonStyle,
+const H4 = styled('h4')(({customCss}) => ({
   fontSize: '1rem',
-  fontWeight: 400,
+  lineHeight: '1.5rem',
+  marginTop: '1.5rem',
+  marginBottom: '0rem',
+  ...commonStyle,
   ...customCss
 }))
 
@@ -56,24 +67,24 @@ const getHeadingRenderer = ({
   return ToBeRendered
 }
 
-const Heading = ({md, customCss, overridenLevel}) =>
-  console.log({md}) || (
-    <MarkdownElement
-      text={md}
-      renderers={{
-        heading: props =>
-          getHeadingRenderer({
-            props,
-            customCss,
-            DefaultRenderer: ReactMarkdown.renderers.heading,
-            overridenLevel
-          })
-      }}
-    />
-  )
+const Heading = ({md, customCss, overridenLevel}) => (
+  <MarkdownElement
+    text={md}
+    renderers={{
+      heading: props =>
+        getHeadingRenderer({
+          props,
+          customCss,
+          DefaultRenderer: ReactMarkdown.renderers.heading,
+          overridenLevel
+        })
+    }}
+  />
+)
 
 H1.displayName = 'H1'
 H2.displayName = 'H2'
 H3.displayName = 'H3'
+H4.displayName = 'H4'
 
-export {Heading, H1, H2, H3}
+export {Heading, H1, H2, H3, H4}
