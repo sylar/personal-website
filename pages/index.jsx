@@ -36,7 +36,7 @@ const Homepage = ({data}) => {
         }}
       />
       <HR />
-      {/* <LinkList links={urlsBlock} /> */}
+      <LinkList links={urlsBlock} />
     </Layout>
   )
 }
