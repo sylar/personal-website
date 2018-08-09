@@ -1,12 +1,13 @@
 import React, {Fragment} from 'react'
 import Header from '../../sliceHeader'
 import Content from './content'
+import {Section} from '../..'
 
 const Slice = ({description, headerText}) => (
-  <Fragment>
+  <Section>
     <Header headerText={headerText} />
     <Content description={description} />
-  </Fragment>
+  </Section>
 )
 
 export default Slice

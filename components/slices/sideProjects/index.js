@@ -2,9 +2,10 @@ import React, {Fragment} from 'react'
 import Header from '../../sliceHeader'
 import Content from './content'
 import {UL, LI} from '../..'
+import {Section} from '../..'
 
 const Slice = ({items, headerText}) => (
-  <Fragment>
+  <Section>
     <Header headerText={headerText} />
     <UL customCss={{margin: 0, paddingLeft: 0}}>
       {items.map((item, key) => (
@@ -12,7 +13,7 @@ const Slice = ({items, headerText}) => (
           key={key}
           customCss={{
             textAlign: 'justify',
-            margin: '.75rem 0',
+            marginBottom: '.75rem',
             '@media print': {margin: '0.375rem 0'},
             listStyle: 'none'
           }}
@@ -21,7 +22,7 @@ const Slice = ({items, headerText}) => (
         </LI>
       ))}
     </UL>
-  </Fragment>
+  </Section>
 )
 
 export default Slice
