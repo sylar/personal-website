@@ -1,5 +1,11 @@
 {
   "presets": [
+    ["@babel/preset-env", {
+      "targets": {
+        "chrome": 41,
+        "browsers": ["last 2 versions", "safari 7"]
+      }
+    }],
     "next/babel"
   ],
   "plugins": ["babel-plugin-transform-flow-strip-types", "@babel/plugin-proposal-export-default-from", "@babel/plugin-proposal-export-namespace-from", "emotion"]
