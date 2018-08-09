@@ -18,9 +18,9 @@ app.prepare().then(() => {
   const whitelistedEndpoints = ['/graphql']
   const cacheableEndpoints = ['/', '/cv']
 
-  if (dev) {
-    whitelistedEndpoints.push('/playground')
-  }
+  // if (dev) {
+  whitelistedEndpoints.push('/playground')
+  // }
 
   express.use((req, res, next) => {
     if (whitelistedEndpoints.includes(req.path)) {
@@ -38,7 +38,7 @@ app.prepare().then(() => {
     {
       port,
       endpoint: '/graphql',
-      playground: dev ? '/playground' : false,
+      playground: '/playground',
       cacheControl: true
     },
     ({port}) => console.log(`Listening on ${port}`)
