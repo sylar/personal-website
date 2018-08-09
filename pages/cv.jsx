@@ -11,7 +11,8 @@ import {
   Section,
   Div,
   ExperienceSlice,
-  SideProjectsSlice
+  SideProjectsSlice,
+  HobbiesSlice
 } from '../components'
 import {cvQuery} from '../lib/gql'
 
@@ -20,7 +21,7 @@ const CvPage = ({data: {resume}}) => {
     lastUpdate,
     location,
     email,
-    slices: {experience, sideProjects},
+    slices: {experience, sideProjects, hobbies},
     logo
   } = resume
 
@@ -113,6 +114,11 @@ const CvPage = ({data: {resume}}) => {
       <SideProjectsSlice
         headerText={sideProjects.title}
         items={sideProjects.content}
+      />
+
+      <HobbiesSlice
+        headerText={hobbies.title}
+        description={hobbies.description}
       />
     </Layout>
   )
