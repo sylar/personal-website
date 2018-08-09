@@ -23,15 +23,18 @@ const HR = styled('hr')({
   margin: '-1px 0'
 })
 
-const ParagraphRenderer = ({children, customCss}) => (
-  <P customCss={customCss}>{children}</P>
+const ParagraphRenderer = ({children, customCss, passThrough}) => (
+  <P customCss={customCss}>
+    {children} {passThrough}
+  </P>
 )
 
-const Paragraph = ({md, customCss}) => (
+const Paragraph = ({md, customCss, children: passThrough}) => (
   <MarkdownElement
     text={md}
     renderers={{
-      paragraph: ({children}) => ParagraphRenderer({children, customCss})
+      paragraph: ({children}) =>
+        ParagraphRenderer({children, customCss, passThrough})
     }}
   />
 )
