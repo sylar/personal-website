@@ -1,11 +1,15 @@
-// @flow
-
 import React from 'react'
 import {graphql} from 'react-apollo'
-import {Layout, LinkList, Logo, Paragraph, HR} from '../components'
+import {Layout, LinkList, Logo, Paragraph, HR, Link} from '../components'
 import {homepageQuery} from '../lib/gql'
 
 const Homepage = ({data}) => {
+  const {loading} = data
+
+  if (loading) {
+    return null
+  }
+
   const {urlsBlock, logo, description} = data.homepage
   return (
     <Layout
@@ -37,6 +41,6 @@ const Homepage = ({data}) => {
   )
 }
 
-export default graphql(homepageQuery)(Homepage)
-
 Homepage.displayName = 'Homepage'
+
+export default graphql(homepageQuery)(Homepage)

@@ -9,6 +9,7 @@ const Italic = styled('em')(({customCss}) => ({...customCss}))
 const P = styled('p')(({customCss}) => ({
   marginTop: '0rem',
   marginBottom: '1.5rem',
+  textAlign: 'justify',
   ...customCss
 }))
 
