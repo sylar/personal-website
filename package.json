@@ -4,6 +4,7 @@
   "private": true,
   "description": "My personal website.",
   "scripts": {
+    "heroku-postbuild": "npm run build",
     "dev": "node ./server",
     "build": "next build",
     "start": "NODE_ENV=production node ./server",
