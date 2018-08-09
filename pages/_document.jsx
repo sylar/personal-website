@@ -35,7 +35,7 @@ class MyDocument extends Document {
           <meta name="viewport" content="width=device-width, minimum-scale=1" />
           <meta name="description" content="Andrei Constantinescu's website." />
           <style dangerouslySetInnerHTML={{__html: this.props.css}} />
-          <link rel="stylesheet" href="//basehold.it/24" />
+          {/* <link rel="stylesheet" href="//basehold.it/24" /> */}
         </Head>
         <body>
           <Main />
