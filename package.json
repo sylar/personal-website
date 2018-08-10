@@ -18,6 +18,7 @@
   "license": "MIT",
   "dependencies": {
     "apollo-boost": "^0.2.0-alpha.14",
+    "babel-core": "7.0.0-bridge.0",
     "babel-plugin-emotion": "^9.2.6",
     "compression": "^1.7.3",
     "date-fns": "^2.0.0-alpha.16",
@@ -54,5 +55,8 @@
     "flow-bin": "^0.78.0",
     "husky": "^1.0.0-rc.13",
     "targets-webpack-plugin": "^1.0.3"
+  },
+  "peerDependencies": {
+    "babel-core": "6.x || ^7.0.0-0"
   }
 }

@@ -1,4 +1,8 @@
 {
-  "presets": ["next/babel"],
+  "presets": [["next/babel", {
+    "preset-env": {
+      "modules": false,
+      "targets": { "browsers": [ "chrome >= 41", "last 2 versions", "ie >= 11"] } }
+    }]],
   "plugins": ["babel-plugin-transform-flow-strip-types", "@babel/plugin-proposal-export-default-from", "@babel/plugin-proposal-export-namespace-from", "emotion"]
 }
