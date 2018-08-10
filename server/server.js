@@ -9,6 +9,7 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({dev})
 const {renderAndCache} = require('./caching')
 const handle = app.getRequestHandler()
+const http2 = require('http2')
 
 app.prepare().then(() => {
   const server = new GraphQLServer({
@@ -19,9 +20,9 @@ app.prepare().then(() => {
   const whitelistedEndpoints = ['/graphql']
   const cacheableEndpoints = ['/', '/cv']
 
-  // if (dev) {
-  whitelistedEndpoints.push('/playground')
-  // }
+  if (dev) {
+    whitelistedEndpoints.push('/playground')
+  }
 
   if (!dev) {
     express.use(compression())
@@ -43,8 +44,9 @@ app.prepare().then(() => {
     {
       port,
       endpoint: '/graphql',
-      playground: '/playground',
-      cacheControl: true
+      playground: dev ? '/playground' : false,
+      cacheControl: true,
+      https: !dev
     },
     ({port}) => console.log(`Listening on ${port}`)
   )
