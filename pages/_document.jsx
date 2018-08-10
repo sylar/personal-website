@@ -3,17 +3,8 @@ import React, {Fragment} from 'react'
 import Document, {Head, Main, NextScript} from 'next/document'
 import {extractCritical} from 'emotion-server'
 
-type ctx = {
-  renderPage: () => {
-    head: Object,
-    html: string,
-    chunks: Object,
-    errorHtml: string
-  }
-}
-
 class MyDocument extends Document {
-  static getInitialProps ({renderPage}: ctx) {
+  static getInitialProps ({renderPage}) {
     const page = renderPage()
     const styles = extractCritical(page.html)
     return {...page, ...styles}

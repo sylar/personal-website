@@ -36,17 +36,17 @@ module.exports = {
   //   //   }
   //   // }
   // },
-  // webpack: function (config, {dev}) {
-  //   if (!dev) {
-  //     const TargetsPlugin = require('targets-webpack-plugin')
-  //     config.plugins.push(
-  //       new TargetsPlugin({
-  //         browsers: ['last 2 versions', 'chrome >= 41']
-  //       })
-  //     )
-  //   }
-  //   return config
-  // },
+  webpack: function (config, {dev}) {
+    if (!dev) {
+      const TargetsPlugin = require('targets-webpack-plugin')
+      config.plugins.unshift(
+        new TargetsPlugin({
+          browsers: ['last 2 versions', 'chrome >= 41', 'ie >= 11']
+        })
+      )
+    }
+    return config
+  },
   serverRuntimeConfig: {
     PRISMIC_API_KEY:
       process.env.PRISMIC_API_KEY || (env ? env.PRISMIC_API_KEY : null),
