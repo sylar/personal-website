@@ -4,25 +4,24 @@ node_js:
 cache: yarn
 before_install:
 - openssl aes-256-cbc -K $encrypted_a56df8d86925_key -iv $encrypted_a56df8d86925_iv
-  -in .travis/deploy.key.enc -out deploy.key -d
+  -in ./.travis/keys/deploy.key.enc -out ./.travis/keys/deploy.key -d
 - yarn global add greenkeeper-lockfile@1
+- chmod +x ./.travis/hooks/deploy.sh
+- chmod +x ./.travis/hooks/after-deploy.sh
 before_script: greenkeeper-lockfile-update
 script:
 - yarn check --integrity
 - yarn test
 after_script: greenkeeper-lockfile-upload
-after_success:
-- eval "$(ssh-agent -s)" #start the ssh agent
-- chmod 600 .travis/deploy.key # this key should have push access
-- ssh-add .travis/deploy.key
-- ssh-keyscan $HOST_IP >> ~/.ssh/known_hosts
-- git remote add deploy $HOST_GIT_REMOTE
-- git config --global push.default simple
-- git push deploy master
+deploy:
+  provider: script
+  script: "./.travis/hooks/deploy.sh"
+  skip_cleanup: true
+  on:
+    branch: master
 after_deploy:
 - curl constantinescu.io
 - curl constantinescu.io/cv
-
 branches:
   only:
   - master
