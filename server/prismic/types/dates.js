@@ -1,5 +1,5 @@
-const {Date} = require('prismic-dom')
+const {Date: PrismicDate} = require('prismic-dom')
 
-const getDate = date => Date(date)
+const getDate = date => new Date(PrismicDate(date))
 
 module.exports = getDate
