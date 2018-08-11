@@ -10,7 +10,6 @@ const getPagePayload = async ({page, pageType, query, handler}) => {
     accessToken: PRISMIC_API_KEY
   })
 
-  console.log({api, PRISMIC_API, PRISMIC_API_KEY})
   // Prismic's fault :(
   // eslint-disable-next-line
   const {data, last_publication_date} = await api.getByUID(pageType, page, {

@@ -1,8 +1,8 @@
 import React from 'react'
 import {format, differenceInCalendarMonths} from 'date-fns'
-import {Section} from '../../..'
+import {Div} from '../../..'
 
-const Period = ({start, end, current, customCss}) => {
+const Period = ({start, end, current}) => {
   const isCurrent = current === 'Yes'
   const DATE_FORMAT = 'MMM YYYY'
   const startDate = format(new Date(start), DATE_FORMAT)
@@ -12,10 +12,10 @@ const Period = ({start, end, current, customCss}) => {
     : differenceInCalendarMonths(new Date(start), new Date(end))
 
   return (
-    <Section customCss={customCss}>
+    <Div>
       {startDate} - {endDate}
       {/* {!isCurrent && <Span>{difference} months</Span>} */}
-    </Section>
+    </Div>
   )
 }
 

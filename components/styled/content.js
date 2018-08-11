@@ -19,6 +19,8 @@ const Div = styled('div')(({customCss}) => ({...customCss}))
 
 const Article = styled('article')(({customCss}) => ({...customCss}))
 
+const Header = styled('header')(({customCss}) => ({...customCss}))
+
 const HR = styled('hr')({
   border: '1px solid',
   margin: '-1px 0'
@@ -49,5 +51,6 @@ Span.displayName = 'Span'
 Div.displayName = 'Div'
 Article.displayName = 'Article'
 HR.displayName = 'HR'
+Header.displayName = 'Header'
 
-export {Bold, Italic, P, Span, Paragraph, Div, Article, HR}
+export {Bold, Italic, P, Span, Paragraph, Div, Article, HR, Header}

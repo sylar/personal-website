@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Main} from './styled'
+import {Main, Article} from './styled'
 
 const Layout = ({customCss, children}) => (
   <Main
@@ -7,7 +7,7 @@ const Layout = ({customCss, children}) => (
       ...customCss
     }}
   >
-    {children}
+    <Article>{children}</Article>
   </Main>
 )
 

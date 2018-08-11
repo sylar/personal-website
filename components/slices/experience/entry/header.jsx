@@ -10,7 +10,7 @@ const EntryHeader = ({
   endDate,
   currentJob
 }) => (
-  <Section
+  <Div
     customCss={{
       display: 'flex',
       width: '100%',
@@ -27,22 +27,14 @@ const EntryHeader = ({
         md={title}
         overridenLevel={4}
         customCss={{
-          margin: 0
+          margin: 0,
+          fontWeight: 'normal'
         }}
       />
     </Div>
     <A href={company.url.value}>{company.name}</A>
-    <Period
-      start={startDate}
-      end={endDate}
-      current={currentJob}
-      customCss={{
-        display: 'flex',
-        justifyContent: 'flex-end',
-        '@media (max-width: 480px)': {justifyContent: 'flex-start'}
-      }}
-    />
-  </Section>
+    <Period start={startDate} end={endDate} current={currentJob} />
+  </Div>
 )
 
 EntryHeader.displayName = 'EntryHeader'
