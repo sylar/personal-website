@@ -4,6 +4,7 @@ const types = require('./types')
 const {GraphQLServer} = require('graphql-yoga')
 const compression = require('compression')
 const fs = require('fs')
+const {resolve} = require('path')
 
 const port = parseInt(process.env.PORT, 10) || 4000
 const dev = process.env.NODE_ENV !== 'production'
@@ -49,8 +50,8 @@ app.prepare().then(() => {
       https: dev
         ? false
         : {
-          key: fs.readFileSync(process.env.SSL_KEY_PATH),
-          cert: fs.readFileSync(process.env.SSL_CERT_PATH)
+          key: fs.readFileSync(resolve(process.env.SSL_KEY_PATH)),
+          cert: fs.readFileSync(resolve(process.env.SSL_CERT_PATH))
         }
     },
     ({port}) => console.log(`Listening on ${port}`)
