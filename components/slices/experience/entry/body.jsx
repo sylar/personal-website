@@ -1,8 +1,9 @@
-import React from 'react'
-import {TechStack, Section, UL, ListItem} from '../../..'
+import React, {Fragment} from 'react'
+import {UL, ListItem} from '../../..'
+import TechStack from './techStack'
 
 const EntryBody = ({techStack, tasks}) => (
-  <Section>
+  <Fragment>
     <TechStack techStack={techStack} />
     <UL customCss={{margin: 0, paddingLeft: 0}}>
       {tasks.map((task, key) => (
@@ -18,7 +19,7 @@ const EntryBody = ({techStack, tasks}) => (
         />
       ))}
     </UL>
-  </Section>
+  </Fragment>
 )
 
 EntryBody.displayName = 'EntryBody'

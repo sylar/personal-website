@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import Header from './header'
 import Body from './body'
-import {Article} from '../../..'
+import {Section} from '../../..'
 
 const Entry = ({
   type,
@@ -13,14 +13,7 @@ const Entry = ({
   tasks,
   techStack
 }) => (
-  <Article
-    customCss={{
-      marginTop: '1.5rem',
-      '@media print': {
-        pageBreakBefore: 'avoid'
-      }
-    }}
-  >
+  <Fragment>
     <Header
       type={type}
       title={title}
@@ -30,7 +23,7 @@ const Entry = ({
       currentJob={currentJob}
     />
     <Body tasks={tasks} techStack={techStack} />
-  </Article>
+  </Fragment>
 )
 
 Entry.displayName = 'EntryContent'

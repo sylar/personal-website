@@ -1,7 +1,18 @@
 import React from 'react'
-import {Section, Logo, H2, UL, LI, A, Link, Span, Div} from '../../components'
+import {
+  Section,
+  Logo,
+  H2,
+  UL,
+  LI,
+  A,
+  Link,
+  Span,
+  Div,
+  Header
+} from '../../components'
 
-const Header = ({location, email, logo}) => (
+const PageHeader = ({location, email, logo}) => (
   <Section
     customCss={{
       display: 'flex',
@@ -76,6 +87,6 @@ const Header = ({location, email, logo}) => (
   </Section>
 )
 
-Header.displayName = 'CVPageHeader'
+PageHeader.displayName = 'CVPageHeader'
 
-export default Header
+export default PageHeader
