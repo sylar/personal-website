@@ -4,7 +4,7 @@ node_js:
 cache: yarn
 before_install:
 - openssl aes-256-cbc -K $encrypted_a56df8d86925_key -iv $encrypted_a56df8d86925_iv
-  -in deploy.key.enc -out deploy.key -d
+  -in .travis/deploy.key.enc -out deploy.key -d
 - yarn global add greenkeeper-lockfile@1
 before_script: greenkeeper-lockfile-update
 script:
