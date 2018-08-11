@@ -45,8 +45,7 @@ app.prepare().then(() => {
       port,
       endpoint: '/graphql',
       playground: dev ? '/playground' : false,
-      cacheControl: true,
-      https: !dev
+      cacheControl: true
     },
     ({port}) => console.log(`Listening on ${port}`)
   )
