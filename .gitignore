@@ -4,3 +4,7 @@ coverage/
 .DS_STORE
 .out/
 env.json
+
+# Credentials
+.travis/*.key
+.travis/*.key.pub
