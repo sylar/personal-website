@@ -49,13 +49,7 @@ app.prepare().then(() => {
       port,
       endpoint: '/graphql',
       playground: dev ? '/playground' : false,
-      cacheControl: true,
-      https: isProd
-        ? {
-          key: SSL_KEY.replace(/\\n/g, '\n'),
-          cert: SSL_CRT.replace(/\\n/g, '\n')
-        }
-        : false
+      cacheControl: true
     },
     ({port}) => console.log(`Listening on ${port}`)
   )

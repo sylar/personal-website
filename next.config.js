@@ -21,9 +21,7 @@ module.exports = {
   serverRuntimeConfig: {
     PRISMIC_API_KEY:
       process.env.PRISMIC_API_KEY || (env ? env.PRISMIC_API_KEY : null),
-    PRISMIC_API: process.env.PRISMIC_API || (env ? env.PRISMIC_API : null),
-    SSL_KEY: process.env.SSL_KEY || null,
-    SSL_CRT: process.env.SSL_CRT || null
+    PRISMIC_API: process.env.PRISMIC_API || (env ? env.PRISMIC_API : null)
   },
   publicRuntimeConfig: {
     GRAPHQL_ENDPOINT:
