@@ -6,13 +6,12 @@ const compression = require('compression')
 const getConfig = require('next/config').default
 
 const port = parseInt(process.env.PORT, 10) || 4000
-const dev = process.env.NODE_ENV !== 'production'
 const isProd = process.env.NODE_ENV === 'production'
-const app = next({dev})
+const app = next({dev: !isProd})
 const {renderAndCache} = require('./caching')
 const handle = app.getRequestHandler()
 const {
-  serverRuntimeConfig: {SSL_KEY, SSL_CRT}
+  serverRuntimeConfig: {DEPLOY_URL}
 } = getConfig()
 
 app.prepare().then(() => {
@@ -24,11 +23,11 @@ app.prepare().then(() => {
   const whitelistedEndpoints = ['/graphql']
   const cacheableEndpoints = ['/', '/cv']
 
-  if (dev) {
+  if (!isProd) {
     whitelistedEndpoints.push('/playground')
   }
 
-  if (!dev) {
+  if (isProd) {
     express.use(compression())
   }
 
@@ -37,7 +36,7 @@ app.prepare().then(() => {
       return next()
     }
 
-    if (cacheableEndpoints.includes(req.path) && !dev) {
+    if (cacheableEndpoints.includes(req.path) && isProd) {
       return renderAndCache({req, res, app})
     }
 
@@ -48,8 +47,9 @@ app.prepare().then(() => {
     {
       port,
       endpoint: '/graphql',
-      playground: dev ? '/playground' : false,
-      cacheControl: true
+      playground: isProd ? false : '/playground',
+      cacheControl: true,
+      cors: isProd ? DEPLOY_URL : null
     },
     ({port}) => console.log(`Listening on ${port}`)
   )
