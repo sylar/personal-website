@@ -6,5 +6,6 @@ coverage/
 env.json
 
 # Credentials
-.travis/*.key
-.travis/*.key.pub
+.travis/**/*.key
+.travis/**/*.key.pub
+.travis/**/*.crt

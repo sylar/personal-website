@@ -50,8 +50,8 @@ app.prepare().then(() => {
       https: dev
         ? false
         : {
-          key: fs.readFileSync(resolve(process.env.SSL_KEY_PATH)),
-          cert: fs.readFileSync(resolve(process.env.SSL_CERT_PATH))
+          key: fs.readFileSync(resolve(process.env.SSL_PATH_KEY)),
+          cert: fs.readFileSync(resolve(process.env.SSL_PATH_CRT))
         }
     },
     ({port}) => console.log(`Listening on ${port}`)
