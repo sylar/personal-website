@@ -3,6 +3,7 @@ const resolvers = require('./resolvers')
 const types = require('./types')
 const {GraphQLServer} = require('graphql-yoga')
 const compression = require('compression')
+const getConfig = require('next/config').default
 
 const port = parseInt(process.env.PORT, 10) || 4000
 const dev = process.env.NODE_ENV !== 'production'
@@ -10,6 +11,9 @@ const isProd = process.env.NODE_ENV === 'production'
 const app = next({dev})
 const {renderAndCache} = require('./caching')
 const handle = app.getRequestHandler()
+const {
+  serverRuntimeConfig: {SSL_KEY, SSL_CRT}
+} = getConfig()
 
 app.prepare().then(() => {
   const server = new GraphQLServer({
@@ -48,8 +52,8 @@ app.prepare().then(() => {
       cacheControl: true,
       https: isProd
         ? {
-          key: process.env.SSL_KEY,
-          cert: process.env.SSL_CRT
+          key: SSL_KEY.replace(/\\n/g, '\n'),
+          cert: SSL_CRT.replace(/\\n/g, '\n')
         }
         : false
     },
