@@ -3,11 +3,10 @@ const resolvers = require('./resolvers')
 const types = require('./types')
 const {GraphQLServer} = require('graphql-yoga')
 const compression = require('compression')
-const fs = require('fs')
-const {resolve} = require('path')
 
 const port = parseInt(process.env.PORT, 10) || 4000
 const dev = process.env.NODE_ENV !== 'production'
+const isProd = process.env.NODE_ENV === 'production'
 const app = next({dev})
 const {renderAndCache} = require('./caching')
 const handle = app.getRequestHandler()
@@ -47,12 +46,12 @@ app.prepare().then(() => {
       endpoint: '/graphql',
       playground: dev ? '/playground' : false,
       cacheControl: true,
-      https: dev
-        ? false
-        : {
-          key: fs.readFileSync(resolve(process.env.SSL_PATH_KEY)),
-          cert: fs.readFileSync(resolve(process.env.SSL_PATH_CRT))
+      https: isProd
+        ? {
+          key: process.env.SSL_KEY,
+          cert: process.env.SSL_CERT
         }
+        : false
     },
     ({port}) => console.log(`Listening on ${port}`)
   )

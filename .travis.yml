@@ -4,10 +4,6 @@ node_js:
 cache: yarn
 before_install:
 - openssl aes-256-cbc -K $encrypted_c6b17e88fa55_key -iv $encrypted_c6b17e88fa55_iv
-  -in ./.travis/keys/certificate.key.enc -out ./.travis/keys/certificate.key -d
-- openssl aes-256-cbc -K $encrypted_c6b17e88fa55_key -iv $encrypted_c6b17e88fa55_iv
-  -in ./.travis/keys/certificate.crt.enc -out ./.travis/keys/certificate.crt -d
-- openssl aes-256-cbc -K $encrypted_a56df8d86925_key -iv $encrypted_a56df8d86925_iv
   -in ./.travis/keys/deploy.key.enc -out ./.travis/keys/deploy.key -d
 - yarn global add greenkeeper-lockfile@1
 - chmod +x ./.travis/hooks/deploy.sh

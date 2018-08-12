@@ -1,4 +1,5 @@
 const isDev = process.env.NODE_ENV !== 'production'
+const isProd = process.env.NODE_ENV === 'production'
 let env = null
 
 if (isDev) {
@@ -21,8 +22,8 @@ module.exports = {
     PRISMIC_API_KEY:
       process.env.PRISMIC_API_KEY || (env ? env.PRISMIC_API_KEY : null),
     PRISMIC_API: process.env.PRISMIC_API || (env ? env.PRISMIC_API : null),
-    SSL_PATH_CRT: isDev ? null : process.env.SSL_PATH_CRT,
-    SSL_PATH_KEY: isDev ? null : process.env.SSL_PATH_KEY
+    SSL_KEY: isProd ? process.env.SSL_KEY : null,
+    SSL_CERT: isProd ? process.env.SSL_CERT : null
   },
   publicRuntimeConfig: {
     GRAPHQL_ENDPOINT:

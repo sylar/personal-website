@@ -6,7 +6,7 @@
   "scripts": {
     "heroku-postbuild": "npm run build",
     "dev": "node ./server",
-    "build": "next build",
+    "build": "npm run start",
     "start": "NODE_ENV=production node ./server",
     "flow": "npx flow",
     "test": "echo 1",
