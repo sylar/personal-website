@@ -8,8 +8,9 @@ before_install:
 - yarn global add greenkeeper-lockfile@1
 - chmod +x ./.travis/hooks/deploy.sh
 before_script: greenkeeper-lockfile-update
+install:
+  - git fetch --unshallow --tags
 script:
-- yarn check --integrity
 - yarn test
 after_script: greenkeeper-lockfile-upload
 deploy:

@@ -3,6 +3,7 @@ const resolvers = require('./resolvers')
 const types = require('./types')
 const {GraphQLServer} = require('graphql-yoga')
 const compression = require('compression')
+const fs = require('fs')
 
 const port = parseInt(process.env.PORT, 10) || 4000
 const dev = process.env.NODE_ENV !== 'production'
@@ -48,8 +49,8 @@ app.prepare().then(() => {
       cacheControl: true,
       https: isProd
         ? {
-          key: process.env.SSL_KEY,
-          cert: process.env.SSL_CERT
+          key: fs.readFileSync('../server.key'),
+          cert: fs.readFileSync('../server.crt')
         }
         : false
     },
