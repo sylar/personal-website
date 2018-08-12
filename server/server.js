@@ -3,8 +3,6 @@ const resolvers = require('./resolvers')
 const types = require('./types')
 const {GraphQLServer} = require('graphql-yoga')
 const compression = require('compression')
-const fs = require('fs')
-const {join: joinPath} = require('path')
 
 const port = parseInt(process.env.PORT, 10) || 4000
 const dev = process.env.NODE_ENV !== 'production'
