@@ -16,7 +16,7 @@ const getPagePayload = async ({page, pageType, query, handler}) => {
     graphQuery: query
   })
   return {
-    lastUpdate: last_publication_date,
+    lastUpdate: new Date(last_publication_date),
     ...handler(data)
   }
 }
