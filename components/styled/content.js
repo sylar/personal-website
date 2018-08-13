@@ -21,10 +21,11 @@ const Article = styled('article')(({customCss}) => ({...customCss}))
 
 const Header = styled('header')(({customCss}) => ({...customCss}))
 
-const HR = styled('hr')({
+const HR = styled('hr')(({customCss}) => ({
   border: '1px solid',
-  margin: '-1px 0'
-})
+  margin: '-1px 0',
+  ...customCss
+}))
 
 const ParagraphRenderer = ({children, customCss, passThrough}) => (
   <P customCss={customCss}>

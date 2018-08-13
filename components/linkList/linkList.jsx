@@ -6,7 +6,7 @@ const LinkList = ({links}) => (
   <UL
     customCss={{
       padding: 0,
-      marginTop: '3rem',
+      marginTop: '1.5rem',
       marginBottom: 0,
       display: 'flex',
       justifyContent: 'space-between'

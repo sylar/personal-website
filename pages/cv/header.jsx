@@ -10,7 +10,8 @@ const PageHeader = ({location, email, logo}) => (
       justifyContent: 'space-between',
       marginBottom: '.75rem',
       '@media (max-width: 480px)': {
-        flexDirection: 'column'
+        flexDirection: 'column',
+        marginTop: '1.5rem'
       },
       '@media print': {
         marginBottom: '1.5rem'

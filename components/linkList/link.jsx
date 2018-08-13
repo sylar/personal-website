@@ -25,8 +25,8 @@ const effect = `
     top: 100%;
     left: 0;
     width: 100%;
-    height: 4px;
-    background: #D2D7D3;
+    height: 2px;
+    background: rgba(0,0,0,0.15);
     content: '';
     opacity: 0;
     transition: opacity 0.3s, transform 0.3s;

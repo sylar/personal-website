@@ -32,7 +32,10 @@ const CvPage = ({data}) => {
         display: 'flex',
         flexDirection: 'column',
         padding: '3rem',
-        margin: '0 auto'
+        margin: '0 auto',
+        '@media (max-width: 480px)': {
+          padding: 0
+        }
       }}
     >
       <Header location={location} email={email} logo={logo} />

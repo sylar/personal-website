@@ -1,6 +1,6 @@
 import React from 'react'
 import {graphql} from 'react-apollo'
-import {Layout, LinkList, Logo, Paragraph, HR, Link} from '../components'
+import {Layout, LinkList, Logo, Paragraph, HR} from '../components'
 import {homepageQuery} from '../lib/gql'
 
 const Homepage = ({data}) => {
@@ -16,25 +16,28 @@ const Homepage = ({data}) => {
       customCss={{
         display: 'flex',
         flexDirection: 'column',
-        boxShadow: '0px 0px 2px 0px rgba(0,0,0,0.15)',
+        boxShadow: '0px 0px 1px 0px rgba(0,0,0,0.15)',
         padding: '3rem',
-        paddingBottom: '1.5rem',
         borderRadius: '10px',
-        backgroundColor: '#f5f5f5'
+        '@media (max-width: 480px)': {
+          boxShadow: 'none',
+          borderRadius: 0,
+          margin: '1.5rem',
+          padding: 0
+        }
       }}
     >
       <Logo
         src={logo}
         customCss={{
           width: '6rem',
-          margin: '0 auto',
-          marginBottom: '1.5rem',
+          margin: '1.5rem auto',
+          marginTop: 0,
           height: '6rem'
         }}
       />
-      <HR />
       <Paragraph
-        md={description + description + description}
+        md={description}
         customCss={{
           fontWeight: 300,
           letterSpacing: '1px',
@@ -43,7 +46,7 @@ const Homepage = ({data}) => {
           margin: '2.4em 0'
         }}
       />
-      <HR />
+      <HR customCss={{borderColor: 'rgba(0,0,0,0.15)'}} />
       <LinkList links={urlsBlock} />
     </Layout>
   )
