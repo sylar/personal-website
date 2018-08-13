@@ -11,6 +11,12 @@ const Homepage = ({data}) => {
   }
 
   const {urlsBlock, logo, description} = data.homepage
+
+  const urls = urlsBlock.concat({
+    name: 'Resume',
+    url: '/cv'
+  })
+
   return (
     <Layout
       customCss={{
@@ -47,7 +53,7 @@ const Homepage = ({data}) => {
         }}
       />
       <HR customCss={{borderColor: 'rgba(0,0,0,0.15)'}} />
-      <LinkList links={urlsBlock} />
+      <LinkList links={urls} />
     </Layout>
   )
 }

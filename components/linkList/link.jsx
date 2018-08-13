@@ -44,7 +44,7 @@ const customStyle = `
 `
 
 const LinkComponent = ({item: {name, url, target}}) => (
-  <Link url={url} passHref={true}>
+  <Link url={url} prefetch={true}>
     <A
       css={css`
         ${customStyle};
