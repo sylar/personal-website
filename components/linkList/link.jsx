@@ -43,8 +43,8 @@ const customStyle = `
   ${effect}
 `
 
-const LinkComponent = ({item: {name, url, target}}) => (
-  <Link url={url} prefetch={true}>
+const LinkComponent = ({item: {name, url, target, prefetch = false}}) => (
+  <Link url={url} prefetch={prefetch}>
     <A
       css={css`
         ${customStyle};

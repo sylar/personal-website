@@ -9,7 +9,8 @@ const LinkList = ({links}) => (
       marginTop: '1.5rem',
       marginBottom: 0,
       display: 'flex',
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
+      flexWrap: 'wrap'
     }}
   >
     {links.map((item, key) => (

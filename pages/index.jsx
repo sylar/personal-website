@@ -14,7 +14,8 @@ const Homepage = ({data}) => {
 
   const urls = urlsBlock.concat({
     name: 'Resume',
-    url: '/cv'
+    url: '/cv',
+    prefetch: true
   })
 
   return (
