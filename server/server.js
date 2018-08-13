@@ -1,10 +1,12 @@
 const next = require('next')
 const resolvers = require('./resolvers')
 const types = require('./types')
-const {GraphQLServer} = require('graphql-yoga')
 const compression = require('compression')
 const getConfig = require('next/config').default
 const bodyParser = require('body-parser')
+const express = require('express')
+const {ApolloServer} = require('apollo-server-express')
+const {MemcachedCache} = require('apollo-server-memcached')
 
 const port = parseInt(process.env.PORT, 10) || 4000
 const isProd = process.env.NODE_ENV === 'production'
@@ -16,26 +18,37 @@ const {
 } = getConfig()
 
 app.prepare().then(() => {
-  const server = new GraphQLServer({
-    typeDefs: types,
-    resolvers
+  const server = express()
+  const apollo = new ApolloServer({typeDefs: types, resolvers})
+
+  apollo.applyMiddleware({
+    app: server,
+    cacheControl: true,
+    cors: isProd ? DEPLOY_URL : null,
+    persistedQueries: {
+      cache: new MemcachedCache(
+        ['memcached-server-1', 'memcached-server-2', 'memcached-server-3'],
+        {retries: 10, retry: 10000} // Options
+      )
+    }
   })
-  const {express} = server
+
+  // const {express} = server
   const whitelistedEndpoints = ['/graphql', '/cache-clear']
   const cacheableEndpoints = ['/', '/cv/', '/cv']
 
-  express.use(bodyParser.json())
-  express.use(bodyParser.urlencoded({extended: true}))
+  server.use(bodyParser.json())
+  server.use(bodyParser.urlencoded({extended: true}))
 
   if (!isProd) {
     whitelistedEndpoints.push('/playground')
   }
 
   if (isProd) {
-    express.use(compression())
+    server.use(compression())
   }
 
-  express.use((req, res, next) => {
+  server.use((req, res, next) => {
     if (whitelistedEndpoints.includes(req.path)) {
       return next()
     }
@@ -48,7 +61,7 @@ app.prepare().then(() => {
   })
 
   if (isProd) {
-    express.post('/cache-clear', ({body}, res) => {
+    server.post('/cache-clear', ({body}, res) => {
       const {secret} = body
       if (secret === CACHE_CLEAR_SECRET) {
         clearCache()
@@ -59,14 +72,15 @@ app.prepare().then(() => {
     })
   }
 
-  server.start(
-    {
-      port,
-      endpoint: '/graphql',
-      playground: isProd ? false : '/playground',
-      cacheControl: true,
-      cors: isProd ? DEPLOY_URL : null
-    },
-    ({port}) => console.log(`Listening on ${port}`)
-  )
+  server.listen({port}, () => console.log(`Listening on ${port}`))
+  // server.start(
+  //   {
+  //     port,
+  //     endpoint: '/graphql',
+  //     playground: isProd ? false : '/playground',
+  //     cacheControl: true,
+  //     cors: isProd ? DEPLOY_URL : null
+  //   },
+  //   ({port}) => console.log(`Listening on ${port}`)
+  // )
 })

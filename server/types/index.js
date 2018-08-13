@@ -1,4 +1,6 @@
-const query = `
+const {gql} = require('apollo-server-express')
+
+const query = gql`
   type Stack {
     name: String
     url: String
@@ -40,7 +42,6 @@ const query = `
   type SideProjectsSlice {
     title: String
     content: [SideProjectsSliceItem]
-
   }
 
   type HobbiesSlice {
