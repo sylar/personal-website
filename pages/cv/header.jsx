@@ -1,16 +1,5 @@
 import React from 'react'
-import {
-  Section,
-  Logo,
-  H2,
-  UL,
-  LI,
-  A,
-  Link,
-  Span,
-  Div,
-  Header
-} from '../../components'
+import {Section, Logo, H2, UL, LI, A, Link, Span, Div} from '../../components'
 
 const PageHeader = ({location, email, logo}) => (
   <Section
@@ -30,7 +19,12 @@ const PageHeader = ({location, email, logo}) => (
   >
     <Logo
       src={logo}
-      customCss={{marginBottom: 0, '@media print': {width: '4.5rem'}}}
+      customCss={{
+        marginBottom: 0,
+        width: '6rem',
+        height: '6rem',
+        '@media print': {width: '4.5rem'}
+      }}
     />
     <Div
       customCss={{

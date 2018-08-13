@@ -23,7 +23,15 @@ const Homepage = ({data}) => {
         backgroundColor: '#f5f5f5'
       }}
     >
-      <Logo src={logo} />
+      <Logo
+        src={logo}
+        customCss={{
+          width: '6rem',
+          margin: '0 auto',
+          marginBottom: '1.5rem',
+          height: '6rem'
+        }}
+      />
       <HR />
       <Paragraph
         md={description + description + description}

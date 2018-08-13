@@ -1,20 +1,21 @@
 import React from 'react'
 import {Section, Image} from './styled'
+import {css} from 'react-emotion'
 
-const Logo = ({src, customCss}) => (
-  <Section>
-    <Image
-      src={src}
-      customCss={{
-        width: '6rem',
-        alignSelf: 'center',
-        marginBottom: '3rem',
-        ...customCss
-      }}
-    />
+const Logo = ({src, customCss, imgCss}) => (
+  <Section
+    customCss={{
+      textAlign: 'center',
+      ...customCss
+    }}
+  >
+    <Image src={src} customCss={imgCss} />
   </Section>
 )
 
 Logo.displayName = 'Logo'
+Logo.defaultProps = {
+  imgCss: {}
+}
 
 export default Logo
