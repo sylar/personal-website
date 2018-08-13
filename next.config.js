@@ -24,7 +24,14 @@ module.exports = {
     PRISMIC_API: process.env.PRISMIC_API || (env ? env.PRISMIC_API : null),
     DEPLOY_URL: process.env.DEPLOY_URL || null,
     CACHE_CLEAR_SECRET:
-      process.env.CACHE_CLEAR_SECRET || (env ? env.CACHE_CLEAR_SECRET : null)
+      process.env.CACHE_CLEAR_SECRET || (env ? env.CACHE_CLEAR_SECRET : null),
+    CLOUDFLARE_EMAIL:
+      process.env.CLOUDFLARE_EMAIL || (env ? env.CLOUDFLARE_EMAIL : null),
+    CLOUDFLARE_ZONE_ID:
+      process.env.CLOUDFLARE_ZONE_ID || (env ? env.CLOUDFLARE_ZONE_ID : null),
+    CLOUDFLARE_GLOBAL_KEY:
+      process.env.CLOUDFLARE_GLOBAL_KEY ||
+      (env ? env.CLOUDFLARE_GLOBAL_KEY : null)
   },
   publicRuntimeConfig: {
     GRAPHQL_ENDPOINT:

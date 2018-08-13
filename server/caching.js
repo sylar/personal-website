@@ -1,4 +1,13 @@
 const LRUCache = require('lru-cache')
+const fetch = require('isomorphic-unfetch')
+const getConfig = require('next/config').default
+const {
+  serverRuntimeConfig: {
+    CLOUDFLARE_EMAIL,
+    CLOUDFLARE_ZONE_ID,
+    CLOUDFLARE_GLOBAL_KEY
+  }
+} = getConfig()
 
 const ssrCache = new LRUCache({
   max: 100,
@@ -9,8 +18,32 @@ function getCacheKey (req) {
   return `${req.url}`
 }
 
+async function clearCloudflare () {
+  // curl -X POST https://api.cloudflare.com/client/v4/zones/''$CLOUDFLARE_ZONE_ID''/purge_cache -H 'X-Auth-Email: '$CLOUDFLARE_EMAIL'' -H 'X-Auth-Key: '$CLOUDFLARE_GLOBAL_KEY'' -H 'Content-Type: application/json' --data '{\"purge_everything\":true}
+  const response = await fetch(
+    `https://api.cloudflare.com/client/v4/zones/${CLOUDFLARE_ZONE_ID}/purge_cache`,
+    {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        'X-Auth-Email': `${CLOUDFLARE_EMAIL}`,
+        'X-Auth-Key': `${CLOUDFLARE_GLOBAL_KEY}`
+      },
+      body: JSON.stringify({purge_everything: true})
+    }
+  )
+
+  console.log({cloudflarePurged: response})
+}
+
 function clearCache () {
+  clearCloudflare()
   ssrCache.reset()
+
+  console.log({
+    ssrPurged: true
+  })
 }
 
 async function renderAndCache ({req, res, app}) {

@@ -12,7 +12,7 @@ const app = next({dev: !isProd})
 const {renderAndCache, clearCache} = require('./caching')
 const handle = app.getRequestHandler()
 const {
-  serverRuntimeConfig: {DEPLOY_URL}
+  serverRuntimeConfig: {DEPLOY_URL, CACHE_CLEAR_SECRET}
 } = getConfig()
 
 app.prepare().then(() => {
@@ -48,9 +48,14 @@ app.prepare().then(() => {
   })
 
   if (isProd) {
-    express.post('/cache-clear', (req, res) => {
-      console.log(req.body)
-      return res.send(200)
+    express.post('/cache-clear', ({body}, res) => {
+      const {secret} = body
+      if (secret === CACHE_CLEAR_SECRET) {
+        clearCache()
+        return res.sendStatus(200)
+      }
+
+      return res.sendStatus(400)
     })
   }
 
