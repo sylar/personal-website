@@ -4,11 +4,12 @@ const types = require('./types')
 const {GraphQLServer} = require('graphql-yoga')
 const compression = require('compression')
 const getConfig = require('next/config').default
+const bodyParser = require('body-parser')
 
 const port = parseInt(process.env.PORT, 10) || 4000
 const isProd = process.env.NODE_ENV === 'production'
 const app = next({dev: !isProd})
-const {renderAndCache} = require('./caching')
+const {renderAndCache, clearCache} = require('./caching')
 const handle = app.getRequestHandler()
 const {
   serverRuntimeConfig: {DEPLOY_URL}
@@ -20,8 +21,11 @@ app.prepare().then(() => {
     resolvers
   })
   const {express} = server
-  const whitelistedEndpoints = ['/graphql']
+  const whitelistedEndpoints = ['/graphql', '/cache-clear']
   const cacheableEndpoints = ['/', '/cv']
+
+  express.use(bodyParser.json())
+  express.use(bodyParser.urlencoded({extended: true}))
 
   if (!isProd) {
     whitelistedEndpoints.push('/playground')
@@ -42,6 +46,13 @@ app.prepare().then(() => {
 
     return handle(req, res)
   })
+
+  if (isProd) {
+    express.post('/cache-clear', (req, res) => {
+      console.log(req.body)
+      return res.send(200)
+    })
+  }
 
   server.start(
     {

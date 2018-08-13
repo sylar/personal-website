@@ -9,6 +9,10 @@ function getCacheKey (req) {
   return `${req.url}`
 }
 
+function clearCache () {
+  ssrCache.reset()
+}
+
 async function renderAndCache ({req, res, app}) {
   const key = getCacheKey(req)
   const pagePath = req.originalUrl
@@ -41,5 +45,6 @@ async function renderAndCache ({req, res, app}) {
 }
 
 module.exports = {
-  renderAndCache
+  renderAndCache,
+  clearCache
 }
