@@ -22,7 +22,7 @@ app.prepare().then(() => {
   })
   const {express} = server
   const whitelistedEndpoints = ['/graphql', '/cache-clear']
-  const cacheableEndpoints = ['/', '/cv']
+  const cacheableEndpoints = ['/', '/cv/', '/cv']
 
   express.use(bodyParser.json())
   express.use(bodyParser.urlencoded({extended: true}))
