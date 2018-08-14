@@ -13,7 +13,9 @@ const LastUpdate = ({timestamp}) => {
         margin: '1.5rem 0'
       }}
     >
-      <P customCss={{margin: 0}}>Last update: {date}</P>
+      <P customCss={{margin: 0, '@media print': {marginTop: '.75rem'}}}>
+        Last update: {date}
+      </P>
     </Section>
   )
 }

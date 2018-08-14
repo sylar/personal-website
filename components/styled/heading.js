@@ -25,7 +25,13 @@ const H2 = styled('h2')(({customCss}) => ({
   marginTop: '1.5rem',
   marginBottom: '1.5rem',
   ...commonStyle,
-  ...customCss
+  ...customCss,
+  '@media print': {
+    fontSize: '2rem',
+    lineHeight: 1.5,
+    ...commonStyle['@media print'],
+    ...customCss['@media print']
+  }
 }))
 
 const H3 = styled('h3')(({customCss}) => ({
@@ -34,7 +40,14 @@ const H3 = styled('h3')(({customCss}) => ({
   marginTop: '1.5rem',
   marginBottom: '0rem',
   ...commonStyle,
-  ...customCss
+  ...customCss,
+  '@media print': {
+    fontSize: '1.3rem',
+    lineHeight: 1.5,
+    margin: 0,
+    ...commonStyle['@media print'],
+    ...customCss['@media print']
+  }
 }))
 
 const H4 = styled('h4')(({customCss}) => ({
@@ -43,7 +56,14 @@ const H4 = styled('h4')(({customCss}) => ({
   marginTop: '1.5rem',
   marginBottom: '0rem',
   ...commonStyle,
-  ...customCss
+  ...customCss,
+  '@media print': {
+    fontSize: '1rem',
+    lineHeight: 1.5,
+    margin: 0,
+    ...commonStyle['@media print'],
+    ...customCss['@media print']
+  }
 }))
 
 const components = {

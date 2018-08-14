@@ -17,7 +17,8 @@ const Entry = ({
     customCss={{
       padding: '.75rem 0',
       '@media print': {
-        padding: '1.5rem 0'
+        paddingTop: '.75rem',
+        paddingBottom: 0
       }
     }}
   >

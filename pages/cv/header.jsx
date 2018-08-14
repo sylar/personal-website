@@ -14,7 +14,7 @@ const PageHeader = ({location, email, logo}) => (
         marginTop: '1.5rem'
       },
       '@media print': {
-        marginBottom: '1.5rem'
+        margin: 0
       }
     }}
   >
@@ -24,7 +24,7 @@ const PageHeader = ({location, email, logo}) => (
         marginBottom: 0,
         width: '6rem',
         height: '6rem',
-        '@media print': {width: '4.5rem'}
+        '@media print': {height: '4.5rem'}
       }}
     />
     <Div

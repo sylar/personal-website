@@ -5,7 +5,11 @@ const TechStackItem = ({url, name}) => (
   <LI
     customCss={{
       listStyle: 'none',
-      marginRight: '.375rem'
+      marginRight: '.375rem',
+      '@media print': {
+        marginRight: '.375rem',
+        listStyle: 'none'
+      }
     }}
   >
     <A href={url}>{name}</A>
@@ -23,8 +27,7 @@ const TechStack = ({techStack}) => (
         display: 'flex',
         flexWrap: 'wrap',
         '@media print': {
-          margin: 0,
-          marginBottom: '.75rem'
+          fontSize: '.5rem'
         }
       }}
     >

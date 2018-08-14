@@ -4,7 +4,7 @@ import {Heading} from './styled'
 const SliceHeader = ({headerText}) => (
   <Heading
     md={headerText}
-    customCss={{marginTop: '1.5rem', '@media print': {marginTop: '1.5rem'}}}
+    customCss={{marginTop: '1.5rem'}}
   />
 )
 

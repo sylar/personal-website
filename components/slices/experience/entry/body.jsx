@@ -5,7 +5,15 @@ import TechStack from './techStack'
 const EntryBody = ({techStack, tasks}) => (
   <Fragment>
     <TechStack techStack={techStack} />
-    <UL customCss={{margin: 0, paddingLeft: 0}}>
+    <UL
+      customCss={{
+        margin: 0,
+        paddingLeft: 0,
+        '@media print': {
+          paddingLeft: '1.15rem'
+        }
+      }}
+    >
       {tasks.map((task, key) => (
         <ListItem
           key={key}
@@ -13,7 +21,6 @@ const EntryBody = ({techStack, tasks}) => (
           customCss={{
             textAlign: 'justify',
             margin: '.75rem 0',
-            '@media print': {margin: '0.375rem 0'},
             listStyle: 'none'
           }}
         />
