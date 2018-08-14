@@ -22,7 +22,7 @@ class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
-          <title>Andrei Constantinescu.</title>
+          <title>Andrei Constantinescu | Home</title>
           <meta name="viewport" content="width=device-width, minimum-scale=1" />
           <meta name="description" content="Andrei Constantinescu's website." />
           <style dangerouslySetInnerHTML={{__html: this.props.css}} />

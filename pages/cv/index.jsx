@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react'
 import {graphql} from 'react-apollo'
+import Head from 'next/head'
 import {
   Layout,
   ExperienceSlice,
@@ -27,6 +28,10 @@ const CvPage = ({data}) => {
   } = data.resume
   return (
     <Fragment>
+      <Head>
+        <title>Andrei Constantinescu | CV</title>
+        <meta name="description" content="Andrei Constantinescu's CV." />
+      </Head>
       <Header location={location} email={email} logo={logo} />
       <Layout
         customCss={{
