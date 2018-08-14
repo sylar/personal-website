@@ -20,7 +20,8 @@ injectGlobal`
   }
   body {
     max-width: 45rem;
-    margin: 4.5rem auto;
+    margin: 3rem auto;
+    margin-bottom: 0;
     @media (max-width: 480px) {
       margin: 1.5rem
     }
