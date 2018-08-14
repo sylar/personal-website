@@ -17,7 +17,11 @@ const LinkList = ({links}) => (
       <LI
         key={key}
         customCss={{
-          display: 'block'
+          display: 'block',
+          '@media (max-width: 480px)': {
+            flexBasis: '50%',
+            display: 'flex'
+          }
         }}
       >
         <Link item={item} />
