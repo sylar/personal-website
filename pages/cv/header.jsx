@@ -60,7 +60,7 @@ const PageHeader = ({location, email, logo}) => (
           }}
         >
           <Link url="/" prefetch={true}>
-            Homepage
+            <A>Homepage</A>
           </Link>
         </LI>
         <LI

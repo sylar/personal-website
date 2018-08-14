@@ -28,7 +28,14 @@ const Homepage = ({data}) => {
 
   return (
     <Fragment>
-      <Header customCss={{textAlign: 'center'}}>
+      <Header
+        customCss={{
+          textAlign: 'center',
+          '@media (max-width: 480px)': {
+            marginTop: '4.5rem'
+          }
+        }}
+      >
         <Logo
           src={logo}
           customCss={{
@@ -68,7 +75,6 @@ const Homepage = ({data}) => {
             fontWeight: 300,
             letterSpacing: '1px',
             fontSize: '20px',
-            // lineHeight: '1.2rem',
             margin: '1.5rem 0'
           }}
         />
