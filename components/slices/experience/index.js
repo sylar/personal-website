@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react'
 import Header from '../../sliceHeader'
 import Content from './content'
-import {Section} from '../..'
+import {Section, Article, LI} from '../..'
 
 const Slice = ({items, headerText}) => (
   <Section>
