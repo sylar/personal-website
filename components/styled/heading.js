@@ -6,7 +6,8 @@ import MarkdownElement from '../MarkdownElement'
 
 const commonStyle = {
   '@media print': {
-    margin: 0
+    margin: 0,
+    color: 'black'
   }
 }
 

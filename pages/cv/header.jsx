@@ -8,7 +8,6 @@ const PageHeader = ({location, email, logo}) => (
       flexDirection: 'row-reverse',
       alignItems: 'center',
       justifyContent: 'space-between',
-      marginBottom: '.75rem',
       '@media (max-width: 480px)': {
         flexDirection: 'column',
         marginTop: '1.5rem'
@@ -34,8 +33,17 @@ const PageHeader = ({location, email, logo}) => (
         alignItems: 'flex-start'
       }}
     >
-      <H2 customCss={{marginBottom: 0, '@media print': {margin: 0}}}>
-        Andrei Constantinescu
+      <H2
+        customCss={{
+          marginBottom: 0,
+          '@media print': {margin: 0, display: 'flex'}
+        }}
+      >
+        Andrei Constantinescu<Span
+          customCss={{display: 'none', '@media print': {display: 'block'}}}
+        >
+          {"'s CV"}
+        </Span>
       </H2>
       <UL
         customCss={{

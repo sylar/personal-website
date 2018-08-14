@@ -27,7 +27,7 @@ const TechStack = ({techStack}) => (
         display: 'flex',
         flexWrap: 'wrap',
         '@media print': {
-          fontSize: '.5rem'
+          fontSize: '.6rem'
         }
       }}
     >

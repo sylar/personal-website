@@ -5,7 +5,13 @@ import {UL, LI} from '../..'
 import {Section} from '../..'
 
 const Slice = ({items, headerText}) => (
-  <Section>
+  <Section
+    customCss={{
+      '@media print': {
+        marginTop: '.5rem'
+      }
+    }}
+  >
     <Header headerText={headerText} />
     <UL customCss={{margin: 0, paddingLeft: 0}}>
       {items.map((item, key) => (
@@ -14,7 +20,6 @@ const Slice = ({items, headerText}) => (
           customCss={{
             textAlign: 'justify',
             marginBottom: '.75rem',
-            '@media print': {margin: '0.375rem 0'},
             listStyle: 'none'
           }}
         >
