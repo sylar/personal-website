@@ -1,8 +1,8 @@
 import React from 'react'
-import {Section, Logo, H2, UL, LI, A, Link, Span, Div} from '../../components'
+import {Header, Logo, H2, UL, LI, A, Link, Span, Div} from '../../components'
 
 const PageHeader = ({location, email, logo}) => (
-  <Section
+  <Header
     customCss={{
       display: 'flex',
       flexDirection: 'row-reverse',
@@ -79,7 +79,7 @@ const PageHeader = ({location, email, logo}) => (
         </LI>
       </UL>
     </Div>
-  </Section>
+  </Header>
 )
 
 PageHeader.displayName = 'CVPageHeader'

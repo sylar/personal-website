@@ -20,6 +20,13 @@ injectGlobal`
     line-height: 1.5;
     margin: 0;
   }
+  body {
+    max-width: 45rem;
+    margin: 4.5rem auto;
+    @media (max-width: 480px) {
+      margin: 1.5rem
+    }
+  }
 `
 
 class MyApp extends App {

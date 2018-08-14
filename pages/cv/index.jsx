@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import {graphql} from 'react-apollo'
 import {
   Layout,
@@ -26,46 +26,46 @@ const CvPage = ({data}) => {
     logo
   } = data.resume
   return (
-    <Layout
-      customCss={{
-        maxWidth: '45rem',
-        display: 'flex',
-        flexDirection: 'column',
-        padding: '3rem',
-        margin: '0 auto',
-        '@media (max-width: 480px)': {
-          padding: 0
-        }
-      }}
-    >
+    <Fragment>
       <Header location={location} email={email} logo={logo} />
-      <Content
-        slices={[
-          {
-            Component: ExperienceSlice,
-            data: {
-              items: experience.content,
-              headerText: experience.title
-            }
-          },
-          {
-            Component: SideProjectsSlice,
-            data: {
-              items: sideProjects.content,
-              headerText: sideProjects.title
-            }
-          },
-          {
-            Component: HobbiesSlice,
-            data: {
-              description: hobbies.description,
-              headerText: hobbies.title
-            }
+      <Layout
+        customCss={{
+          display: 'flex',
+          flexDirection: 'column',
+          margin: '0 auto',
+          '@media (max-width: 480px)': {
+            padding: 0
           }
-        ]}
-      />
-      <LastUpdate timestamp={lastUpdate} />
-    </Layout>
+        }}
+      >
+        <Content
+          slices={[
+            {
+              Component: ExperienceSlice,
+              data: {
+                items: experience.content,
+                headerText: experience.title
+              }
+            },
+            {
+              Component: SideProjectsSlice,
+              data: {
+                items: sideProjects.content,
+                headerText: sideProjects.title
+              }
+            },
+            {
+              Component: HobbiesSlice,
+              data: {
+                description: hobbies.description,
+                headerText: hobbies.title
+              }
+            }
+          ]}
+        />
+        <LastUpdate timestamp={lastUpdate} />
+      </Layout>
+    </Fragment>
   )
 }
 
