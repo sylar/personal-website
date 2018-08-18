@@ -27,6 +27,7 @@ const LastUpdate = ({timestamp}) => {
         name="print"
         onClick={printHandler}
         customCss={{
+          background: 'none',
           border: 'none',
           cursor: 'pointer',
           padding: 0,
