@@ -8,7 +8,7 @@ const printHandler = ev => {
 }
 
 const LastUpdate = ({timestamp}) => {
-  const DATE_FORMAT = 'LLLL io, YYYY'
+  const DATE_FORMAT = 'LLLL do, YYYY'
   const date = format(new Date(timestamp), DATE_FORMAT)
 
   return (
