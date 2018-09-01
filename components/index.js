@@ -1,6 +1,6 @@
 export * from './styled'
 export Layout from './layout'
-export * from './linkList'
+export * from './link'
 export Logo from './logo'
 export MarkdownElement from './MarkdownElement'
 export SliceHeader from './sliceHeader'

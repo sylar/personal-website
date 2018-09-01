@@ -12,7 +12,9 @@ const TechStackItem = ({url, name}) => (
       }
     }}
   >
-    <A href={url}>{name}</A>
+    <A href={url} target="_blank">
+      {name}
+    </A>
   </LI>
 )
 

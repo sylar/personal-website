@@ -13,20 +13,7 @@ if (typeof window !== 'undefined') {
 
 injectGlobal`${globalStyle}`
 
-const PrintNotCopy = () =>
-  document.addEventListener('copy', ev => {
-    ev.clipboardData.setData(
-      'text/plain',
-      'To print, use the supplied print button please! Thanks :)'
-    )
-    ev.preventDefault()
-  })
-
 class MyApp extends App {
-  componentDidMount () {
-    PrintNotCopy()
-  }
-
   render () {
     const {Component, pageProps, apolloClient} = this.props
     return (

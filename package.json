@@ -20,7 +20,6 @@
     "apollo-boost": "^0.2.0-alpha.14",
     "apollo-cache-inmemory": "^1.2.7",
     "apollo-client": "^2.3.8",
-    "apollo-link": "^1.2.2",
     "apollo-link-http": "^1.5.4",
     "apollo-link-persisted-queries": "^0.2.1",
     "apollo-server-express": "^2.0.0",

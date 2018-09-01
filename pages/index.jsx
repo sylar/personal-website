@@ -9,7 +9,7 @@ import {
   HR,
   Heading
 } from '../components'
-import {homepageQuery} from '../lib/gql'
+import {homepageQuery, cvQuery} from '../lib/gql'
 
 const Homepage = ({data}) => {
   const {loading} = data
@@ -23,7 +23,8 @@ const Homepage = ({data}) => {
   const urls = urlsBlock.concat({
     name: 'Resume',
     url: '/cv',
-    prefetch: true
+    prefetch: true,
+    apolloQuery: cvQuery
   })
 
   return (

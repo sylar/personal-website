@@ -1,5 +1,6 @@
 import React from 'react'
 import {Header, Logo, H2, UL, LI, A, Link, Span, Div} from '../../components'
+import {homepageQuery} from '../../lib/gql'
 
 const PageHeader = ({location, email, logo}) => (
   <Header
@@ -67,9 +68,12 @@ const PageHeader = ({location, email, logo}) => (
             marginRight: '.5rem'
           }}
         >
-          <Link url="/" prefetch={true}>
-            <A>Homepage</A>
-          </Link>
+          <Link
+            url="/"
+            prefetch={true}
+            apolloQuery={homepageQuery}
+            name="Homepage"
+          />
         </LI>
         <LI
           customCss={{
