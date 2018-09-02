@@ -20,9 +20,7 @@ function getCacheKey (req) {
 
 async function clearCloudflare () {
   // curl -X POST https://api.cloudflare.com/client/v4/zones/''$CLOUDFLARE_ZONE_ID''/purge_cache -H 'X-Auth-Email: '$CLOUDFLARE_EMAIL'' -H 'X-Auth-Key: '$CLOUDFLARE_GLOBAL_KEY'' -H 'Content-Type: application/json' --data '{\"purge_everything\":true}
-  const {
-    body: {success}
-  } = await fetch(
+  const response = await fetch(
     `https://api.cloudflare.com/client/v4/zones/${CLOUDFLARE_ZONE_ID}/purge_cache`,
     {
       method: 'POST',
@@ -35,6 +33,7 @@ async function clearCloudflare () {
       body: JSON.stringify({purge_everything: true})
     }
   )
+  const {success} = await response.json()
 
   console.log({cloudflarePurged: success})
 }
