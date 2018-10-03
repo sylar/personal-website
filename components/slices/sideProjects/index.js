@@ -12,8 +12,19 @@ const Slice = ({items, headerText}) => (
       }
     }}
   >
-    <Header headerText={headerText} />
-    <UL customCss={{margin: 0, paddingLeft: 0}}>
+    <Header
+      headerText={headerText}
+      customCss={{
+        paddingBottom: '.75rem'
+      }}
+    />
+    <UL
+      customCss={{
+        margin: 0,
+        paddingLeft: 0,
+        '@media print': {paddingLeft: '1.15rem'}
+      }}
+    >
       {items.map((item, key) => (
         <LI
           key={key}

@@ -5,7 +5,8 @@ const Content = ({description}) => (
   <Paragraph
     md={description}
     customCss={{
-      margin: 0
+      margin: 0,
+      textIndent: '1.15rem'
     }}
   />
 )

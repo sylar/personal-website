@@ -11,7 +11,12 @@ const Slice = ({description, headerText}) => (
       }
     }}
   >
-    <Header headerText={headerText} />
+    <Header
+      headerText={headerText}
+      customCss={{
+        padding: '.75rem 0'
+      }}
+    />
     <Content description={description} />
   </Section>
 )
