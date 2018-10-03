@@ -5,6 +5,7 @@ const DESCRIPTION = 'description'
 
 const HOMEPAGE = 'homepage'
 const RESUMEPAGE = 'resume'
+const RESUMEPAGE_UID = 'resume-page'
 
 // SLICE: experience
 const SLICE_EXPERIENCE = 'experience'
@@ -72,5 +73,6 @@ module.exports = {
   KEY,
   HOMEPAGE,
   RESUMEPAGE,
+  RESUMEPAGE_UID,
   LOGO
 }
