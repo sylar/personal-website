@@ -1,6 +1,6 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
-const Main = styled('main')(({customCss}) => ({
+const Main = styled('main')(({ customCss }) => ({
   ...customCss
 }))
 

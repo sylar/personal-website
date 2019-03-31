@@ -1,6 +1,6 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
-const Image = styled('img')(({customCss}) => ({
+const Image = styled('img')(({ customCss }) => ({
   height: '100%',
   width: 'auto',
   ...customCss

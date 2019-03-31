@@ -1,12 +1,12 @@
 import React from 'react'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import MarkdownElement from '../MarkdownElement'
 
-const Bold = styled('strong')(({customCss}) => ({...customCss}))
+const Bold = styled('strong')(({ customCss }) => ({ ...customCss }))
 
-const Italic = styled('em')(({customCss}) => ({...customCss}))
+const Italic = styled('em')(({ customCss }) => ({ ...customCss }))
 
-const P = styled('p')(({customCss}) => ({
+const P = styled('p')(({ customCss }) => ({
   marginTop: '0rem',
   marginBottom: '1.5rem',
   textAlign: 'justify',
@@ -17,11 +17,11 @@ const P = styled('p')(({customCss}) => ({
   }
 }))
 
-const Span = styled('span')(({customCss}) => ({...customCss}))
+const Span = styled('span')(({ customCss }) => ({ ...customCss }))
 
-const Div = styled('div')(({customCss}) => ({...customCss}))
+const Div = styled('div')(({ customCss }) => ({ ...customCss }))
 
-const Article = styled('article')(({customCss}) => ({
+const Article = styled('article')(({ customCss }) => ({
   ...customCss,
   '@media print': {
     margin: 0,
@@ -30,26 +30,26 @@ const Article = styled('article')(({customCss}) => ({
   }
 }))
 
-const Header = styled('header')(({customCss}) => ({...customCss}))
+const Header = styled('header')(({ customCss }) => ({ ...customCss }))
 
-const HR = styled('hr')(({customCss}) => ({
+const HR = styled('hr')(({ customCss }) => ({
   border: '1px solid',
   margin: '-1px 0',
   ...customCss
 }))
 
-const ParagraphRenderer = ({children, customCss, passThrough}) => (
+const ParagraphRenderer = ({ children, customCss, passThrough }) => (
   <P customCss={customCss}>
     {children} {passThrough}
   </P>
 )
 
-const Paragraph = ({md, customCss, children: passThrough}) => (
+const Paragraph = ({ md, customCss, children: passThrough }) => (
   <MarkdownElement
     text={md}
     renderers={{
-      paragraph: ({children}) =>
-        ParagraphRenderer({children, customCss, passThrough})
+      paragraph: ({ children }) =>
+        ParagraphRenderer({ children, customCss, passThrough })
     }}
   />
 )
@@ -96,4 +96,4 @@ Header.defaultProps = {
   customCss: {}
 }
 
-export {Bold, Italic, P, Span, Paragraph, Div, Article, HR, Header}
+export { Bold, Italic, P, Span, Paragraph, Div, Article, HR, Header }

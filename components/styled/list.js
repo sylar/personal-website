@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import MarkdownElement from '../MarkdownElement'
 
 const commonStyle = {
@@ -11,7 +11,7 @@ const commonStyle = {
   }
 }
 
-const UL = styled('ul')(({customCss}) => ({
+const UL = styled('ul')(({ customCss }) => ({
   ...commonStyle,
   ...customCss,
   '@media print': {
@@ -20,7 +20,7 @@ const UL = styled('ul')(({customCss}) => ({
   }
 }))
 
-const OL = styled('ol')(({customCss}) => ({
+const OL = styled('ol')(({ customCss }) => ({
   ...commonStyle,
   ...customCss,
   '@media print': {
@@ -29,7 +29,7 @@ const OL = styled('ol')(({customCss}) => ({
   }
 }))
 
-const LI = styled('li')(({customCss}) => ({
+const LI = styled('li')(({ customCss }) => ({
   ...customCss,
   '@media print': {
     listStyle: 'square',
@@ -38,15 +38,15 @@ const LI = styled('li')(({customCss}) => ({
   }
 }))
 
-const MdLi = ({children, customCss}) => (
+const MdLi = ({ children, customCss }) => (
   <LI customCss={customCss}>{children}</LI>
 )
 
-const ListItem = ({md, customCss}) => (
+const ListItem = ({ md, customCss }) => (
   <MarkdownElement
     text={md}
     renderers={{
-      paragraph: ({children}) => MdLi({children, customCss})
+      paragraph: ({ children }) => MdLi({ children, customCss })
     }}
   />
 )
@@ -66,4 +66,4 @@ LI.defaultProps = {
   customCss: {}
 }
 
-export {UL, OL, LI, ListItem}
+export { UL, OL, LI, ListItem }

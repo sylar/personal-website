@@ -1,6 +1,6 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
-const Button = styled('button')(({customCss}) => ({...customCss}))
+const Button = styled('button')(({ customCss }) => ({ ...customCss }))
 
 Button.displayName = 'Button'
 Button.defaultProps = {

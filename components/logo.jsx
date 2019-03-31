@@ -1,8 +1,8 @@
 import React from 'react'
-import {Section, Image} from './styled'
-import {css} from 'react-emotion'
+import { Section, Image } from './styled'
+import { css } from '@emotion/core'
 
-const Logo = ({src, customCss, imgCss}) => (
+const Logo = ({ src, customCss, imgCss }) => (
   <Section
     customCss={{
       textAlign: 'center',

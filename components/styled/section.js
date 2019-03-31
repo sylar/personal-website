@@ -1,6 +1,6 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
-const Section = styled('section')(({customCss}) => ({
+const Section = styled('section')(({ customCss }) => ({
   ...customCss,
   '@media print': {
     margin: 0,
