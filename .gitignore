@@ -9,3 +9,4 @@ env.json
 .travis/**/*.key
 .travis/**/*.key.pub
 .travis/**/*.crt
+.env
