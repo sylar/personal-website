@@ -1,9 +1,9 @@
 import React from 'react'
-import {format, differenceInCalendarMonths} from 'date-fns'
-import {Div} from '../../..'
+import { format, differenceInCalendarMonths } from 'date-fns'
+import { Div } from '../../..'
 
-const Period = ({start, end, current}) => {
-  const isCurrent = current === 'Yes'
+const Period = ({ start, end, current }) => {
+  const isCurrent = current
   const DATE_FORMAT = 'MMM YYYY'
   const startDate = format(new Date(start), DATE_FORMAT)
   const endDate = isCurrent ? 'present' : format(new Date(end), DATE_FORMAT)

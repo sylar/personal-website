@@ -2,20 +2,20 @@ import React from 'react'
 import { ApolloConsumer } from 'react-apollo'
 import { css } from '@emotion/core'
 import { NextLink, A } from '../styled'
-// import prefetchWithData from '../../lib/prefetchWithData'
+import prefetch from '../../lib/prefetch'
 
 const Link = ({ name, url, prefetch, apolloQuery, customCss, target }) => (
   <ApolloConsumer>
     {({ query }) => (
-      <NextLink url={url} prefetch={prefetch}>
+      <NextLink url={url} prefetch>
         <A
           css={css`
             ${customCss};
           `}
           target={target}
-          // onMouseOver={() => prefetchWithData(url)}
+          onMouseOver={() => prefetch(url)}
         >
-          {name}
+          A {name}
         </A>
       </NextLink>
     )}

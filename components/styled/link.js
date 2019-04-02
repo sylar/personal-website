@@ -12,7 +12,7 @@ const A = styled('a')(({ customCss }) => ({
 }))
 
 const NextLink = ({ children, url, prefetch, passHref, apolloQuery }) => (
-  <Link href={url} passHref={passHref} prefetch={prefetch}>
+  <Link href={url} passHref={passHref} prefetch>
     {children}
   </Link>
 )

@@ -1,5 +1,5 @@
-import React, {PureComponent} from 'react'
-import {uniqBy} from 'lodash'
+import React, { PureComponent } from 'react'
+import { uniqBy } from 'lodash'
 import Entry from './entry'
 
 class Content extends PureComponent {
@@ -7,23 +7,26 @@ class Content extends PureComponent {
 
   constructor (props) {
     super(props)
-    const {tasks, techStack} = this.getTasksAndStack({tasks: props.tasks})
 
-    this.state = {tasks, techStack}
+    const { tasks, techStack } = this.getTasksAndStack({
+      tasks: props.tasks
+    })
+
+    this.state = { tasks, techStack }
   }
 
-  getTasksAndStack ({tasks}) {
+  getTasksAndStack ({ tasks }) {
     return tasks.reduce(
-      ({tasks, techStack}, {description, stack}) => ({
+      ({ tasks, techStack }, { description, stack }) => ({
         tasks: tasks.concat(description),
-        techStack: uniqBy(techStack.concat(stack), ({name}) => name)
+        techStack: uniqBy(techStack.concat(stack), details => details)
       }),
-      {tasks: [], techStack: []}
+      { tasks: [], techStack: [] }
     )
   }
 
   render () {
-    const {type, title, company, startDate, endDate, currentJob} = this.props
+    const { type, title, company, startDate, endDate, currentJob } = this.props
 
     return (
       <Entry

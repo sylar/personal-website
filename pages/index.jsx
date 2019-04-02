@@ -13,18 +13,11 @@ import {
 
 const HomePage = () => (
   <Query query={homepageQuery}>
-    {({
-      loading,
-      error,
-      data: {
-        prismic: { homepage }
-      },
-      fetchMore
-    }) => {
+    {({ data, loading, error }) => {
       if (loading) {
         return null
       }
-
+      const { homepage } = data.prismic
       const { urlsBlock, logo, description, title } = homepage
       const urls = urlsBlock.concat({
         name: 'Resume',

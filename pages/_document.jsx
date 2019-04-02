@@ -21,7 +21,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>Andrei Constantinescu | Home</title>
+          {/* <title>Andrei Constantinescu | Home</title> */}
           <meta name="viewport" content="width=device-width, minimum-scale=1" />
           <meta name="description" content="Andrei Constantinescu's website." />
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
