@@ -4,7 +4,7 @@ import { Div } from '../../..'
 
 const Period = ({ start, end, current }) => {
   const isCurrent = current
-  const DATE_FORMAT = 'MMM YYYY'
+  const DATE_FORMAT = 'MMM yyyy'
   const startDate = format(new Date(start), DATE_FORMAT)
   const endDate = isCurrent ? 'present' : format(new Date(end), DATE_FORMAT)
   const difference = isCurrent

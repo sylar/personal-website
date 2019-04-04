@@ -1,14 +1,14 @@
-import React, {Fragment} from 'react'
-import {format} from 'date-fns'
-import {Section, P, Button} from '../../components'
+import React, { Fragment } from 'react'
+import { format } from 'date-fns'
+import { Section, P, Button } from '../../components'
 
 const printHandler = ev => {
   ev.preventDefault()
   window && window.print()
 }
 
-const LastUpdate = ({timestamp}) => {
-  const DATE_FORMAT = 'LLLL do, YYYY'
+const LastUpdate = ({ timestamp }) => {
+  const DATE_FORMAT = 'LLLL do, yyyy'
   const date = format(new Date(timestamp), DATE_FORMAT)
 
   return (
@@ -20,7 +20,7 @@ const LastUpdate = ({timestamp}) => {
         justifyContent: 'space-between'
       }}
     >
-      <P customCss={{margin: 0, '@media print': {marginTop: '.75rem'}}}>
+      <P customCss={{ margin: 0, '@media print': { marginTop: '.75rem' } }}>
         Last update: {date}
       </P>
       <Button
