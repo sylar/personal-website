@@ -4,7 +4,7 @@ import { css } from '@emotion/core'
 import { NextLink, A } from '../styled'
 import prefetch from '../../lib/prefetch'
 
-const Link = ({ name, url, prefetch, apolloQuery, customCss, target }) => (
+const Link = ({ name, url, apolloQuery, customCss, target }) => (
   <ApolloConsumer>
     {({ query }) => (
       <NextLink url={url} prefetch>
@@ -15,7 +15,7 @@ const Link = ({ name, url, prefetch, apolloQuery, customCss, target }) => (
           target={target}
           onMouseOver={() => prefetch(url)}
         >
-          A {name}
+          {name}
         </A>
       </NextLink>
     )}

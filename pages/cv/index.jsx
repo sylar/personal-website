@@ -35,7 +35,7 @@ const ResumePage = function () {
           lastUpdate,
           location,
           email,
-          slices: { experience, sideProjects, hobbies },
+          slices: { experience, side_projects: sideProjects, hobbies },
           logo
         } = resume
 
@@ -64,15 +64,14 @@ const ResumePage = function () {
                       items: experience.content,
                       headerText: experience.title
                     }
+                  },,
+                  {
+                    Component: SideProjectsSlice,
+                    data: {
+                      items: sideProjects.content,
+                      headerText: sideProjects.title
+                    }
                   },
-                  // ,
-                  // {
-                  //   Component: SideProjectsSlice,
-                  //   data: {
-                  //     items: sideProjects.content,
-                  //     headerText: sideProjects.title
-                  //   }
-                  // }
                   {
                     Component: HobbiesSlice,
                     data: {
