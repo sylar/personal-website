@@ -73,7 +73,7 @@ const PageHeader = ({ location, email, logo }) => (
             url="/"
             prefetch={true}
             // apolloQuery={homepageQuery}
-            name="Homepage"
+            label="Homepage"
           />
         </LI>
         <LI

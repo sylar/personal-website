@@ -1,6 +1,6 @@
 import * as React from 'react'
-// import Link from './link'
-import Link from 'next/link'
+import Link from './link'
+// import Link from 'next/link'
 import { UL, LI } from '../styled'
 import prefetch from '../../lib/prefetch'
 
@@ -67,10 +67,10 @@ const LinkList = ({ links }) => (
           }
         }}
       >
-        {/* <Link {...item} customCss={customLinkStyle} /> */}
-        <Link prefetch href={item.url}>
-          <a onMouseOver={() => prefetch('/product?sku=0001')}>{item.name}</a>
-        </Link>
+        <Link {...item} customCss={customLinkStyle} />
+        {/* <Link prefetch href={item.url}>
+          <a onMouseOver={() => prefetch('/product?sku=0001')}>{item.label}</a>
+        </Link> */}
       </LI>
     ))}
   </UL>

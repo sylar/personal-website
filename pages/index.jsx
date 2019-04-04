@@ -20,7 +20,7 @@ const HomePage = () => (
       const { homepage } = data.prismic
       const { urlsBlock, logo, description, title } = homepage
       const urls = urlsBlock.concat({
-        name: 'Resume',
+        label: 'Resume',
         url: '/cv'
       })
 

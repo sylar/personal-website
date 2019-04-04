@@ -21,11 +21,10 @@ const PrintNotCopy = () =>
     ev.preventDefault()
   })
 
-const ResumePage = function () {
+const ResumePage = function() {
   return (
     <Query query={resumePage}>
       {({ data, loading, error }) => {
-        console.log({ error })
         if (loading) {
           return null
         }
@@ -64,7 +63,8 @@ const ResumePage = function () {
                       items: experience.content,
                       headerText: experience.title
                     }
-                  },,
+                  },
+                  ,
                   {
                     Component: SideProjectsSlice,
                     data: {

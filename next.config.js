@@ -1,9 +1,13 @@
-require('dotenv').config()
+const { NODE_ENV = 'development' } = process.env
 
-const { GRAPHQL_ENDPOINT, NODE_ENV, PORT } = process.env
+if (NODE_ENV === 'development') {
+  require('dotenv').config()
+}
+
+const { GRAPHQL_ENDPOINT, PORT } = process.env
 
 module.exports = {
-  webpack: function (config, { dev }) {
+  webpack: function(config, { dev }) {
     config.plugins = config.plugins || []
 
     if (!dev) {
