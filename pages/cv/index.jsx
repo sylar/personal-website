@@ -64,21 +64,22 @@ const ResumePage = function () {
                       items: experience.content,
                       headerText: experience.title
                     }
-                  }
+                  },
+                  // ,
                   // {
                   //   Component: SideProjectsSlice,
                   //   data: {
                   //     items: sideProjects.content,
                   //     headerText: sideProjects.title
                   //   }
-                  // },
-                  // {
-                  //   Component: HobbiesSlice,
-                  //   data: {
-                  //     description: hobbies.description,
-                  //     headerText: hobbies.title
-                  //   }
                   // }
+                  {
+                    Component: HobbiesSlice,
+                    data: {
+                      description: hobbies.description,
+                      headerText: hobbies.title
+                    }
+                  }
                 ]}
               />
               <LastUpdate timestamp={lastUpdate} />
