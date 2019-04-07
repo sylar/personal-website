@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 import React from 'react'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import ReactMarkdown from 'react-markdown'
 import MarkdownElement from '../MarkdownElement'
 
@@ -11,7 +11,7 @@ const commonStyle = {
   }
 }
 
-const H1 = styled('h1')(({customCss}) => ({
+const H1 = styled('h1')(({ customCss }) => ({
   fontSize: '4.25rem',
   lineHeight: '4.5rem',
   marginTop: '1.5rem',
@@ -20,7 +20,7 @@ const H1 = styled('h1')(({customCss}) => ({
   ...customCss
 }))
 
-const H2 = styled('h2')(({customCss}) => ({
+const H2 = styled('h2')(({ customCss }) => ({
   fontSize: '2.625rem',
   lineHeight: '3rem',
   marginTop: '1.5rem',
@@ -35,7 +35,7 @@ const H2 = styled('h2')(({customCss}) => ({
   }
 }))
 
-const H3 = styled('h3')(({customCss}) => ({
+const H3 = styled('h3')(({ customCss }) => ({
   fontSize: '1.625rem',
   lineHeight: '3rem',
   marginTop: '1.5rem',
@@ -51,7 +51,7 @@ const H3 = styled('h3')(({customCss}) => ({
   }
 }))
 
-const H4 = styled('h4')(({customCss}) => ({
+const H4 = styled('h4')(({ customCss }) => ({
   fontSize: '1rem',
   lineHeight: '1.5rem',
   marginTop: '1.5rem',
@@ -80,7 +80,7 @@ const getHeadingRenderer = ({
   customCss,
   overridenLevel
 }) => {
-  const {level, children} = props
+  const { level, children } = props
   const Component = components[`H${overridenLevel || level}`] || components.H4
 
   const ToBeRendered = <Component customCss={customCss}>{children}</Component>
@@ -88,7 +88,7 @@ const getHeadingRenderer = ({
   return ToBeRendered
 }
 
-const Heading = ({md, customCss, overridenLevel}) => (
+const Heading = ({ md, customCss, overridenLevel }) => (
   <MarkdownElement
     text={md}
     renderers={{
@@ -108,4 +108,4 @@ H2.displayName = 'H2'
 H3.displayName = 'H3'
 H4.displayName = 'H4'
 
-export {Heading, H1, H2, H3, H4}
+export { Heading, H1, H2, H3, H4 }

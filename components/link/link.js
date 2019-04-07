@@ -1,25 +1,20 @@
 import React from 'react'
-import {ApolloConsumer} from 'react-apollo'
-import {css} from 'react-emotion'
-import {NextLink, A} from '../styled'
-import prefetchWithData from '../../lib/prefetchWithData'
+import { ApolloConsumer } from 'react-apollo'
+import { css } from '@emotion/core'
+import { NextLink, A } from '../styled'
+import prefetch from '../../lib/prefetch'
 
-const Link = ({name, url, prefetch, apolloQuery, customCss, target}) => (
-  <ApolloConsumer>
-    {({query}) => (
-      <NextLink url={url} prefetch={prefetch}>
-        <A
-          css={css`
-            ${customCss};
-          `}
-          target={target}
-          onMouseOver={() => prefetchWithData(url)}
-        >
-          {name}
-        </A>
-      </NextLink>
-    )}
-  </ApolloConsumer>
+const Link = ({ label, url, apolloQuery, customCss, target }) => (
+  <NextLink url={url} prefetch>
+    <A
+      css={css`
+        ${customCss};
+      `}
+      target={target}
+    >
+      {label}
+    </A>
+  </NextLink>
 )
 
 Link.displayName = 'Link'

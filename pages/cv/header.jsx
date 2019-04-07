@@ -1,8 +1,8 @@
 import React from 'react'
-import {Header, Logo, H2, UL, LI, A, Link, Span, Div} from '../../components'
-import {homepageQuery} from '../../lib/gql'
+import { Header, Logo, H2, UL, LI, A, Link, Span, Div } from '../../components'
+// import { homepageQuery } from '../../lib/gql'
 
-const PageHeader = ({location, email, logo}) => (
+const PageHeader = ({ location, email, logo }) => (
   <Header
     customCss={{
       display: 'flex',
@@ -24,7 +24,7 @@ const PageHeader = ({location, email, logo}) => (
         marginBottom: 0,
         width: '6rem',
         height: '6rem',
-        '@media print': {height: '4.5rem'}
+        '@media print': { height: '4.5rem' }
       }}
     />
     <Div
@@ -37,11 +37,12 @@ const PageHeader = ({location, email, logo}) => (
       <H2
         customCss={{
           marginBottom: 0,
-          '@media print': {margin: 0, display: 'flex'}
+          '@media print': { margin: 0, display: 'flex' }
         }}
       >
-        Andrei Constantinescu<Span
-          customCss={{display: 'none', '@media print': {display: 'block'}}}
+        Andrei Constantinescu
+        <Span
+          customCss={{ display: 'none', '@media print': { display: 'block' } }}
         >
           {"'s CV"}
         </Span>
@@ -71,8 +72,8 @@ const PageHeader = ({location, email, logo}) => (
           <Link
             url="/"
             prefetch={true}
-            apolloQuery={homepageQuery}
-            name="Homepage"
+            // apolloQuery={homepageQuery}
+            label="Homepage"
           />
         </LI>
         <LI

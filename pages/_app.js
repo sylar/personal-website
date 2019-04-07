@@ -1,8 +1,8 @@
-import App, {Container} from 'next/app'
+import App, { Container } from 'next/app'
 import React from 'react'
-import {withApollo} from '../lib/apollo'
-import {ApolloProvider} from 'react-apollo'
-import {injectGlobal, hydrate} from 'react-emotion'
+import withApolloClient from '../lib/apollo/with-apollo'
+import { ApolloProvider } from 'react-apollo'
+import { injectGlobal, hydrate } from 'emotion'
 import globalStyle from '../lib/globalStyle'
 
 // Adds server generated styles to emotion cache.
@@ -15,7 +15,7 @@ injectGlobal`${globalStyle}`
 
 class MyApp extends App {
   render () {
-    const {Component, pageProps, apolloClient} = this.props
+    const { Component, pageProps, apolloClient } = this.props
     return (
       <Container>
         <ApolloProvider client={apolloClient}>
@@ -26,4 +26,4 @@ class MyApp extends App {
   }
 }
 
-export default withApollo(MyApp)
+export default withApolloClient(MyApp)

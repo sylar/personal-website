@@ -1,7 +1,7 @@
 import React from 'react'
-import {UL, LI, A, Section} from '../../..'
+import { UL, LI, A, Section } from '../../..'
 
-const TechStackItem = ({url, name}) => (
+const TechStackItem = ({ url, name }) => (
   <LI
     customCss={{
       listStyle: 'none',
@@ -18,7 +18,7 @@ const TechStackItem = ({url, name}) => (
   </LI>
 )
 
-const TechStack = ({techStack}) => (
+const TechStack = ({ techStack }) => (
   <Section>
     <UL
       customCss={{
@@ -33,9 +33,11 @@ const TechStack = ({techStack}) => (
         }
       }}
     >
-      {techStack.map(({url, name}, key) => (
-        <TechStackItem key={key} url={url} name={name} />
-      ))}
+      {techStack
+        .filter(i => !!i)
+        .map((item = { url: '', name: '' }, key) => (
+          <TechStackItem key={key} url={item.url} name={item.name} />
+        ))}
     </UL>
   </Section>
 )

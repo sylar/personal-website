@@ -1,0 +1,116 @@
+version: 2.1
+
+executors:
+  nodejs:
+    docker:
+      - image: circleci/node:11.11
+    working_directory: ~/repo
+
+commands:
+  install-deps:
+    steps:
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile --production=false
+  restore-caches:
+    steps:
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - restore_cache:
+          name: Restore node_modules Cache
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+  save-caches:
+    steps:
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+      - save_cache:
+          name: Save node_modules Cache
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+  build-project:
+    steps:
+      - run:
+          name: Build Next.js Project
+          command: yarn build
+      - run:
+          name: Export Static Assets
+          command: yarn export
+      - run:
+          name: Add `.nojekyll` to bypass on Github Pages
+          command: touch out/.nojekyll
+      - save_cache:
+          name: Save `out/` to cache
+          key: deploy-ci-build-cache
+          paths:
+            - out
+
+  configure-git:
+    steps:
+      - run:
+          name: Set git username
+          command: git config --global user.name "$GH_NAME"
+      - run:
+          name: Set git email
+          command: git config --global user.email "$GH_EMAIL"
+
+  commit-and-push-to-gh-pages:
+    steps:
+      - run:
+          name: Add `out/` to commit
+          command: git add out/
+      - run:
+          name: List added files
+          command: git status
+      - run:
+          name: Create gh-pages commit
+          command: git commit -m "Deploy gh-pages from build ${CIRCLE_BUILD_NUM}"
+      - run:
+          name: Push to gh-pages branch
+          command: git subtree push --prefix out origin gh-pages
+
+jobs:
+  build:
+    executor: nodejs
+    steps:
+      - checkout
+      - restore-caches
+      - install-deps
+      - save-caches
+      - build-project
+  deploy-gh-pages:
+    executor: nodejs
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - '45:5e:a1:63:63:c1:7b:ce:e4:99:b4:44:c8:ab:95:20'
+      - checkout
+      - restore_cache:
+          name: Restore static export
+          keys:
+            - deploy-ci-build-cache
+      - configure-git
+      - commit-and-push-to-gh-pages
+
+workflows:
+  build-deploy-to-gh-pages:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+      - deploy-gh-pages:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+              ignore:
+                - gh-pages
