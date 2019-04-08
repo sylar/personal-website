@@ -87,6 +87,24 @@ commands:
           name: Push to gh-pages branch
           command: git subtree push --prefix out origin gh-pages
 
+  clear-cloudflare-cache:
+    steps:
+      - run:
+          environment:
+            CLOUDFLARE_URL: https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE_ID/purge_cache
+          name: Purge cloudflare cache
+          command: curl -X POST $CLOUDFLARE_URL -H "X-Auth-Email:$CLOUDFLARE_EMAIL" -H "X-Auth-Key:$CLOUDFLARE_GLOBAL_KEY" --header "Content-Type:application/json" --data '{"purge_everything":true}' | jq '.success'
+      - run:
+          name: Waiting for cache to be purged
+          command: sleep 35
+  install-jq:
+    steps:
+      - run:
+          environment:
+            JQ_URL: https://circle-downloads.s3.amazonaws.com/circleci-images/cache/linux-amd64/jq-latest
+          name: Install jq
+          command: curl --silent --show-error --location --fail --retry 3 --output /usr/bin/jq $JQ_URL && chmod +x /usr/bin/jq
+
 jobs:
   build:
     executor: nodejs
@@ -97,7 +115,8 @@ jobs:
       - save-caches
       - build-project
   deploy-gh-pages:
-    executor: nodejs
+    machine: true
+    working_directory: ~/repo
     steps:
       - configure-git
       - add_ssh_keys:
@@ -110,6 +129,11 @@ jobs:
           keys:
             - deploy-ci-build-cache-{{ .Environment.CIRCLE_SHA1 }}
       - commit-and-push-to-gh-pages
+  clear-caches:
+    machine: true
+    steps:
+      - install-jq
+      - clear-cloudflare-cache
 
 workflows:
   build-deploy-to-gh-pages:
@@ -125,3 +149,7 @@ workflows:
           filters:
             branches:
               only: master
+      - clear-caches:
+          filters:
+            branches:
+              only: gh-pages
