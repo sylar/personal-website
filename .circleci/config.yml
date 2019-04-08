@@ -47,7 +47,7 @@ commands:
           command: touch out/.nojekyll
       - save_cache:
           name: Save `out/` to cache
-          key: deploy-ci-build-cache
+          key: deploy-ci-build-cache-{{ .Environment.CIRCLE_SHA1 }}
           paths:
             - out
 
@@ -105,7 +105,7 @@ jobs:
       - restore_cache:
           name: Restore static export
           keys:
-            - deploy-ci-build-cache
+            - deploy-ci-build-cache-{{ .Environment.CIRCLE_SHA1 }}
       - commit-and-push-to-gh-pages
 
 workflows:
