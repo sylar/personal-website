@@ -45,6 +45,9 @@ commands:
       - run:
           name: Add `.nojekyll` to bypass on Github Pages
           command: touch out/.nojekyll
+      - run:
+          name: Add `CNAME` gh-pages branch
+          command: echo constantinescu.io > out/CNAME
       - save_cache:
           name: Save `out/` to cache
           key: deploy-ci-build-cache-{{ .Environment.CIRCLE_SHA1 }}
