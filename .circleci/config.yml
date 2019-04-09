@@ -50,7 +50,7 @@ commands:
           command: echo constantinescu.io > out/CNAME
       - save_cache:
           name: Save `out/` to cache
-          key: deploy-ci-build-cache-{{ .Environment.CIRCLE_SHA1 }}
+          key: deploy-ci-build-cache-{{ .Environment.CIRCLE_BUILD_NUM }}
           paths:
             - out
 
@@ -120,7 +120,7 @@ jobs:
       - restore_cache:
           name: Restore static export
           keys:
-            - deploy-ci-build-cache-{{ .Environment.CIRCLE_SHA1 }}
+            - deploy-ci-build-cache-{{ .Environment.CIRCLE_PREVIOUS_BUILD_NUM }}
       - commit-and-push-to-gh-pages
   clear-caches:
     machine: true
