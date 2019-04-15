@@ -11,8 +11,8 @@ const A = styled('a')(({ customCss }) => ({
   }
 }))
 
-const NextLink = ({ children, url, prefetch, passHref, apolloQuery }) => (
-  <Link href={url} passHref={passHref} prefetch>
+const NextLink = ({ children, url, passHref, apolloQuery, shouldPrefetch }) => (
+  <Link href={url} passHref={passHref} prefetch={shouldPrefetch}>
     {children}
   </Link>
 )
@@ -27,7 +27,7 @@ A.defaultProps = {
 NextLink.defaultProps = {
   children: null,
   url: '',
-  prefetch: false,
+  shouldPrefetch: true,
   passHref: true
 }
 
