@@ -5,6 +5,7 @@ if (NODE_ENV === 'development') {
 
 const { GRAPHQL_ENDPOINT, PORT } = process.env
 module.exports = {
+  target: 'serverless',
   publicRuntimeConfig: {
     GRAPHQL_ENDPOINT: GRAPHQL_ENDPOINT,
     NODE_ENV: NODE_ENV,
