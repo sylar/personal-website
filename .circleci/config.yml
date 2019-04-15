@@ -21,7 +21,7 @@ commands:
       - restore_cache:
           name: Restore node_modules Cache
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
+            - dependencies-{{ checksum "package.json" }}
   save-caches:
     steps:
       - save_cache:
@@ -33,60 +33,12 @@ commands:
           name: Save node_modules Cache
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: dependencies-{{ checksum "package.json" }}
   build-project:
     steps:
       - run:
           name: Build Next.js Project
           command: yarn build
-      - run:
-          name: Export Static Assets
-          command: yarn export
-      - run:
-          name: Add `.nojekyll` to bypass on Github Pages
-          command: touch out/.nojekyll
-      - run:
-          name: Add `CNAME` gh-pages branch
-          command: echo constantinescu.io > out/CNAME
-      - save_cache:
-          name: Save `out/` to cache
-          key: deploy-ci-build-cache-{{ .Environment.CIRCLE_BUILD_NUM }}
-          paths:
-            - out
-
-  configure-git:
-    steps:
-      - run:
-          name: Set git username
-          command: git config --global user.name "$GH_NAME"
-      - run:
-          name: Set git email
-          command: git config --global user.email "$GH_EMAIL"
-
-  pull-gh-pages:
-    steps:
-      - run:
-          name: Checkout to gh-pages
-          command: git checkout gh-pages
-      - run:
-          name: Pull gh-pages
-          command: git pull origin gh-pages:gh-pages
-
-  commit-and-push-to-gh-pages:
-    steps:
-      - run:
-          name: Add `out/` to commit
-          command: git add out/
-      - run:
-          name: List added files
-          command: git status
-      - run:
-          name: Create gh-pages commit
-          command: git commit -m "Deploy gh-pages from build ${CIRCLE_BUILD_NUM}" -m "[skip ci] magic."
-      - run:
-          name: Push to gh-pages branch
-          command: git subtree push --prefix out origin gh-pages
-
   clear-cloudflare-cache:
     steps:
       - run:
@@ -107,32 +59,13 @@ jobs:
       - install-deps
       - save-caches
       - build-project
-  deploy-gh-pages:
-    machine: true
-    working_directory: ~/repo
-    steps:
-      - configure-git
-      - add_ssh_keys:
-          fingerprints:
-            - '45:5e:a1:63:63:c1:7b:ce:e4:99:b4:44:c8:ab:95:20'
-      - checkout
-      - pull-gh-pages
-      - restore_cache:
-          name: Restore static export
-          keys:
-            - deploy-ci-build-cache-{{ .Environment.CIRCLE_PREVIOUS_BUILD_NUM }}
-      - commit-and-push-to-gh-pages
   clear-caches:
     machine: true
     steps:
       - clear-cloudflare-cache
 
 workflows:
-  build-deploy-to-gh-pages:
+  build-deploy:
     jobs:
-      - build:
-          filters:
-            branches:
-              ignore:
-                - gh-pages
+      - build
       - clear-caches
