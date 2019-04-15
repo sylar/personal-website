@@ -2,7 +2,7 @@ node_modules
 .next
 coverage/
 .DS_STORE
-
+out
 env.json
 
 # Credentials
