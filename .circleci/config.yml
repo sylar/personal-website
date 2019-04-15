@@ -135,12 +135,4 @@ workflows:
             branches:
               ignore:
                 - gh-pages
-      - deploy-gh-pages:
-          requires:
-            - build
-          filters:
-            branches:
-              only: master
-      - clear-caches:
-          requires:
-            - deploy-gh-pages
+      - clear-caches
