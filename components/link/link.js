@@ -2,10 +2,13 @@ import React from 'react'
 import { ApolloConsumer } from 'react-apollo'
 import { css } from '@emotion/core'
 import { NextLink, A } from '../styled'
-import prefetch from '../../lib/prefetch'
 
-const Link = ({ label, url, apolloQuery, customCss, target }) => (
-  <NextLink url={url} prefetch>
+const isExternal = function(url) {
+  return /https?/.test(url)
+}
+
+const Link = ({ label, url, apolloQuery, customCss, target, prefetch }) => (
+  <NextLink url={url} prefetch={!isExternal(url)}>
     <A
       css={css`
         ${customCss};
