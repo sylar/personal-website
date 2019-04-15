@@ -1,5 +1,13 @@
 {
   "version": 2,
   "name": "constantinescu.io",
-  "builds": [{ "src": "next.config.js", "use": "@now/next" }]
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }],
+  "build": {
+    "env": {
+      "GRAPHQL_ENDPOINT": "@main-gql-endpoint"
+    }
+  },
+  "env": {
+    "GRAPHQL_ENDPOINT": "@main-gql-endpoint"
+  }
 }
