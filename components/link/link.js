@@ -7,8 +7,8 @@ const isExternal = function(url) {
   return /https?/.test(url)
 }
 
-const Link = ({ label, url, apolloQuery, customCss, target, prefetch }) => (
-  <NextLink url={url} prefetch={!isExternal(url)}>
+const Link = ({ label, url, apolloQuery, customCss, target }) => (
+  <NextLink url={url} shouldPrefetch={!isExternal(url)}>
     <A
       css={css`
         ${customCss};
