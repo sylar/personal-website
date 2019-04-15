@@ -1,16 +1,13 @@
 {
   "name": "constantinescu.io",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "private": true,
   "description": "My personal website.",
   "scripts": {
-    "heroku-postbuild": "npm run build",
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "flow": "npx flow",
     "test": "echo 1",
-    "submodule:update": "git submodule update --remote; git submodule foreach -q --recursive 'branch=\"$(git config -f $toplevel/.gitmodules submodule.$name.branch)\"; git checkout $branch'",
     "export": "next export"
   },
   "repository": "git@github.com:andreiconstantinescu/constantinescu.io.git",
@@ -21,6 +18,7 @@
     "@emotion/styled": "^10.0.10",
     "apollo-boost": "^0.3.1",
     "case-sensitive-paths-webpack-plugin": "^2.2.0",
+    "core-js": "3",
     "date-fns": "^2.0.0-alpha.27",
     "dotenv": "^7.0.0",
     "emotion": "^10.0.9",
