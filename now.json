@@ -10,7 +10,7 @@
   "routes": [
     {
       "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+",
-      "headers": { "cache-control": "immutable" }
+      "headers": { "cache-control": "immutable, s-maxage=31536000, max-age=0" }
     }
   ]
 }
