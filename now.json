@@ -7,7 +7,10 @@
       "GRAPHQL_ENDPOINT": "@main-gql-endpoint"
     }
   },
-  "env": {
-    "GRAPHQL_ENDPOINT": "@main-gql-endpoint"
-  }
+  "routes": [
+    {
+      "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+",
+      "headers": { "cache-control": "immutable" }
+    }
+  ]
 }
