@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "constantinescu.io",
+  "name": "Personal Website",
   "alias": "constantinescu.io",
   "builds": [{ "src": "next.config.js", "use": "@now/next" }],
   "build": {
@@ -12,8 +12,11 @@
     {
       "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+",
       "headers": {
-        "cache-control": "immutable, s-maxage=31536000, max-age=86400"
+        "cache-control": "immutable, s-maxage=31536000, max-age=31536000"
       }
     }
-  ]
+  ],
+  "github": {
+    "silent": true
+  }
 }
