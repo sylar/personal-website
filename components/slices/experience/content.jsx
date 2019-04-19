@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { uniqBy } from 'lodash'
+import uniqBy from 'lodash.uniqby'
 import Entry from './entry'
 
 class Content extends PureComponent {
