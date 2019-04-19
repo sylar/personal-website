@@ -12,7 +12,13 @@
     {
       "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+",
       "headers": {
-        "cache-control": "immutable, s-maxage=31536000, max-age=31536000"
+        "cache-control": "immutable, max-age=31536000"
+      }
+    },
+    {
+      "src": "/.*",
+      "headers": {
+        "cache-control": "s-maxage=31536000"
       }
     }
   ],
