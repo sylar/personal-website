@@ -5,7 +5,8 @@
   "builds": [{ "src": "next.config.js", "use": "@now/next" }],
   "build": {
     "env": {
-      "GRAPHQL_ENDPOINT": "@main-gql-endpoint"
+      "GRAPHQL_ENDPOINT": "@main-gql-endpoint",
+      "STAGING_GRAPHQL_ENDPOINT": "@staging-gql-endpoint"
     }
   },
   "routes": [
