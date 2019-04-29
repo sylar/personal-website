@@ -1,5 +1,6 @@
 import React from 'react'
 import { UL, LI, A, Section } from '../../..'
+import uniqBy from 'lodash.uniqby'
 
 const TechStackItem = ({ url, name }) => (
   <LI
@@ -12,7 +13,7 @@ const TechStackItem = ({ url, name }) => (
       }
     }}
   >
-    <A href={url} target="_blank">
+    <A href={url} target='_blank'>
       {name}
     </A>
   </LI>
@@ -33,11 +34,11 @@ const TechStack = ({ techStack }) => (
         }
       }}
     >
-      {techStack
-        .filter(i => !!i)
-        .map((item = { url: '', name: '' }, key) => (
+      {uniqBy(techStack.filter(i => !!i), item => item.name).map(
+        (item = { url: '', name: '' }, key) => (
           <TechStackItem key={key} url={item.url} name={item.name} />
-        ))}
+        )
+      )}
     </UL>
   </Section>
 )
