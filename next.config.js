@@ -3,13 +3,15 @@ if (NODE_ENV === 'development') {
   require('dotenv').config()
 }
 
-const { GRAPHQL_ENDPOINT } = process.env
+const { GRAPHQL_ENDPOINT, STAGING_GRAPHQL_ENDPOINT, NOW_ENV } = process.env
 module.exports = {
   env: {
-    GRAPHQL_ENDPOINT
+    GRAPHQL_ENDPOINT,
+    STAGING_GRAPHQL_ENDPOINT,
+    NOW_ENV
   },
   target: 'serverless',
-  exportPathMap: async function() {
+  exportPathMap: async function exportPathMap () {
     return {
       '/': { page: '/' },
       '/cv': { page: '/cv' },
