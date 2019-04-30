@@ -39,16 +39,15 @@ commands:
       - run:
           name: Build Next.js Project
           command: yarn build
-  clear-cloudflare-cache:
+  deploy-to-now:
     steps:
       - run:
-          environment:
-            CLOUDFLARE_URL: https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE_ID/purge_cache
-          name: Purge cloudflare cache
-          command: curl -X POST $CLOUDFLARE_URL -H "X-Auth-Email:$CLOUDFLARE_EMAIL" -H "X-Auth-Key:$CLOUDFLARE_GLOBAL_KEY" --header "Content-Type:application/json" --data '{"purge_everything":true}' > /dev/null
-      - run:
-          name: Waiting for cache to be purged
-          command: sleep 35
+          name: Deploy to production
+          command: |
+            if [ "$WEBHOOK_TRIGGER" == "true" ]; then
+              npx now --target production -e NODE_ENV=production --token=$NOW_TOKEN
+              WEBHOOK_TRIGGER=false
+            fi
 
 jobs:
   build:
@@ -59,13 +58,19 @@ jobs:
       - install-deps
       - save-caches
       - build-project
-  clear-caches:
-    machine: true
+    environment:
+      WEBHOOK_TRIGGER: false
+  nowDeploy:
+    executor: nodejs
     steps:
-      - clear-cloudflare-cache
+      - checkout
+      - restore-caches
+      - deploy-to-now
 
 workflows:
   build-deploy:
     jobs:
       - build
-      - clear-caches
+      - nowDeploy:
+          requires:
+            - build
