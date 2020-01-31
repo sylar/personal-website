@@ -21,11 +21,11 @@ const PrintNotCopy = () =>
     ev.preventDefault()
   })
 
-const ResumePage = function() {
+const ResumePage = function () {
   return (
     <Query query={resumePage}>
       {({ data, loading, error }) => {
-        if (loading) {
+        if (loading || !data.prismic) {
           return null
         }
 
@@ -39,10 +39,10 @@ const ResumePage = function() {
         } = resume
 
         return (
-          <Fragment>
+          <>
             <Head>
               <title>Andrei Constantinescu | CV</title>
-              <meta name="description" content="Andrei Constantinescu's CV." />
+              <meta name='description' content="Andrei Constantinescu's CV." />
             </Head>
             <Header location={location} email={email} logo={logo} />
             <Layout
@@ -63,8 +63,7 @@ const ResumePage = function() {
                       items: experience.content,
                       headerText: experience.title
                     }
-                  },
-                  ,
+                  },,
                   {
                     Component: SideProjectsSlice,
                     data: {
@@ -83,7 +82,7 @@ const ResumePage = function() {
               />
               <LastUpdate timestamp={lastUpdate} />
             </Layout>
-          </Fragment>
+          </>
         )
       }}
     </Query>
