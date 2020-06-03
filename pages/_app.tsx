@@ -1,7 +1,12 @@
-import "../styles/index.css"
+import "../styles/index.css";
+import Page from "../components/Page";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <Page>
+      <Component {...pageProps} />
+    </Page>
+  );
 }
 
-export default MyApp
+export default MyApp;
