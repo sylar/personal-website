@@ -10,3 +10,5 @@ env.json
 .travis/**/*.key.pub
 .travis/**/*.crt
 .env
+
+.vercel
