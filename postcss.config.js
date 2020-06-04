@@ -1,8 +1,9 @@
-const { NODE_ENV } = process.env
-const isProd = NODE_ENV === "production"
+const { NODE_ENV } = process.env;
+const isProd = NODE_ENV === "production";
 
 const plugins = [
   "tailwindcss",
+  "postcss-preset-env",
   ...(isProd
     ? [
         "@fullhuman/postcss-purgecss",
@@ -16,7 +17,7 @@ const plugins = [
       ]
     : []),
   "postcss-preset-env"
-]
+];
 module.exports = {
   plugins
-}
+};
