@@ -1181,10 +1181,10 @@
     postcss "7.0.28"
     purgecss "^2.2.0"
 
-"@next/react-dev-overlay@9.4.5-canary.4":
-  version "9.4.5-canary.4"
-  resolved "https://registry.yarnpkg.com/@next/react-dev-overlay/-/react-dev-overlay-9.4.5-canary.4.tgz#4cb10cd6cf28d1cd2fac58f2e57df4a4e0b95721"
-  integrity sha512-iIB3YPKzl88K0SSnQV+O2v/z6JuqlPq8IQkbweFH2ztMHWfXSDVbaBiL9H5fRsLbGfHdU45AIcErSyVUVGUgvg==
+"@next/react-dev-overlay@9.4.5-canary.8":
+  version "9.4.5-canary.8"
+  resolved "https://registry.yarnpkg.com/@next/react-dev-overlay/-/react-dev-overlay-9.4.5-canary.8.tgz#0a8ceae7e42ad681719cb501d5f32ebfde5cb7ca"
+  integrity sha512-asN5aMiww0sxmQpPtjC1tluxFiAgQJ6qLhE+IThXSi/5Uv9fQnJ75GC/XkaBgStLgLKy46wNg9O0hHo89ydO7Q==
   dependencies:
     "@babel/code-frame" "7.8.3"
     ally.js "1.4.1"
@@ -1197,10 +1197,10 @@
     stacktrace-parser "0.1.10"
     strip-ansi "6.0.0"
 
-"@next/react-refresh-utils@9.4.5-canary.4":
-  version "9.4.5-canary.4"
-  resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-9.4.5-canary.4.tgz#a3062959b86f76b87fa2b5d6c2857a0fb2a65f1e"
-  integrity sha512-twTU+k5SVtdyvhAAEbfQYKes8036GjqXV/ObADiCMKq44KgCQDdP4sHWIjy1cdFkHD8z2IBzmZfmSj2q3uYcQg==
+"@next/react-refresh-utils@9.4.5-canary.8":
+  version "9.4.5-canary.8"
+  resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-9.4.5-canary.8.tgz#71401cfdd1e1a6294102abe8430bcbccb4826aca"
+  integrity sha512-y6triiEFeEU3PJqGBmkBKkSQxj0H2xBEk/Vh0p5pdhnkZ+CMSdIZSBQx/+oDBfFW12PhsY06lZmJIRO8y4NKxg==
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
@@ -1217,10 +1217,10 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.4.tgz#38fd73ddfd9b55abb1e1b2ed578cb55bd7b7d339"
   integrity sha512-8+KAKzEvSUdeo+kmqnKrqgeE+LcA0tjYWFY7RPProVYwnqDjukzO+3b6dLD56rYX5TdWejnEOLJYOIeh4CXKuA==
 
-"@types/node@^14.0.6":
-  version "14.0.6"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.6.tgz#f9e178b2da31a4b0ec60b64649e244c31ce18daf"
-  integrity sha512-FbNmu4F67d3oZMWBV6Y4MaPER+0EpE9eIYf2yaHhCWovc1dlXCZkqGX4NLHfVVr6umt20TNBdRzrNJIzIKfdbw==
+"@types/node@^14.0.13":
+  version "14.0.13"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.13.tgz#ee1128e881b874c371374c1f72201893616417c9"
+  integrity sha512-rouEWBImiRaSJsVA+ITTFM6ZxibuAlTuNOCyxVbwreu6k6+ujs7DfnU9o+PShFhET78pMBl3eH+AGSI5eOTkPA==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -5847,10 +5847,10 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-next@^9.4.5-canary.4:
-  version "9.4.5-canary.4"
-  resolved "https://registry.yarnpkg.com/next/-/next-9.4.5-canary.4.tgz#c6bc8f15fe6853f849ec1118bf6aeea779264762"
-  integrity sha512-PddAPYc4MiU874txUM9W2LpUQPKt+p9YVbcFhN6oszBccZfVE2NPprpfC+hC36qeLsKaA6ebMYYIu1tBEo7odQ==
+next@^9.4.5-canary.8:
+  version "9.4.5-canary.8"
+  resolved "https://registry.yarnpkg.com/next/-/next-9.4.5-canary.8.tgz#4ecba2a6961771cf21f5a3f917412700973e8a0d"
+  integrity sha512-NIo02mMI/7R7m9sYWiUUnNOiCwuXECc26pt7b0CZiywRVgIl7xUQ/Sg4p6cFmp8vs2hxzGa1olOEYR4Ic8TE1A==
   dependencies:
     "@ampproject/toolbox-optimizer" "2.5.0"
     "@babel/code-frame" "7.8.3"
@@ -5870,8 +5870,8 @@ next@^9.4.5-canary.4:
     "@babel/preset-typescript" "7.9.0"
     "@babel/runtime" "7.9.6"
     "@babel/types" "7.9.6"
-    "@next/react-dev-overlay" "9.4.5-canary.4"
-    "@next/react-refresh-utils" "9.4.5-canary.4"
+    "@next/react-dev-overlay" "9.4.5-canary.8"
+    "@next/react-refresh-utils" "9.4.5-canary.8"
     babel-plugin-syntax-jsx "6.18.0"
     babel-plugin-transform-define "2.0.0"
     babel-plugin-transform-react-remove-prop-types "0.4.24"
@@ -7363,10 +7363,10 @@ prettier-eslint-cli@^5.0.0:
     rxjs "^6.5.2"
     yargs "^13.2.4"
 
-prettier-eslint@^10.1.1:
-  version "10.1.1"
-  resolved "https://registry.yarnpkg.com/prettier-eslint/-/prettier-eslint-10.1.1.tgz#52e203d367e158038174444edf85519c4175ac1d"
-  integrity sha512-TtYxuFUMVxudJTSnPScaBqHZm/48ndvX3KLFzhejJYbRzRybmM9RdBfn9YzgN0itfPrYxCesIZGJqyXXZJOR2w==
+prettier-eslint@^11.0.0:
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/prettier-eslint/-/prettier-eslint-11.0.0.tgz#b19b97c8a1fc4c898b7d1a54b948ef957ceb101d"
+  integrity sha512-ACjL7T8m10HCO7DwYdXwhNWuZzQv86JkZAhVpzFV9brTMWi3i6LhqoELFaXf6RetDngujz89tnbDmGyvDl+rzA==
   dependencies:
     "@typescript-eslint/parser" "^3.0.0"
     common-tags "^1.4.0"
@@ -7375,7 +7375,7 @@ prettier-eslint@^10.1.1:
     indent-string "^4.0.0"
     lodash.merge "^4.6.0"
     loglevel-colored-level-prefix "^1.0.0"
-    prettier "^1.7.0"
+    prettier "^2.0.0"
     pretty-format "^23.0.1"
     require-relative "^0.8.7"
     typescript "^3.9.3"
@@ -7424,6 +7424,11 @@ prettier@^1.7.0:
   version "1.19.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
   integrity sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==
+
+prettier@^2.0.0:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.0.5.tgz#d6d56282455243f2f92cc1716692c08aa31522d4"
+  integrity sha512-7PtVymN48hGcO4fGjybyBSIWDsLU4H4XlvOHfq91pz9kkGlonzwTfYkaIEwiRg/dAJF9YlbsduBAgtYLi+8cFg==
 
 pretty-format@^23.0.1:
   version "23.6.0"
@@ -9242,10 +9247,10 @@ typescript@^3.9.3:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.3.tgz#d3ac8883a97c26139e42df5e93eeece33d610b8a"
   integrity sha512-D/wqnB2xzNFIcoBG9FG8cXRDjiqSTbG2wd8DMZeQyJlP1vfTkIxH4GKveWaEBYySKIg+USu+E+EDIR47SqnaMQ==
 
-typescript@^4.0.0-dev.20200601:
-  version "4.0.0-dev.20200601"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.0.0-dev.20200601.tgz#f9cb22cbfc312350ff55b7c57eef62810b0fd1e8"
-  integrity sha512-vInHlMfXsl78aut2sD+Nj2mFL8Cl3+NxzVKYX9q5FrCEzd7NK7ptrCklBFm5WE2E1gioYofCEo8q4hgIVChfjQ==
+typescript@^4.0.0-dev.20200609:
+  version "4.0.0-dev.20200609"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.0.0-dev.20200609.tgz#c35a84902eb522dc858fe61c018003928051a465"
+  integrity sha512-+FFUGuOqBW5+eZf7IboN14yKVtciZ5NHQApru8/e+Leka0953ixdaU3euouPnJ/S7i/e5MtNWgxLG5TNBOuN/Q==
 
 unfetch@^4.0.0:
   version "4.1.0"
