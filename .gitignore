@@ -12,3 +12,4 @@ env.json
 .env
 
 .vercel
+.yarn-error
