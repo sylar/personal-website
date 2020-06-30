@@ -1,12 +1,24 @@
-import "../styles/index.css";
-import Page from "../components/Page";
+import App from 'next/app'
+import {ThemeProvider} from 'styled-components'
+import { PageLayout } from '../components/styled'
+import theme, { GlobalStyle } from '../theme'
 
-function MyApp({ Component, pageProps }) {
-  return (
-    <Page>
-      <Component {...pageProps} />
-    </Page>
-  );
+class MyApp extends App {
+  render() {
+    const { Component, pageProps } = this.props
+    return (
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+
+        
+        <PageLayout>
+
+        
+        <Component {...pageProps} />
+        </PageLayout>
+      </ThemeProvider>
+    )
+  }
 }
 
 export default MyApp;
