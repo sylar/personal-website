@@ -1,7 +1,8 @@
-
-import styled from 'styled-components'
+import { ReactElement } from 'react'
 import { Title } from '../components/styled'
 
-export default function Home() {
+function Home(): ReactElement {
   return <Title>Hello World.</Title>
 }
+
+export default Home
