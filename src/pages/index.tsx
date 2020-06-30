@@ -1,11 +1,7 @@
-import React from "react";
 
-const Homepage = function() {
-  return (
-    <section className="title">
-      <h1>Hello world.</h1>
-    </section>
-  );
-};
+import styled from 'styled-components'
+import { Title } from '../components/styled'
 
-export default Homepage;
+export default function Home() {
+  return <Title>Hello World.</Title>
+}
