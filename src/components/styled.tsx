@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
 export const PageLayout = styled.div`
-    max-width: 800px;
-    margin: 0 auto;
-    color: ${props => props.theme.colors.primary};
-    
+  max-width: 800px;
+  margin: 0 auto;
+  color: ${(props) => props.theme.colors.primary};
 `
 
 export const Heading = styled.h2``
