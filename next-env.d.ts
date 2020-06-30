@@ -3,18 +3,17 @@
 
 import 'styled-components'
 
-// and extend them!
 declare module 'styled-components' {
   export interface DefaultTheme {
     background: {
-        light: string,
-        dark: string
+      light: string
+      dark: string
     }
     fontFamily: string
 
     colors: {
-        primary: string,
-        secondary: string
+      primary: string
+      secondary: string
     }
   }
 }
