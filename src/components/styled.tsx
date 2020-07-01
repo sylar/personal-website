@@ -5,7 +5,7 @@ const shevy = new Shevy()
 const { h2, h3, h4, content } = shevy
 
 export const PageLayout = styled.div`
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   color: ${(props) => props.theme.colors.primary};
   font-size: ${content.fontSize};
