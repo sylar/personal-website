@@ -3,10 +3,7 @@ export enum LogoSizes {
   MEDIUM = 'medium'
 }
 
-export type LogoContainerProps = {
+export type LogoProps = {
   src: string
-  round?: boolean
   size?: LogoSizes
 }
-
-export type LogoProps = Pick<LogoContainerProps, 'src' | 'round'>

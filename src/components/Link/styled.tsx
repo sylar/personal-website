@@ -8,5 +8,6 @@ export const List = styled(UL)`
 
 export const ListElement = styled(LI)`
   display: block;
-  margin: 0 ${(props) => props.theme.typography.lineHeightSpacing()};
+  margin: 0;
+  margin-right: ${(props) => props.theme.typography.lineHeightSpacing(1)};
 `
