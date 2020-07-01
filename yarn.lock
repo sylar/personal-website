@@ -1921,6 +1921,11 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
+"@types/shevyjs@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@types/shevyjs/-/shevyjs-1.1.0.tgz#fb5fc5347916cfce3770f652b0f0f73bab292d90"
+  integrity sha512-Gb98Q5WSdogc1+nnGxyLQWJ4BV5wCTjr4zZ6r3J9Rpwnfzv7tvqwHaybQUpJcyPPAU9akO7aiPwuistoslbuxA==
+
 "@types/styled-components@^5.1.0":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.0.tgz#24d3412ba5395aa06e14fbc93c52f9454cebd0d6"
@@ -8163,6 +8168,11 @@ shell-quote@1.7.2:
   version "1.7.2"
   resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.7.2.tgz#67a7d02c76c9da24f99d20808fcaded0e0e04be2"
   integrity sha512-mRz/m/JVscCrkMyPqHc/bczi3OQHkLTqXHEFu0zDhK/qfv3UcOA4SVmRCLmos4bhjr9ekVQubj/R7waKapmiQg==
+
+shevyjs@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/shevyjs/-/shevyjs-1.1.0.tgz#49f04285693fd6416ecef4eb0fced8ad6ae40383"
+  integrity sha1-SfBChWk/1kFuzvTrD87YrWrkA4M=
 
 side-channel@^1.0.2:
   version "1.0.2"

@@ -1,4 +1,8 @@
+import Shevy from 'shevyjs'
 import { createGlobalStyle, css, DefaultTheme } from 'styled-components'
+
+const shevy = new Shevy()
+const { body } = shevy
 
 const COLORS = {
   electromagnetic: '#2f3640',
@@ -23,6 +27,10 @@ export const GlobalStyle = createGlobalStyle`${css`
   html {
     font-family: ${(props) => props.theme.fontFamily};
     background: ${(props) => props.theme.background.light};
+  }
+  body {
+    font-size: ${body.fontSize}
+    line-height: ${body.lineHeight}
   }
 `}
 `
