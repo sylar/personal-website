@@ -1,14 +1,14 @@
-import LinkList from '../../components/Link/LinkList'
-import Logo from '../../components/Logo'
-import personalData from '../../data/personal'
+import LinkList from '../components/Link/LinkList'
+import Logo from '../components/Logo'
+import personalData from '../lib/data/personal'
 import {
   Header,
   HeaderTitle,
   HomeContent,
   HomeLayout,
   HomeContactList
-} from './styled'
-import Md from '../../components/Md'
+} from '../lib/styles/homepage'
+import Md from '../components/Md'
 
 function Home(): JSX.Element {
   return (

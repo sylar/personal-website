@@ -1,4 +1,12 @@
-import { Heading, Title, Subtitle, Paragraph, Image, UL, LI } from '../styled'
+import {
+  Heading,
+  Title,
+  Subtitle,
+  Paragraph,
+  Image,
+  UL,
+  LI
+} from '../../lib/styles/global'
 import ReactMarkdown from 'react-markdown'
 import { MdProps } from './types'
 

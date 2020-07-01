@@ -26,15 +26,14 @@ export const Subtitle = styled.h4`
   margin-bottom: ${(props) => props.theme.typography.h4.marginBottom};
 `
 export const Section = styled.section`
-  font-size: ${(props) => props.theme.typography.content.fontSize};
-  line-height: ${(props) => props.theme.typography.content.lineHeight};
 `
+
 export const Paragraph = styled.p`
-  font-size: ${(props) => props.theme.typography.content.fontSize};
   line-height: ${(props) => props.theme.typography.lineHeightSpacing(1.5)};
-  margin-bottom: ${(props) => props.theme.typography.content.marginBottom};
 `
+
 export const Image = styled.img``
+
 export const SVG = styled.svg`
   @media (prefers-color-scheme: light) {
     path {
@@ -48,26 +47,14 @@ export const SVG = styled.svg`
   }
 `
 
-export const UL = styled.ul`
-  font-size: ${(props) => props.theme.typography.content.fontSize};
-  line-height: ${(props) => props.theme.typography.content.lineHeight};
-  margin-bottom: ${(props) => props.theme.typography.content.marginBottom};
-`
+export const UL = styled.ul``
 
-export const LI = styled.li`
-  font-size: ${(props) => props.theme.typography.content.fontSize};
-  line-height: ${(props) => props.theme.typography.content.lineHeight};
-  margin-bottom: ${(props) => props.theme.typography.content.marginBottom};
-`
+export const LI = styled.li``
 
 export const HR = styled.hr`
   border: 1px solid ${(props) => props.theme.colors.primary};
   margin: -1px 0;
   line-height: ${(props) => props.theme.typography.lineHeightSpacing(0.5)};
-  margin-top: ${(props) => props.theme.typography.content.marginBottom};
-`
-export const Div = styled.div`
-  font-size: ${(props) => props.theme.typography.content.fontSize};
-  line-height: ${(props) => props.theme.typography.content.lineHeight};
-  margin-bottom: ${(props) => props.theme.typography.content.marginBottom};
-`
+ `
+
+ export const Div = styled.div``

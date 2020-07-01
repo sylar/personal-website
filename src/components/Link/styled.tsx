@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { LI, UL } from '../styled'
+import { LI, UL } from '../../lib/styles/global'
 
 export const List = styled(UL)`
   padding: 0;
