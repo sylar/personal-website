@@ -10,7 +10,7 @@ export default {
     },
     {
       label: 'linkedIn',
-      url: 'https://linkedin.com/constantinescuio'
+      url: 'https://linkedin.com/in/constantinescuio'
     },
     {
       label: 'resume',
