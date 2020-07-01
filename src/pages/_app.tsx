@@ -1,6 +1,6 @@
 import App from 'next/app'
 import { ThemeProvider } from 'styled-components'
-import { PageLayout } from '../components/styled'
+import { PageLayout } from '../lib/styles/global'
 import theme, { GlobalStyle } from '../theme'
 import Head from 'next/head'
 

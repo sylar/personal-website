@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Section, Title, PageLayout, Div } from '../../components/styled'
+import { Section, Title, PageLayout, Div } from './global'
 
 export const Header = styled(Section)`
   display: flex;
