@@ -18,8 +18,9 @@ export default {
       internal: true
     }
   ],
-  descripion:
-    'I am a Senior Software Engineer with an eye for javascript, usability and performance that tries to be up to date and enjoys a workout with every occasion',
+  descripion: `London based **Javascript Consultant** passionate about **usability**, **performance** and **simplicity**.
+  
+  I am remotely available.`,
   hobbies:
     'Mostly I read biographies and nonfiction books as well as tech news from hacker news. In my spare time I enjoy going to the gym and also practice playing  the guitar, should I have the time.'
 }

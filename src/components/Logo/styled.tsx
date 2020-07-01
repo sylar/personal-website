@@ -1,15 +1,16 @@
 import styled, { css } from 'styled-components'
 import { Image, Section } from '../styled'
-import { LogoContainerProps, LogoProps, LogoSizes } from './types'
+import { LogoProps, LogoSizes } from './types'
 
 export const LogoContainer = styled(Section)`
   width: 100%;
 
-  ${(props: Partial<LogoContainerProps>) => {
+  ${(props: Partial<LogoProps>) => {
     switch (props.size) {
       case LogoSizes.SMALL:
         return css`
-          width: 15%;
+          width: ${(props) => props.theme.typography.lineHeightSpacing(6)};
+          height: ${(props) => props.theme.typography.lineHeightSpacing(6)};
         `
       default:
         return css`
@@ -21,10 +22,4 @@ export const LogoContainer = styled(Section)`
 
 export const Logo = styled(Image)`
   width: 100%;
-  ${(props: LogoProps) =>
-    props.round &&
-    css`
-      border-radius: 50%;
-    `}
-  }
 `
