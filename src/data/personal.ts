@@ -15,7 +15,7 @@ export default {
     {
       label: 'resume',
       url: '/cv',
-      prefetch: true
+      internal: true
     }
   ],
   descripion:
