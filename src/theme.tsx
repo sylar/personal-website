@@ -1,7 +1,10 @@
 import Shevy from 'shevyjs'
 import { createGlobalStyle, css, DefaultTheme } from 'styled-components'
 
-const shevy = new Shevy()
+const shevy = new Shevy({
+  baseFontSize: '24px',
+  baseLineHeight: 1
+})
 const { body, h2, h3, h4, content, lineHeightSpacing, baseSpacing } = shevy
 
 const COLORS = {
@@ -35,10 +38,15 @@ export const GlobalStyle = createGlobalStyle`${css`
   html {
     font-family: ${(props) => props.theme.fontFamily};
     background: ${(props) => props.theme.background.light};
+    margin: 0;
+    padding: 0;
   }
   body {
     font-size: ${(props) => props.theme.typography.body.fontSize};
     line-height: ${(props) => props.theme.typography.body.lineHeight};
+  }
+  #__next {
+    height: 100vh;
   }
 `}
 `
