@@ -3,9 +3,11 @@ import { Sizes } from '../lib/styles/global'
 import ExperienceBlock from '../components/Blocks/Experience'
 import experienceData from '../lib/data/experince'
 import personalData from '../lib/data/personal'
+import projectsData from '../lib/data/projects'
 import { JobType } from '../components/Blocks/Experience/types'
 import SectionBlock from '../components/Blocks/Section'
 import EducationBlock from '../components/Blocks/Education'
+import ProjectsBlock from '../components/Blocks/Projects'
 
 const ResumePage = (): JSX.Element => (
   <>
@@ -27,6 +29,9 @@ const ResumePage = (): JSX.Element => (
           }}
         />
       ))}
+    </SectionBlock>
+    <SectionBlock title="Side Projects">
+      <ProjectsBlock projects={projectsData} />
     </SectionBlock>
     <SectionBlock title="Education">
       <EducationBlock
