@@ -7,10 +7,7 @@ import {
   JobDuration,
   JobCompany
 } from './styled'
-
-const formatDate = (date: Date): string => {
-  return `${date.getMonth() + 1} ${date.getFullYear()}`
-}
+import { formatDate } from '../../lib/utils'
 
 const JobNameComponent = (props: Pick<Job, 'type' | 'title'>): JSX.Element => (
   <JobName>
