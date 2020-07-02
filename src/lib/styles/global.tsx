@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const PageLayout = styled.div`
+export const PageLayout = styled.main`
   max-width: 800px;
   height: 100%;
   margin: 0 auto;

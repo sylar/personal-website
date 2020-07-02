@@ -1,5 +1,5 @@
 import { ExperienceBlockContentProps } from './types'
-import Md from '../Md'
+import Md from '../../Md'
 import { ExperienceContentList } from './styled'
 const ExperienceBlockContent = (
   props: ExperienceBlockContentProps
