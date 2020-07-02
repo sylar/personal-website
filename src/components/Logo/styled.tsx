@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
-import { Image, Section, Sizes } from '../../lib/styles/global'
+import { Image, Sizes } from '../../lib/styles/global'
 import { LogoProps } from './types'
 
-export const LogoContainer = styled(Section)`
+export const LogoContainer = styled.div`
   ${(props: Partial<LogoProps>) => {
     switch (props.size) {
       case Sizes.SMALL:

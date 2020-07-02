@@ -22,5 +22,11 @@ export default {
   
   I am available for remote work too.`,
   hobbies:
-    'Mostly I read biographies and nonfiction books as well as tech news from hacker news. In my spare time I enjoy going to the gym and also practice playing  the guitar, should I have the time.'
+    'Mostly I read biographies and nonfiction books as well as tech news from hacker news. In my spare time I enjoy going to the gym and also practice playing  the guitar, should I have the time.',
+  education: {
+    degree: `BSc in Computer Science`,
+    institution: 'University of Bucharest',
+    startYear: 2012,
+    endYear: 2016
+  }
 }
