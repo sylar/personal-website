@@ -8,6 +8,7 @@ import { JobType } from '../components/Blocks/Experience/types'
 import SectionBlock from '../components/Blocks/Section'
 import EducationBlock from '../components/Blocks/Education'
 import ProjectsBlock from '../components/Blocks/Projects'
+import HobbiesBlock from '../components/Blocks/Hobbies'
 
 const ResumePage = (): JSX.Element => (
   <>
@@ -30,9 +31,6 @@ const ResumePage = (): JSX.Element => (
         />
       ))}
     </SectionBlock>
-    <SectionBlock title="Side Projects">
-      <ProjectsBlock projects={projectsData} />
-    </SectionBlock>
     <SectionBlock title="Education">
       <EducationBlock
         degree={personalData.education.degree}
@@ -40,6 +38,12 @@ const ResumePage = (): JSX.Element => (
         startYear={personalData.education.startYear}
         endYear={personalData.education.endYear}
       />
+    </SectionBlock>
+    <SectionBlock title="Side Projects">
+      <ProjectsBlock projects={projectsData} />
+    </SectionBlock>
+    <SectionBlock title="Hobbies">
+      <HobbiesBlock content={personalData.hobbies} />
     </SectionBlock>
   </>
 )
