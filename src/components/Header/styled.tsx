@@ -4,12 +4,13 @@ import { HeaderProps } from './types'
 
 export const Header = styled(Section)`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   ${(props: Partial<HeaderProps>) => {
     switch (props.size) {
       case Sizes.MEDIUM:
         return css`
+          justify-items: center;
+          align-items: center;
+          flex-direction: column;
           margin-bottom: ${(props) =>
             props.theme.typography.lineHeightSpacing(3)};
           padding-top: ${(props) =>
@@ -17,6 +18,9 @@ export const Header = styled(Section)`
         `
       case Sizes.SMALL:
         return css`
+          align-items: center;
+          flex-direction: row-reverse;
+          justify-content: space-between;
           padding: ${(props) => props.theme.typography.lineHeightSpacing(1)} 0;
         `
       default:
@@ -32,8 +36,8 @@ export const HeaderTitle = styled(Title)`
         return css`
           margin: 0;
           padding-top: 0;
-          font-size: ${(props) => props.theme.typography.h6.fontSize};
-          line-height: ${(props) => props.theme.typography.h6.lineHeight};
+          font-size: ${(props) => props.theme.typography.h5.fontSize};
+          line-height: ${(props) => props.theme.typography.h5.lineHeight};
         `
       default:
         break

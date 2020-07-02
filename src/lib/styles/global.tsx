@@ -81,3 +81,5 @@ export const HR = styled.hr`
 }
 
 export const Article = styled.article``
+
+export const Small = styled.small`font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.6)}; `
