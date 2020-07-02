@@ -14,26 +14,37 @@ export const Heading = styled.h1`
   font-size: ${(props) => props.theme.typography.h2.fontSize};
   line-height: ${(props) => props.theme.typography.h2.lineHeight};
   margin-bottom: ${(props) => props.theme.typography.h2.marginBottom};
+  margin-top: ${(props) => props.theme.typography.h2.marginBottom};
 `
 export const Title = styled.h3`
   font-size: ${(props) => props.theme.typography.h3.fontSize};
   line-height: ${(props) => props.theme.typography.h3.lineHeight};
   margin-bottom: ${(props) => props.theme.typography.h3.marginBottom};
+  margin-top: ${(props) => props.theme.typography.h3.marginBottom};
 `
 export const Subtitle = styled.h4`
   font-size: ${(props) => props.theme.typography.h4.fontSize};
   line-height: ${(props) => props.theme.typography.h4.lineHeight};
   margin-bottom: ${(props) => props.theme.typography.h4.marginBottom};
+  margin-top: ${(props) => props.theme.typography.h4.marginBottom};
 `
 
 export const H5 = styled.h5`
 font-size: ${(props) => props.theme.typography.h5.fontSize};
 line-height: ${(props) => props.theme.typography.h5.lineHeight};
 margin-bottom: ${(props) => props.theme.typography.h5.marginBottom};
+margin-top: ${(props) => props.theme.typography.h5.marginBottom};
+`
+export const H6 = styled.h6`
+font-size: ${(props) => props.theme.typography.h6.fontSize};
+line-height: ${(props) => props.theme.typography.h6.lineHeight};
+margin-bottom: ${(props) => props.theme.typography.h6.marginBottom};
+margin-top: ${(props) => props.theme.typography.h6.marginBottom};
 `
 
-export const Section = styled.section`
-`
+export const Section = styled.section``
+
+export const Span = styled.span``
 
 export const Paragraph = styled.p``
 
@@ -68,3 +79,5 @@ export const HR = styled.hr`
   SMALL = 'small',
   MEDIUM = 'medium'
 }
+
+export const Article = styled.article``

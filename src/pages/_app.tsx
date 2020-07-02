@@ -11,7 +11,6 @@ class MyApp extends App {
       <>
         <Head>
           <title>Andrei Constantinescu</title>
-          <link rel="stylesheet" href="//basehold.it/24" />
         </Head>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
