@@ -1,25 +1,18 @@
 import LinkList from '../components/Link/LinkList'
-import Logo from '../components/Logo'
 import personalData from '../lib/data/personal'
 import {
-  Header,
-  HeaderTitle,
   HomeContent,
   HomeLayout,
   HomeContactList
 } from '../lib/styles/homepage'
 import Md from '../components/Md'
+import HeaderComponent from '../components/Header'
+import { Sizes } from '../lib/styles/global'
 
 function Home(): JSX.Element {
   return (
     <HomeLayout>
-      <Header>
-        <HeaderTitle>
-          Andrei <br />
-          Constantinescu
-        </HeaderTitle>
-        <Logo src="/LogoRound.svg" />
-      </Header>
+      <HeaderComponent size={Sizes.MEDIUM} />
       <HomeContent>
         <Md source={personalData.descripion} />
         <HomeContactList>

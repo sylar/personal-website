@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const PageLayout = styled.div`
-  max-width: 1000px;
+  max-width: 800px;
   height: 100%;
   margin: 0 auto;
   color: ${(props) => props.theme.colors.primary};
@@ -25,6 +25,13 @@ export const Subtitle = styled.h4`
   line-height: ${(props) => props.theme.typography.h4.lineHeight};
   margin-bottom: ${(props) => props.theme.typography.h4.marginBottom};
 `
+
+export const H5 = styled.h4`
+font-size: ${(props) => props.theme.typography.h5.fontSize};
+line-height: ${(props) => props.theme.typography.h5.lineHeight};
+margin-bottom: ${(props) => props.theme.typography.h5.marginBottom};
+`
+
 export const Section = styled.section`
 `
 
@@ -58,3 +65,8 @@ export const HR = styled.hr`
  `
 
  export const Div = styled.div``
+
+ export enum Sizes {
+  SMALL = 'small',
+  MEDIUM = 'medium'
+}
