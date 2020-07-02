@@ -1,10 +1,24 @@
 export default [
   {
+    company: 'BP',
+    description: `BP plc is a multinational oil and gas company headquartered in London, United Kingdom. It is one of the world's seven oil and gas "supermajors"`,
+    startDate: 1585695600000,
+    endDate: null,
+    type: 'contract',
+    jobTitle: 'software consultant',
+    techStack: ['react-js', 'jest', 'testcafe', 'typescript', 'stripe'],
+    tasks: `
+  - Designing and creating a framework-agnostic payments SDK integrating different payment providers under the hood exposing a simple interface for the user to consume. Created using typescript, unit tested with jest and deployed to the company’s private npm.
+  - Created a demo-app that illustrates the capabilities of the sdk by letting the user to make use of it with various configuration options, also it was the base for testcafe e2e tests.
+  - The SDK and Demo app had different azure pipelines in order to automate testing and code coverage reports.
+    `
+  },
+  {
     company: 'Partners Capital LLP',
     description:
       'Partners Capital Investment Group, LLC is an Outsourced Investment Office that serves endowments, foundations, pensions, investment professionals, and high-net-worth families in Europe, North America and Asia.',
     startDate: 1567292400000,
-    endDate: null,
+    endDate: 1585695600000,
     type: 'contract',
     jobTitle: 'frontend developer',
     techStack: [
@@ -19,7 +33,7 @@ export default [
     tasks: `
   - contributed to the transition of the existing excel balance sheet to a fully fledged Reactjs based web app by developing various features dealing with large sets of data being delivered by different internal api endpoints.
   - improved the overall performance by 35% of the time to interactive and  by 25% of the calculation times by making use of reselect's custom memoization feature and normalising vital parts of the client side state.
-  - added end to end smoke tests using cypess to boost the confidence of the newly developed features that coexist well with the existing ones."
+  - added end to end smoke tests using cypess to boost the confidence of the newly developed features that coexist well with the existing ones.
     `
   },
   {
