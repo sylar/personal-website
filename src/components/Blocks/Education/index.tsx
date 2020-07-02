@@ -2,13 +2,15 @@ import { EducationBlockProps } from './types'
 import { BlockHeading } from '../styled'
 import { Span } from '../../../lib/styles/global'
 
-const EducationBlockComponent = (props: EducationBlockProps): JSX.Element => {
+const EducationBlockComponent = ({
+  education
+}: EducationBlockProps): JSX.Element => {
   return (
     <BlockHeading>
-      <Span>{props.degree}</Span>
-      <Span>{props.institution}</Span>
+      <Span>{education.degree}</Span>
+      <Span>{education.institution}</Span>
       <Span>
-        {props.startYear} - {props.endYear}
+        {education.startYear} - {education.endYear}
       </Span>
     </BlockHeading>
   )
