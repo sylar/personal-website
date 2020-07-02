@@ -1,8 +1,3 @@
-export enum JobType {
-  CONTRACT = 'contract',
-  PERMANENT = 'permanent'
-}
-
 export type Company = {
   name: string
   description: string
@@ -10,7 +5,7 @@ export type Company = {
 }
 
 export type Job = {
-  type: JobType
+  type: string
   title: string
   startDate: number
   endDate?: number

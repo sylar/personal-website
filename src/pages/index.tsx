@@ -8,19 +8,26 @@ import {
 import Md from '../components/Md'
 import HeaderComponent from '../components/Header'
 import { Sizes } from '../lib/styles/global'
+import { HomePageProps } from '../lib/pageTypes'
 
-function Home(): JSX.Element {
+function Home({ personalData }: HomePageProps): JSX.Element {
   return (
     <HomeLayout>
       <HeaderComponent size={Sizes.MEDIUM} />
       <HomeContent>
-        <Md source={personalData.descripion} />
+        <Md source={personalData.description} />
         <HomeContactList>
           <LinkList urls={personalData.links} />
         </HomeContactList>
       </HomeContent>
     </HomeLayout>
   )
+}
+
+export async function getStaticProps(): Promise<{ props: HomePageProps }> {
+  return {
+    props: { personalData }
+  }
 }
 
 export default Home

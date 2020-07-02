@@ -4,13 +4,17 @@ import ExperienceBlock from '../components/Blocks/Experience'
 import experienceData from '../lib/data/experince'
 import personalData from '../lib/data/personal'
 import projectsData from '../lib/data/projects'
-import { JobType } from '../components/Blocks/Experience/types'
 import SectionBlock from '../components/Blocks/Section'
 import EducationBlock from '../components/Blocks/Education'
 import ProjectsBlock from '../components/Blocks/Projects'
 import HobbiesBlock from '../components/Blocks/Hobbies'
+import { ResumePageProps } from '../lib/pageTypes'
 
-const ResumePage = (): JSX.Element => (
+const ResumePage = ({
+  personalData,
+  experienceData,
+  projectsData
+}: ResumePageProps): JSX.Element => (
   <>
     <HeaderComponent size={Sizes.SMALL} />
     <SectionBlock title="Experience">
@@ -26,18 +30,13 @@ const ResumePage = (): JSX.Element => (
             startDate: xp.startDate,
             endDate: xp.endDate,
             title: xp.jobTitle,
-            type: xp.type as JobType
+            type: xp.type
           }}
         />
       ))}
     </SectionBlock>
     <SectionBlock title="Education">
-      <EducationBlock
-        degree={personalData.education.degree}
-        institution={personalData.education.institution}
-        startYear={personalData.education.startYear}
-        endYear={personalData.education.endYear}
-      />
+      <EducationBlock education={personalData.education} />
     </SectionBlock>
     <SectionBlock title="Side Projects">
       <ProjectsBlock projects={projectsData} />
@@ -47,5 +46,15 @@ const ResumePage = (): JSX.Element => (
     </SectionBlock>
   </>
 )
+
+export async function getStaticProps(): Promise<{ props: ResumePageProps }> {
+  return {
+    props: {
+      personalData,
+      experienceData,
+      projectsData
+    }
+  }
+}
 
 export default ResumePage

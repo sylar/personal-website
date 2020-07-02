@@ -18,7 +18,7 @@ export default {
       internal: true
     }
   ],
-  descripion: `London based **Javascript Consultant** passionate about **usability**, **performance** and **simplicity**.
+  description: `London based **Javascript Consultant** passionate about **usability**, **performance** and **simplicity**.
   
   I am available for remote work too.`,
   hobbies:

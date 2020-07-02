@@ -1,6 +1,3 @@
-export type EducationBlockProps = {
-  degree: string
-  institution: string
-  startYear: number
-  endYear: number
-}
+import { EducationEntry } from '../../../lib/pageTypes'
+
+export type EducationBlockProps = { education: EducationEntry }
