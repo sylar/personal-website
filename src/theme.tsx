@@ -5,7 +5,17 @@ const shevy = new Shevy({
   baseFontSize: '24px',
   baseLineHeight: 1
 })
-const { body, h2, h3, h4, h5, content, lineHeightSpacing, baseSpacing } = shevy
+const {
+  body,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  content,
+  lineHeightSpacing,
+  baseSpacing
+} = shevy
 
 const COLORS = {
   electromagnetic: '#2f3640',
@@ -28,6 +38,7 @@ const Theme: DefaultTheme = {
     h3,
     h4,
     h5,
+    h6,
     content,
     lineHeightSpacing,
     baseSpacing
