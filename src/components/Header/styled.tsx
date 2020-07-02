@@ -17,8 +17,7 @@ export const Header = styled(Section)`
         `
       case Sizes.SMALL:
         return css`
-          margin: ${(props) => props.theme.typography.lineHeightSpacing(0.5)} 0;
-          padding-top: 0;
+          padding: ${(props) => props.theme.typography.lineHeightSpacing(1)} 0;
         `
       default:
         break
@@ -33,7 +32,8 @@ export const HeaderTitle = styled(Title)`
         return css`
           margin: 0;
           padding-top: 0;
-          font-size: ${(props) => props.theme.typography.h5.fontSize};
+          font-size: ${(props) => props.theme.typography.h6.fontSize};
+          line-height: ${(props) => props.theme.typography.h6.lineHeight};
         `
       default:
         break

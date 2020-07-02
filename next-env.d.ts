@@ -26,6 +26,7 @@ declare module 'styled-components' {
       h3: RhythmProperties
       h4: RhythmProperties
       h5: RhythmProperties
+      h6: RhythmProperties
       content: RhythmProperties
     } & Pick<Shevy, 'lineHeightSpacing' | 'baseSpacing'>
   }

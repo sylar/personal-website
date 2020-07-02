@@ -7,7 +7,7 @@ export const PageLayout = styled.div`
   color: ${(props) => props.theme.colors.primary};
   font-size: ${(props) => props.theme.typography.content.fontSize};
   line-height: ${(props) => props.theme.typography.content.lineHeight};
-  padding: 0 ${(props) => props.theme.typography.lineHeightSpacing(1)};
+  padding: 0 ${(props) => props.theme.typography.lineHeightSpacing(1.5)};
 `
 
 export const Heading = styled.h1`
@@ -26,7 +26,7 @@ export const Subtitle = styled.h4`
   margin-bottom: ${(props) => props.theme.typography.h4.marginBottom};
 `
 
-export const H5 = styled.h4`
+export const H5 = styled.h5`
 font-size: ${(props) => props.theme.typography.h5.fontSize};
 line-height: ${(props) => props.theme.typography.h5.lineHeight};
 margin-bottom: ${(props) => props.theme.typography.h5.marginBottom};
@@ -35,9 +35,7 @@ margin-bottom: ${(props) => props.theme.typography.h5.marginBottom};
 export const Section = styled.section`
 `
 
-export const Paragraph = styled.p`
-  line-height: ${(props) => props.theme.typography.lineHeightSpacing(1.5)};
-`
+export const Paragraph = styled.p``
 
 export const Image = styled.img``
 
