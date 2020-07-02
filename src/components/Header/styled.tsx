@@ -21,7 +21,8 @@ export const Header = styled(Section)`
           align-items: center;
           flex-direction: row-reverse;
           justify-content: space-between;
-          padding: ${(props) => props.theme.typography.lineHeightSpacing(1)} 0;
+          padding-top: ${(props) =>
+            props.theme.typography.lineHeightSpacing(1)};
         `
       default:
         break

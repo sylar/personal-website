@@ -1,5 +1,5 @@
 import HeaderComponent from '../components/Header'
-import { Sizes, H6 } from '../lib/styles/global'
+import { Sizes } from '../lib/styles/global'
 import ExperienceBlock from '../components/Blocks/Experience'
 import experienceData from '../lib/data/experince'
 import personalData from '../lib/data/personal'
