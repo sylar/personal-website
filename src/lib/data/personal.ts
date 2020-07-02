@@ -14,7 +14,7 @@ export default {
     },
     {
       label: 'resume',
-      url: '/resume',
+      url: '/cv',
       internal: true
     }
   ],
