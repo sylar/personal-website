@@ -1,16 +1,17 @@
 export default [
   {
     company: 'BP',
-    description: `BP plc is a multinational oil and gas company headquartered in London, United Kingdom. It is one of the world's seven oil and gas "supermajors"`,
+    description: `BP plc is one of the world's seven oil and gas "supermajors" headquartered in London, United Kingdom.`,
     startDate: 1585695600000,
     endDate: null,
     type: 'contract',
     jobTitle: 'software consultant',
     techStack: ['react-js', 'jest', 'testcafe', 'typescript', 'stripe'],
     tasks: `
-  - Designing and creating a framework-agnostic payments SDK integrating different payment providers under the hood exposing a simple interface for the user to consume. Created using typescript, unit tested with jest and deployed to the company’s private npm.
-  - Created a demo-app that illustrates the capabilities of the sdk by letting the user to make use of it with various configuration options, also it was the base for testcafe e2e tests.
-  - The SDK and Demo app had different azure pipelines in order to automate testing and code coverage reports.
+  - **Single handedly** implemented a framework-agnostic Payments SDK using **Typescript** while maintaining an unit test **coverage level 90%** using Jest.
+  - Developed an **internal testing sandbox app** with **Reactjs** for the SDk to simulate various scenarios.
+  - Work in an **agile** environment, **unblocking** and **pairing** with team developers. Initiate discussions about **approaches and improvements** for both sides of the SDK and **Azure** services that we engaged with.
+  - **Released alpha version** for internal testing and **provide support** for the clients.
     `
   },
   {
@@ -31,9 +32,9 @@ export default [
       'typescript'
     ],
     tasks: `
-  - contributed to the transition of the existing excel balance sheet to a fully fledged Reactjs based web app by developing various features dealing with large sets of data being delivered by different internal api endpoints.
-  - improved the overall performance by 35% of the time to interactive and  by 25% of the calculation times by making use of reselect's custom memoization feature and normalising vital parts of the client side state.
-  - added end to end smoke tests using cypess to boost the confidence of the newly developed features that coexist well with the existing ones.
+  - Develop various frontend features with **Reactjs**, **Typescript** and **JavaScript** / **Node.js** for a digital transformation app of an balancesheet Excel based system.
+  - **Improved the TTI performance by 35%** by using different **memoization techniques** for the app's business logic while **normalizing the state store**.
+  - **Proposed and implementend** end to end testing, using Cypress, to **boost confidence and reliability** of the existing and upcoming features for both developers and stakeholders.
     `
   },
   {
@@ -53,10 +54,11 @@ export default [
       'typescript'
     ],
     tasks: `
-  - created a real-time UK heat map split into DNO regions powered by a various Kafka stream of data collected from users regarding the charging/capacity/usage of their smart devices (smart chargers/home batteries/v2g devices).
-    
-  - contributed to the creation of the internal reusable components catalog in order to unify the experience across the company’s applications, both internal and client facing.
-    `
+  - **Lead development** of a real-time dashboard (UK map and graphs) of smart devices' metrics collected from the users. The information was delivered by a **Node.js** through websockets while being subscribed to various **Kafka** streams.
+  - Rendered the UK maps's individual DNO regions with **Geojsons and Webgl**. Used **D3** for bespoke representions of the real time data.
+  - Created a **[Storybook](https://storybook.js.org/)** catalogue for shared UI component to **make collaboration easier** between the design and the development teams.
+  - Provide **mentoring** and **support** for new team members to get accustomed with the codebase.
+  `
   },
   {
     company: 'Sky',
@@ -79,9 +81,9 @@ export default [
       'optimizely'
     ],
     tasks: `
-  - maintained and updated as needed the NowTV app’s Jest unit tests and Ruby functional tests in order to gain more confidence with each platform-dependent release of the application.
-  - created a curated VOD content rail and a multi-variant A/B testing solution tailored to the needs of the app using Optimizely.
-  - reduced the overall technical debt of the codebase by updating patterns and approaches and also by applying code linting rules where needed.
+  - Work in an **agile** team to **reduce technical debt** and **improve reliability** of the app by updating approches and tools used by the NowTV.
+  - Improved coverage levels by **5%** of Jest unit tests and by **2%** the **Ruby** based functional tests of the NowTV app to **gain more confidence** in the releases.
+  - Implemented features across the app like a curated VOD content rail and developed a **multi-variant A/B testing bespoke solution** using **[Optimizely](https://www.optimizely.com)**.
     `
   },
   {
@@ -102,8 +104,8 @@ export default [
       'cypress'
     ],
     tasks: `
-  - increased the client’s confidence when using the Broadband Checker tool (part of a multi tenancy user journey creation tool) by adding a 3D Secure Payment verification step before confirming the internet provider switch.
-  - improved the e2e testing approaches by using the record/replay strategy of the requests with Cypress in order to reduce the testing times and improve the reliability of the tests.
+  - Work closely with the design team to implement a **3D Secure** verification step in the user switch journey for broadband using the **[Broadband Checker](https://www.uswitch.com/broadband/)**.
+  - Improved the speeds of the cypress based smoke tests by 40% by implementing a **record and replay** strategy for API responses while testing.
     `
   },
   {
@@ -127,8 +129,9 @@ export default [
       'express-js'
     ],
     tasks: `
-  - contributed to the creation of 2018’s World Cup Update page by integrating various services used throughout the site (Brightcove/Parsley/OPTA Sports) to deliver curated content and metrics in real time.
-  - contributed to various tech stack upgrades and techniques in order to streamline the release process and also to increase the developer confidence.
+  - Developed features like **live sports metrics** with [Opta](https://www.optasportspro.com), **tracking of the page usage** with [Parsely](https://www.parse.ly) and **video gallery** with [Brightcove](https://www.brightcove.com/) for The Sun national page.
+  - **Succesfully lunched** the 2018 FIFA World Cup page.
+  - **Boosted overall loading times** of The Sun's website by updating the existing approach of head bidding.
     `
   },
   {
@@ -141,8 +144,9 @@ export default [
     jobTitle: 'frontend developer',
     techStack: ['react', 'redux', 'redux-saga', 'reselect', 'webpack', 'sass'],
     tasks: `
-  - contributed to the creation of an internal multi tenancy insurance quote generator by implementing the api orchestration (of multiple datasources) and data management within the app.
-  - created internal small PoC/services that contributed to achieving feature parity of the new web based quote generator with the existing spreadsheet one.
+  - Work in an *agile* team with the goal of delivering a client facing multi tenancy insurance quote generation solution using **Reactjs** to replace the existing Excel based one.
+  - Used **(Sagas)[https://redux-saga.js.org]** to efficiently **orchestrate async api calls** on the client side application.
+  - Took advantage of memoization to *maintain* low loading times** while generating a quote.
     `
   },
   {
@@ -166,9 +170,10 @@ export default [
       'postgres'
     ],
     tasks: `
-  - single handedly created from scratch both the frontend and the backend (along with the databases) of an online catalog of Maths resources for pupils from Year 1 to Year 6. The resources have different types (video, documents) and were available on a tier based model.
-  - made use of AWS resources for deploying and storing the documents for the platform and also made use of different caching and availability methods for distributing the correct content to the user based on their level of access.
-  - the server communicating with the AWS services and with the internal user authentication service is a graphql based nodejs server.
+  - **Lead develop** a full-stack a various Math resources explorer for pupils Year 1 to Year 6 using **Reactjs**, **Node.js**, **[Apollo GraphQL](https://www.apollographql.com)** and **PostgreSQL**.
+  - Leveraged the user access to resources on GraphQL custom directives communicating with the existing services.
+  - **Maintained low app loading times** by implementing different caching strategies including **[query persistance](https://www.apollographql.com/docs/apollo-server/performance/apq/)**, **Cloudfront** capabilities and **server-side rendering** where possible.
+  - Work closely with project manager and **realeased the initial version** by the end of October 2017.
     `
   },
   {
