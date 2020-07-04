@@ -55,7 +55,7 @@ export default [
     ],
     tasks: `
   - **Lead development** of a real-time dashboard (UK map and graphs) of smart devices' metrics collected from the users. The information was delivered by a **Node.js** through websockets while being subscribed to various **Kafka** streams.
-  - Rendered the UK maps's individual DNO regions with **Geojsons and Webgl**. Used **D3** for bespoke representions of the real time data.
+  - Crafted the UK maps's individual DNO regions with **Geojsons and Webgl**. Used **D3** for bespoke representions of the real time data.
   - Created a **[Storybook](https://storybook.js.org/)** catalogue for shared UI component to **make collaboration easier** between the design and the development teams.
   - Provide **mentoring** and **support** for new team members to get accustomed with the codebase.
   `
@@ -146,7 +146,7 @@ export default [
     tasks: `
   - Work in an *agile* team with the goal of delivering a client facing multi tenancy insurance quote generation solution using **Reactjs** to replace the existing Excel based one.
   - Used **(Sagas)[https://redux-saga.js.org]** to efficiently **orchestrate async api calls** on the client side application.
-  - Took advantage of memoization to *maintain* low loading times** while generating a quote.
+  - Took advantage of memoization to **maintain low loading times** while generating a quote.
     `
   },
   {
@@ -170,7 +170,7 @@ export default [
       'postgres'
     ],
     tasks: `
-  - **Lead develop** a full-stack a various Math resources explorer for pupils Year 1 to Year 6 using **Reactjs**, **Node.js**, **[Apollo GraphQL](https://www.apollographql.com)** and **PostgreSQL**.
+  - Lead develop a full-stack a various Math resources explorer for pupils Year 1 to Year 6 using **Reactjs**, **Node.js**, **[Apollo GraphQL](https://www.apollographql.com)** and **PostgreSQL**.
   - Leveraged the user access to resources on GraphQL custom directives communicating with the existing services.
   - **Maintained low app loading times** by implementing different caching strategies including **[query persistance](https://www.apollographql.com/docs/apollo-server/performance/apq/)**, **Cloudfront** capabilities and **server-side rendering** where possible.
   - Work closely with project manager and **realeased the initial version** by the end of October 2017.
@@ -199,9 +199,11 @@ export default [
       'graphql-relay'
     ],
     tasks: `
-  - single handedly created a social listening tool that used a graphql backend to gather, analyse and deliver different metrics relevant for the company's end goal of discovering and harnessing upcoming social trends.
-  - open sourced the bespoke template of the social listening tool under the name of \`project viper\`. It consists of unifying different libraries and technologies from the nodejs ecosystem.
-  - open sourced a docker based environment for developing Wordpress based projects in a isolated manner that will not interfere with the host environment.
+  - Work in an **agile** team to deliver a social listening solution to discover and predict social trends among the youth.
+  - Developed a full-stack PoC using **Node.js**, **Reactjs**, **GraphQL**, **(Relay)[https://relay.dev]** and **PostgreSQL**.
+  - Integrated **AWS** and **GCP** services to gather, analyse and report findings from a curated list of sources.
+  - **[Opensourced](https://github.com/sylar/project-viper)** on Github the template used for the PoC.
+  - **[Opensourced](https://github.com/sylar/wordpress-jail-cell)** on Github a **Docker** based environment for developing [Wordpress](https://wordpress.com) based plugins / themes.
     `
   },
   {
@@ -225,9 +227,10 @@ export default [
       'shopify'
     ],
     tasks: `
-  - developed shared components for navigating between the existing projects of the company that will maintain the logged user's details and access levels and for registering (and onboarding) a user into Kano World using Polymer and Web Components.
-  - created the kano.me storefront with the help of Vuejs and Shopify by developing a small client side api responsible for bundling and setting prices of products based on their existence and availability info from Shopify.
-  - among contributing to different Javascript projects company wide, I have created a small internal Amazon-like SLA service that would send to the storefront the delivery times of the orders with respect of the timezone of the user and stock availability.
+  - **Improved the onboarding process** by simplifying the flow and user testing diffenrent ideas frequently concluding in changing the whole initial journey.
+  - Codeveloped the [kano storefront](https://kano.me) with **Vuejs**, **Shopify** and **Node.js**. 
+  - Created various internal services like a Amazon-like delivery times manager that respects the user's timezone and a product bundler on top of **Shopify** to ease promotions cration by the Marketing team.
+  - Implemented different features like a **Polymer** based navigation solution to unify the company's user facing **JavaScript** projects.
     `
   },
   {
@@ -240,9 +243,9 @@ export default [
     jobTitle: 'software engineer',
     techStack: ['node', 'backbone', 'jade', 'styuls', 'gulp', 'heroku'],
     tasks: `
-  - contributed to developing using BackboneJs, Jade, Stylus, Expressjs and an authoring tool, LFA, a series of interactive and collaborative textbook for pupils from Year 1 to Year 4 in the Romanian language for a wide spectrum of subjects: Romanian language, maths, history, ethics or geography.
-  - contributed to creating the open source website of the 2014's presidential campaign for Monica Macovei with a stack based on BackboneJs, Jade, Stylus and Expressjs.
-  - Redesigned the company website using BackboneJs, Jade, Stylus and Expressjs.
+  - As part of the content team, I created various interactive and collaborative textbooks for pupils using **[Backbone.js](https://backbonejs.org)**, **[Jade](http://jade-lang.com)**, **[Stylus](https://stylus-lang.com)** and out custom authoring tool **[LFA](https://www.npmjs.com/package/lfa)**.
+  - Developed 2014's Romanian [Presidential Campaign Website](https://github.com/readfwd/macovei) for Monica Macovei.
+  - Reimplemented the company website as a **static website** served by Github.
     `
   }
 ]
