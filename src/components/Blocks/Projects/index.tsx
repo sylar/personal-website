@@ -7,9 +7,13 @@ const ProjectsBlock = (props: ProjectsBlockProps): JSX.Element => {
   return (
     <ProjectBlockList>
       {props.projects.map((project, key) => (
-        <LI key={`projects_${key}`}>
-          <Md source={project.details} />
-        </LI>
+        <Md
+          key={`projects_${key}`}
+          source={project.details}
+          renderers={{
+            paragraph: LI
+          }}
+        />
       ))}
     </ProjectBlockList>
   )

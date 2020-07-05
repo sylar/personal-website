@@ -1,4 +1,4 @@
-import { Section, Title, Sizes } from '../../lib/styles/global'
+import { Section, Title, Sizes, Small } from '../../lib/styles/global'
 import styled, { css } from 'styled-components'
 import { HeaderProps } from './types'
 
@@ -21,8 +21,10 @@ export const Header = styled(Section)`
           align-items: center;
           flex-direction: row-reverse;
           justify-content: space-between;
-          padding-top: ${(props) =>
-            props.theme.typography.lineHeightSpacing(1)};
+          @media screen {
+            padding-top: ${(props) =>
+              props.theme.typography.lineHeightSpacing(1)};
+          }
         `
       default:
         break
@@ -44,4 +46,10 @@ export const HeaderTitle = styled(Title)`
         break
     }
   }}
+`
+
+export const SmallList = styled(Small)`
+  @media print {
+    display: none;
+  }
 `

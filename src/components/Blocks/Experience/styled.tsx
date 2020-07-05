@@ -23,5 +23,7 @@ export const JobCompany = styled(Div)`
 `
 
 export const ExperienceBlock = styled(Article)`
-  margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(1.75)};
+  @media screen {
+    margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(1.75)};
+  }
 `
