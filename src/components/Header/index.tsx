@@ -1,8 +1,8 @@
-import { Header, HeaderTitle } from './styled'
+import { Header, HeaderTitle, SmallList } from './styled'
 import Logo from '../Logo'
 import { HeaderProps } from './types'
 import LinkList from '../Link/LinkList'
-import { Div, Small, Sizes } from '../../lib/styles/global'
+import { Div, Sizes } from '../../lib/styles/global'
 import { LinkProps } from '../Link/types'
 
 const links: LinkProps[] = [
@@ -23,9 +23,9 @@ const HeaderComponent = ({ size }: HeaderProps): JSX.Element => (
     <Div>
       <HeaderTitle size={size}>Andrei Constantinescu</HeaderTitle>
       {size === Sizes.SMALL && (
-        <Small>
+        <SmallList>
           <LinkList urls={links} />
-        </Small>
+        </SmallList>
       )}
     </Div>
   </Header>

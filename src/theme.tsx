@@ -1,6 +1,12 @@
 import Shevy from 'shevyjs'
 import { createGlobalStyle, css, DefaultTheme } from 'styled-components'
 
+if (process.browser) {
+  const isPrintMode = window.matchMedia('print')
+
+  console.log({ isPrintMode: isPrintMode.matches })
+}
+
 const shevy = new Shevy({
   baseFontSize: '24px',
   baseLineHeight: 1
@@ -50,15 +56,45 @@ export const GlobalStyle = createGlobalStyle`${css`
   html {
     font-family: ${(props) => props.theme.fontFamily};
     background: ${(props) => props.theme.background.light};
-    margin: 0;
-    padding: 0;
   }
-  body {
-    font-size: ${(props) => props.theme.typography.body.fontSize};
-    line-height: ${(props) => props.theme.typography.body.lineHeight};
+  @media screen {
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-size: ${(props) => props.theme.typography.body.fontSize};
+      line-height: ${(props) => props.theme.typography.body.lineHeight};
+    }
+    #__next {
+      height: 100vh;
+    }
   }
-  #__next {
-    height: 100vh;
+
+  @media print {
+    @page {
+      size: A4;
+      margin: 15px;
+    }
+    html,
+    body {
+      width: 210mm;
+      height: 297mm;
+      font-size: 12px;
+      line-height: 1.5rem;
+    }
+
+    a {
+      color: ${(props) => props.theme.colors.primary};
+      text-decoration: none;
+      pointer-events: none;
+    }
+
+    header,
+    footer {
+      display: none;
+    }
   }
 `}
 `

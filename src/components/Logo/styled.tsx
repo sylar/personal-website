@@ -26,6 +26,12 @@ export const LogoContainer = styled.div`
         `
     }
   }}
+  @media print {
+    svg {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
 `
 
 export const Logo = styled(Image)`
