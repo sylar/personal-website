@@ -10,11 +10,7 @@ import ProjectsBlock from '../components/Blocks/Projects'
 import HobbiesBlock from '../components/Blocks/Hobbies'
 import { ResumePageProps } from '../lib/pageTypes'
 
-const ResumePage = ({
-  personalData,
-  experienceData,
-  projectsData
-}: ResumePageProps): JSX.Element => (
+const ResumePage = (): JSX.Element => (
   <>
     <HeaderComponent size={Sizes.SMALL} />
     <SectionBlock title="Experience">
@@ -47,14 +43,14 @@ const ResumePage = ({
   </>
 )
 
-export async function getStaticProps(): Promise<{ props: ResumePageProps }> {
-  return {
-    props: {
-      personalData,
-      experienceData,
-      projectsData
-    }
-  }
-}
+// export async function getStaticProps(): Promise<{ props: ResumePageProps }> {
+//   return {
+//     props: {
+//       personalData,
+//       experienceData,
+//       projectsData
+//     }
+//   }
+// }
 
 export default ResumePage
