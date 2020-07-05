@@ -31,7 +31,7 @@ export default [
       'typescript'
     ],
     tasks: `
-  - Develop various frontend features with **Reactjs**, **Typescript** and **JavaScript** / **Node.js** for a digital transformation app of an balancesheet Excel based system.
+  - Develop various frontend features with **Reactjs**, **Typescript** and **JavaScript** / **Node.js** for a digital transformation app of a balancesheet Excel based system.
   - **Improved the TTI performance by 35%** by using different **memoization techniques** for the app's business logic while **normalizing the state store**.
   - **Proposed and implementend** end to end testing, using Cypress, to **boost confidence and reliability** of the existing and upcoming features for both developers and stakeholders.`
   },
