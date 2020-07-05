@@ -19,7 +19,7 @@ export default {
     }
   ],
   description: `London based **Javascript Consultant** passionate about **usability**, **performance** and **simplicity**.
-  
+
   I am available for remote work too.`,
   hobbies:
     'I enjoy read nonfiction books, especially biographies, and different tech publications ([hn news](https://news.ycombinator.com)). In my spare time I enjoy practising sports teaching others computer science.',

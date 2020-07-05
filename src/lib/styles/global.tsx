@@ -62,9 +62,9 @@ export const H6 = styled.h6`
 
 export const Section = styled.section``
 
-  
+
 export const Span = styled.span``
-  
+
 export const Paragraph = styled.p`
   @media print {
     margin: 0;

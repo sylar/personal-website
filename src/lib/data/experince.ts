@@ -218,7 +218,7 @@ export default [
     ],
     tasks: `
   - **Improved the onboarding process** by simplifying the flow and user testing diffenrent ideas frequently concluding in changing the whole initial journey.
-  - Codeveloped the [kano storefront](https://kano.me) with **Vuejs**, **Shopify** and **Node.js**. 
+  - Codeveloped the [kano storefront](https://kano.me) with **Vuejs**, **Shopify** and **Node.js**.
   - Created various internal services like a Amazon-like delivery times manager that respects the user's timezone and a product bundler on top of **Shopify** to ease promotions cration by the Marketing team.
   - Implemented different features like a **Polymer** based navigation solution to unify the company's user facing **JavaScript** projects.`
   },
