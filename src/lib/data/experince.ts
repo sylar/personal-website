@@ -11,8 +11,7 @@ export default [
   - **Single handedly** implemented a framework-agnostic Payments SDK using **Typescript** while maintaining an unit test **coverage level 90%** using Jest.
   - Developed an **internal testing sandbox app** with **Reactjs** for the SDk to simulate various scenarios.
   - Work in an **agile** environment, **unblocking** and **pairing** with team developers. Initiate discussions about **approaches and improvements** for both sides of the SDK and **Azure** services that we engaged with.
-  - **Released alpha version** for internal testing and **provide support** for the clients.
-    `
+  - **Released alpha version** for internal testing and **provide support** for the clients.`
   },
   {
     company: 'Partners Capital LLP',
@@ -34,8 +33,7 @@ export default [
     tasks: `
   - Develop various frontend features with **Reactjs**, **Typescript** and **JavaScript** / **Node.js** for a digital transformation app of an balancesheet Excel based system.
   - **Improved the TTI performance by 35%** by using different **memoization techniques** for the app's business logic while **normalizing the state store**.
-  - **Proposed and implementend** end to end testing, using Cypress, to **boost confidence and reliability** of the existing and upcoming features for both developers and stakeholders.
-    `
+  - **Proposed and implementend** end to end testing, using Cypress, to **boost confidence and reliability** of the existing and upcoming features for both developers and stakeholders.`
   },
   {
     company: 'Kaluza',
@@ -57,8 +55,7 @@ export default [
   - **Lead development** of a real-time dashboard (UK map and graphs) of smart devices' metrics collected from the users. The information was delivered by a **Node.js** through websockets while being subscribed to various **Kafka** streams.
   - Crafted the UK maps's individual DNO regions with **Geojsons and Webgl**. Used **D3** for bespoke representions of the real time data.
   - Created a **[Storybook](https://storybook.js.org/)** catalogue for shared UI component to **make collaboration easier** between the design and the development teams.
-  - Provide **mentoring** and **support** for new team members to get accustomed with the codebase.
-  `
+  - Provide **mentoring** and **support** for new team members to get accustomed with the codebase.`
   },
   {
     company: 'Sky',
@@ -82,9 +79,8 @@ export default [
     ],
     tasks: `
   - Work in an **agile** team to **reduce technical debt** and **improve reliability** of the app by updating approches and tools used by the NowTV.
-  - Improved coverage levels by **5%** of Jest unit tests and by **2%** the **Ruby** based functional tests of the NowTV app to **gain more confidence** in the releases.
-  - Implemented features across the app like a curated VOD content rail and developed a **multi-variant A/B testing bespoke solution** using **[Optimizely](https://www.optimizely.com)**.
-    `
+  - Improved coverage levels by **5%** of Jest unit tests and by **2%** the **Ruby based functional tests** of the NowTV app to gain more confidence in the releases.
+  - Implemented features across the app like a curated VOD content rail and developed a **multi-variant A/B testing bespoke solution** using **[Optimizely](https://www.optimizely.com)**.`
   },
   {
     company: 'uSwitch',
@@ -105,8 +101,7 @@ export default [
     ],
     tasks: `
   - Work closely with the design team to implement a **3D Secure** verification step in the user switch journey for broadband using the **[Broadband Checker](https://www.uswitch.com/broadband/)**.
-  - Improved the speeds of the cypress based smoke tests by 40% by implementing a **record and replay** strategy for API responses while testing.
-    `
+  - Improved the speeds of the cypress based smoke tests by 40% by implementing a **record and replay** strategy for API responses while testing.`
   },
   {
     company: 'The Sun, News UK',
@@ -131,8 +126,7 @@ export default [
     tasks: `
   - Developed features like **live sports metrics** with [Opta](https://www.optasportspro.com), **tracking of the page usage** with [Parsely](https://www.parse.ly) and **video gallery** with [Brightcove](https://www.brightcove.com/) for The Sun national page.
   - **Succesfully lunched** the 2018 FIFA World Cup page.
-  - **Boosted overall loading times** of The Sun's website by updating the existing approach of head bidding.
-    `
+  - **Boosted overall loading times** of The Sun's website by updating the existing approach of head bidding.`
   },
   {
     company: 'AIG',
@@ -146,8 +140,7 @@ export default [
     tasks: `
   - Work in an **agile** team with the goal of delivering a client facing multi tenancy insurance quote generation solution using **Reactjs** to replace the existing Excel based one.
   - Used **[Sagas](https://redux-saga.js.org)** to efficiently **orchestrate async api calls** on the client side application.
-  - Took advantage of memoization to **maintain low loading times** while generating a quote.
-    `
+  - Took advantage of memoization to **maintain low loading times** while generating a quote.`
   },
   {
     company: 'Third Space Learning',
@@ -173,8 +166,7 @@ export default [
   - Lead develop a full-stack a various Math resources explorer for pupils Year 1 to Year 6 using **Reactjs**, **Node.js**, **[Apollo GraphQL](https://www.apollographql.com)** and **PostgreSQL**.
   - Leveraged the user access to resources on GraphQL custom directives communicating with the existing services.
   - **Maintained low app loading times** by implementing different caching strategies including **[query persistance](https://www.apollographql.com/docs/apollo-server/performance/apq/)**, **Cloudfront** capabilities and **server-side rendering** where possible.
-  - Work closely with project manager and **realeased the initial version** by the end of October 2017.
-    `
+  - Work closely with project manager and **realeased the initial version** by the end of October 2017.`
   },
   {
     company: 'Beamly',
@@ -200,10 +192,9 @@ export default [
     ],
     tasks: `
   - Work in an **agile** team to deliver a social listening solution to discover and predict social trends among the youth.
-  - Developed a full-stack PoC using **Node.js**, **Reactjs**, **GraphQL**, **(Relay)[https://relay.dev]** and **PostgreSQL**.
+  - Developed a full-stack PoC using **Node.js**, **Reactjs**, **GraphQL**, **[Relay](https://relay.dev)** and **PostgreSQL**.
   - Integrated **AWS** and **GCP** services to gather, analyse and report findings from a curated list of sources.
-  - **Opensourced** Opensourced on Github the [template}(https://github.com/sylar/project-viper) used for the PoC and a **Docker** based [environment](https://github.com/sylar/wordpress-jail-cell) for developing [Wordpress](https://wordpress.com) plugins / themes.
-    `
+  - **Opensourced** Opensourced on Github the [template](https://github.com/sylar/project-viper) used for the PoC and a **Docker** based [environment](https://github.com/sylar/wordpress-jail-cell) for developing [Wordpress](https://wordpress.com) plugins / themes.`
   },
   {
     company: 'Kano Computing',
@@ -229,8 +220,7 @@ export default [
   - **Improved the onboarding process** by simplifying the flow and user testing diffenrent ideas frequently concluding in changing the whole initial journey.
   - Codeveloped the [kano storefront](https://kano.me) with **Vuejs**, **Shopify** and **Node.js**. 
   - Created various internal services like a Amazon-like delivery times manager that respects the user's timezone and a product bundler on top of **Shopify** to ease promotions cration by the Marketing team.
-  - Implemented different features like a **Polymer** based navigation solution to unify the company's user facing **JavaScript** projects.
-    `
+  - Implemented different features like a **Polymer** based navigation solution to unify the company's user facing **JavaScript** projects.`
   },
   {
     company: 'Learn Forward',
@@ -244,7 +234,6 @@ export default [
     tasks: `
   - As part of the content team, I created various interactive and collaborative textbooks for pupils using **[Backbone.js](https://backbonejs.org)**, **[Jade](http://jade-lang.com)**, **[Stylus](https://stylus-lang.com)** and out custom authoring tool **[LFA](https://www.npmjs.com/package/lfa)**.
   - Developed 2014's Romanian [Presidential Campaign Website](https://github.com/readfwd/macovei) for Monica Macovei.
-  - Reimplemented the company website as a **static website** served by Github.
-    `
+  - Reimplemented the company website as a **static website** served by Github.`
   }
 ]
