@@ -144,8 +144,8 @@ export default [
     jobTitle: 'frontend developer',
     techStack: ['react', 'redux', 'redux-saga', 'reselect', 'webpack', 'sass'],
     tasks: `
-  - Work in an *agile* team with the goal of delivering a client facing multi tenancy insurance quote generation solution using **Reactjs** to replace the existing Excel based one.
-  - Used **(Sagas)[https://redux-saga.js.org]** to efficiently **orchestrate async api calls** on the client side application.
+  - Work in an **agile** team with the goal of delivering a client facing multi tenancy insurance quote generation solution using **Reactjs** to replace the existing Excel based one.
+  - Used **[Sagas](https://redux-saga.js.org)** to efficiently **orchestrate async api calls** on the client side application.
   - Took advantage of memoization to **maintain low loading times** while generating a quote.
     `
   },
@@ -202,8 +202,7 @@ export default [
   - Work in an **agile** team to deliver a social listening solution to discover and predict social trends among the youth.
   - Developed a full-stack PoC using **Node.js**, **Reactjs**, **GraphQL**, **(Relay)[https://relay.dev]** and **PostgreSQL**.
   - Integrated **AWS** and **GCP** services to gather, analyse and report findings from a curated list of sources.
-  - **[Opensourced](https://github.com/sylar/project-viper)** on Github the template used for the PoC.
-  - **[Opensourced](https://github.com/sylar/wordpress-jail-cell)** on Github a **Docker** based environment for developing [Wordpress](https://wordpress.com) based plugins / themes.
+  - **Opensourced** Opensourced on Github the [template}(https://github.com/sylar/project-viper) used for the PoC and a **Docker** based [environment](https://github.com/sylar/wordpress-jail-cell) for developing [Wordpress](https://wordpress.com) plugins / themes.
     `
   },
   {
