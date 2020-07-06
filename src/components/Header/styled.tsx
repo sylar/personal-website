@@ -41,6 +41,12 @@ export const HeaderTitle = styled(Title)`
           padding-top: 0;
           font-size: ${(props) => props.theme.typography.h5.fontSize};
           line-height: ${(props) => props.theme.typography.h5.lineHeight};
+          @media print {
+            font-size: ${(props) => props.theme.typography.h6.fontSize};
+            ::after {
+              content: "'s resume";
+            }
+          }
         `
       default:
         break
