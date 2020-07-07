@@ -67,9 +67,6 @@ export const GlobalStyle = createGlobalStyle`${css`
       font-size: ${(props) => props.theme.typography.body.fontSize};
       line-height: ${(props) => props.theme.typography.body.lineHeight};
     }
-    #__next {
-      height: 100vh;
-    }
   }
 
   @media print {
