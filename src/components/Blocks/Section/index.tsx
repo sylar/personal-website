@@ -1,6 +1,6 @@
 import { SectionBlockProps } from './types'
 import { SectionBlock } from './styled'
-import { H6 } from '../../../lib/styles/global'
+import { H6 } from '../../../styles/global'
 
 const SectionBlockComponent = ({
   title,

@@ -1,7 +1,7 @@
 import RoundLogo from './RoundLogo'
 import { LogoContainer } from './styled'
 import { LogoProps } from './types'
-import { Sizes } from '../../lib/styles/global'
+import { Sizes } from '../../styles/global'
 
 const LogoComponent = ({ size }: LogoProps): JSX.Element => (
   <LogoContainer size={size}>

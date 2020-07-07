@@ -2,7 +2,7 @@ import { Header, HeaderTitle, SmallList } from './styled'
 import Logo from '../Logo'
 import { HeaderProps } from './types'
 import LinkList from '../Link/LinkList'
-import { Div, Sizes } from '../../lib/styles/global'
+import { Div, Sizes } from '../../styles/global'
 import { LinkProps } from '../Link/types'
 
 const links: LinkProps[] = [

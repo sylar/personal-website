@@ -1,14 +1,10 @@
 import LinkList from '../components/Link/LinkList'
-import personalData from '../lib/data/personal'
-import {
-  HomeContent,
-  HomeLayout,
-  HomeContactList
-} from '../lib/styles/homepage'
+import personalData from '../data/personal'
+import { HomeContent, HomeLayout, HomeContactList } from '../styles/homepage'
 import Md from '../components/Md'
 import HeaderComponent from '../components/Header'
-import { Sizes } from '../lib/styles/global'
-import { HomePageProps } from '../lib/pageTypes'
+import { Sizes } from '../styles/global'
+import { HomePageProps } from '../utils/pageTypes'
 
 function Home({ personalData }: HomePageProps): JSX.Element {
   return (

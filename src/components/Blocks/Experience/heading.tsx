@@ -1,8 +1,8 @@
 import { ExperienceBlockHeadingProps, Job } from './types'
-import { Div } from '../../../lib/styles/global'
+import { Div } from '../../../styles/global'
 import Link from '../../Link'
 import { JobName, JobDuration, JobCompany } from './styled'
-import { formatDate } from '../../../lib/utils'
+import { formatDate } from '../../../utils/utils'
 import { BlockHeading } from '../styled'
 
 const JobNameComponent = (props: Pick<Job, 'type' | 'title'>): JSX.Element => (

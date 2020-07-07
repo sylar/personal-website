@@ -1,6 +1,6 @@
 import { EducationBlockProps } from './types'
 import { BlockHeading } from '../styled'
-import { Span } from '../../../lib/styles/global'
+import { Span } from '../../../styles/global'
 
 const EducationBlockComponent = ({
   education

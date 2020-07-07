@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Paragraph } from '../../../lib/styles/global'
+import { Paragraph } from '../../../styles/global'
 
 export const HobbiesBlockContent = styled(Paragraph)`
   @media screen {

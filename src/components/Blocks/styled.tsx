@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Div, UL } from '../../lib/styles/global'
+import { Div, UL } from '../../styles/global'
 
 export const BlockHeading = styled(Div)`
   display: flex;

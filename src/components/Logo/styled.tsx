@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { Image, Sizes } from '../../lib/styles/global'
+import { Image, Sizes } from '../../styles/global'
 import { LogoProps } from './types'
 
 export const LogoContainer = styled.div`

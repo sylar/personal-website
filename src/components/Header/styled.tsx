@@ -1,4 +1,4 @@
-import { Section, Title, Sizes, Small } from '../../lib/styles/global'
+import { Section, Title, Sizes, Small } from '../../styles/global'
 import styled, { css } from 'styled-components'
 import { HeaderProps } from './types'
 

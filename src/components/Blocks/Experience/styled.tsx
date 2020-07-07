@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Div, Article } from '../../../lib/styles/global'
+import { Div, Article } from '../../../styles/global'
 
 export const JobName = styled(Div)`
   display: flex;

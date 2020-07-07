@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Section } from '../../../lib/styles/global'
+import { Section } from '../../../styles/global'
 
 export const SectionBlock = styled(Section)`
   @media screen {

@@ -1,14 +1,14 @@
 import HeaderComponent from '../components/Header'
-import { Sizes } from '../lib/styles/global'
+import { Sizes } from '../styles/global'
 import ExperienceBlock from '../components/Blocks/Experience'
-import experienceData from '../lib/data/experince'
-import personalData from '../lib/data/personal'
-import projectsData from '../lib/data/projects'
+import experienceData from '../data/experince'
+import personalData from '../data/personal'
+import projectsData from '../data/projects'
 import SectionBlock from '../components/Blocks/Section'
 import EducationBlock from '../components/Blocks/Education'
 import ProjectsBlock from '../components/Blocks/Projects'
 import HobbiesBlock from '../components/Blocks/Hobbies'
-import { ResumePageProps } from '../lib/pageTypes'
+import { ResumePageProps } from '../utils/pageTypes'
 
 const ResumePage = (): JSX.Element => (
   <>

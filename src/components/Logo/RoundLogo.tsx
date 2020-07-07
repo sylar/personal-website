@@ -1,4 +1,4 @@
-import { SVG } from '../../lib/styles/global'
+import { SVG } from '../../styles/global'
 
 const RoundLogo = (): JSX.Element => (
   <SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.6 100.3">

@@ -1,6 +1,6 @@
 import { ProjectsBlockProps } from './types'
 import Md from '../../Md'
-import { LI } from '../../../lib/styles/global'
+import { LI } from '../../../styles/global'
 import { ProjectBlockList } from './styled'
 
 const ProjectsBlock = (props: ProjectsBlockProps): JSX.Element => {

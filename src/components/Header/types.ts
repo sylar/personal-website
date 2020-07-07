@@ -1,4 +1,4 @@
-import { Sizes } from '../../lib/styles/global'
+import { Sizes } from '../../styles/global'
 
 export type HeaderProps = {
   size?: Sizes

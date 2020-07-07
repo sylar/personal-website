@@ -1,7 +1,7 @@
 import App from 'next/app'
 import { ThemeProvider } from 'styled-components'
-import { PageLayout } from '../lib/styles/global'
-import theme, { GlobalStyle } from '../theme'
+import { PageLayout } from '../styles/global'
+import theme, { GlobalStyle } from '../styles/theme'
 import Head from 'next/head'
 
 class MyApp extends App {

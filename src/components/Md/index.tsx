@@ -6,7 +6,7 @@ import {
   Image,
   UL,
   LI
-} from '../../lib/styles/global'
+} from '../../styles/global'
 import ReactMarkdown from 'react-markdown'
 import { MdProps } from './types'
 
