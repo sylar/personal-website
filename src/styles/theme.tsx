@@ -68,7 +68,7 @@ export const GlobalStyle = createGlobalStyle`${css`
       line-height: ${(props) => props.theme.typography.body.lineHeight};
     }
   }
-
+  
   @media print {
     @page {
       size: A4;
@@ -80,8 +80,9 @@ export const GlobalStyle = createGlobalStyle`${css`
       height: 297mm;
       font-size: 12px;
       line-height: 1.5rem;
+      background: white;
     }
-
+    
     a {
       color: ${(props) => props.theme.colors.primary};
       text-decoration: none;
