@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Div, Article } from '../../../styles/global'
+import { Div, Article, Paragraph } from '../../../styles/global'
 
 export const JobName = styled(Div)`
   display: flex;
@@ -26,4 +26,10 @@ export const ExperienceBlock = styled(Article)`
   @media screen {
     margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(1.75)};
   }
+`
+
+export const CompanyDescription = styled(Paragraph)`
+  font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
+  line-height: ${(props) => props.theme.typography.lineHeightSpacing(1)};
+  margin: ${(props) => props.theme.typography.lineHeightSpacing(0.5)} 0;
 `

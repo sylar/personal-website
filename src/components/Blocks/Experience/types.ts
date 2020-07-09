@@ -24,4 +24,5 @@ export type ExperienceBlockHeadingProps = {
 }
 
 export type ExperienceBlockContentProps = Pick<Job, 'duties'> &
-  Pick<ExperienceBlockProps, 'techStack'>
+  Pick<ExperienceBlockProps, 'techStack'> &
+  Pick<Company, 'description'>

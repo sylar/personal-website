@@ -8,11 +8,16 @@ import SectionBlock from '../components/Blocks/Section'
 import EducationBlock from '../components/Blocks/Education'
 import ProjectsBlock from '../components/Blocks/Projects'
 import HobbiesBlock from '../components/Blocks/Hobbies'
-import { ResumePageProps } from '../utils/pageTypes'
 
 const ResumePage = (): JSX.Element => (
   <>
-    <HeaderComponent size={Sizes.SMALL} />
+    <HeaderComponent
+      size={Sizes.SMALL}
+      description={personalData.description}
+    />
+    <SectionBlock title="Hobbies">
+      <HobbiesBlock content={personalData.hobbies} />
+    </SectionBlock>
     <SectionBlock title="Experience">
       {experienceData.map((xp, key) => (
         <ExperienceBlock
@@ -36,9 +41,6 @@ const ResumePage = (): JSX.Element => (
     </SectionBlock>
     <SectionBlock title="Side Projects">
       <ProjectsBlock projects={projectsData} />
-    </SectionBlock>
-    <SectionBlock title="Hobbies">
-      <HobbiesBlock content={personalData.hobbies} />
     </SectionBlock>
   </>
 )

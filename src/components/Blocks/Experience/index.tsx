@@ -9,7 +9,7 @@ const ExperienceBlockComponent = ({
 }: ExperienceBlockProps): JSX.Element => (
   <ExperienceBlock>
     <Heading company={company} job={job} />
-    <Content duties={job.duties} />
+    <Content duties={job.duties} description={company.description} />
   </ExperienceBlock>
 )
 

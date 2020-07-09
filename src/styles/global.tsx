@@ -69,8 +69,13 @@ export const Span = styled.span``
   
 export const Paragraph = styled.p`
   @media print {
-    margin: 0;
+    margin: ${(props) => props.theme.typography.lineHeightSpacing(.25)} 0;
+    line-height: ${(props) => props.theme.typography.lineHeightSpacing(.5)};
+    font-size: ${(props) => props.theme.typography.lineHeightSpacing(.5)};
   }
+  line-height: ${(props) => props.theme.typography.lineHeightSpacing(1.5)};
+  font-size: ${(props) => props.theme.typography.lineHeightSpacing(1)};
+
   `
 
 
