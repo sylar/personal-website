@@ -2,20 +2,6 @@
   "version": 2,
   "name": "Personal Website",
   "alias": "constantinescu.io",
-  "routes": [
-    {
-      "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+",
-      "headers": {
-        "cache-control": "immutable, max-age=31536000"
-      }
-    },
-    {
-      "src": "/.*",
-      "headers": {
-        "cache-control": "s-maxage=31536000"
-      }
-    }
-  ],
   "github": {
     "silent": true
   }

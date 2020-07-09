@@ -3,7 +3,7 @@ import { DefaultTheme } from 'styled-components'
 
 export type HeaderProps = {
   size?: Sizes
-  description: string
+  description?: string
 }
 
 export type HeaderStyleProps = { theme: DefaultTheme } & HeaderProps
