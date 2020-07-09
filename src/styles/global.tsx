@@ -9,7 +9,6 @@ export const PageLayout = styled.main`
     font-size: ${(props) => props.theme.typography.content.fontSize};
     line-height: ${(props) => props.theme.typography.content.lineHeight};
     padding: 0 ${(props) => props.theme.typography.lineHeightSpacing(1.5)};
-    background: white !important;
 
   }
 `

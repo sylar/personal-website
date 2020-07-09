@@ -31,5 +31,7 @@ export const ExperienceBlock = styled(Article)`
 export const CompanyDescription = styled(Paragraph)`
   font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
   line-height: ${(props) => props.theme.typography.lineHeightSpacing(1)};
-  margin: ${(props) => props.theme.typography.lineHeightSpacing(0.5)} 0;
+  margin: 0;
+  margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(0.5)};
+  font-style: italic;
 `

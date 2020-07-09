@@ -79,7 +79,7 @@ export default [
     ],
     tasks: `
   - Worked in an **agile** team to **reduce technical debt** of the internal services delivering the content to the user and improving the release times pipelines across the devices by 5% by updating the approches and the tools used.
-  - Improved coverage levels by **5%** of Jest unit tests and by **2%** for the **Ruby based functional tests** of the NowTV app to gain more confidence in the releases preventing rollbacks for smart TVs.
+  - Improved coverage levels by **5%** of Jest unit tests and by **2%** for the **Ruby based functional tests** of the NowTV app to gain more confidence in the releases preventing rollbacks for the 1M+ devices that have the app installed.
   - Implemented features across the app like a curated VOD content rail and developed a **multi-variant A/B testing bespoke solution** using **[Optimizely](https://www.optimizely.com)**.`
   },
   {
@@ -100,7 +100,7 @@ export default [
       'cypress'
     ],
     tasks: `
-  - Worked closely with the design team to implement a **3D Secure** verification step in the user switch journey for broadband using the **[Broadband Checker](https://www.uswitch.com/broadband/)**.
+  - Worked closely with the design team to implement a **3D Secure** verification step in the user switch journey for broadband using the **[Broadband Checker](https://www.uswitch.com/broadband/)** improving the **convergence rate by 15%**.
   - Improved the speed of the cypress based smoke tests by 40% by implementing a **record and replay** strategy for API responses while testing.`
   },
   {
@@ -124,7 +124,7 @@ export default [
       'express-js'
     ],
     tasks: `
-  - Developed features like **live sports metrics** with [Opta](https://www.optasportspro.com), **tracking of the page usage** with [Parsely](https://www.parse.ly) and **video gallery** with [Brightcove](https://www.brightcove.com/) for The Sun national page seen by millions of people.
+  - Developed features like **live sports metrics** with [Opta](https://www.optasportspro.com), **tracking of the page usage** with [Parsely](https://www.parse.ly) and **video gallery** with [Brightcove](https://www.brightcove.com/) for The Sun national page seen by more than 2M people at peak times.
   - **Succesfully lunched** the 2018 FIFA World Cup page.`
   },
   {
@@ -198,7 +198,7 @@ export default [
   {
     company: 'Kano Computing',
     description:
-      'Beamly is a digital marketing and technology agency based in London, UK and New York City, United States.',
+      'Kano is a new kind of computer company. Our kits and software give all ages, all over the world, the power to create technology, not just consume it.',
     startDate: 1435705200000,
     endDate: 1475276400000,
     type: 'permanent',
