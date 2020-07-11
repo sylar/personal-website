@@ -13,3 +13,4 @@ env.json
 
 .vercel
 .yarn-error
+test.js

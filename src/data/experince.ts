@@ -2,7 +2,7 @@ export default [
   {
     company: 'BP plc',
     description: `BP plc is one of the world's seven oil and gas "supermajors" headquartered in London, UK.`,
-    startDate: 1585695600000,
+    startDate: 1583107200000,
     endDate: null,
     type: 'contract',
     jobTitle: 'software consultant',
@@ -17,8 +17,8 @@ export default [
     company: 'Partners Capital LLP',
     description:
       'Partners Capital Investment Group, LLC is an Outsourced Investment Office that serves endowments, foundations, pensions, investment professionals, and high-net-worth families in Europe, North America and Asia.',
-    startDate: 1567292400000,
-    endDate: 1585695600000,
+    startDate: 1567724400000,
+    endDate: 1583107200000,
     type: 'contract',
     jobTitle: 'frontend developer',
     techStack: [
@@ -39,8 +39,8 @@ export default [
     company: 'Kaluza',
     description:
       'Kaluza has developed the technology that will enable the coordination and control of millions of connected devices, creating a fully distributed energy system and 100% penetration of renewable power.',
-    startDate: 1559343600000,
-    endDate: 1567292400000,
+    startDate: 1559775600000,
+    endDate: 1567724400000,
     type: 'contract',
     jobTitle: 'senior frontend developer',
     techStack: [
@@ -61,8 +61,8 @@ export default [
     company: 'Sky',
     description:
       'Sky UK (formerly British Sky Broadcasting Limited, BSkyB and Sky) is a British telecommunications company which serves the United Kingdom owned by Comcast. ',
-    startDate: 1533078000000,
-    endDate: 1556665200000,
+    startDate: 1541462400000,
+    endDate: 1557097200000,
     type: 'contract',
     jobTitle: 'senior developer',
     techStack: [
@@ -86,8 +86,8 @@ export default [
     company: 'uSwitch',
     description:
       'uSwitch Limited is a UK-based price comparison service and switching website founded in 2000.',
-    startDate: 1533078000000,
-    endDate: 1538348400000,
+    startDate: 1533510000000,
+    endDate: 1538780400000,
     type: 'contract',
     jobTitle: 'senior frontend developer',
     techStack: [
@@ -107,8 +107,8 @@ export default [
     company: 'The Sun, News UK',
     description:
       'The Sun is a tabloid newspaper published in the United Kingdom and the Republic of Ireland.',
-    startDate: 1519862400000,
-    endDate: 1530399600000,
+    startDate: 1520294400000,
+    endDate: 1533510000000,
     type: 'contract',
     jobTitle: 'fullstack developer',
     techStack: [
@@ -131,8 +131,8 @@ export default [
     company: 'AIG',
     description:
       'American International Group, Inc., also known as AIG, is an American multinational finance and insurance corporation with operations in more than 80 countries and jurisdictions.',
-    startDate: 1506812400000,
-    endDate: 1517443200000,
+    startDate: 1509926400000,
+    endDate: 1517875200000,
     type: 'contract',
     jobTitle: 'frontend developer',
     techStack: ['react', 'redux', 'redux-saga', 'reselect', 'webpack', 'sass'],
@@ -145,8 +145,8 @@ export default [
     company: 'Third Space Learning',
     description:
       'Third Space Learning is making high quality 1-to-1 maths teaching more accessible than ever before for pupils from year 1 through year 6.',
-    startDate: 1498863600000,
-    endDate: 1506812400000,
+    startDate: 1501974000000,
+    endDate: 1507244400000,
     type: 'contract',
     jobTitle: 'fullstack developer',
     techStack: [
@@ -171,8 +171,8 @@ export default [
     company: 'Beamly',
     description:
       'Beamly is a digital marketing and technology agency based in London, UK and New York City, United States.',
-    startDate: 1477958400000,
-    endDate: 1498863600000,
+    startDate: 1478390400000,
+    endDate: 1501974000000,
     type: 'permanent',
     jobTitle: 'software engineer',
     techStack: [
@@ -199,8 +199,8 @@ export default [
     company: 'Kano Computing',
     description:
       'Kano is a new kind of computer company. Our kits and software give all ages, all over the world, the power to create technology, not just consume it.',
-    startDate: 1435705200000,
-    endDate: 1475276400000,
+    startDate: 1436137200000,
+    endDate: 1475708400000,
     type: 'permanent',
     jobTitle: 'software engineer',
     techStack: [
@@ -225,8 +225,8 @@ export default [
     company: 'Learn Forward',
     description:
       'Learn forward is a company that helps publishers create collaborative digital textbooks and we help teachers design & deliver lessons in a digital format.',
-    startDate: 1396306800000,
-    endDate: 1430434800000,
+    startDate: 1396738800000,
+    endDate: 1430866800000,
     type: 'permanent',
     jobTitle: 'software engineer',
     techStack: ['node', 'backbone', 'jade', 'styuls', 'gulp', 'heroku'],
