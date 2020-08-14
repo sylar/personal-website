@@ -26,6 +26,10 @@ export const ExperienceBlock = styled(Article)`
   @media screen {
     margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(1.75)};
   }
+  margin-left: ${(props) =>
+    props.type === 'contract'
+      ? props.theme.typography.lineHeightSpacing(0.75)
+      : 'initial'};
 `
 
 export const CompanyDescription = styled(Paragraph)`

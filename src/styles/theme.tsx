@@ -3,8 +3,6 @@ import { createGlobalStyle, css, DefaultTheme } from 'styled-components'
 
 if (process.browser) {
   const isPrintMode = window.matchMedia('print')
-
-  console.log({ isPrintMode: isPrintMode.matches })
 }
 
 const shevy = new Shevy({

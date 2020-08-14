@@ -24,13 +24,7 @@ const ResumePage = (): JSX.Element => (
             description: xp.description,
             name: xp.company
           }}
-          job={{
-            duties: xp.tasks,
-            startDate: xp.startDate,
-            endDate: xp.endDate,
-            title: xp.jobTitle,
-            type: xp.type
-          }}
+          job={{ ...xp, duties: xp.tasks, title: xp.jobTitle }}
         />
       ))}
     </SectionBlock>

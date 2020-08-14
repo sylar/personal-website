@@ -10,6 +10,7 @@ export type Job = {
   startDate: number
   endDate?: number
   duties: string
+  jobs?: Job[]
 }
 
 export type ExperienceBlockProps = {
@@ -23,6 +24,6 @@ export type ExperienceBlockHeadingProps = {
   job: Omit<Job, 'duties'>
 }
 
-export type ExperienceBlockContentProps = Pick<Job, 'duties'> &
+export type ExperienceBlockContentProps = Pick<Job, 'duties' | 'jobs'> &
   Pick<ExperienceBlockProps, 'techStack'> &
   Pick<Company, 'description'>
