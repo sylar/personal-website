@@ -17,8 +17,7 @@ export const Header = styled(Section)`
       case Sizes.SMALL:
         return css`
           align-items: center;
-          flex-direction: row-reverse;
-          justify-content: space-between;
+          justify-content: center;
           @media screen {
             padding-top: ${props.theme.typography.lineHeightSpacing(1)};
           }

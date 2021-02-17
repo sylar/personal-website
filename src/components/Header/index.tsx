@@ -6,13 +6,12 @@ import Md from '../Md'
 
 const HeaderComponent = ({ size, description }: HeaderProps): JSX.Element => (
   <Header size={size}>
-    <Logo size={size} />
-    <Div>
-      <HeaderTitle size={size}>Andrei Constantinescu</HeaderTitle>
-      {size === Sizes.SMALL && (
+    {/* <Logo size={size} /> */}
+
+    <HeaderTitle size={size}>Andrei Constantinescu</HeaderTitle>
+    {/* {size === Sizes.SMALL && (
         <Md source={description} renderers={{ paragraph: HeaderDescription }} />
-      )}
-    </Div>
+      )} */}
   </Header>
 )
 

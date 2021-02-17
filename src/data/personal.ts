@@ -20,6 +20,6 @@ export default {
     degree: `BSc in Computer Science`,
     institution: 'University of Bucharest',
     startYear: 2012,
-    endYear: 2016
+    endYear: 2017
   }
 }

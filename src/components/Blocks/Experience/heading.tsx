@@ -7,7 +7,7 @@ import { BlockHeading } from '../styled'
 
 const JobNameComponent = (props: Pick<Job, 'type' | 'title'>): JSX.Element => (
   <JobName>
-    {props.type !== 'contract' && <strong>{props.type}</strong>}
+    <strong>{props.type}</strong>
     <Div>{props.title}</Div>
   </JobName>
 )

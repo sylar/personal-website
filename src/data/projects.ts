@@ -1,13 +1,13 @@
 export default [
   {
     name: 'ts-template',
-    repo: 'https://github.com/sylar/world-capital',
+    repo: 'https://github.com/sylar/ts-template',
     details: `A [Typescript template](https://github.com/sylar/ts-template) to develop React based applications with confidence as a successor to [Project Viper](https://github.com/sylar/ts-template) templates used and starred by 2 people.`
   },
   {
     name: 'dotfiles',
-    repo: 'https://github.com/sylar/dorfiles',
-    details: `My [personal dotfiles](https://github.com/sylar/dorfiles) that I regularly update.`
+    repo: 'https://github.com/sylar/dotfiles',
+    details: `My [personal dotfiles](https://github.com/sylar/dotfiles) that I regularly update.`
   },
   {
     name: 'personal-website',
