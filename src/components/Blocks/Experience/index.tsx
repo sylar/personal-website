@@ -6,9 +6,9 @@ import { ExperienceBlock } from './styled'
 const ExperienceBlockComponent = ({
   company,
   job
-}: ExperienceBlockProps): JSX.Element => {
+}: ExperienceBlockProps): any => {
   return (
-    <ExperienceBlock type={job.type}>
+    <ExperienceBlock>
       <Heading company={company} job={job} />
       <Content
         duties={job.duties}

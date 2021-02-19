@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components'
 import { PageLayout } from '../styles/global'
 import theme, { GlobalStyle } from '../styles/theme'
 import Head from 'next/head'
+import ResumeProvider from '../context/resume.context'
 
 class MyApp extends App {
   render(): JSX.Element {
@@ -13,10 +14,12 @@ class MyApp extends App {
           <title>Andrei Constantinescu</title>
         </Head>
         <ThemeProvider theme={theme}>
-          <GlobalStyle />
-          <PageLayout>
-            <Component {...pageProps} />
-          </PageLayout>
+          <ResumeProvider>
+            <GlobalStyle />
+            <PageLayout>
+              <Component {...pageProps} />
+            </PageLayout>
+          </ResumeProvider>
         </ThemeProvider>
       </>
     )

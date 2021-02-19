@@ -29,6 +29,7 @@ export const Header = styled(Section)`
 `
 export const HeaderTitle = styled(Title)`
   font-weight: 400;
+  cursor: pointer;
   ${(props: Partial<HeaderStyleProps>) => {
     switch (props.size) {
       case Sizes.SMALL:
@@ -47,7 +48,7 @@ export const HeaderTitle = styled(Title)`
       default:
         break
     }
-  }}
+  }};
 `
 
 export const HeaderDescription = styled(Paragraph)`
