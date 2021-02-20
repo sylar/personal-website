@@ -74,9 +74,11 @@ const ResumePage = (props): JSX.Element => {
             job={{ ...xp, duties: xp.tasks, title: xp.jobTitle }}
           />
         ))}
-        <SectionBlock title="Previous">
-          <PreviousWorplaces workplaces={state.liteWorkplaces} />
-        </SectionBlock>
+        {isLite && (
+          <SectionBlock title="Previous">
+            <PreviousWorplaces workplaces={state.liteWorkplaces} />
+          </SectionBlock>
+        )}
       </SectionBlock>
       <SectionBlock title="Education">
         <EducationBlock education={personalData.education} />
