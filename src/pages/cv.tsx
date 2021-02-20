@@ -11,6 +11,7 @@ import { useResumeCxt } from '../context/resume.context'
 import { ResumeViewModes } from '../context/types'
 import React from 'react'
 import { useRouter } from 'next/router'
+import PreviousWorplaces from '../components/Blocks/Experience/previous'
 
 const getNextViewState = (currentState: ResumeViewModes) => {
   const a =
@@ -73,6 +74,9 @@ const ResumePage = (props): JSX.Element => {
             job={{ ...xp, duties: xp.tasks, title: xp.jobTitle }}
           />
         ))}
+        <SectionBlock title="Previous">
+          <PreviousWorplaces workplaces={state.liteWorkplaces} />
+        </SectionBlock>
       </SectionBlock>
       <SectionBlock title="Education">
         <EducationBlock education={personalData.education} />

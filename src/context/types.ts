@@ -15,7 +15,8 @@ export enum ResumeViewModes {
 }
 
 export enum ResumeCtxActionTypes {
-  SET_MODE = 'SET_MODE'
+  SET_MODE = 'SET_MODE',
+  GET_WORKPLACES_LIST = 'GET_WORKPLACES_LIST'
 }
 
 export type ActionType = {

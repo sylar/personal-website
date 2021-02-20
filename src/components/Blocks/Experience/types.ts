@@ -1,3 +1,5 @@
+import { ExperienceEntry } from '../../../utils/pageTypes'
+
 export type Company = {
   name: string
   description: string
@@ -27,3 +29,12 @@ export type ExperienceBlockHeadingProps = {
 export type ExperienceBlockContentProps = Pick<Job, 'duties' | 'jobs'> &
   Pick<ExperienceBlockProps, 'techStack'> &
   Pick<Company, 'description'>
+
+export type PreviousWorkplace = Pick<
+  ExperienceEntry,
+  'company' | 'endDate' | 'startDate'
+>
+
+export type PreviousComponentProps = {
+  workplaces: PreviousWorkplace[]
+}

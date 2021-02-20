@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Div, Article, Paragraph } from '../../../styles/global'
+import { Div, Article, Paragraph, LI } from '../../../styles/global'
 
 export const JobName = styled(Div)`
   display: flex;
@@ -37,4 +37,13 @@ export const CompanyDescription = styled(Paragraph)`
   @media print {
     font-size: inherit;
   }
+`
+
+export const PreviousWokplacesLists = styled(Div)`
+  display: flex;
+  justify-content: space-between;
+`
+
+export const PreviousWorkplacesListItem = styled(LI)`
+  list-style-type: none;
 `

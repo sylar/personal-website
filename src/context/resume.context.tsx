@@ -1,6 +1,6 @@
-import { ReadSyncOptions } from 'fs'
-import React, { Dispatch } from 'react'
+import React from 'react'
 import resumeData from '../data/experince'
+import { ExperienceEntry } from '../utils/pageTypes'
 import {
   ActionType,
   ResumeActions,
@@ -9,14 +9,31 @@ import {
   ResumeViewModes
 } from './types'
 
+const MAX_LITE_ITEMS = 3
+
+const getLiteWorkplaces = (workplaces: ExperienceEntry[], limit: number) => {
+  console.log('mata', workplaces.slice(0, limit))
+
+  return workplaces
+    .slice(limit, workplaces.length)
+    .reduce((acc, wp: ExperienceEntry) => {
+      const newEntry = {
+        company: wp.company,
+        startDate: wp.startDate,
+        endDate: wp.endDate
+      }
+      return [...acc, newEntry]
+    }, [])
+}
+
 const initialState = {
   workplaces: resumeData,
-  liteMaxItems: 3,
+  liteMaxItems: MAX_LITE_ITEMS,
+  liteWorkplaces: getLiteWorkplaces(resumeData, MAX_LITE_ITEMS),
   mode: ResumeViewModes.LITE
 }
 
 const setViewMode = function setViewMode(payload: ResumeViewModes, state) {
-  console.log('rer')
   return {
     ...state,
     mode: payload
@@ -32,7 +49,6 @@ const actions: ResumeActions = {
     mode: ResumeViewModes
   ) {
     return (dispatch: React.Dispatch<ActionType>) => {
-      console.log('in dispatch')
       dispatch({ type: ResumeCtxActionTypes.SET_MODE as any, payload: mode })
     }
   }
@@ -40,7 +56,6 @@ const actions: ResumeActions = {
 
 const reducer = (state: ResumePageType, action: ActionType) => {
   const { type, payload } = action
-  console.log('in reducer', actionsMap[type])
   const newState = actionsMap[type] ? actionsMap[type](payload, state) : state
 
   return newState
@@ -77,7 +92,7 @@ const ResumeProvider = React.memo(({ children }: any) => {
     stateRef.current = state
   }, [state])
 
-  console.log('here', { enchancedActions })
+  console.log('here', { state })
 
   return (
     <ResumeContext.Provider
