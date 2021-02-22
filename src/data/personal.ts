@@ -1,10 +1,6 @@
 export default {
   links: [
     {
-      label: 'email',
-      url: 'mailto:andrei@constantinescu.io'
-    },
-    {
       label: 'github',
       url: 'https://github.com/sylar'
     },
@@ -21,5 +17,9 @@ export default {
     institution: 'University of Bucharest',
     startYear: 2012,
     endYear: 2017
+  },
+  email: {
+    label: 'email',
+    url: 'mailto:andrei@constantinescu.io'
   }
 }

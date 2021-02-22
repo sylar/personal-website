@@ -1,9 +1,11 @@
-import { Section, Title, Sizes, Paragraph } from '../../styles/global'
+import { Section, Title, Sizes, Paragraph, Div } from '../../styles/global'
 import styled, { css } from 'styled-components'
 import { HeaderStyleProps } from './types'
+import Link from '../Link'
 
 export const Header = styled(Section)`
   display: flex;
+  flex-direction: column;
   ${(props: Partial<HeaderStyleProps>) => {
     switch (props.size) {
       case Sizes.MEDIUM:
@@ -55,4 +57,8 @@ export const HeaderDescription = styled(Paragraph)`
   font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
   line-height: ${(props) => props.theme.typography.lineHeightSpacing(1)};
   padding-right: ${(props) => props.theme.typography.lineHeightSpacing(2)};
+`
+
+export const Email = styled(Div)`
+  font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.5)};
 `

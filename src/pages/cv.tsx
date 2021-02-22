@@ -15,13 +15,9 @@ import PreviousWorplaces from '../components/Blocks/Experience/previous'
 import SummarySection from '../components/Blocks/Summary'
 
 const getNextViewState = (currentState: ResumeViewModes) => {
-  const a =
-    currentState?.toUpperCase() === ResumeViewModes.FULL
-      ? ResumeViewModes.LITE.toLowerCase()
-      : ResumeViewModes.FULL.toLowerCase()
-  console.log({ a, currentState })
-
-  return a
+  return currentState?.toUpperCase() === ResumeViewModes.FULL
+    ? ResumeViewModes.LITE.toLowerCase()
+    : ResumeViewModes.FULL.toLowerCase()
 }
 
 const ResumePage = (props): JSX.Element => {
@@ -49,8 +45,7 @@ const ResumePage = (props): JSX.Element => {
   return (
     <>
       <HeaderComponent
-        size={Sizes.SMALL}
-        description={personalData.description}
+        email={personalData.email}
         onClick={() => {
           const nextState = getNextViewState(
             localRouter.query.mode as ResumeViewModes
