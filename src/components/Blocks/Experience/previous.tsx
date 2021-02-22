@@ -1,8 +1,10 @@
 import React from 'react'
-import { LI } from '../../../styles/global'
 import { formatDate } from '../../../utils/utils'
-import { BlockList } from '../styled'
-import { PreviousWorkplacesListItem, PreviousWokplacesLists } from './styled'
+import {
+  PreviousWorkplacesListItem,
+  PreviousWokplacesLists,
+  PreviousWorkplaceList
+} from './styled'
 import { PreviousComponentProps } from './types'
 
 const PreviousWorplaces = (props: PreviousComponentProps): JSX.Element => {
@@ -19,16 +21,20 @@ const PreviousWorplaces = (props: PreviousComponentProps): JSX.Element => {
     <PreviousWokplacesLists>
       {[fisrtHalf, secondHalf].map((set, id) => {
         return (
-          <BlockList key={`previousWp_${id}`}>
+          <PreviousWorkplaceList key={`previousWp_${id}`}>
             {set.map((wp, idx) => {
               return (
                 <PreviousWorkplacesListItem key={`previousWp_${idx}`}>
-                  {wp.company}: {formatDate(new Date(wp.startDate))} -{' '}
-                  {formatDate(new Date(wp.endDate))}
+                  <strong>{wp.type}</strong>
+                  {wp.company}{' '}
+                  <div>
+                    {wp.jobTitle}, {formatDate(new Date(wp.startDate))} -{' '}
+                    {formatDate(new Date(wp.endDate))}
+                  </div>
                 </PreviousWorkplacesListItem>
               )
             })}
-          </BlockList>
+          </PreviousWorkplaceList>
         )
       })}
     </PreviousWokplacesLists>

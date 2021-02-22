@@ -1,9 +1,10 @@
 import styled from 'styled-components'
-import { Div, Article, Paragraph, LI } from '../../../styles/global'
+import { Div, Article, Paragraph, LI, UL } from '../../../styles/global'
+import { BlockList } from '../styled'
 
 export const JobName = styled(Div)`
   display: flex;
-  flex: 5;
+  flex-wrap: wrap;
   text-transform: capitalize;
   strong {
     margin-right: 0.25rem;
@@ -12,13 +13,13 @@ export const JobName = styled(Div)`
 
 export const JobDuration = styled(Div)`
   display: flex;
-  flex: 3;
   justify-content: flex-end;
 `
 
 export const JobCompany = styled(Div)`
   display: flex;
-  flex: 3;
+  flex-wrap: wrap;
+
   justify-content: center;
 `
 
@@ -41,9 +42,25 @@ export const CompanyDescription = styled(Paragraph)`
 
 export const PreviousWokplacesLists = styled(Div)`
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+  /* justify-content: space-between; */
 `
 
 export const PreviousWorkplacesListItem = styled(LI)`
   list-style-type: none;
+  strong {
+    text-transform: capitalize;
+    margin-right: 0.2em;
+  }
+  div {
+    text-transform: capitalize;
+    font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.5)};
+  }
+`
+export const PreviousWorkplaceList = styled(BlockList)`
+  flex: 1;
+  li {
+    margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(0.25)};
+  }
 `

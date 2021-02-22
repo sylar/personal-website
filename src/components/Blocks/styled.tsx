@@ -3,6 +3,7 @@ import { Div, UL } from '../../styles/global'
 
 export const BlockHeading = styled(Div)`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0.25rem 0;
   @media screen {

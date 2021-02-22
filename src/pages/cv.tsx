@@ -25,24 +25,25 @@ const getNextViewState = (currentState: ResumeViewModes) => {
 
 const ResumePage = (props): JSX.Element => {
   const {
-    actions: { SET_MODE },
-    state
+    actions: { SWITCH_MODE },
+    state: { liteModeOn, liteMaxItems, liteWorkplaces, workplaces }
   } = useResumeCxt()
-  const [isLite, setIsLite] = React.useState(true)
 
   const localRouter = useRouter()
 
   React.useEffect(() => {
-    if (SET_MODE) {
-      SET_MODE(localRouter.query.mode as ResumeViewModes)
+    if (
+      (localRouter.query.mode as string)?.toUpperCase() ===
+        ResumeViewModes.FULL &&
+      liteModeOn
+    ) {
+      SWITCH_MODE()
     }
   }, [localRouter.query.mode])
 
-  console.log('modeeeee', state.mode, props, { isLite })
-
-  const workplaces = isLite
-    ? state.workplaces.slice(0, state.liteMaxItems)
-    : state.workplaces
+  const displayedWorkplaces = liteModeOn
+    ? workplaces.slice(0, liteMaxItems)
+    : workplaces
 
   return (
     <>
@@ -59,12 +60,12 @@ const ResumePage = (props): JSX.Element => {
             }
           })
           console.log({ nextState })
-          setIsLite(nextState.toUpperCase() === ResumeViewModes.LITE)
+          SWITCH_MODE()
         }}
       />
 
       <SectionBlock title="Experience">
-        {workplaces.map((xp, key) => (
+        {displayedWorkplaces.map((xp, key) => (
           <ExperienceBlock
             key={`xp_block_${key}`}
             company={{
@@ -74,9 +75,9 @@ const ResumePage = (props): JSX.Element => {
             job={{ ...xp, duties: xp.tasks, title: xp.jobTitle }}
           />
         ))}
-        {isLite && (
+        {liteModeOn && (
           <SectionBlock title="Previous">
-            <PreviousWorplaces workplaces={state.liteWorkplaces} />
+            <PreviousWorplaces workplaces={liteWorkplaces} />
           </SectionBlock>
         )}
       </SectionBlock>
@@ -86,9 +87,11 @@ const ResumePage = (props): JSX.Element => {
       <SectionBlock title="Side Projects">
         <ProjectsBlock projects={projectsData} />
       </SectionBlock>
-      <SectionBlock title="Hobbies">
-        <HobbiesBlock content={personalData.hobbies} />
-      </SectionBlock>
+      {!liteModeOn && (
+        <SectionBlock title="Hobbies">
+          <HobbiesBlock content={personalData.hobbies} />
+        </SectionBlock>
+      )}
     </>
   )
 }

@@ -12,15 +12,15 @@ import {
 const MAX_LITE_ITEMS = 3
 
 const getLiteWorkplaces = (workplaces: ExperienceEntry[], limit: number) => {
-  console.log('mata', workplaces.slice(0, limit))
-
   return workplaces
     .slice(limit, workplaces.length)
     .reduce((acc, wp: ExperienceEntry) => {
       const newEntry = {
         company: wp.company,
         startDate: wp.startDate,
-        endDate: wp.endDate
+        endDate: wp.endDate,
+        type: wp.type,
+        jobTitle: wp.jobTitle
       }
       return [...acc, newEntry]
     }, [])
@@ -30,33 +30,31 @@ const initialState = {
   workplaces: resumeData,
   liteMaxItems: MAX_LITE_ITEMS,
   liteWorkplaces: getLiteWorkplaces(resumeData, MAX_LITE_ITEMS),
-  mode: ResumeViewModes.LITE
+  liteModeOn: true
 }
 
-const setViewMode = function setViewMode(payload: ResumeViewModes, state) {
+const setViewMode = function setViewMode(state) {
   return {
     ...state,
-    mode: payload
+    liteModeOn: !state.liteModeOn
   }
 }
 
 const actionsMap = {
-  [ResumeCtxActionTypes.SET_MODE]: setViewMode
+  [ResumeCtxActionTypes.SWITCH_MODE]: setViewMode
 }
 
 const actions: ResumeActions = {
-  [ResumeCtxActionTypes.SET_MODE]: function setModeAction(
-    mode: ResumeViewModes
-  ) {
+  [ResumeCtxActionTypes.SWITCH_MODE]: function setModeAction() {
     return (dispatch: React.Dispatch<ActionType>) => {
-      dispatch({ type: ResumeCtxActionTypes.SET_MODE as any, payload: mode })
+      dispatch({ type: ResumeCtxActionTypes.SWITCH_MODE as any })
     }
   }
 }
 
 const reducer = (state: ResumePageType, action: ActionType) => {
   const { type, payload } = action
-  const newState = actionsMap[type] ? actionsMap[type](payload, state) : state
+  const newState = actionsMap[type] ? actionsMap[type](state, payload) : state
 
   return newState
 }

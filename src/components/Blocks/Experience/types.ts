@@ -32,7 +32,7 @@ export type ExperienceBlockContentProps = Pick<Job, 'duties' | 'jobs'> &
 
 export type PreviousWorkplace = Pick<
   ExperienceEntry,
-  'company' | 'endDate' | 'startDate'
+  'company' | 'endDate' | 'startDate' | 'type' | 'jobTitle'
 >
 
 export type PreviousComponentProps = {

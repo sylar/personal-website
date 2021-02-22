@@ -15,17 +15,17 @@ export enum ResumeViewModes {
 }
 
 export enum ResumeCtxActionTypes {
-  SET_MODE = 'SET_MODE',
+  SWITCH_MODE = 'SWITCH_MODE',
   GET_WORKPLACES_LIST = 'GET_WORKPLACES_LIST'
 }
 
 export type ActionType = {
   type: ResumeCtxActionTypes
-  payload: ResumeViewModes
+  payload?: ResumeViewModes
 }
 
 export type ResumeActions = {
-  [ResumeCtxActionTypes.SET_MODE]: (
-    mode: ResumeViewModes
-  ) => (dispatch: React.Dispatch<ActionType>) => void
+  [ResumeCtxActionTypes.SWITCH_MODE]: () => (
+    dispatch: React.Dispatch<ActionType>
+  ) => void
 }
