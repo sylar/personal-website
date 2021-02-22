@@ -1,5 +1,5 @@
 import HeaderComponent from '../components/Header'
-import { Sizes } from '../styles/global'
+import { Sizes, ResumeSwitcher } from '../styles/global'
 import ExperienceBlock from '../components/Blocks/Experience'
 import personalData from '../data/personal'
 import projectsData from '../data/projects'
@@ -13,6 +13,7 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import PreviousWorplaces from '../components/Blocks/Experience/previous'
 import SummarySection from '../components/Blocks/Summary'
+import Link from '../components/Link'
 
 const getNextViewState = (currentState: ResumeViewModes) => {
   return currentState?.toUpperCase() === ResumeViewModes.FULL
@@ -34,7 +35,9 @@ const ResumePage = (props): JSX.Element => {
         ResumeViewModes.FULL &&
       liteModeOn
     ) {
-      SWITCH_MODE()
+      if (SWITCH_MODE) {
+        SWITCH_MODE()
+      }
     }
   }, [localRouter.query.mode])
 
@@ -42,22 +45,22 @@ const ResumePage = (props): JSX.Element => {
     ? workplaces.slice(0, liteMaxItems)
     : workplaces
 
+  const SwitchModeAndUpdateUrl = () => {
+    const nextState = getNextViewState(
+      localRouter.query.mode as ResumeViewModes
+    )
+    localRouter.push({
+      query: {
+        mode: nextState
+      }
+    })
+    SWITCH_MODE()
+  }
   return (
     <>
       <HeaderComponent
         email={personalData.email}
-        onClick={() => {
-          const nextState = getNextViewState(
-            localRouter.query.mode as ResumeViewModes
-          )
-          localRouter.push({
-            query: {
-              mode: nextState
-            }
-          })
-          console.log({ nextState })
-          SWITCH_MODE()
-        }}
+        onClick={SwitchModeAndUpdateUrl}
       />
 
       <SectionBlock title="Summary">
@@ -87,11 +90,14 @@ const ResumePage = (props): JSX.Element => {
       <SectionBlock title="Side Projects">
         <ProjectsBlock projects={projectsData} />
       </SectionBlock>
-      {!liteModeOn && (
-        <SectionBlock title="Hobbies">
-          <HobbiesBlock content={personalData.hobbies} />
-        </SectionBlock>
-      )}
+
+      <SectionBlock title="Hobbies">
+        <HobbiesBlock content={personalData.hobbies} />
+      </SectionBlock>
+
+      <ResumeSwitcher onClick={SwitchModeAndUpdateUrl}>
+        Switch to {liteModeOn ? 'cv' : 'resume'}{' '}
+      </ResumeSwitcher>
     </>
   )
 }

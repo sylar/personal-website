@@ -115,3 +115,12 @@ export const HR = styled.hr`
 export const Article = styled.article``
 
 export const Small = styled.small`font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.6)}; `
+
+export const ResumeSwitcher = styled(Small)`
+  font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
+  cursor: pointer;
+  color: ${(props) => props.theme.colors.primary};
+  @media print {
+    display: none
+  }
+`

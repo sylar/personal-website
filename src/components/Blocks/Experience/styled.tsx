@@ -4,7 +4,6 @@ import { BlockList } from '../styled'
 
 export const JobName = styled(Div)`
   display: flex;
-  flex-wrap: wrap;
   text-transform: capitalize;
   strong {
     margin-right: 0.25rem;
