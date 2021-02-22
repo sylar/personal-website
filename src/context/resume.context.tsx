@@ -5,8 +5,7 @@ import {
   ActionType,
   ResumeActions,
   ResumeCtxActionTypes,
-  ResumePageType,
-  ResumeViewModes
+  ResumePageType
 } from './types'
 
 const MAX_LITE_ITEMS = 3
@@ -89,8 +88,6 @@ const ResumeProvider = React.memo(({ children }: any) => {
   React.useEffect(() => {
     stateRef.current = state
   }, [state])
-
-  console.log('here', { state })
 
   return (
     <ResumeContext.Provider

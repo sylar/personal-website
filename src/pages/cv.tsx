@@ -12,6 +12,7 @@ import { ResumeViewModes } from '../context/types'
 import React from 'react'
 import { useRouter } from 'next/router'
 import PreviousWorplaces from '../components/Blocks/Experience/previous'
+import SummarySection from '../components/Blocks/Summary'
 
 const getNextViewState = (currentState: ResumeViewModes) => {
   const a =
@@ -63,6 +64,10 @@ const ResumePage = (props): JSX.Element => {
           SWITCH_MODE()
         }}
       />
+
+      <SectionBlock title="Summary">
+        <SummarySection content={personalData.description} />
+      </SectionBlock>
 
       <SectionBlock title="Experience">
         {displayedWorkplaces.map((xp, key) => (
