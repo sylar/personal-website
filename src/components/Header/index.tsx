@@ -2,8 +2,6 @@ import React from 'react'
 import { Email, Header, HeaderTitle } from './styled'
 import { HeaderProps } from './types'
 import { Sizes } from '../../styles/global'
-import LinkList from '../Link/LinkList'
-import personalData from '../../data/personal'
 
 const HeaderComponent = ({ email, onClick }: HeaderProps): JSX.Element => (
   <Header size={Sizes.SMALL}>

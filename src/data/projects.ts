@@ -7,7 +7,7 @@ export default [
   {
     name: 'personal-website',
     repo: 'https://github.com/sylar/personal-website',
-    details: `My [personal website](https://github.com/sylar/personal-website) build with reactjs nextjs and deployed with nowsh.`
+    details: `My [personal website](https://github.com/sylar/personal-website) build with ReactJS and NextJS and deployed with Vercel's nowsh.`
   },
   {
     name: 'wordpress-jailcell',

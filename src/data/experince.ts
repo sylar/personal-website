@@ -18,7 +18,7 @@ export default [
     tasks: `
   - Designed and implemented a **framework-agnostic Payments SDK** using **Typescript** and maintained unit test **coverage level 90%** using Jest.
   - Integrated various payment methods like Apple Pay, Google Pay and Paypal with the SDK to created a centrelised place for all the transactions.
-  - Developed an internal testing **sandbox app** with **Reactjs** to simulate various scenarios and run the SDK e2e tests.
+  - Developed an internal testing **sandbox app** with **ReactJS** to simulate various scenarios and run the SDK e2e tests.
   - Created a **user login monitor** within AWS that automatically sends emails and alerts triggered by different rules and thresholds.
   - Work in an **agile** environment, **unblocking** and **pairing** with team developers. 
   - Initiated discussions about improving the development experience by introducing linting as both precommit hook and pipeline task.`
@@ -41,7 +41,7 @@ export default [
       'typescript'
     ],
     tasks: `
-  - Developed various frontend features with **Reactjs**, **Typescript** and **JavaScript** / **Node.js** for a digital transformation app of an Excel based system.
+  - Developed various frontend features with **ReactJS**, **Typescript** and **JavaScript** / **NodeJS** for a digital transformation app of an Excel based system.
   - **Improved the Time-To-Interactive performance by 35%** by using different **memoization techniques** for the app's business logic while **normalizing the state store**.
   - **Proposed and implemented** e2e testing, using Cypress, to **improve reliability** of both existing and upcoming features.`
   },
@@ -62,7 +62,7 @@ export default [
       'typescript'
     ],
     tasks: `
-  - **Led development** in a team 2 of a real-time dashboard of smart devices' metrics collected from the users. The information was delivered by **Node.js** through websockets while being subscribed to various **Kafka** streams.
+  - **Led development** in a team 2 of a real-time dashboard of smart devices' metrics collected from the users. The information was delivered by **NodeJS** through websockets while being subscribed to various **Kafka** streams.
   - Crafted the UK maps's individual DNO regions with **Geojsons and Webgl**. Used **D3** for bespoke representations of the real time data.
   - Created a **[Storybook](https://storybook.js.org/)** catalogue for **shared UI components** to make collaboration easier between the design and the development teams.
   - Provided **mentoring** and **support** for new team members to get accustomed with the codebase.`
@@ -147,7 +147,7 @@ export default [
     jobTitle: 'frontend developer',
     techStack: ['react', 'redux', 'redux-saga', 'reselect', 'webpack', 'sass'],
     tasks: `
-  - Worked in an **agile** team with the goal of delivering a client facing multi tenancy insurance quote generation solution using **Reactjs** to replace the existing Excel based one.
+  - Worked in an **agile** team with the goal of delivering a client facing multi tenancy insurance quote generation solution using **ReactJS** to replace the existing Excel based one.
   - Used **[Sagas](https://redux-saga.js.org)** to efficiently **orchestrate async api calls** on the client side application.
   - Took advantage of memoization to **maintain low loading times** while generating a quote.`
   },
@@ -172,7 +172,7 @@ export default [
       'postgres'
     ],
     tasks: `
-  - Lead develop a full stack Math resources explorer app for pupils Year 1 to Year 6 using **Reactjs**, **Node.js**, **[Apollo GraphQL](https://www.apollographql.com)** and **PostgreSQL**.
+  - Lead develop a full stack Math resources explorer app for pupils Year 1 to Year 6 using **ReactJS**, **NodeJS**, **[Apollo GraphQL](https://www.apollographql.com)** and **PostgreSQL**.
   - Relied on GraphQL custom directives to authenticate and communicate with existing services.
   - **Maintained low app loading times** by implementing different caching strategies including **[query persistance](https://www.apollographql.com/docs/apollo-server/performance/apq/)**, **Cloudfront** capabilities and **server-side rendering** where possible.
   - Worked closely with the project manager and **released the initial version** as initially planned.`
@@ -200,7 +200,7 @@ export default [
       'graphql-relay'
     ],
     tasks: `
-  - Worked in an **agile** team to deliver a social listening solution to discover and predict social trends among the youth using **Node.js**, **Reactjs**, **GraphQL**, **[Relay](https://relay.dev)** and **PostgreSQL**.
+  - Worked in an **agile** team to deliver a social listening solution to discover and predict social trends among the youth using **NodeJS**, **ReactJS**, **GraphQL**, **[Relay](https://relay.dev)** and **PostgreSQL**.
   - Integrated **AWS** and **GCP** services to gather, analyse and report findings from a curated list of sources for the app.
   - **Opensourced** on Github the [template](https://github.com/sylar/project-viper) used for the PoC and a **Docker** based [environment](https://github.com/sylar/wordpress-jail-cell) for developing [Wordpress](https://wordpress.com) plugins / themes.`
   },
@@ -226,7 +226,7 @@ export default [
     ],
     tasks: `
   - **Improved the onboarding process** on the Kano web platform by simplifying the flow with user tested ideas adn approaches.
-  - Codeveloped the [kano web store](https://kano.me) with **Vuejs**, **Shopify** and **Node.js**. 
+  - Codeveloped the [kano web store](https://kano.me) with **Vuejs**, **Shopify** and **NodeJS**. 
   - Created internal services like a Amazon-like delivery times manager and a product bundler on top of **Shopify** to ease promotions creation, both used by the marketing team.`
   },
   {
