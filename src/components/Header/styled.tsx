@@ -23,6 +23,10 @@ export const Header = styled(Section)`
           @media screen {
             padding-top: ${props.theme.typography.lineHeightSpacing(1)};
           }
+          @media print {
+            margin-top: ${props.theme.typography.lineHeightSpacing(1)};
+            margin-bottom: ${props.theme.typography.lineHeightSpacing(1)};
+          }
         `
       default:
         break

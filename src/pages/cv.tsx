@@ -1,5 +1,5 @@
 import HeaderComponent from '../components/Header'
-import { Sizes, ResumeSwitcher } from '../styles/global'
+import { ResumeSwitcher } from '../styles/global'
 import ExperienceBlock from '../components/Blocks/Experience'
 import personalData from '../data/personal'
 import projectsData from '../data/projects'
@@ -13,7 +13,7 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import PreviousWorplaces from '../components/Blocks/Experience/previous'
 import SummarySection from '../components/Blocks/Summary'
-import Link from '../components/Link'
+import SkillsBox from '../components/Blocks/Skills'
 
 const getNextViewState = (currentState: ResumeViewModes) => {
   return currentState?.toUpperCase() === ResumeViewModes.FULL
@@ -56,6 +56,7 @@ const ResumePage = (props): JSX.Element => {
     })
     SWITCH_MODE()
   }
+
   return (
     <>
       <HeaderComponent
@@ -66,7 +67,13 @@ const ResumePage = (props): JSX.Element => {
       <SectionBlock title="Summary">
         <SummarySection content={personalData.description} />
       </SectionBlock>
-
+      <SectionBlock title="Skills">
+        <SkillsBox
+          languages={personalData.skills.languages}
+          libraries={personalData.skills.libraries}
+          technologies={personalData.skills.technologies}
+        />
+      </SectionBlock>
       <SectionBlock title="Experience">
         {displayedWorkplaces.map((xp, key) => (
           <ExperienceBlock
@@ -91,9 +98,11 @@ const ResumePage = (props): JSX.Element => {
         <ProjectsBlock projects={projectsData} />
       </SectionBlock>
 
-      <SectionBlock title="Hobbies">
-        <HobbiesBlock content={personalData.hobbies} />
-      </SectionBlock>
+      {!liteModeOn && (
+        <SectionBlock title="Hobbies">
+          <HobbiesBlock content={personalData.hobbies} />
+        </SectionBlock>
+      )}
 
       <ResumeSwitcher onClick={SwitchModeAndUpdateUrl}>
         Switch to {liteModeOn ? 'cv' : 'resume'}{' '}

@@ -94,7 +94,7 @@ export const SVG = styled.svg`
 `
 
 export const UL = styled.ul`
-
+  margin: 0
 `
 
 export const LI = styled.li``
@@ -119,7 +119,7 @@ export const Small = styled.small`font-size: ${(props) => props.theme.typography
 export const ResumeSwitcher = styled(Small)`
   font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
   cursor: pointer;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.small};
   @media print {
     display: none
   }

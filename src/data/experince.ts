@@ -7,7 +7,7 @@ export default [
     type: 'contract',
     jobTitle: 'software consultant',
     techStack: [
-      'react-js',
+      'reactJS',
       'jest',
       'testcafe',
       'typescript',
@@ -32,7 +32,7 @@ export default [
     type: 'contract',
     jobTitle: 'frontend developer',
     techStack: [
-      'react-js',
+      'reactJS',
       'redux',
       'redux-thunk',
       'reselect',
@@ -54,7 +54,7 @@ export default [
     type: 'contract',
     jobTitle: 'senior frontend developer',
     techStack: [
-      'react-js',
+      'reactJS',
       'webgl',
       'express-js',
       'kafka-streams',

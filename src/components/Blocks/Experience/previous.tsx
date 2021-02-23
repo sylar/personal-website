@@ -8,7 +8,6 @@ import {
 import { PreviousComponentProps } from './types'
 
 const PreviousWorplaces = (props: PreviousComponentProps): JSX.Element => {
-  console.log('dasdasd', props)
   const fisrtHalfLength = Math.ceil(props.workplaces.length / 2)
   const fisrtHalf = props.workplaces.slice(0, fisrtHalfLength)
 

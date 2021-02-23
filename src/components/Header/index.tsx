@@ -11,7 +11,7 @@ const HeaderComponent = ({ email, onClick }: HeaderProps): JSX.Element => (
       Andrei Constantinescu
     </HeaderTitle>
     <Email>
-      {email.label}: <a href={email.url}>{email.url.slice(7)}</a>
+      <a href={email.url}>{email.url.slice(7)}</a>
     </Email>
   </Header>
 )
