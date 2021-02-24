@@ -16,12 +16,10 @@ export default [
       'azure'
     ],
     tasks: `
-  - Designed and implemented a **framework-agnostic Payments SDK** using **Typescript** and maintained unit test **coverage level 90%** using Jest.
-  - Integrated various payment methods like Apple Pay, Google Pay and Paypal with the SDK to created a centrelised place for all the transactions.
-  - Developed an internal testing **sandbox app** with **ReactJS** to simulate various scenarios and run the SDK e2e tests.
+  - Designed and implemented a **framework-agnostic Payments SDK** integrating payment methods like Apple Pay, Google Pay and Paypal backed by Mastercard gateway using **Typescript** and maintained unit test **coverage level 90%** using Jest.
+  - Developed an internal testing **sandbox app** using **ReactJS** to simulate various scenarios and run the end-to-end the SDK.
   - Created a **user login monitor** within AWS that automatically sends emails and alerts triggered by different rules and thresholds.
-  - Work in an **agile** environment, **unblocking** and **pairing** with team developers. 
-  - Initiated discussions about improving the development experience by introducing linting as both precommit hook and pipeline task.`
+  - Work in an **agile** environment, **unblocking**, **pairing** with team developers and initiating discussions about improvements and tackling tech debt.`
   },
   {
     company: 'Partners Capital LLP',
@@ -41,9 +39,9 @@ export default [
       'typescript'
     ],
     tasks: `
-  - Developed various frontend features with **ReactJS**, **Typescript** and **JavaScript** / **NodeJS** for a digital transformation app of an Excel based system.
+  - Developed frontend features with **ReactJS**, **Typescript** for a digital transformation app of an Excel based balancesheet system.
   - **Improved the Time-To-Interactive performance by 35%** by using different **memoization techniques** for the app's business logic while **normalizing the state store**.
-  - **Proposed and implemented** e2e testing, using Cypress, to **improve reliability** of both existing and upcoming features.`
+  - **Proposed and implemented** end-to-end testing, using Cypress, to **improve reliability** of both existing and upcoming features.`
   },
   {
     company: 'Kaluza',
