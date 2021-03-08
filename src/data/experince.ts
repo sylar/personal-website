@@ -66,7 +66,7 @@ export default [
   - Provided **mentoring** and **support** for new team members to get accustomed with the codebase.`
   },
   {
-    company: 'Sky',
+    company: 'NowTV, Sky UK',
     description:
       'Sky UK (formerly British Sky Broadcasting Limited, BSkyB and Sky) is a British telecommunications company which serves the United Kingdom owned by Comcast. ',
     startDate: 1541462400000,

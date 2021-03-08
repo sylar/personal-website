@@ -1,5 +1,5 @@
 import HeaderComponent from '../components/Header'
-import { ResumeSwitcher } from '../styles/global'
+import { Div, ResumeSwitcher, Span } from '../styles/global'
 import ExperienceBlock from '../components/Blocks/Experience'
 import personalData from '../data/personal'
 import projectsData from '../data/projects'
@@ -103,10 +103,21 @@ const ResumePage = (props): JSX.Element => {
           <HobbiesBlock content={personalData.hobbies} />
         </SectionBlock>
       )}
-
-      <ResumeSwitcher onClick={SwitchModeAndUpdateUrl}>
-        Switch to {liteModeOn ? 'cv' : 'resume'}{' '}
-      </ResumeSwitcher>
+      {liteModeOn ? (
+        <ResumeSwitcher onClick={SwitchModeAndUpdateUrl}>
+          <Div>Switch to the more detailed cv.</Div>
+          <Span>
+            More details on{' '}
+            <a href="https://constantinescu.io/cv?mode=full">
+              https://constantinescu.io/cv?mode=full
+            </a>
+          </Span>
+        </ResumeSwitcher>
+      ) : (
+        <ResumeSwitcher onClick={SwitchModeAndUpdateUrl}>
+          Switch to resume
+        </ResumeSwitcher>
+      )}
     </>
   )
 }
