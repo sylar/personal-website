@@ -17,7 +17,7 @@ export default [
     ],
     tasks: `
   - Designed and implemented a **framework-agnostic Payments SDK** integrating payment methods like Apple Pay, Google Pay and Paypal backed by Mastercard gateway using **Typescript** and maintained unit test **coverage level 90%** using Jest.
-  - Developed an internal testing **sandbox app** using **ReactJS** to simulate various scenarios and run the end-to-end the SDK.
+  - Developed an internal testing **sandbox app** using **ReactJS** to simulate various scenarios and run the end-to-end tests of the SDK.
   - Created a **user login monitor** within AWS that automatically sends emails and alerts triggered by different rules and thresholds.
   - Work in an **agile** environment, **unblocking**, **pairing** with team developers and initiating discussions about improvements and tackling tech debt.`
   },
