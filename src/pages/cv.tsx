@@ -73,16 +73,18 @@ const ResumePage = (): JSX.Element => {
         />
       </SectionBlock>
       <SectionBlock title="Experience">
-        {displayedWorkplaces.map((xp, key) => (
-          <ExperienceBlock
-            key={`xp_block_${key}`}
-            company={{
-              description: xp.description,
-              name: xp.company
-            }}
-            job={{ ...xp, duties: xp.tasks, title: xp.jobTitle }}
-          />
-        ))}
+        <>
+          {displayedWorkplaces.map((xp, key) => (
+            <ExperienceBlock
+              key={`xp_block_${key}`}
+              company={{
+                description: xp.description,
+                name: xp.company
+              }}
+              job={{ ...xp, duties: xp.tasks, title: xp.jobTitle }}
+            />
+          ))}
+        </>
         {liteModeOn && (
           <SectionBlock title="Previous">
             <PreviousWorplaces workplaces={liteWorkplaces} />
