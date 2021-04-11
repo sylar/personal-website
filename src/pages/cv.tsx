@@ -1,5 +1,5 @@
 import HeaderComponent from '../components/Header'
-import { Div, ResumeSwitcher, Span } from '../styles/global'
+import { ResumeSwitcher, Span } from '../styles/global'
 import ExperienceBlock from '../components/Blocks/Experience'
 import personalData from '../data/personal'
 import projectsData from '../data/projects'
@@ -15,7 +15,7 @@ import PreviousWorplaces from '../components/Blocks/Experience/previous'
 import SummarySection from '../components/Blocks/Summary'
 import SkillsBox from '../components/Blocks/Skills'
 
-const ResumePage = (props): JSX.Element => {
+const ResumePage = (): JSX.Element => {
   const {
     actions: { SWITCH_MODE },
     state: { liteModeOn, liteMaxItems, liteWorkplaces, workplaces }
