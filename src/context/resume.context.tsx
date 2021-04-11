@@ -5,7 +5,8 @@ import {
   ActionType,
   ResumeActions,
   ResumeCtxActionTypes,
-  ResumePageType
+  ResumePageType,
+  ResumeViewModes
 } from './types'
 
 const MAX_LITE_ITEMS = 3
@@ -29,13 +30,13 @@ const initialState = {
   workplaces: resumeData,
   liteMaxItems: MAX_LITE_ITEMS,
   liteWorkplaces: getLiteWorkplaces(resumeData, MAX_LITE_ITEMS),
-  liteModeOn: true
+  liteModeOn: false
 }
 
-const setViewMode = function setViewMode(state) {
+const setViewMode = function setViewMode(state, mode) {
   return {
     ...state,
-    liteModeOn: !state.liteModeOn
+    liteModeOn: mode === ResumeViewModes.LITE
   }
 }
 
@@ -44,9 +45,9 @@ const actionsMap = {
 }
 
 const actions: ResumeActions = {
-  [ResumeCtxActionTypes.SWITCH_MODE]: function setModeAction() {
+  [ResumeCtxActionTypes.SWITCH_MODE]: function setModeAction(mode) {
     return (dispatch: React.Dispatch<ActionType>) => {
-      dispatch({ type: ResumeCtxActionTypes.SWITCH_MODE as any })
+      dispatch({ type: ResumeCtxActionTypes.SWITCH_MODE as any, payload: mode })
     }
   }
 }

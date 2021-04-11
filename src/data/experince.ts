@@ -3,7 +3,7 @@ export default [
     company: 'BP plc',
     description: `BP plc is one of the world's seven oil and gas "supermajors" headquartered in London, UK.`,
     startDate: 1583107200000,
-    endDate: null,
+    endDate: 1617145200000,
     type: 'contract',
     jobTitle: 'software consultant',
     techStack: [

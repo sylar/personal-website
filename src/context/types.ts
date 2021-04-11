@@ -25,7 +25,7 @@ export type ActionType = {
 }
 
 export type ResumeActions = {
-  [ResumeCtxActionTypes.SWITCH_MODE]: () => (
-    dispatch: React.Dispatch<ActionType>
-  ) => void
+  [ResumeCtxActionTypes.SWITCH_MODE]: (
+    mode: ResumeViewModes
+  ) => (dispatch: React.Dispatch<ActionType>) => void
 }

@@ -15,12 +15,6 @@ import PreviousWorplaces from '../components/Blocks/Experience/previous'
 import SummarySection from '../components/Blocks/Summary'
 import SkillsBox from '../components/Blocks/Skills'
 
-const getNextViewState = (currentState: ResumeViewModes) => {
-  return currentState?.toUpperCase() === ResumeViewModes.FULL
-    ? ResumeViewModes.LITE.toLowerCase()
-    : ResumeViewModes.FULL.toLowerCase()
-}
-
 const ResumePage = (props): JSX.Element => {
   const {
     actions: { SWITCH_MODE },
@@ -30,14 +24,21 @@ const ResumePage = (props): JSX.Element => {
   const localRouter = useRouter()
 
   React.useEffect(() => {
-    if (
-      (localRouter.query.mode as string)?.toUpperCase() ===
-        ResumeViewModes.FULL &&
-      liteModeOn
-    ) {
-      if (SWITCH_MODE) {
-        SWITCH_MODE()
-      }
+    const isCorrectMode = Object.keys(ResumeViewModes).includes(
+      ((localRouter.query?.mode as string) || '').toUpperCase()
+    )
+    if (isCorrectMode && SWITCH_MODE) {
+      SWITCH_MODE(
+        (localRouter.query.mode as string).toUpperCase() as ResumeViewModes
+      )
+    }
+
+    if (!isCorrectMode) {
+      localRouter.push({
+        query: {
+          mode: ResumeViewModes.LITE.toLowerCase()
+        }
+      })
     }
   }, [localRouter.query.mode])
 
@@ -45,16 +46,13 @@ const ResumePage = (props): JSX.Element => {
     ? workplaces.slice(0, liteMaxItems)
     : workplaces
 
-  const SwitchModeAndUpdateUrl = () => {
-    const nextState = getNextViewState(
-      localRouter.query.mode as ResumeViewModes
-    )
+  const SwitchModeAndUpdateUrl = (mode: ResumeViewModes) => {
     localRouter.push({
       query: {
-        mode: nextState
+        mode: mode.toLowerCase()
       }
     })
-    SWITCH_MODE()
+    SWITCH_MODE(mode)
   }
 
   return (
@@ -104,18 +102,16 @@ const ResumePage = (props): JSX.Element => {
         </SectionBlock>
       )}
       {liteModeOn ? (
-        <ResumeSwitcher onClick={SwitchModeAndUpdateUrl}>
-          <Div>Switch to the more detailed cv.</Div>
-          <Span>
-            More details on{' '}
-            <a href="https://constantinescu.io/cv?mode=full">
-              https://constantinescu.io/cv?mode=full
-            </a>
-          </Span>
+        <ResumeSwitcher
+          onClick={() => SwitchModeAndUpdateUrl(ResumeViewModes.FULL)}
+        >
+          <Span>View the more detailed cv</Span>
         </ResumeSwitcher>
       ) : (
-        <ResumeSwitcher onClick={SwitchModeAndUpdateUrl}>
-          Switch to resume
+        <ResumeSwitcher
+          onClick={() => SwitchModeAndUpdateUrl(ResumeViewModes.LITE)}
+        >
+          <Span>Switch to resume</Span>
         </ResumeSwitcher>
       )}
     </>
