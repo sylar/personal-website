@@ -32,7 +32,7 @@ export default {
       'Now',
       'Git'
     ],
-    languages: ['Typescript', 'Javascript', 'Ruby', 'GraphQL', 'SQL'],
+    languages: ['Typescript', 'Javascript', 'SwiftUI', 'GraphQL'],
     libraries: ['ReactJS', 'Redux', 'Jest', 'Cypress', 'Webpack']
   }
 }
