@@ -1,5 +1,26 @@
 export default [
   {
+    company: 'CMC Markets plc',
+    description: `CMC Markets is a UK-based financial services company that offers online trading in shares, spread betting, cfds  and foreign exchange across world markets.`,
+    startDate: 1626260400000,
+    type: 'contract',
+    jobTitle: 'software consultant',
+    techStack: [
+      'reactJS',
+      'swift ui',
+      'jest',
+      'cypress',
+      'typescript',
+      'javascript',
+      'webpack'
+    ],
+    tasks: `
+  - Contributed to the development of a **ReactJS PWA investment app** for internal customer support usage.
+  - Released **microfrontend** based user flows (registration, tax decalaration forms) that seemlessly integrated in the mobile native apps (iOS/Android).
+  - Developed native **wkWebkitViews SwiftUI based integrations** for communication between web and native to maintain both native feel and web robustness advantages.
+  - **Improved Time-To-Interactive performance by ~30%** for web user flows on the native apps and **lowered the bundle size by ~20%** by making use of tree shaking technique and code splitting at route level.`
+  },
+  {
     company: 'BP plc',
     description: `BP plc is one of the world's seven oil and gas "supermajors" headquartered in London, UK.`,
     startDate: 1583107200000,
@@ -16,7 +37,7 @@ export default [
       'azure'
     ],
     tasks: `
-  - Designed and implemented a **framework-agnostic Payments SDK** integrating payment methods like Apple Pay, Google Pay and Paypal backed by Mastercard gateway using **Typescript** and maintained unit test **coverage level 90%** using Jest.
+  - Designed and implemented a **framework-agnostic Payments SDK** integrating various payment methods backed by Mastercard gateway using **Typescript** and maintained unit test **coverage level 90%** using Jest.
   - Developed an internal testing **sandbox app** using **ReactJS** to simulate various scenarios and run the end-to-end tests of the SDK.
   - Created a **user login monitor** within AWS that automatically sends emails and alerts triggered by different rules and thresholds.
   - Work in an **agile** environment, **unblocking**, **pairing** with team developers and initiating discussions about improvements and tackling tech debt.`

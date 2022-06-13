@@ -121,9 +121,6 @@ export const ResumeSwitcher = styled(Small)`
   cursor: pointer;
   color: ${(props) => props.theme.colors.small};
   @media print {
-    font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.5)};
-    div {
-      display: none;
-    }
+    display: none;
   }
 `

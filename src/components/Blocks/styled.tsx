@@ -9,7 +9,7 @@ export const BlockHeading = styled(Div)`
   @media screen {
     font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
     line-height: ${(props) => props.theme.typography.lineHeightSpacing(1)};
-    padding: ${(props) => props.theme.typography.lineHeightSpacing(0.5)} 0;
+    padding: ${(props) => props.theme.typography.lineHeightSpacing(0.25)} 0;
   }
 `
 

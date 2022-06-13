@@ -9,7 +9,7 @@ export default {
       url: 'https://linkedin.com/in/constantinescuio'
     }
   ],
-  description: `I am a **Javascript Engineer** passionate about **usability**, **performance** and **simplicity**. In my experience I have enjoyed creating client side experiences using **ReactJS**, usually backed by **NodeJS** services and deployed using **serverless technology**.`,
+  description: `I am a **Javascript Engineer** passionate about **usability**, **performance** and **simplicity**. I enjoy creating **ReactJS** user experiences, usually backed by **serverlessly** deployed **NodeJS** services or integrated within **SwiftUI** based applications.`,
   hobbies:
     'I am so passionate about teaching others computer science that I managed to mentor two of my friends and now they are working as web developers. I also enjoy practising sports and reading nonfiction books, especially biographies, and different tech publications like [hn](https://news.ycombinator.com).',
   education: {

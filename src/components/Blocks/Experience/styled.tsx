@@ -35,6 +35,7 @@ export const CompanyDescription = styled(Paragraph)`
   margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(0.5)};
   font-style: italic;
   @media print {
+    margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(0.25)};
     font-size: inherit;
   }
 `
