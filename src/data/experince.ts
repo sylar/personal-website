@@ -16,7 +16,7 @@ export default [
     ],
     tasks: `
   - Contributed to the development of a **ReactJS PWA investment app** for internal customer support usage.
-  - Released **microfrontend** based user flows (registration, tax decalaration forms) that seemlessly integrated in the mobile native apps (iOS/Android).
+  - Released **microfrontend** based user flows (registration, tax decalaration forms) that seamlessly integrated in the mobile native apps (iOS/Android).
   - Developed native **wkWebkitViews SwiftUI based integrations** for communication between web and native to maintain both native feel and web robustness advantages.
   - **Improved Time-To-Interactive performance by ~30%** for web user flows on the native apps and **lowered the bundle size by ~20%** by making use of tree shaking technique and code splitting at route level.`
   },
