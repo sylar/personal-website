@@ -1,14 +1,15 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { ResumeViewModes } from '../../context/types'
-import chromium from 'chrome-aws-lambda'
+import edgeChromium from 'chrome-aws-lambda'
+import puppeteer from 'puppeteer-core'
 
 const saveAsPdf = async (url: string) => {
-  const browser = await chromium.puppeteer.launch({
-    args: chromium.args,
-    defaultViewport: chromium.defaultViewport,
-    executablePath: await chromium.executablePath,
-    headless: chromium.headless,
-    ignoreHTTPSErrors: true
+  const executablePath = await edgeChromium.executablePath
+
+  const browser = await puppeteer.launch({
+    executablePath,
+    args: edgeChromium.args,
+    headless: false
   })
 
   const page = await browser.newPage()
