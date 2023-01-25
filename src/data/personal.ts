@@ -23,15 +23,7 @@ export default {
     url: 'mailto:andrei@constantinescu.io'
   },
   skills: {
-    technologies: [
-      'NodeJS',
-      'AWS',
-      'AWS Lambda',
-      'Azure',
-      'Heroku',
-      'Now',
-      'Git'
-    ],
+    technologies: ['NodeJS', 'AWS', , 'Azure', 'Now/Vercel', 'NextJS', 'Git'],
     languages: ['Typescript', 'Javascript', 'SwiftUI', 'GraphQL'],
     libraries: ['ReactJS', 'Redux', 'Jest', 'Cypress', 'Webpack']
   }

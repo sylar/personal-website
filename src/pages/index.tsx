@@ -14,7 +14,6 @@ import { useRouter } from 'next/router'
 import PreviousWorplaces from '../components/Blocks/Experience/previous'
 import SummarySection from '../components/Blocks/Summary'
 import SkillsBox from '../components/Blocks/Skills'
-import { Document, Page, PDFDownloadLink } from '@react-pdf/renderer'
 
 type ResumeContentProps = {
   displayedWorkplaces: any[]
@@ -77,18 +76,16 @@ const ResumePage = (): JSX.Element => {
     actions: { SWITCH_MODE },
     state: { liteModeOn, liteMaxItems, liteWorkplaces, workplaces }
   } = useResumeCxt()
-  const [canDownload, setCanDownload] = useState(false)
-
-  useEffect(() => {
-    setCanDownload(true)
-  }, [])
 
   const localRouter = useRouter()
 
   useEffect(() => {
     const { query } = localRouter
     const hasMode = query.mode !== undefined
-    const isFullMode = hasMode && query.mode === ResumeViewModes.FULL
+    const isFullMode =
+      hasMode &&
+      (query.mode as string).toLocaleLowerCase() ===
+        ResumeViewModes.FULL.toLocaleLowerCase()
 
     if (isFullMode) {
       SWITCH_MODE(ResumeViewModes.FULL)
