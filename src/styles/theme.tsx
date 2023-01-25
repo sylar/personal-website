@@ -54,8 +54,8 @@ const Theme: DefaultTheme = {
 export const GlobalStyle = createGlobalStyle`${css`
   body,
   html {
-    font-family: ${(props) => props.theme.fontFamily};
-    background: ${(props) => props.theme.background.light};
+    font-family: ${(props: any) => props.theme.fontFamily};
+    background: ${(props: any) => props.theme.background.light};
   }
   @media screen {
     body,
@@ -64,8 +64,8 @@ export const GlobalStyle = createGlobalStyle`${css`
       padding: 0;
     }
     body {
-      font-size: ${(props) => props.theme.typography.body.fontSize};
-      line-height: ${(props) => props.theme.typography.body.lineHeight};
+      font-size: ${(props: any) => props.theme.typography.body.fontSize};
+      line-height: ${(props: any) => props.theme.typography.body.lineHeight};
     }
   }
   
@@ -84,7 +84,7 @@ export const GlobalStyle = createGlobalStyle`${css`
     }
     
     a {
-      color: ${(props) => props.theme.colors.primary};
+      color: ${(props: any) => props.theme.colors.primary};
       text-decoration: none;
       pointer-events: none;
     }

@@ -16,7 +16,7 @@ export default [
     ],
     tasks: `
   - Contributed to the development of internal trading analysis tooling using **ReactJS**, **NextJS** and **Ag-grid**.
-  - **Improved client side usage performance by 25%** with the help of caching, memoization and limiting render operations of the app.`
+  - ***Improved Time-To-Interactive performance by 25%** and **lowered the bundle size by 20%** with the help of caching, memoization, limiting render operations of the app and code splitting techniques.`
   },
   {
     company: 'CMC Markets plc',

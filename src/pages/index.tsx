@@ -84,8 +84,8 @@ const ResumePage = (): JSX.Element => {
     const hasMode = query.mode !== undefined
     const isFullMode =
       hasMode &&
-      (query.mode as string).toLocaleLowerCase() ===
-        ResumeViewModes.FULL.toLocaleLowerCase()
+      (query.mode as string).toLowerCase() ===
+        ResumeViewModes.FULL.toLowerCase()
 
     if (isFullMode) {
       SWITCH_MODE(ResumeViewModes.FULL)
@@ -125,16 +125,16 @@ const ResumePage = (): JSX.Element => {
           <Span onClick={() => SwitchModeAndUpdateUrl(ResumeViewModes.FULL)}>
             View the more detailed cv
           </Span>
-          <Span onClick={() => localRouter.push('/api/pdf')}>Download</Span>
+          {/* <Span onClick={() => localRouter.push('/api/pdf')}>Download</Span> */}
         </ResumeSwitcher>
       ) : (
         <ResumeSwitcher>
           <Span onClick={() => SwitchModeAndUpdateUrl(ResumeViewModes.LITE)}>
             Switch to resume
           </Span>
-          <Span onClick={() => localRouter.push('/api/pdf?mode=full')}>
+          {/* <Span onClick={() => localRouter.push('/api/pdf?mode=full')}>
             Download
-          </Span>
+          </Span> */}
         </ResumeSwitcher>
       )}
     </>

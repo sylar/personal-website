@@ -9,32 +9,29 @@ const saveAsPdf = async (url: string) => {
   const browser = await puppeteer.launch({
     executablePath,
     args: edgeChromium.args,
-    headless: false
+    headless: true
   })
 
   const page = await browser.newPage()
 
   await page.goto(url, {
-    waitUntil: 'networkidle0'
+    waitUntil: 'domcontentloaded'
   })
 
-  const result = await page.pdf({
-    format: 'a4'
-  })
+  const result = await page.pdf()
   await browser.close()
 
   return result
 }
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const { mode } = req.query
+  const { mode = '' } = req.query
   const isFullMode =
-    (mode as string).toLocaleLowerCase() ===
-    ResumeViewModes.FULL.toLocaleLowerCase()
+    (mode as string).toLowerCase() === ResumeViewModes.FULL.toLowerCase()
   const fileName = `Andrei Constantinescu - ${
     isFullMode ? 'Full' : 'Lite'
   } Resume`
-  res.setHeader('Content-Disposition', `attachment; filename="${fileName}.pdf"`)
+  res.setHeader('Content-Disposition', `inline; filename="${fileName}.pdf"`)
   res.setHeader('Content-Type', 'application/pdf')
   const url = isFullMode
     ? 'https://constantinescu.io/?mode=full'
