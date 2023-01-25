@@ -1,8 +1,28 @@
 export default [
   {
+    company: 'Balyasny Asset Management LLP',
+    description: `Balyasny Asset Management is an American hedge fund headquartered in Chicago founded in 2001 in Chicago by Dmitry Balyasny, Scott Schroeder and Taylor O'Malley.It traded mostly long/short equity which today still accounts for 70% of the firm's risk`,
+    startDate: 1665360000000,
+    type: 'contract',
+    jobTitle: 'software consultant',
+    techStack: [
+      'reactJS',
+      'nextJS',
+      'jest',
+      'typescript',
+      'ag-grid',
+      'jenkins',
+      'webpack'
+    ],
+    tasks: `
+  - Contributed to the development of internal trading analysis tooling using **ReactJS**, **NextJS** and **Ag-grid**.
+  - **Improved client side usage performance by 25%** with the help of caching, memoization and limiting render operations of the app.`
+  },
+  {
     company: 'CMC Markets plc',
     description: `CMC Markets is a UK-based financial services company that offers online trading in shares, spread betting, cfds  and foreign exchange across world markets.`,
     startDate: 1626260400000,
+    endDate: 1664496000000,
     type: 'contract',
     jobTitle: 'software consultant',
     techStack: [
