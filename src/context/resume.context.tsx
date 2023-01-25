@@ -30,7 +30,7 @@ const initialState = {
   workplaces: resumeData,
   liteMaxItems: MAX_LITE_ITEMS,
   liteWorkplaces: getLiteWorkplaces(resumeData, MAX_LITE_ITEMS),
-  liteModeOn: false
+  liteModeOn: true
 }
 
 const setViewMode = function setViewMode(state, mode) {
