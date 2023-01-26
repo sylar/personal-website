@@ -77,7 +77,7 @@ export const GlobalStyle = createGlobalStyle`${css`
     html,
     body {
       width: 210mm;
-      height: 297mm;
+      height: 290mm;
       font-size: 12px;
       line-height: 1.5rem;
       background: white;
