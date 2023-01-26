@@ -15,8 +15,9 @@ export default [
       'webpack'
     ],
     tasks: `
-  - Contributed to the development of internal trading analysis tooling using **ReactJS**, **NextJS** and **Ag-grid**.
-  - ***Improved Time-To-Interactive performance by 25%** and **lowered the bundle size by 20%** with the help of caching, memoization, limiting render operations of the app and code splitting techniques.`
+  - Contributed to development of internal trading analysis tools using **ReactJS**, **NextJS** and **Ag-grid**.
+  - **Lowered the bundle size by 20%** by updating approaches and adhering to code splitting and tree shaking techniques.
+  - **Improved Time-To-Interactive performance by 25%** by making use caching, memoization and prerendering of components.`
   },
   {
     company: 'CMC Markets plc',
