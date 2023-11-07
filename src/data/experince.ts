@@ -15,9 +15,9 @@ export default [
       'webpack'
     ],
     tasks: `
-    - Spearheaded the development of sophisticated internal trading analysis tools, leveraging cutting-edge technologies including **ReactJS**, **NextJS**, and **Ag-grid** to enhance analytical capabilities.
-    - Championed performance optimization by reducing the application’s bundle size by 20% through strategic code splitting and the implementation of tree shaking techniques.
-    - Significantly enhanced the user experience by improving the Time-To-Interactive performance by 25%, achieved by implementing advanced caching strategies, memoization, and component prerendering.`
+- Spearheaded the development of sophisticated internal trading analysis tools, leveraging cutting-edge technologies including **ReactJS**, **NextJS**, and **Ag-grid** to enhance analytical capabilities.
+- Championed performance optimization by reducing the application’s bundle size by 20% through strategic code splitting and the implementation of tree shaking techniques.
+- Significantly enhanced the user experience by improving the Time-To-Interactive performance by 25%, achieved by implementing advanced caching strategies, memoization, and component prerendering.`
   },
   {
     company: 'CMC Markets plc',
@@ -36,10 +36,10 @@ export default [
       'webpack'
     ],
     tasks: `
-    - Co-developed a **ReactJS PWA investment app** for internal customer support, enhancing digital customer engagement.
-    - Engineered seamless user flow integration into mobile native apps through microfrontend architecture, improving cross-platform consistency.
-    - Orchestrated native **wkWebkitViews SwiftUI** integrations, balancing native responsiveness with web robustness.
-    - Elevated web performance within native apps by 30%, and reduced bundle size by 20% via strategic tree shaking and code splitting.`
+- Co-developed a **ReactJS PWA investment app** for internal customer support, enhancing digital customer engagement.
+- Engineered seamless user flow integration into mobile native apps through microfrontend architecture, improving cross-platform consistency.
+- Orchestrated native **wkWebkitViews SwiftUI** integrations, balancing native responsiveness with web robustness.
+- Elevated web performance within native apps by 30%, and reduced bundle size by 20% via strategic tree shaking and code splitting.`
   },
   {
     company: 'BP plc',
@@ -58,10 +58,10 @@ export default [
       'azure'
     ],
     tasks: `
-    - Architected a versatile **framework-agnostic Payments SDK** supporting diverse payment methods, powered by **Typescript** with a 90% unit test coverage via Jest.
-    - Developed an internal **sandbox app** using **ReactJS** to validate various payment scenarios and ensure robust SDK functionality.
-    - Implemented an **AWS-based user login monitor**, bolstering security with automated alerts and email notifications under specific conditions.
-    - Contributed to an **agile team environment**, driving improvements and technical debt resolution through proactive collaboration and pair programming.`
+- Architected a versatile **framework-agnostic Payments SDK** supporting diverse payment methods, powered by **Typescript** with a 90% unit test coverage via Jest.
+- Developed an internal **sandbox app** using **ReactJS** to validate various payment scenarios and ensure robust SDK functionality.
+- Implemented an **AWS-based user login monitor**, bolstering security with automated alerts and email notifications under specific conditions.
+- Contributed to an **agile team environment**, driving improvements and technical debt resolution through proactive collaboration and pair programming.`
   },
   {
     company: 'Partners Capital LLP',
@@ -81,9 +81,9 @@ export default [
       'typescript'
     ],
     tasks: `
-    - Engineered robust frontend features for a digital transformation project, converting Excel-based processes to a **ReactJS** and **Typescript** driven application.
-    - Optimized application responsiveness by 35% with strategic memoization techniques and state normalization, significantly enhancing user interaction.
-    - Advocated for and executed a comprehensive end-to-end testing regime using Cypress, bolstering feature reliability and system integrity.`
+- Engineered robust frontend features for a digital transformation project, converting Excel-based processes to a **ReactJS** and **Typescript** driven application.
+- Optimized application responsiveness by 35% with strategic memoization techniques and state normalization, significantly enhancing user interaction.
+- Advocated for and executed a comprehensive end-to-end testing regime using Cypress, bolstering feature reliability and system integrity.`
   },
   {
     company: 'Kaluza',
@@ -102,10 +102,10 @@ export default [
       'typescript'
     ],
     tasks: `
-    - Pioneered the development of a real-time dashboard for smart device analytics, integrating with **NodeJS** and **Kafka** streams for live data feeds.
-    - Customized UK map visualizations using **Geojsons and Webgl**, and employed **D3** for dynamic data representation.
-    - Curated a **Storybook** component library to streamline collaboration between design and development teams, enhancing UI consistency and dev efficiency.
-    - Mentored junior team members, facilitating knowledge transfer and fostering a collaborative codebase understanding.`
+- Pioneered the development of a real-time dashboard for smart device analytics, integrating with **NodeJS** and **Kafka** streams for live data feeds.
+- Customized UK map visualizations using **Geojsons and Webgl**, and employed **D3** for dynamic data representation.
+- Curated a **Storybook** component library to streamline collaboration between design and development teams, enhancing UI consistency and dev efficiency.
+- Mentored junior team members, facilitating knowledge transfer and fostering a collaborative codebase understanding.`
   },
   {
     company: 'NowTV, Sky UK',
@@ -128,9 +128,9 @@ export default [
       'optimizely'
     ],
     tasks: `
-    - Collaborated in an agile setup to alleviate technical debt, achieving a 5% efficiency gain in content delivery pipelines across multiple devices.
-    - Enhanced testing protocols, leading to a 5% increase in coverage for both Jest unit tests and Ruby-based functional tests.
-    - Developed and deployed new features such as a VOD content rail, and orchestrated a custom A/B testing framework using **Optimizely**.`
+- Collaborated in an agile setup to alleviate technical debt, achieving a 5% efficiency gain in content delivery pipelines across multiple devices.
+- Enhanced testing protocols, leading to a 5% increase in coverage for both Jest unit tests and Ruby-based functional tests.
+- Developed and deployed new features such as a VOD content rail, and orchestrated a custom A/B testing framework using **Optimizely**.`
   },
   {
     company: 'uSwitch',
@@ -150,8 +150,8 @@ export default [
       'cypress'
     ],
     tasks: `
-    - Integrated a **3D Secure** verification process within the broadband switch journey, utilizing the **Broadband Checker**, resulting in a 15% uplift in conversion rates.
-    - Accelerated cypress-based smoke test speeds by 40% by employing a record and replay strategy for API responses.`
+- Integrated a **3D Secure** verification process within the broadband switch journey, utilizing the **Broadband Checker**, resulting in a 15% uplift in conversion rates.
+- Accelerated cypress-based smoke test speeds by 40% by employing a record and replay strategy for API responses.`
   },
   {
     company: 'The Sun, News UK',
@@ -174,8 +174,8 @@ export default [
       'express-js'
     ],
     tasks: `
-    - Developed interactive features such as live sports metrics and video galleries, significantly enhancing user engagement on The Sun’s digital platform.
-    - Successfully orchestrated the launch of the 2018 FIFA World Cup feature page, catering to peak viewership of over 2 million.`
+- Developed interactive features such as live sports metrics and video galleries, significantly enhancing user engagement on The Sun’s digital platform.
+- Successfully orchestrated the launch of the 2018 FIFA World Cup feature page, catering to peak viewership of over 2 million.`
   },
   {
     company: 'AIG',
@@ -187,9 +187,9 @@ export default [
     jobTitle: 'frontend developer',
     techStack: ['react', 'redux', 'redux-saga', 'reselect', 'webpack', 'sass'],
     tasks: `
-    - Contributed to a client-centric multi-tenancy insurance quote generation platform, enhancing business efficiency and customer service.
-    - Implemented **Redux-Saga** for effective management of asynchronous API interactions, ensuring a smooth user experience.
-    - Utilized memoization strategies to maintain optimal performance during the quote generation process.`
+- Contributed to a client-centric multi-tenancy insurance quote generation platform, enhancing business efficiency and customer service.
+- Implemented **Redux-Saga** for effective management of asynchronous API interactions, ensuring a smooth user experience.
+- Utilized memoization strategies to maintain optimal performance during the quote generation process.`
   },
   {
     company: 'Third Space Learning',
@@ -212,9 +212,9 @@ export default [
       'postgres'
     ],
     tasks: `
-    - Developed and optimized a suite of interactive **React** and **Apollo**-based educational applications, enhancing learning engagement and outcomes.
-    - Standardized front-end development with **Styled-JSX**, improving design consistency and streamlining UI component creation.
-    - Led the integration of **GraphQL** services, enabling real-time data exchange and dynamic content presentation.`
+- Developed and optimized a suite of interactive **React** and **Apollo**-based educational applications, enhancing learning engagement and outcomes.
+- Standardized front-end development with **Styled-JSX**, improving design consistency and streamlining UI component creation.
+- Led the integration of **GraphQL** services, enabling real-time data exchange and dynamic content presentation.`
   },
   {
     company: 'Beamly',
@@ -239,9 +239,9 @@ export default [
       'graphql-relay'
     ],
     tasks: `
-    - Orchestrated the front-end engineering of interactive marketing campaign platforms, driving user engagement and providing actionable insights through data analytics.
-    - Pioneered the adoption of responsive design methodologies, achieving seamless cross-platform user experiences and increasing campaign reach.
-    - Optimized page load times by implementing advanced front-end optimization techniques, leading to a 30% improvement in performance metrics.`
+- Orchestrated the front-end engineering of interactive marketing campaign platforms, driving user engagement and providing actionable insights through data analytics.
+- Pioneered the adoption of responsive design methodologies, achieving seamless cross-platform user experiences and increasing campaign reach.
+- Optimized page load times by implementing advanced front-end optimization techniques, leading to a 30% improvement in performance metrics.`
   },
   {
     company: 'Kano Computing',
@@ -264,9 +264,9 @@ export default [
       'shopify'
     ],
     tasks: `
-  - **Improved the onboarding process** on the Kano web platform by simplifying the flow with user tested ideas adn approaches.
-  - Codeveloped the [kano web store](https://kano.me) with **Vuejs**, **Shopify** and **NodeJS**. 
-  - Created internal services like a Amazon-like delivery times manager and a product bundler on top of **Shopify** to ease promotions creation, both used by the marketing team.`
+- **Improved the onboarding process** on the Kano web platform by simplifying the flow with user tested ideas adn approaches.
+- Codeveloped the [kano web store](https://kano.me) with **Vuejs**, **Shopify** and **NodeJS**. 
+- Created internal services like a Amazon-like delivery times manager and a product bundler on top of **Shopify** to ease promotions creation, both used by the marketing team.`
   },
   {
     company: 'Learn Forward',
@@ -278,7 +278,7 @@ export default [
     jobTitle: 'software engineer',
     techStack: ['node', 'backbone', 'jade', 'styuls', 'gulp', 'heroku'],
     tasks: `
-  - As part of the content team, I created various interactive and collaborative textbooks for pupils using **[Backbone.js](https://backbonejs.org)**, **[Jade](http://jade-lang.com)**, **[Stylus](https://stylus-lang.com)** and out custom authoring tool **[LFA](https://www.npmjs.com/package/lfa)**.
-  - Developed 2014's Romanian [Presidential Campaign Website](https://github.com/readfwd/macovei) for Monica Macovei.`
+- As part of the content team, I created various interactive and collaborative textbooks for pupils using **[Backbone.js](https://backbonejs.org)**, **[Jade](http://jade-lang.com)**, **[Stylus](https://stylus-lang.com)** and out custom authoring tool **[LFA](https://www.npmjs.com/package/lfa)**.
+- Developed 2014's Romanian [Presidential Campaign Website](https://github.com/readfwd/macovei) for Monica Macovei.`
   }
 ]

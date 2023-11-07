@@ -9,11 +9,12 @@ const ProjectsBlock = (props: ProjectsBlockProps): JSX.Element => {
       {props.projects.map((project, key) => (
         <Md
           key={`projects_${key}`}
-          source={project.details}
-          renderers={{
+          components={{
             paragraph: LI
           }}
-        />
+        >
+          {project.details}
+        </Md>
       ))}
     </ProjectBlockList>
   )

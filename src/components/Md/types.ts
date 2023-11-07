@@ -1,3 +1,3 @@
 import { ReactMarkdownProps } from 'react-markdown'
 
-export type MdProps = Pick<ReactMarkdownProps, 'renderers' | 'source'>
+export type MdProps = Pick<ReactMarkdownProps, 'components' | 'source'>

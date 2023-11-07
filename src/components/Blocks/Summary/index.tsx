@@ -4,7 +4,7 @@ import { SummaryContent } from './styled'
 import { SummaryProps } from './types'
 
 const SummarySection = function (props: SummaryProps) {
-  return <Md source={props.content} renderers={{ paragraph: SummaryContent }} />
+  return <Md components={{ paragraph: SummaryContent }}>{props.content}</Md>
 }
 
 export default SummarySection

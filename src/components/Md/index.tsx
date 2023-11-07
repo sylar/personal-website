@@ -10,7 +10,7 @@ import {
 import ReactMarkdown from 'react-markdown'
 import { MdProps } from './types'
 
-const defaultRenderers = {
+const defaultcomponents = {
   paragraph: Paragraph,
   image: Image,
   h1: Heading,
@@ -20,13 +20,11 @@ const defaultRenderers = {
   li: LI
 }
 
-const Md = ({ renderers, source }: MdProps): JSX.Element => {
+const Md = ({ components, children }: MdProps): JSX.Element => {
   return (
-    <ReactMarkdown
-      renderers={{ ...defaultRenderers, ...renderers }}
-      source={source}
-      escapeHtml={false}
-    />
+    <ReactMarkdown components={{ ...defaultcomponents, ...components }}>
+      {children}
+    </ReactMarkdown>
   )
 }
 
