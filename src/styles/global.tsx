@@ -9,8 +9,15 @@ export const PageLayout = styled.main`
     font-size: ${(props) => props.theme.typography.content.fontSize};
     line-height: ${(props) => props.theme.typography.content.lineHeight};
     padding: 0 ${(props) => props.theme.typography.lineHeightSpacing(1.5)};
-
   }
+
+  @page 
+  {
+    size: A4 portrait;
+  }
+
+
+  
 `
 
 export const Heading = styled.h1`
@@ -106,6 +113,7 @@ export const HR = styled.hr`
  `
 
  export const Div = styled.div``
+ export const A = styled.a``
 
  export enum Sizes {
   SMALL = 'small',

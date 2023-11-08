@@ -24,13 +24,15 @@ const {
 const COLORS = {
   electromagnetic: '#2f3640',
   lynxWhite: '#f5f6fa',
-  chainchanggrey: '#718093'
+  chainchanggrey: '#718093',
+  subltleSlate: '#92969d'
 }
 const Theme: DefaultTheme = {
   colors: {
     primary: COLORS.electromagnetic,
     secondary: COLORS.lynxWhite,
-    small: COLORS.chainchanggrey
+    small: COLORS.chainchanggrey,
+    muted: COLORS.subltleSlate
   },
   background: {
     light: COLORS.lynxWhite,

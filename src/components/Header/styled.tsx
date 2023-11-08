@@ -1,15 +1,27 @@
-import { Section, Title, Sizes, Paragraph, Div } from '../../styles/global'
+import {
+  Section,
+  Title,
+  Sizes,
+  Paragraph,
+  Div,
+  A,
+  Span
+} from '../../styles/global'
 import styled, { css } from 'styled-components'
 
 export const Header = styled(Section)<any>`
   display: flex;
+  justify-content: center;
   flex-direction: column;
+  @media print {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
   ${(props) => {
     switch (props.size) {
       case Sizes.MEDIUM:
         return css`
           justify-items: center;
-          align-items: center;
           flex-direction: column;
           margin-bottom: ${(props.theme as any).typography.lineHeightSpacing(
             3
@@ -19,7 +31,6 @@ export const Header = styled(Section)<any>`
       case Sizes.SMALL:
         return css`
           align-items: center;
-          justify-content: center;
           @media screen {
             padding-top: ${(props.theme as any).typography.lineHeightSpacing(
               1
@@ -68,6 +79,49 @@ export const HeaderDescription = styled(Paragraph)`
 `
 
 export const Email = styled(Div)`
-  font-size: ${(props) =>
-    (props.theme as any).typography.lineHeightSpacing(0.5)};
+  display: none;
+  @media print {
+    display: block;
+  }
+`
+
+export const Info = styled(Div)`
+  display: flex;
+  flex-direction: column;
+`
+
+export const Muted = styled(Span)`
+  color: ${(props) => props.theme.colors.muted};
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+  }
+
+  @media print {
+    display: none;
+  }
+`
+
+export const Text = styled(Span)`
+  @media print {
+    &::after {
+      content: ' ';
+    }
+  }
+`
+
+export const Anchor = styled(A)`
+  text-decoration: none;
+  color: ${(props) => props.theme.colors.primary};
+  transition: transform 0.3s ease;
+  width: 100%;
+
+  &:hover {
+    text-transform: lowercase;
+    span {
+      color: ${(props) => props.theme.colors.primary};
+    }
+    color: ${(props) => props.theme.colors.primary};
+  }
 `

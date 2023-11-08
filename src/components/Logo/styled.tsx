@@ -28,8 +28,8 @@ export const LogoContainer = styled.div`
   }}
   @media print {
     svg {
-      width: 6rem;
-      height: 6rem;
+      width: 7.2rem;
+      height: 7.2rem;
     }
   }
 `
