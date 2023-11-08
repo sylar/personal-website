@@ -10,8 +10,8 @@ export default [
     details: `My [personal website](https://github.com/sylar/personal-website) build with ReactJS and NextJS and deployed with Vercel's nowsh.`
   },
   {
-    name: 'wordpress-jailcell',
-    repo: 'https://github.com/sylar/wordpress-jailcell',
-    details: `A [docker development environment](https://github.com/sylar/wordpress-jailcell) for creating wordpress plugins / themes.`
+    name: 'personal-server',
+    repo: '',
+    details: `I am developing a privacy-centric local network to safeguard against trackers and ensure secure app access within the system.`
   }
 ]
