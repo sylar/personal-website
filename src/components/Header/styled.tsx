@@ -1,7 +1,5 @@
 import { Section, Title, Sizes, Paragraph, Div } from '../../styles/global'
 import styled, { css } from 'styled-components'
-import { HeaderStyleProps } from './types'
-import Link from '../Link'
 
 export const Header = styled(Section)<any>`
   display: flex;

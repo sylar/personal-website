@@ -14,11 +14,15 @@ const ExperienceBlockContent = (
   return (
     <>
       {!liteModeOn && (
-        <Md components={{ paragraph: CompanyDescription }}>
-          {props.description}
-        </Md>
+        <Md
+          components={{ p: (props) => <CompanyDescription {...props} /> }}
+          source={props.description}
+        />
       )}
-      <Md components={{ list: BlockList }}>{props.duties}</Md>
+      <Md
+        components={{ ul: (props) => <BlockList {...props} /> }}
+        source={props.duties}
+      />
     </>
   )
 }

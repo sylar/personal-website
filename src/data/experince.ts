@@ -1,7 +1,7 @@
 export default [
   {
     company: 'Balyasny Asset Management LLP',
-    description: `Balyasny Asset Management is an American hedge fund headquartered in Chicago founded in 2001 in Chicago by Dmitry Balyasny, Scott Schroeder and Taylor O'Malley.It traded mostly long/short equity which today still accounts for 70% of the firm's risk`,
+    description: `Balyasny Asset Management is an American hedge fund headquartered in Chicago founded in 2001 in Chicago by Dmitry Balyasny, Scott Schroeder and Taylor O'Malley`,
     startDate: 1665360000000,
     type: 'contract',
     jobTitle: 'software consultant',
@@ -15,9 +15,10 @@ export default [
       'webpack'
     ],
     tasks: `
-- Spearheaded the development of sophisticated internal trading analysis tools, leveraging cutting-edge technologies including **ReactJS**, **NextJS**, and **Ag-grid** to enhance analytical capabilities.
-- Championed performance optimization by reducing the application’s bundle size by 20% through strategic code splitting and the implementation of tree shaking techniques.
-- Significantly enhanced the user experience by improving the Time-To-Interactive performance by 25%, achieved by implementing advanced caching strategies, memoization, and component prerendering.`
+- **Orchestrated the creation** and refinement of complex internal trading analysis tools using **ReactJS**, **NextJS**, and **Ag-grid**, elevating our analytical prowess.
+- **Optimized application efficiency** by downsizing bundle size by **20%** and enhanced user interaction speeds by **25%** through strategic code optimizations and advanced caching techniques.
+- **Facilitated consistent code and UI quality** across projects by contributing to the development of a centralized **monorepo**, simplifying maintenance and updates.
+`
   },
   {
     company: 'CMC Markets plc',
@@ -37,9 +38,10 @@ export default [
     ],
     tasks: `
 - Co-developed a **ReactJS PWA investment app** for internal customer support, enhancing digital customer engagement.
-- Engineered seamless user flow integration into mobile native apps through microfrontend architecture, improving cross-platform consistency.
+- Engineered seamless user flow integration into mobile native apps through **microfrontend architecture**, improving cross-platform consistency.
 - Orchestrated native **wkWebkitViews SwiftUI** integrations, balancing native responsiveness with web robustness.
-- Elevated web performance within native apps by 30%, and reduced bundle size by 20% via strategic tree shaking and code splitting.`
+- Elevated web performance within native apps by **30%**, and reduced bundle size by **20%** via strategic **tree shaking** and **code splitting**.
+`
   },
   {
     company: 'BP plc',
@@ -82,8 +84,9 @@ export default [
     ],
     tasks: `
 - Engineered robust frontend features for a digital transformation project, converting Excel-based processes to a **ReactJS** and **Typescript** driven application.
-- Optimized application responsiveness by 35% with strategic memoization techniques and state normalization, significantly enhancing user interaction.
-- Advocated for and executed a comprehensive end-to-end testing regime using Cypress, bolstering feature reliability and system integrity.`
+- Optimized application responsiveness by **35%** with strategic **memoization techniques** and **state normalization**, significantly enhancing user interaction.
+- Advocated for and executed a comprehensive **end-to-end testing regime using Cypress**, bolstering feature reliability and system integrity.
+`
   },
   {
     company: 'Kaluza',
@@ -103,9 +106,10 @@ export default [
     ],
     tasks: `
 - Pioneered the development of a real-time dashboard for smart device analytics, integrating with **NodeJS** and **Kafka** streams for live data feeds.
-- Customized UK map visualizations using **Geojsons and Webgl**, and employed **D3** for dynamic data representation.
-- Curated a **Storybook** component library to streamline collaboration between design and development teams, enhancing UI consistency and dev efficiency.
-- Mentored junior team members, facilitating knowledge transfer and fostering a collaborative codebase understanding.`
+- Customized UK map visualizations using **GeoJSON** and **WebGL**, and employed **D3.js** for dynamic data representation.
+- Curated a **Storybook** component library to streamline collaboration between design and development teams, enhancing UI consistency and development efficiency.
+- **Mentored junior team members**, facilitating knowledge transfer and fostering a collaborative codebase understanding.
+`
   },
   {
     company: 'NowTV, Sky UK',
@@ -128,9 +132,10 @@ export default [
       'optimizely'
     ],
     tasks: `
-- Collaborated in an agile setup to alleviate technical debt, achieving a 5% efficiency gain in content delivery pipelines across multiple devices.
-- Enhanced testing protocols, leading to a 5% increase in coverage for both Jest unit tests and Ruby-based functional tests.
-- Developed and deployed new features such as a VOD content rail, and orchestrated a custom A/B testing framework using **Optimizely**.`
+- Collaborated in an agile setup to alleviate technical debt, achieving a **5% efficiency gain** in content delivery pipelines across multiple devices.
+- Enhanced testing protocols, leading to a **5% increase in coverage** for both **Jest unit tests** and Ruby-based functional tests.
+- Developed and deployed new features such as a VOD content rail, and orchestrated a custom **A/B testing framework** using **Optimizely**.
+`
   },
   {
     company: 'uSwitch',
@@ -174,8 +179,10 @@ export default [
       'express-js'
     ],
     tasks: `
-- Developed interactive features such as live sports metrics and video galleries, significantly enhancing user engagement on The Sun’s digital platform.
-- Successfully orchestrated the launch of the 2018 FIFA World Cup feature page, catering to peak viewership of over 2 million.`
+- Developed interactive features such as live sports metrics and video galleries, significantly **enhancing user engagement** on The Sun’s digital platform.
+- Successfully orchestrated the launch of the **2018 FIFA World Cup feature page**, catering to peak viewership of over **2 million**.
+- Implemented performance optimizations and tracking enhancements, leading to more efficient ad loading via **header bidding** and granular insights into user metrics.
+`
   },
   {
     company: 'AIG',
@@ -187,9 +194,10 @@ export default [
     jobTitle: 'frontend developer',
     techStack: ['react', 'redux', 'redux-saga', 'reselect', 'webpack', 'sass'],
     tasks: `
-- Contributed to a client-centric multi-tenancy insurance quote generation platform, enhancing business efficiency and customer service.
+- Contributed to a client-centric **multi-tenancy insurance quote generation platform**, enhancing business efficiency and customer service.
 - Implemented **Redux-Saga** for effective management of asynchronous API interactions, ensuring a smooth user experience.
-- Utilized memoization strategies to maintain optimal performance during the quote generation process.`
+- Utilized **memoization strategies** to maintain optimal performance during the quote generation process.
+`
   },
   {
     company: 'Third Space Learning',
@@ -239,9 +247,10 @@ export default [
       'graphql-relay'
     ],
     tasks: `
-- Orchestrated the front-end engineering of interactive marketing campaign platforms, driving user engagement and providing actionable insights through data analytics.
-- Pioneered the adoption of responsive design methodologies, achieving seamless cross-platform user experiences and increasing campaign reach.
-- Optimized page load times by implementing advanced front-end optimization techniques, leading to a 30% improvement in performance metrics.`
+- Orchestrated the front-end engineering of interactive marketing campaign platforms, **driving user engagement** and providing **actionable insights** through data analytics.
+- Pioneered the adoption of **responsive design methodologies**, achieving seamless cross-platform user experiences and increasing campaign reach.
+- Optimized page load times by implementing advanced front-end optimization techniques, leading to a **30% improvement in performance metrics**.
+`
   },
   {
     company: 'Kano Computing',
@@ -264,9 +273,10 @@ export default [
       'shopify'
     ],
     tasks: `
-- **Improved the onboarding process** on the Kano web platform by simplifying the flow with user tested ideas adn approaches.
-- Codeveloped the [kano web store](https://kano.me) with **Vuejs**, **Shopify** and **NodeJS**. 
-- Created internal services like a Amazon-like delivery times manager and a product bundler on top of **Shopify** to ease promotions creation, both used by the marketing team.`
+- **Enhanced the user onboarding experience** for the Kano web platform by streamlining the process with user-tested improvements.
+- Co-developed the Kano web store with **Vue.js**, **Shopify**, and **Node.js**, enhancing e-commerce functionality and user interface.
+- Implemented internal services like a delivery times estimator and a product bundler on top of **Shopify**, optimizing promotional activities for the marketing team.
+`
   },
   {
     company: 'Learn Forward',
@@ -278,7 +288,9 @@ export default [
     jobTitle: 'software engineer',
     techStack: ['node', 'backbone', 'jade', 'styuls', 'gulp', 'heroku'],
     tasks: `
-- As part of the content team, I created various interactive and collaborative textbooks for pupils using **[Backbone.js](https://backbonejs.org)**, **[Jade](http://jade-lang.com)**, **[Stylus](https://stylus-lang.com)** and out custom authoring tool **[LFA](https://www.npmjs.com/package/lfa)**.
-- Developed 2014's Romanian [Presidential Campaign Website](https://github.com/readfwd/macovei) for Monica Macovei.`
+- **Contributed to the content team** by crafting interactive and collaborative textbooks for students, utilizing **Backbone.js**, **Jade**, **Stylus**, and our open-source authoring tool **LFA**.
+- **Played a pivotal role** in the 2014 Romanian Presidential campaign by developing the website for candidate Monica Macovei, demonstrating proficiency in **modern web development practices**.
+- **Enhanced digital platform user experiences** and efficiency through strategic improvements in performance and comprehensive **usage tracking**.
+`
   }
 ]

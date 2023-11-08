@@ -103,9 +103,10 @@ const ResumeProvider = React.memo(({ children }: any) => {
   )
 })
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const useResumeCxt = () => {
   const ctx = React.useContext(ResumeContext)
   return ctx
 }
+
+ResumeProvider.displayName = 'ResumeProvider'
 export default ResumeProvider

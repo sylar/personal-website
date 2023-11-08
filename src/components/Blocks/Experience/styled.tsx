@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Div, Article, Paragraph, LI, UL } from '../../../styles/global'
+import { Div, Article, Paragraph, LI } from '../../../styles/global'
 import { BlockList } from '../styled'
 
 export const JobName = styled(Div)`

@@ -72,8 +72,8 @@ export const Paragraph = styled.p`
     line-height: ${(props) => props.theme.typography.lineHeightSpacing(.5)};
     font-size: ${(props) => props.theme.typography.lineHeightSpacing(.5)};
   }
-  line-height: ${(props) => props.theme.typography.lineHeightSpacing(1.5)};
-  font-size: ${(props) => props.theme.typography.lineHeightSpacing(1)};
+  line-height: ${(props) => props.theme.typography.lineHeightSpacing(1.2)};
+  font-size: ${(props) => props.theme.typography.lineHeightSpacing(.7)};
 
   `
 

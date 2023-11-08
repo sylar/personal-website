@@ -11,20 +11,24 @@ import ReactMarkdown from 'react-markdown'
 import { MdProps } from './types'
 
 const defaultcomponents = {
-  paragraph: Paragraph,
-  image: Image,
-  h1: Heading,
-  h3: Title,
-  h4: Subtitle,
-  ul: UL,
-  li: LI
+  p(props) {
+    return <Paragraph {...props} />
+  },
+  img: (props) => <Image {...props} />,
+  h1: (props) => <Heading {...props} />,
+  h3: (props) => <Title {...props} />,
+  h4: (props) => <Subtitle {...props} />,
+  ul: (props) => <UL {...props} />,
+  li: (props) => <LI {...props} />
 }
 
-const Md = ({ components, children }: MdProps): JSX.Element => {
+const Md = ({ components, source }: MdProps): JSX.Element => {
   return (
-    <ReactMarkdown components={{ ...defaultcomponents, ...components }}>
-      {children}
-    </ReactMarkdown>
+    <ReactMarkdown
+      components={{ ...defaultcomponents, ...components }}
+      // eslint-disable-next-line react/no-children-prop
+      children={source}
+    />
   )
 }
 
