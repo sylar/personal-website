@@ -9,7 +9,8 @@ export default {
       url: 'https://linkedin.com/in/constantinescuio'
     }
   ],
-  description: `As a Javascript Engineer with over nine years of experience, my dedication is unwavering toward usability, performance, and simplicity. I specialize in creating compelling ReactJS user experiences, often supported by serverlessly deployed NodeJS services, or intricately integrated within robust SwiftUI based applications.`,
+  description: `**Javascript Engineer | 9 Years | ReactJS & SwiftUI Expert**
+  Focused on **usability** and **performance**, I deliver **streamlined user experiences** and **robust applications**, with a commitment to **simplicity** in every line of code`,
   hobbies:
     'My enthusiasm for computer science has led me to mentor friends into web development careers, reflecting my passion for sharing knowledge and advocating for privacy. Beyond teaching, I relish exploring new locales, diving into nonfiction, particularly biographies, and staying abreast of tech trends through platforms like [Hacker News](https://news.ycombinator.com).',
   education: {

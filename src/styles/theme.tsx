@@ -74,7 +74,7 @@ export const GlobalStyle = createGlobalStyle`${css`
   @media print {
     @page {
       size: A4;
-      margin: 15px;
+      margin: 10px;
     }
     html,
     body {
