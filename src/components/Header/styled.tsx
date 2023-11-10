@@ -37,7 +37,9 @@ export const Header = styled(Section)<any>`
             )};
           }
           @media print {
-            margin-top: ${(props.theme as any).typography.lineHeightSpacing(1)};
+            margin-top: ${(props.theme as any).typography.lineHeightSpacing(
+              0.5
+            )};
             margin-bottom: ${(props.theme as any).typography.lineHeightSpacing(
               1
             )};

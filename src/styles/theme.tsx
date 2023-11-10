@@ -73,7 +73,7 @@ export const GlobalStyle = createGlobalStyle`${css`
   
   @media print {
     @page {
-      size: A4;
+      size: A4 portRait;
       margin: 10px;
     }
     html,

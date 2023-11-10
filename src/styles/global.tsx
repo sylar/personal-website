@@ -10,14 +10,6 @@ export const PageLayout = styled.main`
     line-height: ${(props) => props.theme.typography.content.lineHeight};
     padding: 0 ${(props) => props.theme.typography.lineHeightSpacing(1.5)};
   }
-
-  @page 
-  {
-    size: A4 portrait;
-  }
-
-
-  
 `
 
 export const Heading = styled.h1`
