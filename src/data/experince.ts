@@ -4,7 +4,7 @@ export default [
     description: `Balyasny Asset Management is an American hedge fund headquartered in Chicago founded in 2001 in Chicago by Dmitry Balyasny, Scott Schroeder and Taylor O'Malley`,
     startDate: 1665360000000,
     type: 'contract',
-    jobTitle: 'software consultant',
+    jobTitle: 'UI Developer',
     techStack: [
       'reactJS',
       'nextJS',
@@ -15,7 +15,7 @@ export default [
       'webpack'
     ],
     tasks: `
-- **Orchestrated the creation** and refinement of complex internal trading analysis tools using **ReactJS**, **NextJS**, and **Ag-grid**, elevating our analytical prowess.
+- **Orchestrated the creation** and refinement of complex internal trading analysis tools using **ReactJS**, **NextJS**, **GraphQL** and **Ag-grid**, elevating our analytical prowess.
 - **Optimized application efficiency** by downsizing bundle size by **20%** and enhanced user interaction speeds by **25%** through strategic code optimizations and advanced caching techniques.
 - **Facilitated consistent code and UI quality** across projects by contributing to the development of a centralized **monorepo**, simplifying maintenance and updates.
 `
