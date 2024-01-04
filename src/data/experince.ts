@@ -3,6 +3,7 @@ export default [
     company: 'Balyasny Asset Management LLP',
     description: `Balyasny Asset Management is an American hedge fund headquartered in Chicago founded in 2001 in Chicago by Dmitry Balyasny, Scott Schroeder and Taylor O'Malley`,
     startDate: 1665360000000,
+    endDate: 1703980800000,
     type: 'contract',
     jobTitle: 'UI Developer',
     techStack: [
