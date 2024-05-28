@@ -1,5 +1,24 @@
 export default [
   {
+    company: 'UnlikelyAI',
+    description: `Unlikely AI is a deep tech startup working to create a world where highly intelligent automated systems enable humanity to flourish and benefit us all`,
+    startDate: 1712790000000,
+    endDate: 1716591600000,
+    type: 'contract',
+    jobTitle: 'UI Developer',
+    techStack: [
+      'reactJS',
+      'react-force-graph',
+      'canvas',
+      'typescript',
+      'tailwind'
+    ],
+    tasks: `
+- Delivere front-end services for a chat-based application revamp, feature enhancements, and graph-based interface using **React** and **Tailwind**.
+- Implemented UI improvements to enhance user experience, ensuring seamless interactions across the application's features, with a focus on **performance optimization** and **usability enhancements**.
+- Contributed to an interactive graph-based interface, leveraging on **React** and **canvas** to create visually engaging data visualizations that effectively communicated complex information`
+  },
+  {
     company: 'Balyasny Asset Management LLP',
     description: `Balyasny Asset Management is an American hedge fund headquartered in Chicago founded in 2001 in Chicago by Dmitry Balyasny, Scott Schroeder and Taylor O'Malley`,
     startDate: 1665360000000,

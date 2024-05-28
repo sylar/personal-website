@@ -9,9 +9,7 @@ const EducationBlockComponent = ({
     <BlockHeading>
       <Span>{education.degree}</Span>
       <Span>{education.institution}</Span>
-      <Span>
-        {education.startYear} - {education.endYear}
-      </Span>
+      <Span />
     </BlockHeading>
   )
 }

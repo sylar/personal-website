@@ -9,7 +9,7 @@ export default {
       url: 'https://linkedin.com/in/constantinescuio'
     }
   ],
-  description: `As a **Javascript Engineer** with over **nine years** of experience, my dedication is unwavering toward **usability**, **performance**, and **simplicity**. I specialize in creating **compelling ReactJS user experiences**, often supported by serverlessly deployed **NodeJS services**, or intricately integrated within robust **SwiftUI based applications**.`,
+  description: `As a seasoned **Javascript Consultant** with **over 10 years** of expertise, my passion remains steadfast for crafting **intuitive user interfaces, blazing-fast performance**, and **elegant simplicity**. I excel in designing and delivering ** captivating ReactJS experiences**, often augmented by scalable **NodeJS microservices**, or seamlessly integrated within robust **SwiftUI driven ecosystems**.`,
   hobbies:
     'My enthusiasm for computer science has led me to mentor friends into web development careers, reflecting my passion for sharing knowledge and advocating for privacy. Beyond teaching, I relish exploring new locales, diving into nonfiction, particularly biographies, and staying abreast of tech trends through platforms like [Hacker News](https://news.ycombinator.com).',
   education: {
