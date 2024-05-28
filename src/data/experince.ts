@@ -14,8 +14,8 @@ export default [
       'tailwind'
     ],
     tasks: `
-- Delivere front-end services for a chat-based application revamp, feature enhancements, and graph-based interface using **React** and **Tailwind**.
-- Implemented UI improvements to enhance user experience, ensuring seamless interactions across the application's features, with a focus on **performance optimization** and **usability enhancements**.
+- Delivered front-end services for a chat-based application revamp, feature enhancements, and graph-based interface using **React** and **Tailwind**.
+- Implemented a new UI, prioritizing **fast performance** and **intuitive usability**, to deliver a seamless and engaging experience.
 - Contributed to an interactive graph-based interface, leveraging on **React** and **canvas** to create visually engaging data visualizations that effectively communicated complex information`
   },
   {
