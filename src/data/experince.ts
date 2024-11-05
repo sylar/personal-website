@@ -1,5 +1,18 @@
 export default [
   {
+    company: '',
+    description: 'Various freelancing projects',
+    startDate: 1703980800000,
+    type: 'freelancing',
+    jobTitle: '',
+    tasks: `
+- Developed both static and dynamic websites using **Next.js** and **React**, often deployed on **Vercel**, with a focus on building scalable and high-performance web solutions
+- Worked on creating a platform aimed at connecting handymen with clients, emphasizing user-friendly design and seamless functionality using **AWS Lambdas** and **Auth0**
+- Stayed up to date with the latest AI advancements and how to use LLMs in eveyday life to enhance both productivity and reduce user generated errors
+- Currently leading a project that focuses on time-based chat interactions, designed to offer users a more engaging and personalized experience using **Next.Js**, **React** , **Tailwind**. **NodeJS** and **Postgres**
+`
+  },
+  {
     company: 'UnlikelyAI',
     description: `Unlikely AI is a deep tech startup working to create a world where highly intelligent automated systems enable humanity to flourish and benefit us all`,
     startDate: 1712790000000,
