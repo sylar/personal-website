@@ -1,9 +1,10 @@
+import { Company } from '../components/Blocks/Experience/types'
 import { ExperienceEntry } from '../utils/pageTypes'
 
 export type ResumePageType = {
   lightDetails: {
     top: ExperienceEntry[]
-    rest: Pick<ExperienceEntry, 'company'>[]
+    rest: Company[]
   }
   all: ExperienceEntry[]
   mode: ResumeViewModes

@@ -7,11 +7,11 @@ export default [
   {
     name: 'personal-website',
     repo: 'https://github.com/sylar/personal-website',
-    details: `My [personal website](https://github.com/sylar/personal-website) build with ReactJS and NextJS and deployed with Vercel's nowsh.`
+    details: `My [personal website](https://github.com/sylar/personal-website) built with ReactJS and Next.js, deployed on Vercel`
   },
   {
     name: 'personal-server',
     repo: '',
-    details: `I am developing a privacy-centric local network to safeguard against trackers and ensure secure app access within the system.`
+    details: `Designed and implemented a secure local network, safeguarding against trackers and ensuring secure app access for over 50 devices.`
   }
 ]

@@ -1,44 +1,30 @@
-import { ExperienceBlockHeadingProps, Job } from './types'
+import { Company, ExperienceBlockHeadingProps } from './types'
 import { Div } from '../../../styles/global'
-import Link from '../../Link'
-import { JobName, JobDuration, JobCompany } from './styled'
-import { formatDate } from '../../../utils/utils'
+import { JobName, JobCompany } from './styled'
 import { BlockHeading } from '../styled'
 
-const JobNameComponent = (props: Pick<Job, 'type' | 'title'>): JSX.Element => (
+const JobNameComponent = (
+  props: Pick<Company, 'name' | 'industry'>
+): JSX.Element => (
   <JobName>
     <Div>
-      <strong>{props.type}</strong>
-    </Div>
-    <Div>{props.title}</Div>
+      <strong>{props.name}</strong>
+    </Div>{' '}
+    <small>({props.industry})</small>
   </JobName>
 )
-
-const JobDurationComponent = (
-  props: Pick<Job, 'startDate' | 'endDate'>
-): JSX.Element => {
-  const start = formatDate(new Date(props.startDate))
-  const isCurrent = !Boolean(props.endDate)
-  const toBeDisplayed = isCurrent
-    ? [start, 'Current']
-    : [start, formatDate(new Date(props.endDate))]
-
-  return <JobDuration>{toBeDisplayed.join(' - ')}</JobDuration>
-}
 
 const ExperienceBlockHeadingComponent = (
   props: ExperienceBlockHeadingProps
 ): JSX.Element => {
   return (
     <BlockHeading>
-      <JobNameComponent title={props.job.title} type={props.job.type} />
       <JobCompany>
-        <Link label={props.company.name} url={props.company.url} />
+        <JobNameComponent
+          name={props.company.name}
+          industry={props.company.industry}
+        />
       </JobCompany>
-      <JobDurationComponent
-        startDate={props.job.startDate}
-        endDate={props.job.endDate}
-      />
     </BlockHeading>
   )
 }

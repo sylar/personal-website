@@ -9,7 +9,7 @@ export const SectionBlock = styled(Section)`
   }
   @media print {
     h6 {
-      margin-top: 0.75rem;
+      margin-top: 0.25rem;
       margin-bottom: 0;
     }
   }

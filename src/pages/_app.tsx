@@ -4,6 +4,7 @@ import { PageLayout } from '../styles/global'
 import theme, { GlobalStyle } from '../styles/theme'
 import Head from 'next/head'
 import ResumeProvider from '../context/resume.context'
+import { ResumeCondensedProvider } from '../context/resumeCondensed.context'
 
 class MyApp extends App {
   render(): JSX.Element {
@@ -15,10 +16,12 @@ class MyApp extends App {
         </Head>
         <ThemeProvider theme={theme}>
           <ResumeProvider>
-            <GlobalStyle />
-            <PageLayout>
-              <Component {...pageProps} />
-            </PageLayout>
+            <ResumeCondensedProvider>
+              <GlobalStyle />
+              <PageLayout>
+                <Component {...pageProps} />
+              </PageLayout>
+            </ResumeCondensedProvider>
           </ResumeProvider>
         </ThemeProvider>
       </>

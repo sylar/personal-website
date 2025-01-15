@@ -3,7 +3,8 @@ import { formatDate } from '../../../utils/utils'
 import {
   PreviousWorkplacesListItem,
   PreviousWokplacesLists,
-  PreviousWorkplaceList
+  PreviousWorkplaceList,
+  PreviousWorkplaceTimePeriod
 } from './styled'
 import { PreviousComponentProps } from './types'
 
@@ -25,11 +26,19 @@ const PreviousWorplaces = (props: PreviousComponentProps): JSX.Element => {
               return (
                 <PreviousWorkplacesListItem key={`previousWp_${idx}`}>
                   <strong>{wp.type}</strong>
-                  {wp.company}{' '}
-                  <div>
-                    {wp.jobTitle}, {formatDate(new Date(wp.startDate))} -{' '}
-                    {formatDate(new Date(wp.endDate))}
-                  </div>
+                  {wp.company}
+                  {'  '}{' '}
+                  <small
+                    style={{ marginLeft: '.25em', textTransform: 'capitalize' }}
+                  >
+                    ({wp.industry})
+                  </small>
+                  {wp.startDate && wp.endDate && wp.type === 'permanent' && (
+                    <PreviousWorkplaceTimePeriod>
+                      {formatDate(new Date(wp.startDate))} -{' '}
+                      {formatDate(new Date(wp.endDate))}
+                    </PreviousWorkplaceTimePeriod>
+                  )}
                 </PreviousWorkplacesListItem>
               )
             })}

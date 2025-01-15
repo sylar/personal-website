@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const PageLayout = styled.main`
   @media screen {
-    max-width: 800px;
+    max-width: 900px;
     height: 100%;
     margin: 0 auto;
     color: ${(props) => props.theme.colors.primary};
@@ -67,7 +67,7 @@ export const Span = styled.span``
   
 export const Paragraph = styled.p`
   @media print {
-    margin: ${(props) => props.theme.typography.lineHeightSpacing(.25)} 0;
+    margin: ${(props) => props.theme.typography.lineHeightSpacing(.10)} 0;
     line-height: ${(props) => props.theme.typography.lineHeightSpacing(.5)};
     font-size: ${(props) => props.theme.typography.lineHeightSpacing(.5)};
   }

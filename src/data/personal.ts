@@ -9,7 +9,7 @@ export default {
       url: 'https://linkedin.com/in/constantinescuio'
     }
   ],
-  description: `As a seasoned **Javascript Consultant** with **over 10 years** of expertise, my passion remains steadfast for crafting **intuitive user interfaces, blazing-fast performance**, and **elegant simplicity**. I deliver **captivating ReactJS experiences**, often augmented by scalable **NodeJS microservices**, or seamlessly integrated within robust **SwiftUI driven ecosystems**.`,
+  description: `**JavaScript Consultant** with 10+ years of experience delivering scalable, high-performance web applications using **React**, **Next.js**, and **Node.js**. Skilled in driving impactful results in **contract roles** that require rapid adaptability and focused delivery, as well as in **permanent positions** where long-term contributions and strategic growth are key. Open to both **short-term** and **long-term opportunities** that leverage my expertise and allow me to deliver meaningful impact.`,
   hobbies:
     'My enthusiasm for computer science has led me to mentor friends into web development careers, reflecting my passion for sharing knowledge and advocating for privacy. Beyond teaching, I relish exploring new locales, diving into nonfiction, particularly biographies, and staying abreast of tech trends through platforms like [Hacker News](https://news.ycombinator.com).',
   education: {

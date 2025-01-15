@@ -4,6 +4,7 @@ export type Company = {
   name: string
   description: string
   url?: string
+  industry: string
 }
 
 export type Job = {
@@ -12,12 +13,16 @@ export type Job = {
   startDate: number
   endDate?: number
   duties: string
-  jobs?: Job[]
+  techStack?: string[]
 }
 
 export type ExperienceBlockProps = {
   company: Company
   job: Job
+}
+
+export type ExperienceCondensedBlockProps = {
+  company: Company
   techStack?: string[]
 }
 

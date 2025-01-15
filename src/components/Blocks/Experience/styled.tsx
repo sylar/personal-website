@@ -18,13 +18,22 @@ export const JobDuration = styled(Div)`
 export const JobCompany = styled(Div)`
   display: flex;
   flex-wrap: wrap;
-
   justify-content: center;
+  @media screen {
+    margin-left: -${(props) => props.theme.typography.lineHeightSpacing(1.25)};
+  }
 `
 
 export const ExperienceBlock = styled(Article)`
   @media screen {
-    margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(1.75)};
+    margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
+  }
+`
+
+export const CondensedExperienceBlock = styled(Article)`
+  @media screen {
+    margin-left: ${(props) => props.theme.typography.lineHeightSpacing(1.25)};
+    margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
   }
 `
 
@@ -40,6 +49,13 @@ export const CompanyDescription = styled(Paragraph)`
   }
 `
 
+export const PreviousWorkplaceTimePeriod = styled(Div)`
+  font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.5)};
+  line-height: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
+  align-self: flex-end;
+  margin-left: ${(props) => props.theme.typography.lineHeightSpacing(0.25)};
+`
+
 export const PreviousWokplacesLists = styled(Div)`
   display: flex;
   flex-wrap: wrap;
@@ -48,6 +64,7 @@ export const PreviousWokplacesLists = styled(Div)`
 `
 
 export const PreviousWorkplacesListItem = styled(LI)`
+  display: flex;
   list-style-type: none;
   strong {
     text-transform: capitalize;

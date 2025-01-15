@@ -1,5 +1,5 @@
 import React from 'react'
-import resumeData from '../data/experince'
+import resumeData from '../data/experience'
 import { ExperienceEntry } from '../utils/pageTypes'
 import {
   ActionType,

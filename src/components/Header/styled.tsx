@@ -41,7 +41,7 @@ export const Header = styled(Section)<any>`
               0.5
             )};
             margin-bottom: ${(props.theme as any).typography.lineHeightSpacing(
-              1
+              0.75
             )};
           }
         `

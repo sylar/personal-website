@@ -1,6 +1,5 @@
 import HeaderComponent from '../components/Header'
 import { ResumeSwitcher, Span } from '../styles/global'
-import ExperienceBlock from '../components/Blocks/Experience'
 import personalData from '../data/personal'
 import projectsData from '../data/projects'
 import SectionBlock from '../components/Blocks/Section'
@@ -14,6 +13,8 @@ import { useRouter } from 'next/router'
 import PreviousWorplaces from '../components/Blocks/Experience/previous'
 import SummarySection from '../components/Blocks/Summary'
 import SkillsBox from '../components/Blocks/Skills'
+import ExperienceCondensedBlockComponent from '../components/Blocks/ExperienceCondensed'
+import { getResumeCondensed } from '../context/resumeCondensed.context'
 
 type ResumeContentProps = {
   displayedWorkplaces: any[]
@@ -25,59 +26,68 @@ const ResumeContent = ({
   displayedWorkplaces,
   liteModeOn,
   liteWorkplaces
-}: ResumeContentProps) => (
-  <>
-    <SectionBlock title="Summary">
-      <SummarySection content={personalData.description} />
-    </SectionBlock>
-    <SectionBlock title="Skills">
-      <SkillsBox
-        languages={personalData.skills.languages}
-        libraries={personalData.skills.libraries}
-        technologies={personalData.skills.technologies}
-      />
-    </SectionBlock>
-    <SectionBlock title="Experience">
-      <>
-        {displayedWorkplaces.map((xp, key) => (
-          <ExperienceBlock
-            key={`xp_block_${key}`}
-            company={{
-              description: xp.description,
-              name: xp.company
-            }}
-            job={{ ...xp, duties: xp.tasks, title: xp.jobTitle }}
-          />
-        ))}
-      </>
-      {liteModeOn && (
-        <SectionBlock title="Previous">
-          <PreviousWorplaces workplaces={liteWorkplaces} />
+}: ResumeContentProps) => {
+  const a = [displayedWorkplaces[0]]
+  return (
+    <>
+      <SectionBlock title="Summary">
+        <SummarySection content={personalData.description} />
+      </SectionBlock>
+      <SectionBlock title="Skills">
+        <SkillsBox
+          languages={personalData.skills.languages}
+          libraries={personalData.skills.libraries}
+          technologies={personalData.skills.technologies}
+        />
+      </SectionBlock>
+      <SectionBlock title="Experience">
+        <>
+          {a.map((xp, key) => (
+            <ExperienceCondensedBlockComponent
+              key={`xp_block_${key}`}
+              job={xp}
+            />
+          ))}
+        </>
+
+        {liteModeOn && (
+          <SectionBlock title="Previous">
+            <PreviousWorplaces workplaces={liteWorkplaces} />
+          </SectionBlock>
+        )}
+      </SectionBlock>
+      <SectionBlock title="Education">
+        <EducationBlock education={personalData.education} />
+      </SectionBlock>
+      <SectionBlock title="Side Projects">
+        <ProjectsBlock projects={projectsData} />
+      </SectionBlock>
+
+      {!liteModeOn && (
+        <SectionBlock title="Hobbies">
+          <HobbiesBlock content={personalData.hobbies} />
         </SectionBlock>
       )}
-    </SectionBlock>
-    <SectionBlock title="Education">
-      <EducationBlock education={personalData.education} />
-    </SectionBlock>
-    <SectionBlock title="Side Projects">
-      <ProjectsBlock projects={projectsData} />
-    </SectionBlock>
-
-    {!liteModeOn && (
-      <SectionBlock title="Hobbies">
-        <HobbiesBlock content={personalData.hobbies} />
-      </SectionBlock>
-    )}
-  </>
-)
+    </>
+  )
+}
 
 const ResumePage = (): JSX.Element => {
   const {
     actions: { SWITCH_MODE },
-    state: { liteModeOn, liteMaxItems, liteWorkplaces, workplaces }
+    state: { liteModeOn }
   } = useResumeCxt()
 
+  const [resumeData] = getResumeCondensed()
+
   const localRouter = useRouter()
+
+  const lite = resumeData.reduce((acc, v) => {
+    if (v.clientsByTiers) {
+      return acc.concat(v.clientsByTiers.tierB)
+    }
+    return acc.concat(v)
+  }, [])
 
   useEffect(() => {
     const { query } = localRouter
@@ -91,10 +101,6 @@ const ResumePage = (): JSX.Element => {
       SWITCH_MODE(ResumeViewModes.FULL)
     }
   }, [localRouter.query.mode])
-
-  const displayedWorkplaces = liteModeOn
-    ? workplaces.slice(0, liteMaxItems)
-    : workplaces
 
   const SwitchModeAndUpdateUrl = (mode: ResumeViewModes) => {
     if (mode === ResumeViewModes.FULL) {
@@ -117,8 +123,8 @@ const ResumePage = (): JSX.Element => {
       />
       <ResumeContent
         liteModeOn={liteModeOn}
-        displayedWorkplaces={displayedWorkplaces}
-        liteWorkplaces={liteWorkplaces}
+        displayedWorkplaces={resumeData}
+        liteWorkplaces={lite}
       />
       {liteModeOn ? (
         <ResumeSwitcher>

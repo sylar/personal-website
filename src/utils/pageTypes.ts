@@ -1,7 +1,8 @@
 import { LinkProps } from '../components/Link/types'
 import {
   Job,
-  ExperienceBlockProps
+  ExperienceBlockProps,
+  Company
 } from '../components/Blocks/Experience/types'
 import { Project } from '../components/Blocks/Projects/types'
 export type EducationEntry = {
@@ -11,9 +12,7 @@ export type EducationEntry = {
   endYear: number
 }
 
-export type ExperienceEntry = {
-  company: string
-  description: string
+export type ExperienceEntry = Company & {
   jobTitle: string
   tasks: string
 } & Pick<Job, 'endDate' | 'startDate' | 'type'> &
