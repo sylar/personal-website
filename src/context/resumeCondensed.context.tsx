@@ -1,65 +1,44 @@
 import { createStateContext } from 'react-use'
 import resumeCondensed from '../data/experienceCondensed'
+import {
+  JOB_TYPE,
+  TIERS,
+  Workplace
+} from '../components/Blocks/Experience/types'
+import { ResumeData } from './types'
 
-const resumeData = resumeCondensed.reduce((acc, value) => {
-  const isContract = value.type === 'contract'
-  const {
-    company,
-    tasks,
-    jobTitle,
-    type,
-    description,
-    startDate,
-    endDate,
-    industry
-  } = value
+const getClientsByTier = (clients: Workplace[], tier: TIERS) =>
+  clients.filter((client) => client?.tier === tier ?? false)
 
-  if (isContract) {
-    const clientsByTiers = value.clients.reduce(
-      (clientsAcc, client) => {
-        const { company, tasks, startDate, endDate, type, industry } = client
-        if (client.tier === 1) {
-          return {
-            ...clientsAcc,
-            tierA: clientsAcc.tierA.concat({
-              company,
-              tasks,
-              startDate,
-              endDate,
-              type,
-              industry
-            })
-          }
-        }
-        return {
-          ...clientsAcc,
-          tierB: clientsAcc.tierB.concat({
-            company,
-            tasks,
-            startDate,
-            endDate,
-            type,
-            industry
-          })
-        }
-      },
-      { tierA: [], tierB: [] }
-    )
+const getResumeData = (): ResumeData => {
+  const previousWorkplaces = []
 
-    return acc.concat({
-      title: jobTitle,
-      type,
-      clientsByTiers,
-      description,
-      startDate,
-      endDate
-    })
-  }
+  const displayedWorkplaces = resumeCondensed.reduce((acc, value) => {
+    const isFreelanceGig = value.type === JOB_TYPE.FREELANCE
 
-  return acc.concat({ company, tasks, startDate, endDate, type, industry })
-}, [])
+    if (isFreelanceGig) {
+      const clientsByTiers = {
+        visible: getClientsByTier(value.clients, TIERS.VISIBLE),
+        hidden: getClientsByTier(value.clients, TIERS.HIDDEN)
+      }
+
+      previousWorkplaces.push(...clientsByTiers.hidden)
+
+      return acc.concat({ ...value, clients: clientsByTiers.visible })
+    }
+
+    if (value.tier === TIERS.VISIBLE) {
+      return acc.concat(value)
+    }
+    previousWorkplaces.push(value)
+
+    return acc
+  }, [])
+
+  return { displayedWorkplaces, previousWorkplaces }
+}
 
 const [getResumeCondensed, ResumeCondensedProvider] =
-  createStateContext(resumeData)
+  createStateContext(getResumeData())
 
 export { getResumeCondensed, ResumeCondensedProvider }

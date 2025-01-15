@@ -1,5 +1,10 @@
-import { Company } from '../components/Blocks/Experience/types'
+import { Company, Workplace } from '../components/Blocks/Experience/types'
 import { ExperienceEntry } from '../utils/pageTypes'
+
+export type ResumeData = {
+  displayedWorkplaces: Workplace[]
+  previousWorkplaces: Workplace[]
+}
 
 export type ResumePageType = {
   lightDetails: {

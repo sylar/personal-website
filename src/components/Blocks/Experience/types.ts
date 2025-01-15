@@ -1,45 +1,36 @@
-import { ExperienceEntry } from '../../../utils/pageTypes'
-
 export type Company = {
-  name: string
-  description: string
-  url?: string
-  industry: string
+  companyName: string
+  companyDescription: string
+  companyUrl?: string
+  companyIndustry: string
 }
 
 export type Job = {
   type: string
-  title: string
+  jobTitle: string
   startDate: number
   endDate?: number
-  duties: string
+  tasks?: string
   techStack?: string[]
 }
 
-export type ExperienceBlockProps = {
-  company: Company
-  job: Job
+export type Workplace = Company & Job & { tier?: number }
+
+export type Experience = Workplace & {
+  clients?: Workplace[]
 }
 
-export type ExperienceCondensedBlockProps = {
-  company: Company
-  techStack?: string[]
+export type CompanyHeader = Company & Pick<Job, 'startDate' | 'endDate'>
+
+export type PreviousWorkplace = Omit<CompanyHeader, 'companyDescription'>
+
+export enum JOB_TYPE {
+  CONTRACT = 'contract',
+  PERMANENT = 'permanent',
+  FREELANCE = 'freelance'
 }
 
-export type ExperienceBlockHeadingProps = {
-  company: Company
-  job: Omit<Job, 'duties'>
-}
-
-export type ExperienceBlockContentProps = Pick<Job, 'duties' | 'jobs'> &
-  Pick<ExperienceBlockProps, 'techStack'> &
-  Pick<Company, 'description'>
-
-export type PreviousWorkplace = Pick<
-  ExperienceEntry,
-  'company' | 'endDate' | 'startDate' | 'type' | 'jobTitle'
->
-
-export type PreviousComponentProps = {
-  workplaces: PreviousWorkplace[]
+export enum TIERS {
+  VISIBLE = 1,
+  HIDDEN = 2
 }

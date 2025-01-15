@@ -1,20 +1,24 @@
-import { ExperienceBlockProps } from './types'
-import Heading from './heading'
-import Content from './content'
+import { ExperienceBlockHeadingComponent } from './heading'
 import { ExperienceBlock } from './styled'
+import { Experience } from './types'
+import { ExperienceBlockContent } from './content'
 
 const ExperienceBlockComponent = ({
-  company,
-  job
-}: ExperienceBlockProps): any => {
+  experienceItem
+}: {
+  experienceItem: Experience
+}) => {
   return (
     <ExperienceBlock>
-      <Heading company={company} job={job} />
-      <Content
-        duties={job.duties}
-        description={company.description}
-        jobs={job.jobs || []}
+      <ExperienceBlockHeadingComponent
+        companyName={experienceItem.companyName}
+        companyIndustry={experienceItem.companyIndustry}
+        companyDescription={experienceItem.companyDescription}
+        startDate={experienceItem.startDate}
+        endDate={experienceItem.endDate}
+        companyUrl={experienceItem.companyUrl}
       />
+      <ExperienceBlockContent item={experienceItem} />
     </ExperienceBlock>
   )
 }

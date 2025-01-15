@@ -1,30 +1,27 @@
-import { ExperienceBlockContentProps } from './types'
 import Md from '../../Md'
 import { BlockList } from '../styled'
-import { CompanyDescription } from './styled'
-import { useResumeCxt } from '../../../context/resume.context'
+import { CondensedExperienceBlockContent } from './contentCondensed'
+import { Experience } from './types'
 
-const ExperienceBlockContent = (
-  props: ExperienceBlockContentProps
-): JSX.Element => {
-  const {
-    state: { liteModeOn }
-  } = useResumeCxt()
+const ExperienceBlockContent = ({
+  item
+}: {
+  item: Experience
+}): JSX.Element => {
+  const hasClients = item.clients?.length > 0 ?? false
 
   return (
     <>
-      {!liteModeOn && (
+      {hasClients ? (
+        <CondensedExperienceBlockContent clients={item.clients} />
+      ) : (
         <Md
-          components={{ p: (props) => <CompanyDescription {...props} /> }}
-          source={props.description}
+          components={{ ul: (props) => <BlockList {...props} /> }}
+          source={item.tasks}
         />
       )}
-      <Md
-        components={{ ul: (props) => <BlockList {...props} /> }}
-        source={props.duties}
-      />
     </>
   )
 }
 
-export default ExperienceBlockContent
+export { ExperienceBlockContent }
