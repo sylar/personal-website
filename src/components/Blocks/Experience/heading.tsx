@@ -1,7 +1,6 @@
 import { CompanyHeader, Job } from './types'
-import { JobName, JobCompany, JobDuration } from './styled'
-import { BlockHeading } from '../styled'
-import { Paragraph } from '../../../styles/global'
+import { JobName, JobCompany, JobDuration, CompanyDescription } from './styled'
+import { ExperienceHeading } from './styled'
 import { formatDate } from '../../../utils/utils'
 
 const JobDurationComponent = (
@@ -18,8 +17,8 @@ const JobDurationComponent = (
 
 const ExperienceBlockHeadingComponent = (props: CompanyHeader): JSX.Element => {
   return (
-    <BlockHeading>
-      <JobCompany>
+    <ExperienceHeading>
+      <JobCompany $isClient={props.isClient}>
         <JobName $isClient={props.isClient}>
           {props.companyName}
           {props?.companyIndustry && ` (${props.companyIndustry})`}
@@ -31,8 +30,10 @@ const ExperienceBlockHeadingComponent = (props: CompanyHeader): JSX.Element => {
           ></JobDurationComponent>
         )}
       </JobCompany>
-      {!props.isClient && <Paragraph>{props.companyDescription}</Paragraph>}
-    </BlockHeading>
+      {!props.isClient && props?.companyDescription?.length > 0 && (
+        <CompanyDescription>{props.companyDescription}</CompanyDescription>
+      )}
+    </ExperienceHeading>
   )
 }
 

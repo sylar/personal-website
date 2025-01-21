@@ -7,8 +7,8 @@ import {
 } from '../components/Blocks/Experience/types'
 import { ResumeData } from './types'
 
-const getClientsByTier = (clients: Workplace[], tier: TIERS) =>
-  clients.filter((client) => client?.tier === tier ?? false)
+const getClientsByTier = (clients: Workplace[] = [], tier: TIERS) =>
+  clients.filter((client) => client?.tier === tier)
 
 const getResumeData = (): ResumeData => {
   const previousWorkplaces = []

@@ -8,7 +8,7 @@ type CondensedExperienceBlockContentProps = Pick<Experience, 'clients'>
 const CondensedExperienceBlockContent = ({
   clients
 }: CondensedExperienceBlockContentProps) => (
-  <ExperienceBlock>
+  <ExperienceBlock $isCondensed>
     {clients.map((client) => (
       <CondensedExperienceBlock key={`client_${client.startDate}`}>
         <ExperienceBlockHeadingComponent

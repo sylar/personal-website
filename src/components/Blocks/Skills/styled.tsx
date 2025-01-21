@@ -5,6 +5,7 @@ import { BlockList } from '../styled'
 export const SkillSetList = styled(BlockList)`
   display: flex;
   flex-direction: column;
+  padding: 0;
 `
 
 export const SkillSetItem = styled(LI)`

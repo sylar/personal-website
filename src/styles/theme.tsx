@@ -2,12 +2,12 @@ import createShevy from 'shevyjs'
 import { createGlobalStyle, css, DefaultTheme } from 'styled-components'
 
 const shevy = createShevy({
-  baseFontSize: '20px',
-  baseLineHeight: 1.5,
-  fontScale: 'minorThird',
-  includeMarginBottom: true,
-  proximity: null,
-  precision: null,
+  baseFontSize: '16px', // Base font size of 16px
+  baseLineHeight: 1.5, // Base line height of 1.5
+  fontScale: 'perfectFourth', // Use the Major Third font scale for better readability
+  includeMarginBottom: false, // Include bottom margin for better spacing
+  proximity: 0.3, // Adjust the proximity for spacing between elements
+  precision: 4 // Round values to 4 decimal places for better accuracy
 })
 
 const {
@@ -73,38 +73,21 @@ export const GlobalStyle = createGlobalStyle`${css`
       line-height: ${(props: any) => props.theme.typography.body.lineHeight};
       
 }
-      body::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.1) 1px,
-    transparent 1px
-  );
-  background-size: 1.5rem 1.5rem; /* Match Shevy's line-height */
-  pointer-events: none;
-  z-index: 9999;
+    
 
-
-
-    }
     h1, h2, h3, h4, h5, h6 {
-      margin-bottom: ${(props) => props.theme.typography.baseSpacing(0.5)};
-      margin-top: ${(props) => props.theme.typography.baseSpacing(1)};
+      margin-bottom: 0;
+      margin-top: 0;
     }
-    ul, ol {
-      font-size: ${(props: any) => props.theme.typography.content.fontSize};
-      line-height: ${(props: any) => props.theme.typography.content.lineHeight};
-      margin: 1em 0;
-    }
+    // ul, ol {
+    //   font-size: ${(props: any) => props.theme.typography.content.fontSize};
+    //   line-height: ${(props: any) => props.theme.typography.content.lineHeight};
+    //   margin: 1em 0;
+    // }
     li {
-      font-size: ${(props: any) => props.theme.typography.content.fontSize};
+      // font-size: ${(props: any) => props.theme.typography.content.fontSize};
       line-height: ${(props: any) => props.theme.typography.content.lineHeight};
-      margin-bottom: ${(props) => props.theme.typography.baseSpacing(0.25)};
+      // margin-bottom: ${(props) => props.theme.typography.baseSpacing(0.25)};
     }
   }
   
@@ -128,10 +111,10 @@ export const GlobalStyle = createGlobalStyle`${css`
       pointer-events: none;
     }
 
-    h1, h2, h3, h4, h5, h6 {
-      margin-bottom: ${(props) => props.theme.typography.baseSpacing(0.25)};
-      margin-top: ${(props) => props.theme.typography.baseSpacing(.5)};
-    }
+    // h1, h2, h3, h4, h5, h6 {
+    //   margin-bottom: ${(props) => props.theme.typography.baseSpacing(0.25)};
+    //   margin-top: ${(props) => props.theme.typography.baseSpacing(.5)};
+    // }
 
     header,
     footer {

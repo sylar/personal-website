@@ -6,9 +6,8 @@ import {
   PreviousWorkplaceList,
   PreviousWorkplaceTimePeriod
 } from './styled'
-import { PreviousComponentProps } from './types'
 
-const PreviousWorplaces = (props: PreviousComponentProps): JSX.Element => {
+const PreviousWorplaces = (props): JSX.Element => {
   const fisrtHalfLength = Math.ceil(props.workplaces.length / 2)
   const fisrtHalf = props.workplaces.slice(0, fisrtHalfLength)
 

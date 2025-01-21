@@ -10,12 +10,16 @@ import SummarySection from '../components/Blocks/Summary'
 import SkillsBox from '../components/Blocks/Skills'
 import { getResumeCondensed } from '../context/resumeCondensed.context'
 import ExperienceBlockComponent from '../components/Blocks/Experience'
+import Head from 'next/head'
 
 const ResumeContent = () => {
   const [{ displayedWorkplaces, previousWorkplaces }] = getResumeCondensed()
-  console.log({ displayedWorkplaces, previousWorkplaces })
   return (
     <>
+      <Head>
+        <title>Resume</title>
+        <link rel="stylesheet" href="https://basehold.it/24"></link>
+      </Head>
       <SectionBlock title="Summary">
         <SummarySection content={personalData.description} />
       </SectionBlock>

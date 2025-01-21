@@ -1,5 +1,5 @@
 import { ExperienceBlockHeadingComponent } from './heading'
-import { ExperienceBlock } from './styled'
+import { MainExperienceBlock } from './styled'
 import { Experience } from './types'
 import { ExperienceBlockContent } from './content'
 
@@ -9,7 +9,7 @@ const ExperienceBlockComponent = ({
   experienceItem: Experience
 }) => {
   return (
-    <ExperienceBlock>
+    <MainExperienceBlock>
       <ExperienceBlockHeadingComponent
         companyName={experienceItem.companyName}
         companyIndustry={experienceItem.companyIndustry}
@@ -19,7 +19,7 @@ const ExperienceBlockComponent = ({
         companyUrl={experienceItem.companyUrl}
       />
       <ExperienceBlockContent item={experienceItem} />
-    </ExperienceBlock>
+    </MainExperienceBlock>
   )
 }
 

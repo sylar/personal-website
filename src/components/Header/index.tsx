@@ -8,7 +8,7 @@ const HeaderComponent = ({ email, onClick }: HeaderProps): JSX.Element => (
   <Header size={Sizes.SMALL}>
     <LogoComponent size={Sizes.MEDIUM} />
     <Info>
-      <HeaderTitle size={Sizes.SMALL} onClick={onClick}>
+      <HeaderTitle onClick={onClick}>
         <Anchor href={email.url}>
           <Text>Andrei</Text>
           <Muted>@</Muted>

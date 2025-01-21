@@ -1,7 +1,7 @@
 import Md from '../../Md'
 import { BlockList } from '../styled'
 import { CondensedExperienceBlockContent } from './contentCondensed'
-import { ExperienceBlock } from './styled'
+import { ExperienceBlock, TasksList } from './styled'
 import { Experience } from './types'
 
 const ExperienceBlockContent = ({
@@ -9,7 +9,7 @@ const ExperienceBlockContent = ({
 }: {
   item: Experience
 }): JSX.Element => {
-  const hasClients = item.clients?.length > 0 ?? false
+  const hasClients = item.clients?.length > 0
 
   return (
     <ExperienceBlock>
@@ -18,10 +18,12 @@ const ExperienceBlockContent = ({
           <CondensedExperienceBlockContent clients={item.clients} />
         </>
       ) : (
-        <Md
-          components={{ ul: (props) => <BlockList {...props} /> }}
-          source={item.tasks}
-        />
+        <TasksList>
+          <Md
+            components={{ ul: (props) => <BlockList {...props} /> }}
+            source={item.tasks}
+          />
+        </TasksList>
       )}
     </ExperienceBlock>
   )
