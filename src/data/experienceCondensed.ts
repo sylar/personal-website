@@ -9,7 +9,7 @@ export default [
     clients: [
       {
         companyName: 'UnlikelyAI',
-        type: 'contract',
+        type: 'client',
         companyDescription:
           'Unlikely AI is a deep tech startup working to create a world where highly intelligent automated systems enable humanity to flourish and benefit us all',
         startDate: 1712790000000,
@@ -24,7 +24,7 @@ export default [
       },
       {
         companyName: 'Balyasny Asset Management LLP',
-        type: 'contract',
+        type: 'client',
         companyDescription:
           "Balyasny Asset Management is an American hedge fund headquartered in Chicago founded in 2001 in Chicago by Dmitry Balyasny, Scott Schroeder and Taylor O'Malley",
         startDate: 1665360000000,
@@ -39,7 +39,7 @@ export default [
       },
       {
         companyName: 'CMC Markets plc',
-        type: 'contract',
+        type: 'client',
         companyDescription:
           'CMC Markets is a UK-based financial services company that offers online trading in shares, spread betting, cfds  and foreign exchange across world markets.',
         startDate: 1626260400000,
@@ -55,7 +55,7 @@ export default [
       },
       {
         companyName: 'BP plc',
-        type: 'contract',
+        type: 'client',
         companyDescription:
           'BP plc is one of the world\'s seven oil and gas "supermajors" headquartered in London, UK.',
         startDate: 1583107200000,
@@ -70,7 +70,7 @@ export default [
       },
       {
         companyName: 'Partners Capital LLP',
-        type: 'contract',
+        type: 'client',
         companyDescription:
           'Partners Capital Investment Group, LLC is an Outsourced Investment Office that serves endowments, foundations, pensions, investment professionals, and high-net-worth families in Europe, North America and Asia.',
         startDate: 1567724400000,
@@ -85,12 +85,12 @@ export default [
       },
       {
         companyName: 'Kaluza',
-        type: 'contract',
+        type: 'client',
         companyDescription:
           'Kaluza has developed the technology that will enable the coordination and control of millions of connected devices, creating a fully distributed energy system and 100% penetration of renewable power.',
         startDate: 1559775600000,
         endDate: 1567724400000,
-        companyIndustry: 'Energy/IoT',
+        companyIndustry: 'Energy',
         jobTitle: 'senior frontend developer',
         tasks: `
 - Delivered a real-time analytics dashboard for IoT devices, integrating Node.js and Kafka.
@@ -100,7 +100,7 @@ export default [
       },
       {
         companyName: 'NowTV - Sky UK',
-        type: 'contract',
+        type: 'client',
         companyDescription:
           'Sky UK (formerly British Sky Broadcasting Limited, BSkyB and Sky) is a British telecommunications company which serves the United Kingdom owned by Comcast. ',
         startDate: 1541462400000,
@@ -115,7 +115,7 @@ export default [
       },
       {
         companyName: 'uSwitch',
-        type: 'contract',
+        type: 'client',
         companyDescription:
           'uSwitch Limited is a UK-based price comparison service and switching website founded in 2000.',
         startDate: 1533510000000,
@@ -130,7 +130,7 @@ export default [
       },
       {
         companyName: 'The Sun - News UK',
-        type: 'contract',
+        type: 'client',
         companyDescription:
           'The Sun is a tabloid newspaper published in the United Kingdom and the Republic of Ireland.',
         startDate: 1520294400000,
@@ -145,7 +145,7 @@ export default [
       },
       {
         companyName: 'AIG',
-        type: 'contract',
+        type: 'client',
         companyDescription:
           'American International Group, Inc., also known as AIG, is an American multinational finance and insurance corporation with operations in more than 80 countries and jurisdictions.',
         startDate: 1509926400000,
@@ -160,7 +160,7 @@ export default [
       },
       {
         companyName: 'Third Space Learning',
-        type: 'contract',
+        type: 'client',
         companyDescription:
           'Third Space Learning is making high quality 1-to-1 maths teaching more accessible than ever before for pupils from year 1 through year 6.',
         startDate: 1501974000000,

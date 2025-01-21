@@ -2,6 +2,7 @@ import { CompanyHeader, Job } from './types'
 import { JobName, JobCompany, JobDuration, CompanyDescription } from './styled'
 import { ExperienceHeading } from './styled'
 import { formatDate } from '../../../utils/utils'
+import { NormalFontWeight } from '../../../styles/global'
 
 const JobDurationComponent = (
   props: Pick<Job, 'startDate' | 'endDate'>
@@ -21,7 +22,9 @@ const ExperienceBlockHeadingComponent = (props: CompanyHeader): JSX.Element => {
       <JobCompany $isClient={props.isClient}>
         <JobName $isClient={props.isClient}>
           {props.companyName}
-          {props?.companyIndustry && ` (${props.companyIndustry})`}
+          {props?.companyIndustry && (
+            <NormalFontWeight> ({props.companyIndustry})</NormalFontWeight>
+          )}
         </JobName>
         {!props.isClient && (
           <JobDurationComponent

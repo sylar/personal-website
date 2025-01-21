@@ -25,14 +25,9 @@ const PreviousWorplaces = (props): JSX.Element => {
               return (
                 <PreviousWorkplacesListItem key={`previousWp_${idx}`}>
                   <strong>{wp.type}</strong>
-                  {wp.company}
-                  {'  '}{' '}
-                  <small
-                    style={{ marginLeft: '.25em', textTransform: 'capitalize' }}
-                  >
-                    ({wp.industry})
-                  </small>
-                  {wp.startDate && wp.endDate && wp.type === 'permanent' && (
+                  {wp.companyName}
+                  {/* {'  '} <div>({wp.companyIndustry})</div> */}
+                  {wp.type === 'permanent' && (
                     <PreviousWorkplaceTimePeriod>
                       {formatDate(new Date(wp.startDate))} -{' '}
                       {formatDate(new Date(wp.endDate))}

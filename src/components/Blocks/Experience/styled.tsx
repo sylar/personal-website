@@ -71,7 +71,7 @@ export const CondensedExperienceBlock = styled(Article)`
 export const PreviousWorkplaceTimePeriod = styled(Div)`
   font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.5)};
   line-height: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
-  align-self: flex-end;
+  align-self: self-end;
   margin-left: ${(props) => props.theme.typography.lineHeightSpacing(0.25)};
 `
 
@@ -95,8 +95,6 @@ export const PreviousWorkplacesListItem = styled(LI)`
   }
 `
 export const PreviousWorkplaceList = styled(BlockList)`
+  padding: 0;
   flex: 1;
-  li {
-    margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(0.25)};
-  }
 `

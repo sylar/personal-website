@@ -50,6 +50,10 @@ export const H5 = styled.h5`@media screen {
 }
 `;
 
+export const NormalFontWeight = styled.span`
+  font-weight: normal;
+`
+
 export const H6 = styled.h6`@media screen {
   font-size: ${(props) => props.theme.typography.h6.fontSize};
   line-height: ${(props) => props.theme.typography.h6.lineHeight};
@@ -67,10 +71,6 @@ export const Span = styled.span``
 export const Paragraph = styled.p`
   @media print {
     margin: ${(props) => props.theme.typography.lineHeightSpacing(0.10)} 0;
-  }
-
-  @media screen {
-    margin: ${(props) => props.theme.typography.lineHeightSpacing(1)} 0;
   }
 `
 
