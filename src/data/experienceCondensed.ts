@@ -15,7 +15,7 @@ export default [
         startDate: 1712790000000,
         jobTitle: 'UI Developer',
         endDate: 1716591600000,
-        companyIndustry: 'Innovative/AI',
+        companyIndustry: 'AI',
         tasks: `
 - Revamped a chat-based app UI using React and TailwindCSS, achieving a 20% performance boost.
 - Developed graph-based visualizations with React Canvas, simplifying data representation for end-users.

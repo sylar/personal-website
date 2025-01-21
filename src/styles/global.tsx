@@ -14,68 +14,49 @@ export const PageLayout = styled.main`
 
 export const Heading = styled.h1`
 @media screen {
-
+  font-size: ${(props) => props.theme.typography.h1.fontSize};
+  line-height: ${(props) => props.theme.typography.h1.lineHeight};
+}
+`
+export const Title = styled.h2`@media screen {
   font-size: ${(props) => props.theme.typography.h2.fontSize};
   line-height: ${(props) => props.theme.typography.h2.lineHeight};
-  margin-bottom: ${(props) => props.theme.typography.h2.marginBottom};
-  margin-top: ${(props) => props.theme.typography.h2.marginBottom};
-}
-
-`
-export const Title = styled.h3`@media screen {
-
-  font-size: ${(props) => props.theme.typography.h3.fontSize};
-  line-height: ${(props) => props.theme.typography.h3.lineHeight};
-  margin-bottom: ${(props) => props.theme.typography.h3.marginBottom};
-  margin-top: ${(props) => props.theme.typography.h3.marginBottom};
 }
 
 `
 export const Subtitle = styled.h4`@media screen {
-
+  margin-top: ${(props) => props.theme.typography.h4.marginTop};
   font-size: ${(props) => props.theme.typography.h4.fontSize};
   line-height: ${(props) => props.theme.typography.h4.lineHeight};
-  margin-bottom: ${(props) => props.theme.typography.h4.marginBottom};
-  margin-top: ${(props) => props.theme.typography.h4.marginBottom};
 }
 
 `
 
 export const H5 = styled.h5`@media screen {
-
   font-size: ${(props) => props.theme.typography.h5.fontSize};
   line-height: ${(props) => props.theme.typography.h5.lineHeight};
-  margin-bottom: ${(props) => props.theme.typography.h5.marginBottom};
-  margin-top: ${(props) => props.theme.typography.h5.marginBottom};
 }
 `
-export const H6 = styled.h6`
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  @media screen {
-      line-height: ${(props) => props.theme.typography.h6.lineHeight};
-      font-size: ${(props) => props.theme.typography.h6.fontSize};
-      margin-bottom: ${(props) => props.theme.typography.h6.marginBottom};
-      margin-top: ${(props) => props.theme.typography.h6.marginBottom};
-  }`
-
+export const H6 = styled.h6`@media screen {
+  font-size: ${(props) => props.theme.typography.h6.fontSize};
+  line-height: ${(props) => props.theme.typography.h6.fontSize};
+}
+`
 
 export const Section = styled.section``
 
-  
 export const Span = styled.span``
-  
+
 export const Paragraph = styled.p`
   @media print {
     margin: ${(props) => props.theme.typography.lineHeightSpacing(.10)} 0;
     line-height: ${(props) => props.theme.typography.lineHeightSpacing(.5)};
     font-size: ${(props) => props.theme.typography.lineHeightSpacing(.5)};
   }
-  line-height: ${(props) => props.theme.typography.lineHeightSpacing(1.2)};
-  font-size: ${(props) => props.theme.typography.lineHeightSpacing(.7)};
-
-  `
-
+  line-height: ${(props) => props.theme.typography.content.lineHeight};
+  font-size: ${(props) => props.theme.typography.content.fontSize};
+  margin-top: 0;
+`
 
 export const Image = styled.img``
 
@@ -102,12 +83,12 @@ export const HR = styled.hr`
   border: 1px solid ${(props) => props.theme.colors.primary};
   margin: -1px 0;
   line-height: ${(props) => props.theme.typography.lineHeightSpacing(0.5)};
- `
+`
 
- export const Div = styled.div``
- export const A = styled.a``
+export const Div = styled.div``
+export const A = styled.a``
 
- export enum Sizes {
+export enum Sizes {
   SMALL = 'small',
   MEDIUM = 'medium'
 }

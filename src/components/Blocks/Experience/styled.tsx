@@ -1,27 +1,29 @@
 import styled from 'styled-components'
-import { Div, Article, Paragraph, LI } from '../../../styles/global'
+import { Div, Article, LI, H6, H5 } from '../../../styles/global'
 import { BlockList } from '../styled'
 
-export const JobName = styled(Div)`
-  display: flex;
+export const JobName = styled(H5)<{ $isClient: boolean }>`
   text-transform: capitalize;
-  strong {
-    margin-right: 0.25rem;
-  }
+  ${({ $isClient, theme }) =>
+    $isClient &&
+    `@media screen {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: ${theme.typography.h6.fontSize};
+      line-height: ${theme.typography.h6.lineHeight};
+      }
+  `}
 `
 
-export const JobDuration = styled(Div)`
-  display: flex;
-  justify-content: flex-end;
+export const JobDuration = styled(H6)`
+  font-weight: normal;
+  justify-self: flex-end;
 `
 
 export const JobCompany = styled(Div)`
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  @media screen {
-    margin-left: -${(props) => props.theme.typography.lineHeightSpacing(1.25)};
-  }
+  justify-content: space-between;
+  align-items: baseline;
 `
 
 export const ExperienceBlock = styled(Article)`
@@ -37,18 +39,6 @@ export const CondensedExperienceBlock = styled(Article)`
   }
 `
 
-export const CompanyDescription = styled(Paragraph)`
-  font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
-  line-height: ${(props) => props.theme.typography.lineHeightSpacing(1)};
-  margin: 0;
-  margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(0.5)};
-  font-style: italic;
-  @media print {
-    margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(0.25)};
-    font-size: inherit;
-  }
-`
-
 export const PreviousWorkplaceTimePeriod = styled(Div)`
   font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.5)};
   line-height: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
@@ -56,7 +46,7 @@ export const PreviousWorkplaceTimePeriod = styled(Div)`
   margin-left: ${(props) => props.theme.typography.lineHeightSpacing(0.25)};
 `
 
-export const PreviousWokplacesLists = styled(Div)`
+export const PreviousWorkplacesLists = styled(Div)`
   display: flex;
   flex-wrap: wrap;
   padding: 0;

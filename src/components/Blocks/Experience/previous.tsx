@@ -2,7 +2,7 @@ import React from 'react'
 import { formatDate } from '../../../utils/utils'
 import {
   PreviousWorkplacesListItem,
-  PreviousWokplacesLists,
+  PreviousWorkplacesLists,
   PreviousWorkplaceList,
   PreviousWorkplaceTimePeriod
 } from './styled'
@@ -18,7 +18,7 @@ const PreviousWorplaces = (props: PreviousComponentProps): JSX.Element => {
   )
 
   return (
-    <PreviousWokplacesLists>
+    <PreviousWorkplacesLists>
       {[fisrtHalf, secondHalf].map((set, id) => {
         return (
           <PreviousWorkplaceList key={`previousWp_${id}`}>
@@ -45,7 +45,7 @@ const PreviousWorplaces = (props: PreviousComponentProps): JSX.Element => {
           </PreviousWorkplaceList>
         )
       })}
-    </PreviousWokplacesLists>
+    </PreviousWorkplacesLists>
   )
 }
 

@@ -2,10 +2,9 @@ import styled from 'styled-components'
 import { Div, UL } from '../../styles/global'
 
 export const BlockHeading = styled(Div)`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   padding: 0.25rem 0;
+  display: flex;
+  flex-direction: column;
   @media screen {
     font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
     line-height: ${(props) => props.theme.typography.lineHeightSpacing(1)};
@@ -25,11 +24,6 @@ export const BlockList = styled(UL)`
 
     p {
       margin: 0;
-    }
-
-    li {
-      margin-bottom: ${(props) =>
-        props.theme.typography.lineHeightSpacing(0.5)};
     }
   }
 `

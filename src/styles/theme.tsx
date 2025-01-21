@@ -1,16 +1,18 @@
-import Shevy from 'shevyjs'
+import createShevy from 'shevyjs'
 import { createGlobalStyle, css, DefaultTheme } from 'styled-components'
 
-if (process.browser) {
-  const isPrintMode = window.matchMedia('print')
-}
-
-const shevy = new Shevy({
-  baseFontSize: '24px',
-  baseLineHeight: 1
+const shevy = createShevy({
+  baseFontSize: '20px',
+  baseLineHeight: 1.5,
+  fontScale: 'minorThird',
+  includeMarginBottom: true,
+  proximity: null,
+  precision: null,
 })
+
 const {
   body,
+  h1,
   h2,
   h3,
   h4,
@@ -39,9 +41,10 @@ const Theme: DefaultTheme = {
     dark: COLORS.electromagnetic
   },
   fontFamily:
-    '-apple-system, BlinkMacSystemFont,  BlinkMacSystemFont,  BlinkMacSystemFont,  BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+    '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
   typography: {
     body,
+    h1,
     h2,
     h3,
     h4,
@@ -68,6 +71,40 @@ export const GlobalStyle = createGlobalStyle`${css`
     body {
       font-size: ${(props: any) => props.theme.typography.body.fontSize};
       line-height: ${(props: any) => props.theme.typography.body.lineHeight};
+      
+}
+      body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 1px
+  );
+  background-size: 1.5rem 1.5rem; /* Match Shevy's line-height */
+  pointer-events: none;
+  z-index: 9999;
+
+
+
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: ${(props) => props.theme.typography.baseSpacing(0.5)};
+      margin-top: ${(props) => props.theme.typography.baseSpacing(1)};
+    }
+    ul, ol {
+      font-size: ${(props: any) => props.theme.typography.content.fontSize};
+      line-height: ${(props: any) => props.theme.typography.content.lineHeight};
+      margin: 1em 0;
+    }
+    li {
+      font-size: ${(props: any) => props.theme.typography.content.fontSize};
+      line-height: ${(props: any) => props.theme.typography.content.lineHeight};
+      margin-bottom: ${(props) => props.theme.typography.baseSpacing(0.25)};
     }
   }
   
@@ -84,11 +121,16 @@ export const GlobalStyle = createGlobalStyle`${css`
       line-height: 1.5rem;
       background: white;
     }
-    
+
     a {
       color: ${(props: any) => props.theme.colors.primary};
       text-decoration: none;
       pointer-events: none;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: ${(props) => props.theme.typography.baseSpacing(0.25)};
+      margin-top: ${(props) => props.theme.typography.baseSpacing(.5)};
     }
 
     header,

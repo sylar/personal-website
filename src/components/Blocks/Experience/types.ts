@@ -20,7 +20,8 @@ export type Experience = Workplace & {
   clients?: Workplace[]
 }
 
-export type CompanyHeader = Company & Pick<Job, 'startDate' | 'endDate'>
+export type CompanyHeader = Company &
+  Pick<Job, 'startDate' | 'endDate'> & { isClient?: boolean }
 
 export type PreviousWorkplace = Omit<CompanyHeader, 'companyDescription'>
 

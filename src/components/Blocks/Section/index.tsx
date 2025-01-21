@@ -1,6 +1,6 @@
 import { SectionBlockProps } from './types'
 import { SectionBlock } from './styled'
-import { H6 } from '../../../styles/global'
+import { Subtitle } from '../../../styles/global'
 
 const SectionBlockComponent = ({
   title,
@@ -8,7 +8,7 @@ const SectionBlockComponent = ({
 }: SectionBlockProps): JSX.Element => {
   return (
     <SectionBlock>
-      <H6>{title}</H6>
+      <Subtitle>{title}</Subtitle>
       {children}
     </SectionBlock>
   )
