@@ -1,16 +1,16 @@
 import { EducationBlockProps } from './types'
-import { BlockHeading } from '../styled'
 import { Span } from '../../../styles/global'
+import { EducationEntry } from './styled'
 
 const EducationBlockComponent = ({
   education
 }: EducationBlockProps): JSX.Element => {
   return (
-    <BlockHeading>
+    <EducationEntry>
       <Span>{education.degree}</Span>
       <Span>{education.institution}</Span>
       <Span />
-    </BlockHeading>
+    </EducationEntry>
   )
 }
 
