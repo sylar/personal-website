@@ -7,8 +7,9 @@ const EducationBlockComponent = ({
 }: EducationBlockProps): JSX.Element => {
   return (
     <EducationEntry>
-      <Span>{education.degree}</Span>
-      <Span>{education.institution}</Span>
+      <Span>
+        {education.degree} from {education.institution}
+      </Span>
       <Span />
     </EducationEntry>
   )

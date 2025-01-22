@@ -65,6 +65,9 @@ export const MainExperienceBlock = styled(Article)`
   @media screen {
     margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
   }
+  @media print {
+    margin-top: 1rem;
+  }
 `
 export const ExperienceBlock = styled(Article)<{ $isCondensed?: boolean }>`
   ${({ $isCondensed }) =>

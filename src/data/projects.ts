@@ -2,16 +2,16 @@ export default [
   {
     name: 'dotfiles',
     repo: 'https://github.com/sylar/dotfiles',
-    details: `My [personal dotfiles](https://github.com/sylar/dotfiles) that I regularly update.`
-  },
-  {
-    name: 'personal-website',
-    repo: 'https://github.com/sylar/personal-website',
-    details: `My [personal website](https://github.com/sylar/personal-website) built with ReactJS and Next.js, deployed on Vercel`
+    details: `Maintain a rigorous, custom set of [dotfiles](https://github.com/sylar/dotfiles), publicly available and continuously updated to optimize development workflows.`
   },
   {
     name: 'personal-server',
     repo: '',
-    details: `Designed and implemented a secure local network, safeguarding against trackers and ensuring secure app access for over 50 devices.`
+    details: `Engineered a secure local network, leveraging advanced tracking protection and ensuring seamless, secure application access across 50+ connected devices.`
+  },
+  {
+    name: 'fitness-app',
+    repo: '',
+    details: `Currently developing a fitness tracking app using React Native and Firebase`
   }
 ]

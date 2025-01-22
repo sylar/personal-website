@@ -43,10 +43,8 @@ const ResumeContent = () => {
       <SectionBlock title="Previous">
         <PreviousWorplaces workplaces={previousWorkplaces} />
       </SectionBlock>
-      <SectionBlock title="Education">
+      <SectionBlock title="Key Highlights">
         <EducationBlock education={personalData.education} />
-      </SectionBlock>
-      <SectionBlock title="Side Projects">
         <ProjectsBlock projects={projectsData} />
       </SectionBlock>
     </>
