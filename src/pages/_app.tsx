@@ -11,6 +11,7 @@ class MyApp extends App {
     return (
       <>
         <Head>
+          <meta name="robots" content="noindex, nofollow" />
           <title>Andrei Constantinescu | Resume</title>
         </Head>
         <ThemeProvider theme={theme}>
