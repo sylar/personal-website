@@ -19,7 +19,7 @@ const ResumeContent = () => {
     <>
       <Head>
         <title>Resume</title>
-        <link rel="stylesheet" href="https://basehold.it/24"></link>
+        {/* <link rel="stylesheet" href="https://basehold.it/24"></link> */}
       </Head>
       <SectionBlock title="Summary">
         <SummarySection content={personalData.description} />

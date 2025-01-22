@@ -1,12 +1,11 @@
 import React from 'react'
 import { Anchor, Email, Header, HeaderTitle, Info, Muted, Text } from './styled'
 import { HeaderProps } from './types'
-import { Sizes } from '../../styles/global'
 import LogoComponent from '../Logo'
 
 const HeaderComponent = ({ email, onClick }: HeaderProps): JSX.Element => (
-  <Header size={Sizes.SMALL}>
-    <LogoComponent size={Sizes.MEDIUM} />
+  <Header>
+    <LogoComponent />
     <Info>
       <HeaderTitle onClick={onClick}>
         <Anchor href={email.url}>

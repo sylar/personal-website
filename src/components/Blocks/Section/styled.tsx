@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Section } from '../../../styles/global'
+import { Section, Subtitle } from '../../../styles/global'
 
 export const SectionBlock = styled(Section)`
   @media screen {
@@ -10,5 +10,12 @@ export const SectionBlock = styled(Section)`
       margin-top: 0.25rem;
       margin-bottom: 0;
     }
+  }
+`
+export const SectionBlockTitle = styled(Subtitle)`
+  @media print {
+    font-size: 18px;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
   }
 `

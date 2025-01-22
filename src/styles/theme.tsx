@@ -72,29 +72,21 @@ export const GlobalStyle = createGlobalStyle`${css`
       font-size: ${(props: any) => props.theme.typography.body.fontSize};
       line-height: ${(props: any) => props.theme.typography.body.lineHeight};
       
-}
-    
+    }
 
     h1, h2, h3, h4, h5, h6 {
       margin-bottom: 0;
       margin-top: 0;
     }
-    // ul, ol {
-    //   font-size: ${(props: any) => props.theme.typography.content.fontSize};
-    //   line-height: ${(props: any) => props.theme.typography.content.lineHeight};
-    //   margin: 1em 0;
-    // }
+
     li {
-      // font-size: ${(props: any) => props.theme.typography.content.fontSize};
       line-height: ${(props: any) => props.theme.typography.content.lineHeight};
-      // margin-bottom: ${(props) => props.theme.typography.baseSpacing(0.25)};
     }
   }
   
   @media print {
     @page {
-      size: A4 portRait;
-      margin: 10px;
+      size: A4 portrait;
     }
     html,
     body {
@@ -103,6 +95,7 @@ export const GlobalStyle = createGlobalStyle`${css`
       font-size: 12px;
       line-height: 1.5rem;
       background: white;
+      color: black;
     }
 
     a {
@@ -111,10 +104,10 @@ export const GlobalStyle = createGlobalStyle`${css`
       pointer-events: none;
     }
 
-    // h1, h2, h3, h4, h5, h6 {
-    //   margin-bottom: ${(props) => props.theme.typography.baseSpacing(0.25)};
-    //   margin-top: ${(props) => props.theme.typography.baseSpacing(.5)};
-    // }
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 0;
+      margin-top: ${(props) => props.theme.typography.lineHeightSpacing(.25)};
+    }
 
     header,
     footer {

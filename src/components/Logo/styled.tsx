@@ -1,34 +1,16 @@
-import styled, { css } from 'styled-components'
-import { Image, Sizes } from '../../styles/global'
+import styled from 'styled-components'
+import { Image } from '../../styles/global'
 import { LogoProps } from './types'
 
 export const LogoContainer = styled.div<LogoProps>`
-  ${(props) => {
-    switch (props.size) {
-      case Sizes.SMALL:
-        return css`
-          height: ${(props) => props.theme.typography.lineHeightSpacing(5)};
-          svg {
-            width: ${(props) => props.theme.typography.lineHeightSpacing(5)};
-            height: ${(props) => props.theme.typography.lineHeightSpacing(5)};
-          }
-        `
-      case Sizes.MEDIUM:
-        return css`
-          height: ${(props) => props.theme.typography.lineHeightSpacing(6)};
-          text-align: center;
-          svg {
-            width: ${(props) => props.theme.typography.lineHeightSpacing(6)};
-            height: ${(props) => props.theme.typography.lineHeightSpacing(6)};
-          }
-        `
-      default:
-        return css`
-          width: 100%;
-          height: 130px;
-        `
+  @media screen {
+    height: ${(props) => props.theme.typography.lineHeightSpacing(6)};
+    text-align: center;
+    svg {
+      width: ${(props) => props.theme.typography.lineHeightSpacing(6)};
+      height: ${(props) => props.theme.typography.lineHeightSpacing(6)};
     }
-  }}
+  }
 
   @media print {
     svg {

@@ -1,6 +1,6 @@
 export default [
   {
-    companyName: 'Classified Ltd',
+    companyName: 'Own Contracting Company',
     type: 'freelance',
     jobTitle: 'Software Consultant',
     startDate: 1501974000000,

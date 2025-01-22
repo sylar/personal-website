@@ -14,4 +14,7 @@ export const BlockList = styled(UL)`
       margin: 0;
     }
   }
+  @media print {
+    padding-inline-start: 16px;
+  }
 `

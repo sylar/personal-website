@@ -40,19 +40,19 @@ export const Subtitle = styled.h4`@media screen {
 }
 `;
 
-export const H5 = styled.h5`@media screen {
+export const H5 = styled.h5`
+@media screen {
   font-size: ${(props) => props.theme.typography.h5.fontSize};
   line-height: ${(props) => props.theme.typography.h5.lineHeight};
-  @media print {
-    font-size: ${(props) => props.theme.typography.h6.fontSize};
-  }
+
   ${props => applyHeadingMargins(props)}
 }
+  @media print {
+    margin: 0;
+    font-size: 13px;
+  }
 `;
 
-export const NormalFontWeight = styled.span`
-  font-weight: normal;
-`
 
 export const H6 = styled.h6`@media screen {
   font-size: ${(props) => props.theme.typography.h6.fontSize};

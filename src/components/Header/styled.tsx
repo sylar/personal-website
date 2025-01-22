@@ -1,55 +1,27 @@
-import {
-  Section,
-  Sizes,
-  Paragraph,
-  Div,
-  A,
-  Span,
-  H5
-} from '../../styles/global'
-import styled, { css } from 'styled-components'
+import { Section, Paragraph, Div, A, Span, H5 } from '../../styles/global'
+import styled from 'styled-components'
 
-export const Header = styled(Section)<any>`
+export const Header = styled(Section)`
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  @media screen {
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(2)};
+  }
   @media print {
     justify-content: space-between;
     flex-direction: row-reverse;
   }
-  margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(2)};
-  ${(props) => {
-    switch (props.size) {
-      case Sizes.MEDIUM:
-        return css`
-          justify-items: center;
-          flex-direction: column;
-          margin-bottom: ${(props.theme as any).typography.lineHeightSpacing(
-            3
-          )};
-          padding-top: ${(props.theme as any).typography.lineHeightSpacing(4)};
-        `
-      case Sizes.SMALL:
-        return css`
-          align-items: center;
-
-          @media print {
-            margin-top: ${(props.theme as any).typography.lineHeightSpacing(
-              0.5
-            )};
-            margin-bottom: ${(props.theme as any).typography.lineHeightSpacing(
-              0.75
-            )};
-          }
-        `
-      default:
-        break
-    }
-  }};
 `
 export const HeaderTitle = styled(H5)`
   font-weight: 400;
   cursor: pointer;
+
+  @media print {
+    font-size: ${(props) => props.theme.typography.h4.fontSize};
+    margin-bottom: 0.25rem;
+  }
 `
 
 export const HeaderDescription = styled(Paragraph)`
@@ -106,5 +78,14 @@ export const Anchor = styled(A)`
       color: ${(props) => props.theme.colors.primary};
     }
     color: ${(props) => props.theme.colors.primary};
+  }
+`
+
+export const MutedNormalFontWeight = styled(Muted)`
+  font-weight: normal;
+
+  @media print {
+    display: block;
+    color: initial;
   }
 `

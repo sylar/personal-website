@@ -1,9 +1,12 @@
 import styled, { css } from 'styled-components'
 import { Div, Article, LI, H6, H5, Paragraph } from '../../../styles/global'
 import { BlockHeading, BlockList } from '../styled'
+import { Muted } from '../../Header/styled'
 
 export const JobName = styled(H5)<{ $isClient: boolean }>`
   text-transform: capitalize;
+  display: flex;
+  gap: 0.25em;
   ${({ $isClient, theme }) =>
     $isClient &&
     `@media screen {
@@ -12,12 +15,21 @@ export const JobName = styled(H5)<{ $isClient: boolean }>`
       font-size: ${theme.typography.h6.fontSize};
       line-height: ${theme.typography.h6.lineHeight};
       }
+      @media print {
+        margin-top: 0.75rem;
+      }
   `}
+  @media print {
+    font-size: 15px;
+  }
 `
 
 export const JobDuration = styled(H6)`
   font-weight: normal;
   justify-self: flex-end;
+  @media print {
+    font-size: 12px;
+  }
 `
 
 export const TasksList = styled(Div)`
@@ -27,6 +39,7 @@ export const TasksList = styled(Div)`
     line-height: 1.25;
     margin: 2px 0;
   }
+}
 `
 
 export const JobCompany = styled(Div)<{ $isClient: boolean }>`
@@ -36,7 +49,9 @@ export const JobCompany = styled(Div)<{ $isClient: boolean }>`
   ${({ $isClient }) =>
     !$isClient &&
     css`
+     @media screen {@media screen {
       margin-top: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
+}
     `}
 `
 export const ExperienceHeading = styled(BlockHeading)``
@@ -68,11 +83,15 @@ export const CondensedExperienceBlock = styled(Article)`
   }
 `
 
-export const PreviousWorkplaceTimePeriod = styled(Div)`
+export const PreviousWorkplaceTimePeriod = styled(Muted)`
   font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.5)};
   line-height: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
   align-self: self-end;
   margin-left: ${(props) => props.theme.typography.lineHeightSpacing(0.25)};
+  @media print {
+    display: block;
+    color: initial;
+  }
 `
 
 export const PreviousWorkplacesLists = styled(Div)`

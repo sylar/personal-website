@@ -3,7 +3,6 @@ import { ThemeProvider } from 'styled-components'
 import { PageLayout } from '../styles/global'
 import theme, { GlobalStyle } from '../styles/theme'
 import Head from 'next/head'
-import ResumeProvider from '../context/resume.context'
 import { ResumeCondensedProvider } from '../context/resumeCondensed.context'
 
 class MyApp extends App {
@@ -12,17 +11,15 @@ class MyApp extends App {
     return (
       <>
         <Head>
-          <title>Andrei Constantinescu</title>
+          <title>Andrei Constantinescu | Resume</title>
         </Head>
         <ThemeProvider theme={theme}>
-          <ResumeProvider>
-            <ResumeCondensedProvider>
-              <GlobalStyle />
-              <PageLayout>
-                <Component {...pageProps} />
-              </PageLayout>
-            </ResumeCondensedProvider>
-          </ResumeProvider>
+          <ResumeCondensedProvider>
+            <GlobalStyle />
+            <PageLayout>
+              <Component {...pageProps} />
+            </PageLayout>
+          </ResumeCondensedProvider>
         </ThemeProvider>
       </>
     )
