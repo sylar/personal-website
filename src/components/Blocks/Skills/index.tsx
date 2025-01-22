@@ -12,7 +12,7 @@ const SkillsBox = (props: SkillsProps) => {
         <strong>languages</strong> {props.languages.join(' · ')}
       </SkillSetItem>
       <SkillSetItem>
-        <strong>libraries</strong> {props.libraries.join(' · ')}
+        <strong>libraries & tools</strong> {props.libraries.join(' · ')}
       </SkillSetItem>
     </SkillSetList>
   )

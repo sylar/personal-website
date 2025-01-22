@@ -9,7 +9,7 @@ export default {
       url: 'https://linkedin.com/in/constantinescuio'
     }
   ],
-  description: `**JavaScript Consultant** with 10+ years of experience delivering scalable, high-performance web applications using **React**, **Next.js**, and **Node.js**. Skilled in driving impactful results in **contract roles** that require rapid adaptability and focused delivery, as well as in **permanent positions** where long-term contributions and strategic growth are key. Open to both **short-term** and **long-term opportunities** that leverage my expertise and allow me to deliver meaningful impact.`,
+  description: `**JavaScript Consultant** with **10+ years** of experience creating **scalable web apps** and **intuitive interfaces** using **React**, **Next.js**, and **Node.js**. I've developed **microfrontend bridges** for mobile apps, engineered a **privacy-focused service network**, and built a **fitness app** powered by **React Native**. When I'm not fine-tuning my **custom LLM** or at the gym, I'm delivering impactful solutions. Open to both **short-term** and **long-term roles** where I can make an **immediate impact**.`,
   hobbies:
     'My enthusiasm for computer science has led me to mentor friends into web development careers, reflecting my passion for sharing knowledge and advocating for privacy. Beyond teaching, I relish exploring new locales, diving into nonfiction, particularly biographies, and staying abreast of tech trends through platforms like [Hacker News](https://news.ycombinator.com).',
   education: {
@@ -23,8 +23,26 @@ export default {
     url: 'mailto:andrei@constantinescu.io'
   },
   skills: {
-    technologies: ['NodeJS', 'AWS', 'Azure', 'Now/Vercel', 'NextJS', 'Git'],
-    languages: ['Typescript', 'Javascript', 'SwiftUI', 'GraphQL'],
-    libraries: ['ReactJS', 'Redux', 'Jest', 'Cypress', 'Webpack']
+    technologies: [
+      'Node.js',
+      'Next.js',
+      'TailwindCSS',
+      'AWS',
+      'Azure',
+      'Docker',
+      'Vercel',
+      'Git',
+      'Nginx'
+    ],
+    languages: ['TypeScript', 'JavaScript', 'GraphQL', 'Swift'],
+    libraries: [
+      'ReactJS',
+      'Redux',
+      'Zustand',
+      'Jest',
+      'Cypress',
+      'Webpack',
+      'Babel'
+    ]
   }
 }

@@ -14,7 +14,6 @@ import Head from 'next/head'
 
 const ResumeContent = () => {
   const [{ displayedWorkplaces, previousWorkplaces }] = getResumeCondensed()
-  console.log({ displayedWorkplaces, previousWorkplaces })
   return (
     <>
       <Head>

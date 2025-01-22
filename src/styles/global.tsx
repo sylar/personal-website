@@ -14,7 +14,7 @@ export const PageLayout = styled.main`
     color: ${(props) => props.theme.colors.primary};
     font-size: ${(props) => props.theme.typography.content.fontSize};
     line-height: ${(props) => props.theme.typography.content.lineHeight};
-    padding: 0 ${(props) => props.theme.typography.lineHeightSpacing(1.5)};
+    padding: ${(props) => props.theme.typography.lineHeightSpacing(1)} ${(props) => props.theme.typography.lineHeightSpacing(1.5)} 0 ${(props) => props.theme.typography.lineHeightSpacing(1.5)};
   }
 `;
 

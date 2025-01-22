@@ -12,16 +12,19 @@ export const JobName = styled(H5)<{ $isClient: boolean }>`
     `@media screen {
       margin-top: 0;
       margin-bottom: 0;
-      font-size: ${theme.typography.h6.fontSize};
-      line-height: ${theme.typography.h6.lineHeight};
+      font-size: ${theme.typography.lineHeightSpacing(0.75)};
+      line-height: ${theme.typography.lineHeightSpacing(1)};
       }
       @media print {
+        font-size: 13px;
         margin-top: 0.75rem;
       }
   `}
   @media print {
-    font-size: 15px;
-  }
+    ${({ $isClient }) =>
+      !$isClient &&
+      `
+        font-size: 15px;`}
 `
 
 export const JobDuration = styled(H6)`
@@ -75,18 +78,20 @@ export const ExperienceBlock = styled(Article)<{ $isCondensed?: boolean }>`
     css`
       @media screen {
         margin-top: ${(props) =>
-          props.theme.typography.lineHeightSpacing(0.75)};
+          props.theme.typography.lineHeightSpacing(1.25)};
       }
     `}
 `
 
 export const CondensedExperienceBlock = styled(Article)`
   @media screen {
-    margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(0.5)};
+    margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(1)};
   }
 `
 
 export const PreviousWorkplaceTimePeriod = styled(Muted)`
+  font-weight: 300;
+  color: initial;
   font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.5)};
   line-height: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
   align-self: self-end;

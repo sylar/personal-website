@@ -82,8 +82,10 @@ export const Anchor = styled(A)`
 `
 
 export const MutedNormalFontWeight = styled(Muted)`
-  font-weight: normal;
-
+  font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.5)};
+  align-self: self-end;
+  font-weight: 300;
+  color: initial;
   @media print {
     display: block;
     color: initial;
