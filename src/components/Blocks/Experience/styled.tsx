@@ -106,7 +106,7 @@ export const PreviousWorkplacesLists = styled(Div)`
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  /* justify-content: space-between; */
+  justify-content: space-between;
 `
 
 export const PreviousWorkplacesListItem = styled(LI)`
@@ -124,4 +124,8 @@ export const PreviousWorkplacesListItem = styled(LI)`
 export const PreviousWorkplaceList = styled(BlockList)`
   padding: 0;
   flex: 1;
+
+  @media (max-width: 730px) {
+    flex-basis: 100%; /* Stack on smaller screens */
+  }
 `
