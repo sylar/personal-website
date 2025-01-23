@@ -1,10 +1,10 @@
+'use client'
+
 import { EducationBlockProps } from './types'
 import { Span } from '../../../styles/global'
 import { EducationEntry } from './styled'
 
-const EducationBlockComponent = ({
-  education
-}: EducationBlockProps): JSX.Element => {
+const EducationBlockComponent = ({ education }: EducationBlockProps) => {
   return (
     <EducationEntry>
       <Span>

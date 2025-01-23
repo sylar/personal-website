@@ -1,5 +1,5 @@
 import { DefaultTheme } from 'styled-components'
-import { Sizes } from '../../styles/global'
+import { Sizes } from '../../../styles/global'
 import { LinkProps } from '../Link/types'
 
 export type HeaderProps = {

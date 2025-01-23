@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+
 import Md from '../../Md'
 import { SummaryContent } from './styled'
 import { SummaryProps } from './types'

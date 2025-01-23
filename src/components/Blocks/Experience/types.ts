@@ -2,7 +2,7 @@ export type Company = {
   companyName: string
   companyDescription: string
   companyUrl?: string
-  companyIndustry: string
+  companyIndustry?: string
 }
 
 export type Job = {
@@ -11,6 +11,7 @@ export type Job = {
   startDate: number
   endDate?: number
   tasks?: string
+  tasksDetails?: string
   techStack?: string[]
 }
 

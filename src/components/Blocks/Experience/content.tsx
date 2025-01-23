@@ -1,14 +1,12 @@
+'use client'
+
 import Md from '../../Md'
 import { BlockList } from '../styled'
 import { CondensedExperienceBlockContent } from './contentCondensed'
 import { ExperienceBlock, TasksList } from './styled'
 import { Experience } from './types'
 
-const ExperienceBlockContent = ({
-  item
-}: {
-  item: Experience
-}): JSX.Element => {
+const ExperienceBlockContent = ({ item }: { item: Experience }) => {
   const hasClients = item.clients?.length > 0
 
   return (

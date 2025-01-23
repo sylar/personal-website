@@ -1,4 +1,6 @@
-import { createStateContext } from 'react-use'
+'use client'
+
+import { createContext, useContext, useState, useEffect } from 'react'
 import resumeCondensed from '../data/experienceCondensed'
 import {
   JOB_TYPE,
@@ -38,7 +40,32 @@ const getResumeData = (): ResumeData => {
   return { displayedWorkplaces, previousWorkplaces }
 }
 
-const [getResumeCondensed, ResumeCondensedProvider] =
-  createStateContext(getResumeData())
+const ResumeCondensedContext = createContext<ResumeData | undefined>(undefined)
+
+const ResumeCondensedProvider: React.FC<{ children: React.ReactNode }> = ({
+  children
+}) => {
+  const [resumeData, setResumeData] = useState<ResumeData>(getResumeData())
+
+  useEffect(() => {
+    setResumeData(getResumeData())
+  }, [])
+
+  return (
+    <ResumeCondensedContext.Provider value={resumeData}>
+      {children}
+    </ResumeCondensedContext.Provider>
+  )
+}
+
+const getResumeCondensed = () => {
+  const context = useContext(ResumeCondensedContext)
+  if (context === undefined) {
+    throw new Error(
+      'getResumeCondensed must be used within a ResumeCondensedProvider'
+    )
+  }
+  return context
+}
 
 export { getResumeCondensed, ResumeCondensedProvider }

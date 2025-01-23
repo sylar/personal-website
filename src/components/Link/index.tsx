@@ -1,7 +1,8 @@
+'use client'
 import NextLink from 'next/link'
 import { LinkProps } from './types'
 
-const Link = ({ url, label, internal }: LinkProps): JSX.Element =>
+const Link = ({ url, label, internal }: LinkProps) =>
   internal ? (
     <NextLink href={url} passHref={!internal}>
       <a>{label}</a>

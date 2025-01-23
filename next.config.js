@@ -2,13 +2,13 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: '/resume',
-        destination: '/',
+        source: '/',
+        destination: '/resume',
         permanent: true
       }
     ]
   },
-  typescript: {
-    ignoreBuildErrors: true
+  compiler: {
+    styledComponents: true
   }
 }

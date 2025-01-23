@@ -1,9 +1,11 @@
-import React from 'react'
+'use client'
+
 import { Anchor, Email, Header, HeaderTitle, Info, Muted, Text } from './styled'
 import { HeaderProps } from './types'
 import LogoComponent from '../Logo'
+import { memo } from 'react'
 
-const HeaderComponent = ({ email, onClick }: HeaderProps): JSX.Element => (
+const HeaderComponent = ({ email, onClick }: HeaderProps) => (
   <Header>
     <LogoComponent />
     <Info>
@@ -22,4 +24,4 @@ const HeaderComponent = ({ email, onClick }: HeaderProps): JSX.Element => (
   </Header>
 )
 
-export default React.memo(HeaderComponent)
+export default memo(HeaderComponent)

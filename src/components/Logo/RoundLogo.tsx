@@ -1,7 +1,9 @@
+'use client'
+
 import { SVG } from '../../styles/global'
 import theme from '../../styles/theme'
 
-const RoundLogo = (): JSX.Element => (
+const RoundLogo = () => (
   <SVG xmlns="http://www.w3.org/2000/svg" viewBox="27 7 130 140">
     <g>
       <path

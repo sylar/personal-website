@@ -22,7 +22,7 @@ const defaultcomponents = {
   li: (props) => <LI {...props} />
 }
 
-const Md = ({ components, source }: MdProps): JSX.Element => {
+const Md = ({ components, source }: MdProps) => {
   return (
     <ReactMarkdown
       components={{ ...defaultcomponents, ...components }}

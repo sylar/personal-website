@@ -1,5 +1,8 @@
-import React from 'react'
+'use client'
+
+import { getResumeCondensed } from '../../../context/resumeCondensed.context'
 import { formatDate } from '../../../utils/utils'
+import { SectionBlock } from '../Section/styled'
 import {
   PreviousWorkplacesListItem,
   PreviousWorkplacesLists,
@@ -7,7 +10,16 @@ import {
   PreviousWorkplaceTimePeriod
 } from './styled'
 
-const PreviousWorplaces = (props): JSX.Element => {
+const PreviousWorplacesSection = () => {
+  const { previousWorkplaces } = getResumeCondensed()
+  return (
+    <SectionBlock title="Previous">
+      <PreviousWorplaces workplaces={previousWorkplaces} />
+    </SectionBlock>
+  )
+}
+
+const PreviousWorplaces = (props) => {
   const fisrtHalfLength = Math.ceil(props.workplaces.length / 2)
   const fisrtHalf = props.workplaces.slice(0, fisrtHalfLength)
 
@@ -43,4 +55,4 @@ const PreviousWorplaces = (props): JSX.Element => {
   )
 }
 
-export default PreviousWorplaces
+export default PreviousWorplacesSection

@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+
 import { SkillSetList, SkillSetItem } from './styled'
 import { SkillsProps } from './types'
 

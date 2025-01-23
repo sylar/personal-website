@@ -1,10 +1,10 @@
-import { LinkProps } from '../components/Link/types'
+import { LinkProps } from '../app/components/Link/types'
 import {
   Job,
   ExperienceBlockProps,
   Company
-} from '../components/Blocks/Experience/types'
-import { Project } from '../components/Blocks/Projects/types'
+} from '../app/components/Blocks/Experience/types'
+import { Project } from '../app/components/Blocks/Projects/types'
 export type EducationEntry = {
   degree: string
   institution: string

@@ -4,9 +4,7 @@ import { ExperienceHeading } from './styled'
 import { formatDate } from '../../../utils/utils'
 import { MutedNormalFontWeight } from '../../Header/styled'
 
-const JobDurationComponent = (
-  props: Pick<Job, 'startDate' | 'endDate'>
-): JSX.Element => {
+const JobDurationComponent = (props: Pick<Job, 'startDate' | 'endDate'>) => {
   const start = formatDate(new Date(props.startDate))
   const isCurrent = !Boolean(props.endDate)
   const toBeDisplayed = isCurrent
@@ -16,7 +14,7 @@ const JobDurationComponent = (
   return <JobDuration>{toBeDisplayed.join(' - ')}</JobDuration>
 }
 
-const ExperienceBlockHeadingComponent = (props: CompanyHeader): JSX.Element => {
+const ExperienceBlockHeadingComponent = (props: CompanyHeader) => {
   return (
     <ExperienceHeading>
       <JobCompany $isClient={props.isClient}>

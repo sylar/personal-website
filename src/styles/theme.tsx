@@ -1,3 +1,5 @@
+'use client'
+
 import createShevy from 'shevyjs'
 import { createGlobalStyle, css, DefaultTheme } from 'styled-components'
 

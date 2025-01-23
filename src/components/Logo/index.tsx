@@ -1,8 +1,10 @@
+'use client'
+
 import RoundLogo from './RoundLogo'
 import { LogoContainer } from './styled'
 import { Sizes } from '../../styles/global'
 
-const LogoComponent = (): JSX.Element => (
+const LogoComponent = () => (
   <LogoContainer>
     <RoundLogo />
   </LogoContainer>
