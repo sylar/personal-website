@@ -11,6 +11,7 @@ import Head from 'next/head'
 import { Metadata } from 'next'
 import ExperienceSection from '../../../components/Blocks/Experience'
 import PreviousWorplacesSection from '../../../components/Blocks/Experience/previous'
+import { Paragraph } from '../../../styles/global'
 
 export const metadata: Metadata = {
   title: 'Andrei Constantinescu | Resume',
@@ -49,6 +50,7 @@ const ResumePage = () => {
     <>
       <HeaderComponent email={personalData.email} />
       <ResumeContent />
+      <Paragraph>PULA</Paragraph>
     </>
   )
 }

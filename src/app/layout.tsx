@@ -9,9 +9,9 @@ export default function RootLayout({
   return (
     <html>
       <body>
-        <ClientThemeProvider>
-          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-        </ClientThemeProvider>
+        <StyledComponentsRegistry>
+          <ClientThemeProvider>{children}</ClientThemeProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   )
