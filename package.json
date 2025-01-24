@@ -4,11 +4,11 @@
   "private": true,
   "description": "My personal website.",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
+    "dev": "next dev --turbopack",
     "start": "next start",
     "export": "next export",
-    "lint:fix": "npx eslint --fix ./src"
+    "lint:fix": "npx eslint --fix ./src",
+    "prepare": "husky"
   },
   "repository": "git@github.com:sylar/personal-website.git",
   "author": "Andrei Constantinescu <andrei@constantinescu.io>",
@@ -34,6 +34,7 @@
     "eslint": "^9.18.0",
     "eslint-config-next": "^15.1.6",
     "eslint-plugin-prettier": "^5.2.3",
+    "husky": "^9.1.7",
     "lint-staged": "^15.4.2",
     "prettier": "^3.4.2",
     "typescript": "^5.7.3"

@@ -50,7 +50,6 @@ const ResumePage = () => {
     <>
       <HeaderComponent email={personalData.email} />
       <ResumeContent />
-      <Paragraph>PULA</Paragraph>
     </>
   )
 }

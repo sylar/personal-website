@@ -8,22 +8,21 @@ import {
   LI
 } from '../../styles/global'
 import ReactMarkdown from 'react-markdown'
-import { MdProps } from './types'
 
 const defaultcomponents = {
-  p: ({ ...props }) => <Paragraph {...props} />,
-  img: ({ ...props }) => <Image {...props} />,
-  h1: ({ ...props }) => <Heading {...props} />,
-  h3: ({ ...props }) => <Title {...props} />,
-  h4: ({ ...props }) => <Subtitle {...props} />,
-  ul: ({ ...props }) => <UL {...props} />,
-  li: ({ ...props }) => <LI {...props} />
+  p: ({ node, ...props }) => <Paragraph {...props} />,
+  img: ({ node, ...props }) => <Image {...props} />,
+  h1: ({ node, ...props }) => <Heading {...props} />,
+  h3: ({ node, ...props }) => <Title {...props} />,
+  h4: ({ node, ...props }) => <Subtitle {...props} />,
+  ul: ({ node, ...props }) => <UL {...props} />,
+  li: ({ node, ...props }) => <LI {...props} />
 }
 
-const Md = ({ components, source }: MdProps) => {
+const Md = ({ components, source }) => {
   return (
     <ReactMarkdown
-      components={{ ...defaultcomponents, ...components }}
+      components={{ ...components, ...defaultcomponents }}
       // eslint-disable-next-line react/no-children-prop
       children={source}
     />
