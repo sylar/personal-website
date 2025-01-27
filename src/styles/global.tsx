@@ -126,3 +126,11 @@ export const ResumeSwitcher = styled(Small)`
     display: none;
   }
 `
+
+export const ResumeMutedContainer = styled(Div)`
+  display: flex;
+  justify-content: space-between;
+  @media print {
+    display: none;
+  }
+`

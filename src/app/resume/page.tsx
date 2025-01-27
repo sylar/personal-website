@@ -13,6 +13,7 @@ import ExperienceSection from '../../components/Blocks/Experience'
 import PreviousWorplacesSection from '../../components/Blocks/Experience/previous'
 import { Muted } from '../../components/Header/styled'
 import Link from 'next/link'
+import { ResumeMutedContainer } from '../../styles/global'
 
 export const metadata: Metadata = {
   title: 'Andrei Constantinescu | Resume',
@@ -49,11 +50,26 @@ const ResumePage = async ({ searchParams }) => {
         <ProjectsBlock projects={projectsData} />
       </SectionBlock>
 
-      <Muted>
-        <Link prefetch href={isDetailedView ? '/' : '/resume?view=full'}>
-          View {isDetailedView ? 'short' : 'detailed'} resume
-        </Link>
-      </Muted>
+      <ResumeMutedContainer>
+        <Muted>
+          <Link prefetch href={isDetailedView ? '/' : '/resume?view=full'}>
+            View {isDetailedView ? 'short' : 'detailed'} resume
+          </Link>
+        </Muted>
+
+        <Muted>
+          <Link
+            download
+            href={
+              isDetailedView
+                ? 'https://sylar-personal-website.s3.eu-west-2.amazonaws.com/resume/Andrei+Constantinescu+Detailed+Resume.pdf'
+                : 'https://sylar-personal-website.s3.eu-west-2.amazonaws.com/resume/Andrei+Constantinescu+Resume.pdf'
+            }
+          >
+            Download resume
+          </Link>
+        </Muted>
+      </ResumeMutedContainer>
     </>
   )
 }

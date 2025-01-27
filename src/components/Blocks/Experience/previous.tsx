@@ -2,7 +2,7 @@
 
 import { getResumeCondensed } from '../../../context/resumeCondensed.context'
 import { formatDate } from '../../../utils/utils'
-import { SectionBlock } from '../Section/styled'
+import SectionBlock from '../Section'
 import {
   PreviousWorkplacesListItem,
   PreviousWorkplacesLists,

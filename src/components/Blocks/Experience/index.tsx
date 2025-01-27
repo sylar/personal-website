@@ -5,7 +5,7 @@ import { MainExperienceBlock } from './styled'
 import { ExperienceBlockContentType } from './types'
 import { ExperienceBlockContent } from './content'
 import { getResumeCondensed } from '../../../context/resumeCondensed.context'
-import { SectionBlock } from '../Section/styled'
+import SectionBlock from '../Section'
 
 const ExperienceSection = ({
   isDetailedView

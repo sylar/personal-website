@@ -15,18 +15,14 @@ const compat = new FlatCompat({
   baseDirectory: __dirname
 })
 
-// Export a merged config array
 export default [
-  // 1) Convert old-style `extends` into flat-config
-  //    Add whichever Next.js configs you need: 'next', 'next/core-web-vitals', 'next/typescript', 'prettier', etc.
   ...compat.extends(
-    'next', // Loads Next.js plugin/config
+    'next',
     'next/core-web-vitals',
-    'next/typescript', // If you rely on Next.js TypeScript rules
+    'next/typescript',
     'prettier'
   ),
 
-  // 2) Add your custom flat-config overrides/rules
   {
     files: ['*.ts', '*.tsx', '*.js', '*.jsx'],
     languageOptions: {
@@ -38,7 +34,6 @@ export default [
         ...globals.node
       }
     },
-    // Plugins can still be declared here if you want to reference them directly in `rules`
     plugins: {
       '@typescript-eslint': tsParser,
       prettier: prettierPlugin
@@ -52,7 +47,8 @@ export default [
           varsIgnorePattern: '^_',
           ignoreRestSiblings: true
         }
-      ]
+      ],
+      '@typescript-eslint/no-require-imports': 'off'
     }
   }
 ]

@@ -98,6 +98,8 @@ export const GlobalStyle = createGlobalStyle`${css`
       line-height: 1.5rem;
       background: white;
       color: black;
+       font-weight: 500; /* or whatever heavier weight you prefer */
+    -webkit-print-color-adjust: exact; /* helps preserve color intensity */
     }
 
     a {
