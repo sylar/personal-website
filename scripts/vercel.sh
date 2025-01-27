@@ -15,13 +15,4 @@ echo "Deployment URL: ${VERCEL_URL}"
 npm run resume:generate
 npm run resume:upload
 
-# Optional: Upload generated artifacts
-# npm run upload-artifacts
-
-# Optional: Send deployment notification
-# curl -X POST https://your-monitoring-service.com/notify \
-#      -H "Content-Type: application/json" \
-#      -d "{\"url\": \"${VERCEL_URL}\", \"env\": \"${VERCEL_ENV}\"}"
-
-# Exit with success status
 exit 0
