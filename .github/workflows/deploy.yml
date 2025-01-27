@@ -1,0 +1,35 @@
+name: Deploy to Vercel and Run Post-Scripts
+
+on:
+  push:
+    branches:
+      - main # Adjust based on your default branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Deploy to Vercel
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          npm install -g vercel
+          vercel deploy --prod --token $VERCEL_TOKEN
+
+      # Step 3: Run your post-deploy script
+      - name: Run Post-Deploy Script
+        env:
+          AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
+          AWS_REGION: ${{secrets.AWS_REGION}}
+          AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+          S3_BUCKET_NAME: ${{secrets.S3_BUCKET_NAME}}
+        run: |
+          echo "Post-deploy script running..."
+          # Add your custom commands here
+          ./scripts/vercel.sh  # Example: Custom script file
