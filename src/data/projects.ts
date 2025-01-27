@@ -1,4 +1,4 @@
-export default [
+export const projectsData = [
   {
     name: 'dotfiles',
     repo: 'https://github.com/sylar/dotfiles',

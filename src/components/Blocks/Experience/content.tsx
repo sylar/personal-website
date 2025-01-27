@@ -4,7 +4,7 @@ import Md from '../../Md'
 import { BlockList } from '../styled'
 import { CondensedExperienceBlockContent } from './contentCondensed'
 import { ExperienceBlock, TasksList } from './styled'
-import { Experience, ExperienceBlockContentType } from './types'
+import { ExperienceBlockContentType } from './types'
 
 const ExperienceBlockContent = ({
   experienceItem,

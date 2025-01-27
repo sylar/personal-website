@@ -2,7 +2,7 @@
 
 import { ExperienceBlockHeadingComponent } from './heading'
 import { MainExperienceBlock } from './styled'
-import { Experience, ExperienceBlockContentType } from './types'
+import { ExperienceBlockContentType } from './types'
 import { ExperienceBlockContent } from './content'
 import { getResumeCondensed } from '../../../context/resumeCondensed.context'
 import { SectionBlock } from '../Section/styled'

@@ -1,6 +1,6 @@
 import HeaderComponent from '../../components/Header'
-import personalData from '../../data/personal'
-import projectsData from '../../data/projects'
+import { personalData } from '../../data/personal'
+import { projectsData } from '../../data/projects'
 import SectionBlock from '../../components/Blocks/Section'
 import EducationBlock from '../../components/Blocks/Education'
 import ProjectsBlock from '../../components/Blocks/Projects'

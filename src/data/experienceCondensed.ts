@@ -1,4 +1,4 @@
-export default [
+export const resumeCondensed = [
   {
     companyName: 'Own Contracting Company',
     type: 'freelance',

@@ -1,7 +1,7 @@
 'use client'
 
-import { createContext, useContext, useState } from 'react'
-import resumeCondensed from '../data/experienceCondensed'
+import { createContext, useContext, useEffect, useState } from 'react'
+import { resumeCondensed } from '../data/experienceCondensed'
 import {
   ExperienceBlockContentType,
   JOB_TYPE,
@@ -62,7 +62,13 @@ const ResumeCondensedProvider: React.FC<
     'isDetailedView'
   >
 > = ({ children, isDetailedView }) => {
-  const [resumeData] = useState<ResumeData>(getResumeData(isDetailedView))
+  const [resumeData, setResumeData] = useState<ResumeData>(
+    getResumeData(isDetailedView)
+  )
+
+  useEffect(() => {
+    setResumeData(getResumeData(isDetailedView))
+  }, [isDetailedView])
 
   return (
     <ResumeCondensedContext.Provider value={resumeData}>
@@ -71,7 +77,7 @@ const ResumeCondensedProvider: React.FC<
   )
 }
 
-const getResumeCondensed = () => {
+const useResumeCondensed = () => {
   const context = useContext(ResumeCondensedContext)
   if (context === undefined) {
     throw new Error(
@@ -81,4 +87,4 @@ const getResumeCondensed = () => {
   return context
 }
 
-export { getResumeCondensed, ResumeCondensedProvider }
+export { useResumeCondensed as getResumeCondensed, ResumeCondensedProvider }

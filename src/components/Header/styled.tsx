@@ -27,12 +27,9 @@ export const HeaderTitle = styled(H5)`
 `
 
 export const HeaderDescription = styled(Paragraph)`
-  font-size: ${(props) =>
-    (props.theme as any).typography.lineHeightSpacing(0.75)};
-  line-height: ${(props) =>
-    (props.theme as any).typography.lineHeightSpacing(1)};
-  padding-right: ${(props) =>
-    (props.theme as any).typography.lineHeightSpacing(2)};
+  font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
+  line-height: ${(props) => props.theme.typography.lineHeightSpacing(1)};
+  padding-right: ${(props) => props.theme.typography.lineHeightSpacing(2)};
 `
 
 export const Email = styled(Div)`

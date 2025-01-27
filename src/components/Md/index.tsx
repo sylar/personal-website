@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import {
   Heading,
   Title,
@@ -10,8 +12,8 @@ import {
 import ReactMarkdown from 'react-markdown'
 
 const defaultcomponents = {
-  p: ({ node, ...props }) => <Paragraph {...props} />,
-  img: ({ node, ...props }) => <Image {...props} />,
+  p: ({ node: _node, ...props }) => <Paragraph {...props} />,
+  img: ({ node, ...props }) => <Image alt="image" {...props} />,
   h1: ({ node, ...props }) => <Heading {...props} />,
   h3: ({ node, ...props }) => <Title {...props} />,
   h4: ({ node, ...props }) => <Subtitle {...props} />,
