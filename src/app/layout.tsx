@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import StyledComponentsRegistry from '../lib/styled-components.registry'
 import ClientThemeProvider from '../styles/ClientThemeProvider'
 
@@ -6,7 +7,9 @@ export default function RootLayout({ children }) {
     <html>
       <body>
         <StyledComponentsRegistry>
-          <ClientThemeProvider>{children}</ClientThemeProvider>
+          <Suspense>
+            <ClientThemeProvider>{children}</ClientThemeProvider>
+          </Suspense>
         </StyledComponentsRegistry>
       </body>
     </html>

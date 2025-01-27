@@ -1,14 +1,14 @@
 'use client'
 
-import { createContext, useContext, useState, useEffect } from 'react'
+import { createContext, useContext, useState } from 'react'
 import resumeCondensed from '../data/experienceCondensed'
 import {
+  ExperienceBlockContentType,
   JOB_TYPE,
   TIERS,
   Workplace
 } from '../components/Blocks/Experience/types'
 import { ResumeData } from './types'
-import { useSearchParams } from 'next/navigation'
 
 const getClientsByTier = (clients: Workplace[] = [], tier?: TIERS) => {
   if (!tier) {
@@ -56,18 +56,13 @@ const getResumeData = (isDetailedView: boolean): ResumeData => {
 
 const ResumeCondensedContext = createContext<ResumeData | undefined>(undefined)
 
-const ResumeCondensedProvider: React.FC<{ children: React.ReactNode }> = ({
-  children
-}) => {
-  const searchParams = useSearchParams()
-  const isDetailedView = searchParams.get('view') === 'full'
-  const [resumeData, setResumeData] = useState<ResumeData>(
-    getResumeData(isDetailedView)
-  )
-
-  // useEffect(() => {
-  //   setResumeData(getResumeData(isDetailedView))
-  // }, [isDetailedView])
+const ResumeCondensedProvider: React.FC<
+  { children: React.ReactNode } & Pick<
+    ExperienceBlockContentType,
+    'isDetailedView'
+  >
+> = ({ children, isDetailedView }) => {
+  const [resumeData] = useState<ResumeData>(getResumeData(isDetailedView))
 
   return (
     <ResumeCondensedContext.Provider value={resumeData}>

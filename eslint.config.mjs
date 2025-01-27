@@ -9,7 +9,12 @@ export default [
       '@typescript-eslint': tsParser,
       prettier
     },
-    extends: ['next', 'prettier'], // Next.js and Prettier built-in configs
+    extends: [
+      'next/core-web-vitals',
+      'next/typescript',
+      'plugin:@next/next/recommended',
+      'prettier' // Prettier for formatting
+    ],
     languageOptions: {
       parser: tsParser,
       ecmaVersion: 'latest', // Modern JavaScript features
@@ -20,7 +25,7 @@ export default [
       }
     },
     rules: {
-      'prettier/prettier': 'warn', // Enforce Prettier formatting
+      'prettier/prettier': 'warn',
       '@typescript-eslint/no-unused-vars': [
         'warn',
         {

@@ -1,10 +1,7 @@
-import { LinkProps } from '../app/components/Link/types'
-import {
-  Job,
-  ExperienceBlockProps,
-  Company
-} from '../app/components/Blocks/Experience/types'
-import { Project } from '../app/components/Blocks/Projects/types'
+import { Project } from 'next/dist/build/swc/types'
+import { LinkProps } from 'next/link'
+import { Company, Job } from '../components/Blocks/Experience/types'
+
 export type EducationEntry = {
   degree: string
   institution: string
@@ -15,8 +12,7 @@ export type EducationEntry = {
 export type ExperienceEntry = Company & {
   jobTitle: string
   tasks: string
-} & Pick<Job, 'endDate' | 'startDate' | 'type'> &
-  Pick<ExperienceBlockProps, 'techStack'>
+} & Pick<Job, 'endDate' | 'startDate' | 'type' | 'techStack'>
 
 export type PersonalDataType = {
   links: LinkProps[]
