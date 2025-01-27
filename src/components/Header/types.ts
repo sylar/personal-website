@@ -1,11 +1,10 @@
 import { DefaultTheme } from 'styled-components'
-import { Sizes } from '../../../styles/global'
-import { LinkProps } from '../Link/types'
+import { Sizes } from '../../styles/global'
 
 export type HeaderProps = {
   onClick?: (arg?: unknown) => void
   size?: Sizes
-  email: Pick<LinkProps, 'label' | 'url'>
+  email: { label: string; url: string }
 }
 
 export type HeaderStyleProps = { theme: DefaultTheme } & HeaderProps
