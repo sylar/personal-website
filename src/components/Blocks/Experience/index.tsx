@@ -2,12 +2,14 @@
 
 import { ExperienceBlockHeadingComponent } from './heading'
 import { MainExperienceBlock } from './styled'
-import { Experience } from './types'
+import { Experience, ExperienceBlockContentType } from './types'
 import { ExperienceBlockContent } from './content'
 import { getResumeCondensed } from '../../../context/resumeCondensed.context'
 import { SectionBlock } from '../Section/styled'
 
-const ExperienceSection = () => {
+const ExperienceSection = ({
+  isDetailedView
+}: Pick<ExperienceBlockContentType, 'isDetailedView'>) => {
   const { displayedWorkplaces } = getResumeCondensed()
   return (
     <SectionBlock title="Experience">
@@ -15,6 +17,7 @@ const ExperienceSection = () => {
         <ExperienceBlockComponent
           key={`xp_block_${key}`}
           experienceItem={item}
+          isDetailedView={isDetailedView}
         />
       ))}
     </SectionBlock>
@@ -22,10 +25,9 @@ const ExperienceSection = () => {
 }
 
 const ExperienceBlockComponent = ({
-  experienceItem
-}: {
-  experienceItem: Experience
-}) => {
+  experienceItem,
+  isDetailedView
+}: ExperienceBlockContentType) => {
   return (
     <MainExperienceBlock>
       <ExperienceBlockHeadingComponent
@@ -36,7 +38,10 @@ const ExperienceBlockComponent = ({
         endDate={experienceItem.endDate}
         companyUrl={experienceItem.companyUrl}
       />
-      <ExperienceBlockContent item={experienceItem} />
+      <ExperienceBlockContent
+        experienceItem={experienceItem}
+        isDetailedView={isDetailedView}
+      />
     </MainExperienceBlock>
   )
 }

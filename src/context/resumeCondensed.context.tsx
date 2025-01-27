@@ -8,32 +8,46 @@ import {
   Workplace
 } from '../components/Blocks/Experience/types'
 import { ResumeData } from './types'
+import { useSearchParams } from 'next/navigation'
 
-const getClientsByTier = (clients: Workplace[] = [], tier: TIERS) =>
-  clients.filter((client) => client?.tier === tier)
+const getClientsByTier = (clients: Workplace[] = [], tier?: TIERS) => {
+  if (!tier) {
+    return { visible: clients, hidden: [] }
+  }
 
-const getResumeData = (): ResumeData => {
+  return clients.reduce(
+    (acc, client) => {
+      if (client?.tier === tier) {
+        return { ...acc, visible: acc.visible.concat(client) }
+      }
+
+      return { ...acc, hidden: acc.hidden.concat(client) }
+    },
+    { visible: [], hidden: [] }
+  )
+}
+const getResumeData = (isDetailedView: boolean): ResumeData => {
   const previousWorkplaces = []
 
   const displayedWorkplaces = resumeCondensed.reduce((acc, value) => {
     const isFreelanceGig = value.type === JOB_TYPE.FREELANCE
 
     if (isFreelanceGig) {
-      const clientsByTiers = {
-        visible: getClientsByTier(value.clients, TIERS.VISIBLE),
-        hidden: getClientsByTier(value.clients, TIERS.HIDDEN)
-      }
+      const clientsByTiers = getClientsByTier(
+        value.clients,
+        isDetailedView ? undefined : TIERS.VISIBLE
+      )
 
       previousWorkplaces.push(...clientsByTiers.hidden)
 
       return acc.concat({ ...value, clients: clientsByTiers.visible })
     }
 
-    if (value.tier === TIERS.VISIBLE) {
+    if (isDetailedView || value.tier === TIERS.VISIBLE) {
       return acc.concat(value)
+    } else {
+      previousWorkplaces.push(value)
     }
-    previousWorkplaces.push(value)
-
     return acc
   }, [])
 
@@ -45,11 +59,15 @@ const ResumeCondensedContext = createContext<ResumeData | undefined>(undefined)
 const ResumeCondensedProvider: React.FC<{ children: React.ReactNode }> = ({
   children
 }) => {
-  const [resumeData, setResumeData] = useState<ResumeData>(getResumeData())
+  const searchParams = useSearchParams()
+  const isDetailedView = searchParams.get('view') === 'full'
+  const [resumeData, setResumeData] = useState<ResumeData>(
+    getResumeData(isDetailedView)
+  )
 
-  useEffect(() => {
-    setResumeData(getResumeData())
-  }, [])
+  // useEffect(() => {
+  //   setResumeData(getResumeData(isDetailedView))
+  // }, [isDetailedView])
 
   return (
     <ResumeCondensedContext.Provider value={resumeData}>

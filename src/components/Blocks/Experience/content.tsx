@@ -4,22 +4,32 @@ import Md from '../../Md'
 import { BlockList } from '../styled'
 import { CondensedExperienceBlockContent } from './contentCondensed'
 import { ExperienceBlock, TasksList } from './styled'
-import { Experience } from './types'
+import { Experience, ExperienceBlockContentType } from './types'
 
-const ExperienceBlockContent = ({ item }: { item: Experience }) => {
-  const hasClients = item.clients?.length > 0
+const ExperienceBlockContent = ({
+  experienceItem,
+  isDetailedView
+}: ExperienceBlockContentType) => {
+  const hasClients = experienceItem.clients?.length > 0
 
   return (
     <ExperienceBlock>
       {hasClients ? (
         <>
-          <CondensedExperienceBlockContent clients={item.clients} />
+          <CondensedExperienceBlockContent
+            clients={experienceItem.clients}
+            isDetailedView={isDetailedView}
+          />
         </>
       ) : (
         <TasksList>
           <Md
             components={{ ul: (props) => <BlockList {...props} /> }}
-            source={item.tasks}
+            source={
+              isDetailedView
+                ? experienceItem.tasksDetails
+                : experienceItem.tasks
+            }
           />
         </TasksList>
       )}

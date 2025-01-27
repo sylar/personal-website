@@ -1,25 +1,28 @@
-import HeaderComponent from '../../../components/Header'
-import personalData from '../../../data/personal'
-import projectsData from '../../../data/projects'
-import SectionBlock from '../../../components/Blocks/Section'
-import EducationBlock from '../../../components/Blocks/Education'
-import ProjectsBlock from '../../../components/Blocks/Projects'
-import SummarySection from '../../../components/Blocks/Summary'
-import SkillsBox from '../../../components/Blocks/Skills'
+import HeaderComponent from '../../components/Header'
+import personalData from '../../data/personal'
+import projectsData from '../../data/projects'
+import SectionBlock from '../../components/Blocks/Section'
+import EducationBlock from '../../components/Blocks/Education'
+import ProjectsBlock from '../../components/Blocks/Projects'
+import SummarySection from '../../components/Blocks/Summary'
+import SkillsBox from '../../components/Blocks/Skills'
 
 import Head from 'next/head'
 import { Metadata } from 'next'
-import ExperienceSection from '../../../components/Blocks/Experience'
-import PreviousWorplacesSection from '../../../components/Blocks/Experience/previous'
-import { Paragraph } from '../../../styles/global'
+import ExperienceSection from '../../components/Blocks/Experience'
+import PreviousWorplacesSection from '../../components/Blocks/Experience/previous'
 
 export const metadata: Metadata = {
   title: 'Andrei Constantinescu | Resume',
   description: 'Andrei Constantinescu | Resume'
 }
-const ResumeContent = () => {
+
+const ResumePage = async ({ searchParams }) => {
+  const isDetailedView = (await searchParams.view) === 'full'
+
   return (
     <>
+      <HeaderComponent email={personalData.email} />
       <Head>
         <title>Resume</title>
         {/* <link rel="stylesheet" href="https://basehold.it/24"></link> */}
@@ -34,22 +37,13 @@ const ResumeContent = () => {
           technologies={personalData.skills.technologies}
         />
       </SectionBlock>
-      <ExperienceSection />
+      <ExperienceSection isDetailedView={isDetailedView} />
 
       <PreviousWorplacesSection />
       <SectionBlock title="Key Highlights">
         <EducationBlock education={personalData.education} />
         <ProjectsBlock projects={projectsData} />
       </SectionBlock>
-    </>
-  )
-}
-
-const ResumePage = () => {
-  return (
-    <>
-      <HeaderComponent email={personalData.email} />
-      <ResumeContent />
     </>
   )
 }

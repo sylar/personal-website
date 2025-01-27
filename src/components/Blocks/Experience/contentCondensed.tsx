@@ -1,12 +1,14 @@
 import { ExperienceBlockContent } from './content'
 import { ExperienceBlockHeadingComponent } from './heading'
 import { CondensedExperienceBlock, ExperienceBlock } from './styled'
-import { Experience } from './types'
+import { Experience, ExperienceBlockContentType } from './types'
 
-type CondensedExperienceBlockContentProps = Pick<Experience, 'clients'>
+type CondensedExperienceBlockContentProps = Pick<Experience, 'clients'> &
+  Pick<ExperienceBlockContentType, 'isDetailedView'>
 
 const CondensedExperienceBlockContent = ({
-  clients
+  clients,
+  isDetailedView
 }: CondensedExperienceBlockContentProps) => (
   <ExperienceBlock $isCondensed>
     {clients.map((client) => (
@@ -20,7 +22,10 @@ const CondensedExperienceBlockContent = ({
           companyUrl={client.companyUrl}
           isClient
         />
-        <ExperienceBlockContent item={client} />
+        <ExperienceBlockContent
+          experienceItem={client}
+          isDetailedView={isDetailedView}
+        />
       </CondensedExperienceBlock>
     ))}
   </ExperienceBlock>

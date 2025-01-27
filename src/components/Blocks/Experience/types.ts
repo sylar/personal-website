@@ -36,3 +36,8 @@ export enum TIERS {
   VISIBLE = 1,
   HIDDEN = 2
 }
+
+export type ExperienceBlockContentType = {
+  isDetailedView?: boolean
+  experienceItem: Experience
+}
