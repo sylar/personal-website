@@ -3,11 +3,12 @@ name: Deploy to Vercel and Run Post-Scripts
 on:
   push:
     branches:
-      - main # Adjust based on your default branch
+      - master # Adjust based on your default branch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: production
 
     steps:
       # Step 1: Checkout the repository
@@ -20,8 +21,10 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
           npm install -g vercel
-          vercel deploy --prod --token $VERCEL_TOKEN
+          vercel deploy --token $VERCEL_TOKEN --yes
 
+      - name: Install Required Dev Dependencies
+        run: npm install puppeteer @aws-sdk/client-s3
       # Step 3: Run your post-deploy script
       - name: Run Post-Deploy Script
         env:
@@ -29,6 +32,7 @@ jobs:
           AWS_REGION: ${{secrets.AWS_REGION}}
           AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
           S3_BUCKET_NAME: ${{secrets.S3_BUCKET_NAME}}
+          VERCEL_URL: ${{vars.VERCEL_URL}}
         run: |
           echo "Post-deploy script running..."
           # Add your custom commands here
