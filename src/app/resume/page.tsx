@@ -11,6 +11,8 @@ import Head from 'next/head'
 import { Metadata } from 'next'
 import ExperienceSection from '../../components/Blocks/Experience'
 import PreviousWorplacesSection from '../../components/Blocks/Experience/previous'
+import { Muted } from '../../components/Header/styled'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Andrei Constantinescu | Resume',
@@ -18,14 +20,14 @@ export const metadata: Metadata = {
 }
 
 const ResumePage = async ({ searchParams }) => {
-  const isDetailedView = (await searchParams.view) === 'full'
+  const params = await searchParams
+  const isDetailedView = params.view === 'full'
 
   return (
     <>
       <HeaderComponent email={personalData.email} />
       <Head>
         <title>Resume</title>
-        {/* <link rel="stylesheet" href="https://basehold.it/24"></link> */}
       </Head>
       <SectionBlock title="Summary">
         <SummarySection content={personalData.description} />
@@ -37,13 +39,21 @@ const ResumePage = async ({ searchParams }) => {
           technologies={personalData.skills.technologies}
         />
       </SectionBlock>
+
       <ExperienceSection isDetailedView={isDetailedView} />
 
-      <PreviousWorplacesSection />
+      {!isDetailedView && <PreviousWorplacesSection />}
+
       <SectionBlock title="Key Highlights">
         <EducationBlock education={personalData.education} />
         <ProjectsBlock projects={projectsData} />
       </SectionBlock>
+
+      <Muted>
+        <Link prefetch href={isDetailedView ? '/' : '/resume?view=full'}>
+          View {isDetailedView ? 'short' : 'detailed'} resume
+        </Link>
+      </Muted>
     </>
   )
 }

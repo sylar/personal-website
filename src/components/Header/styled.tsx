@@ -1,3 +1,5 @@
+'use client'
+
 import { Section, Paragraph, Div, A, Span, H5 } from '../../styles/global'
 import styled from 'styled-components'
 
