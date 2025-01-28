@@ -17,8 +17,8 @@ export const resumeCondensed = [
         endDate: 1716591600000,
         companyIndustry: 'AI',
         tasks: `
-- Revamped a chat-based app UI using **React** and **TailwindCSS**, achieving a **20% performance boost**.
-- Developed graph-based visualizations with **React Canvas**, simplifying data representation for end-users.
+- Revamped a chat-based application using **React** and **Tailwind**, delivering a **fast** and **intuitive** user experience.  
+- Built an interactive graph-based interface with **React** and **canvas**, enhancing data visualization and communication.
 `,
         tasksDetails: `
 - Delivered front-end services for a chat-based application revamp, feature enhancements, and graph-based interface using **React** and **Tailwind**.
@@ -37,8 +37,8 @@ export const resumeCondensed = [
         jobTitle: 'UI Developer',
         companyIndustry: 'Financial',
         tasks: `
-- Engineered internal analysis trading tools with **ReactJS**, **Next.js**, and **GraphQL**, improving interaction speeds by **25%**.
-- Contributed to a centralized **monorepo system**, reducing maintenance overhead.
+- Built internal trading analysis tools using **ReactJS**, **NextJS**, **GraphQL**, and **Ag-grid**, improving interaction speeds by **25%** and reducing bundle size by **20%**.  
+- Contributed to a centralized **monorepo**, simplifying maintenance and ensuring consistent code and UI quality.
 `,
         tasksDetails: `
 - **Orchestrated the creation** and refinement of complex internal trading analysis tools using **ReactJS**, **NextJS**, **GraphQL** and **Ag-grid**, elevating our analytical prowess.
@@ -57,10 +57,9 @@ export const resumeCondensed = [
         companyIndustry: 'Trading',
         jobTitle: 'software consultant',
         tasks: `
-
-- Co-developed a **React Progressive Web App (PWA)** for internal customer support, increasing engagement by **30%**.
-- Orchestrated **SwiftUI integrations** with wkWebkitViews in a **micro-frontend architecture**, improving native responsiveness and web robustness.
-- Reduced bundle size by **20%** through advanced **tree-shaking** and **dynamic imports**.
+- Built a **real-time collaborative whiteboard tool** with **ReactJS**, **WebSockets**, and **Canvas API**, fostering seamless team collaboration.  
+- Enhanced performance by **40%** through optimized rendering pipelines, ensuring a lag-free user experience.  
+- Orchestrated **SwiftUI** integrations, delivering native responsiveness while maintaining web robustness.
 `,
         tasksDetails: `
 - Co-developed a **ReactJS PWA investment app** for internal customer support, enhancing digital customer engagement.
@@ -80,9 +79,8 @@ export const resumeCondensed = [
         companyIndustry: 'Energy',
         jobTitle: 'software consultant',
         tasks: `
-  - Architected a **framework-agnostic Payments SDK**, achieving **90% unit test coverage** and ensuring cross-platform reliability.
-  - Enhanced application security by developing an **AWS-based login monitor** with automated alerting.
-              `,
+- Developed a **framework-agnostic Payments SDK** in **TypeScript** with 90% test coverage and built a **ReactJS** sandbox app to ensure reliability across payment scenarios.  
+- Enhanced security by implementing an **AWS-based user login monitor** with automated alerts and notifications.`,
         tasksDetails: `
 - Architected a versatile **framework-agnostic Payments SDK** supporting diverse payment methods, powered by **Typescript** with a 90% unit test coverage via Jest.
 - Developed an internal **sandbox app** using **ReactJS** to validate various payment scenarios and ensure robust SDK functionality.
@@ -101,9 +99,8 @@ export const resumeCondensed = [
         companyIndustry: 'Financial',
         jobTitle: 'frontend developer',
         tasks: `
-- Built **React** and **TypeScript** solutions to automate investment workflows, improving app responsiveness by **35%**.
-- Established end-to-end testing protocols using **Cypress** to enhance system reliability.
-        `,
+- Developed a **ReactJS** and **TypeScript** application, replacing Excel-based processes and improving responsiveness by **35%** through optimized state management.  
+- Implemented an **end-to-end testing regime with Cypress**, ensuring feature reliability and system integrity.`,
         tasksDetails: `
 - Engineered robust frontend features for a digital transformation project, converting Excel-based processes to a **ReactJS** and **Typescript** driven application.
 - Optimized application responsiveness by **35%** with strategic **memoization techniques** and **state normalization**, significantly enhancing user interaction.
@@ -121,9 +118,8 @@ export const resumeCondensed = [
         companyIndustry: 'Energy',
         jobTitle: 'senior frontend developer',
         tasks: `
-- Delivered a **real-time analytics dashboard** for IoT devices, integrating **Node.js** and **Kafka**.
-- Designed UK map visualizations with **GeoJSON**, **WebGL**, and **D3.js** for dynamic energy data.
-             `,
+- Built a real-time analytics dashboard with **NodeJS**, **Kafka**, and custom UK map visualizations using **GeoJSON**, **WebGL**, and **D3.js**.  
+- Curated a **Storybook** component library and mentored junior team members, improving UI consistency and team collaboration.`,
         tasksDetails: `
 - Pioneered the development of a real-time dashboard for smart device analytics, integrating with **NodeJS** and **Kafka** streams for live data feeds.
 - Customized UK map visualizations using **GeoJSON** and **WebGL**, and employed **D3.js** for dynamic data representation.
@@ -142,9 +138,8 @@ export const resumeCondensed = [
         companyIndustry: 'Media',
         jobTitle: 'senior developer',
         tasks: `
-- Optimized content delivery pipelines, achieving a **5% efficiency boost**.
-- Developed custom **A/B testing frameworks** and increased test coverage by **5%**.
-        `,
+- Improved content delivery pipelines by **5%** and enhanced testing coverage with **Jest** and Ruby-based functional tests.  
+- Delivered new features like a VOD content rail and implemented a custom **A/B testing framework** with **Optimizely**.`,
         tasksDetails: `
 - Collaborated in an agile setup to alleviate technical debt, achieving a **5% efficiency gain** in content delivery pipelines across multiple devices.
 - Enhanced testing protocols, leading to a **5% increase in coverage** for both **Jest unit tests** and Ruby-based functional tests.
@@ -181,8 +176,8 @@ export const resumeCondensed = [
         companyIndustry: 'Education',
         jobTitle: 'full stack developer',
         tasks: `
-- Created interactive features like **live sports metrics**, enhancing user engagement.
-- Launched the **2018 FIFA World Cup feature page**, handling **2M+ concurrent users**.
+- Created interactive features like live sports metrics and video galleries, boosting **user engagement** on The Sun’s platform.  
+- Led the launch of the **2018 FIFA World Cup feature page**, handling peak traffic of over **2 million** users while optimizing ad performance with **header bidding**.
      `,
         tasksDetails: `
 - Developed interactive features such as live sports metrics and video galleries, significantly **enhancing user engagement** on The Sun’s digital platform.
@@ -200,8 +195,8 @@ export const resumeCondensed = [
         endDate: 1517875200000,
         jobTitle: 'frontend developer',
         tasks: `
-- Built a **multi-tenancy insurance quote platform** with **Redux-Saga**, improving API interaction performance.
-- Utilized **memoization strategies** to maintain optimal performance during the quote generation process.
+- Developed a **multi-tenancy insurance quote platform**, improving business efficiency and customer service.  
+- Optimized performance and API interactions using **Redux-Saga** and memoization strategies for a seamless user experience.
       `,
         tasksDetails: `
 - Contributed to a client-centric **multi-tenancy insurance quote generation platform**, enhancing business efficiency and customer service.
@@ -220,8 +215,8 @@ export const resumeCondensed = [
         endDate: 1507244400000,
         jobTitle: 'full stack developer',
         tasks: `
-- Developed **React** and **Apollo-based educational tools**, improving learning engagement.
-- Integrated **GraphQL services** for real-time content delivery.
+- Built interactive **React** and **Apollo** educational apps, boosting engagement and learning outcomes.  
+- Streamlined development with **Styled-JSX** and integrated **GraphQL** for real-time data and dynamic content.
       `,
         tasksDetails: `
 - Developed and optimized a suite of interactive **React** and **Apollo**-based educational applications, enhancing learning engagement and outcomes.
@@ -242,9 +237,8 @@ export const resumeCondensed = [
     startDate: 1478390400000,
     endDate: 1501974000000,
     tasks: `
-- Built interactive marketing campaign platforms, improving page load speeds by **30%**.
-- Adopted **responsive design methodologies** to enhance cross-platform usability.
- `,
+- Engineered interactive marketing platforms, **driving engagement** and delivering **actionable insights** through data analytics.  
+- Improved cross-platform experiences with responsive design and boosted performance by **30%** through advanced optimization techniques.`,
     tasksDetails: `
 - Orchestrated the front-end engineering of interactive marketing campaign platforms, **driving user engagement** and providing **actionable insights** through data analytics.
 - Pioneered the adoption of **responsive design methodologies**, achieving seamless cross-platform user experiences and increasing campaign reach.
@@ -262,8 +256,8 @@ export const resumeCondensed = [
     jobTitle: 'software engineer',
     companyIndustry: 'Education',
     tasks: `
-- Enhanced user onboarding for Kano's web platform, improving conversion rates.
-- Built e-commerce functionalities with **Vue.js** and **Shopify** for improved campaign management.
+- Improved user onboarding for the Kano platform with streamlined, user-tested enhancements.  
+- Built the Kano web store using **Vue.js**, **Shopify**, and **Node.js**, adding features like delivery estimators and product bundlers to optimize marketing efforts.
   `,
     tasksDetails: `
 - **Enhanced the user onboarding experience** for the Kano web platform by streamlining the process with user-tested improvements.
@@ -282,8 +276,8 @@ export const resumeCondensed = [
     jobTitle: 'software engineer',
     companyIndustry: 'Education',
     tasks: `
-- Developed collaborative digital textbooks using **Backbone.js**, **Jade**, and **Stylus**.
-- Developed Monica Macovei's presidential campaign website, utilizing modern web technologies.
+- Developed interactive textbooks using **Backbone.js**, **Jade**, and **Stylus**, improving student engagement and collaboration.  
+- Built the 2014 Romanian Presidential campaign website for Monica Macovei, showcasing expertise in **modern web development**.
   `,
     tasksDetails: `
 - **Contributed to the content team** by crafting interactive and collaborative textbooks for students, utilizing **Backbone.js**, **Jade**, **Stylus**, and our open-source authoring tool **LFA**.
