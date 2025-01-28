@@ -130,6 +130,11 @@ export const ResumeSwitcher = styled(Small)`
 export const ResumeMutedContainer = styled(Div)`
   display: flex;
   justify-content: space-between;
+  margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(1)};
+  a {
+    color:inherit;
+    text-decoration: none;
+  }
   @media print {
     display: none;
   }
