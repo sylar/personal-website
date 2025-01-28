@@ -1,8 +1,8 @@
 'use client'
 
 import Md from '../../Md'
-import { HobbiesBlockProps } from './types'
 import { HobbiesBlockContent } from './styled'
+import { HobbiesBlockProps } from './types'
 
 const HobbiesBlock = ({ content }: HobbiesBlockProps) => {
   return (

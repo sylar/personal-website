@@ -1,10 +1,10 @@
-import { FlatCompat } from '@eslint/eslintrc'
-import { fileURLToPath } from 'node:url'
 import path from 'node:path'
-
-import globals from 'globals'
+import { fileURLToPath } from 'node:url'
+import { FlatCompat } from '@eslint/eslintrc'
+import tsPlugin from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
 import prettierPlugin from 'eslint-plugin-prettier'
+import globals from 'globals'
 
 // Needed for `import.meta.dirname` fallback (Node < 20.11.0)
 const __filename = fileURLToPath(import.meta.url)
@@ -22,9 +22,11 @@ export default [
     'next/typescript',
     'prettier'
   ),
-
   {
-    files: ['*.ts', '*.tsx', '*.js', '*.jsx'],
+    ignores: ['.next', 'scripts']
+  },
+  {
+    files: ['*.ts', '*.tsx'],
     languageOptions: {
       parser: tsParser,
       ecmaVersion: 'latest',
@@ -35,7 +37,7 @@ export default [
       }
     },
     plugins: {
-      '@typescript-eslint': tsParser,
+      '@typescript-eslint': tsPlugin,
       prettier: prettierPlugin
     },
     rules: {
@@ -47,8 +49,7 @@ export default [
           varsIgnorePattern: '^_',
           ignoreRestSiblings: true
         }
-      ],
-      '@typescript-eslint/no-require-imports': 'off'
+      ]
     }
   }
 ]

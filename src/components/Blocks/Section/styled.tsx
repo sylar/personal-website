@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { Section, Subtitle } from '../../../styles/global'
 
 export const SectionBlock = styled(Section)`

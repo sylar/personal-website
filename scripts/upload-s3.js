@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 const { S3Client, PutObjectCommand } = require('@aws-sdk/client-s3')
 const { readdir } = require('fs/promises')
 const path = require('path')

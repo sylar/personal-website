@@ -1,7 +1,7 @@
 'use client'
 
-import { SectionBlockProps } from './types'
 import { SectionBlock, SectionBlockTitle } from './styled'
+import { SectionBlockProps } from './types'
 
 const SectionBlockComponent = ({ title, children }: SectionBlockProps) => {
   return (

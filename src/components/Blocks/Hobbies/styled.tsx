@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { Paragraph } from '../../../styles/global'
 
 export const HobbiesBlockContent = styled(Paragraph)`

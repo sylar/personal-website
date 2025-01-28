@@ -1,7 +1,8 @@
 'use client'
 
-import { Section, Paragraph, Div, A, Span, H5 } from '../../styles/global'
 import styled from 'styled-components'
+
+import { A, Div, H5, Paragraph, Section, Span } from '../../styles/global'
 
 export const Header = styled(Section)`
   display: flex;

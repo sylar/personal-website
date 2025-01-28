@@ -1,6 +1,6 @@
 'use client'
 
-import { SkillSetList, SkillSetItem } from './styled'
+import { SkillSetItem, SkillSetList } from './styled'
 import { SkillsProps } from './types'
 
 const SkillsBox = (props: SkillsProps) => {

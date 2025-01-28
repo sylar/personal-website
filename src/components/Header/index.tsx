@@ -1,9 +1,10 @@
 'use client'
 
+import { memo } from 'react'
+
+import LogoComponent from '../Logo'
 import { Anchor, Email, Header, HeaderTitle, Info, Muted, Text } from './styled'
 import { HeaderProps } from './types'
-import LogoComponent from '../Logo'
-import { memo } from 'react'
 
 const HeaderComponent = ({ email, onClick }: HeaderProps) => (
   <Header>

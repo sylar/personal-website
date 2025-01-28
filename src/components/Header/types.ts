@@ -1,4 +1,5 @@
 import { DefaultTheme } from 'styled-components'
+
 import { Sizes } from '../../styles/global'
 
 export type LinkProps = {

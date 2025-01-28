@@ -1,13 +1,14 @@
 'use client'
 
 import { createContext, useContext, useEffect, useState } from 'react'
-import { resumeCondensed } from '../data/experienceCondensed'
+
 import {
   ExperienceBlockContentType,
   JOB_TYPE,
   TIERS,
   Workplace
 } from '../components/Blocks/Experience/types'
+import { resumeCondensed } from '../data/experienceCondensed'
 import { ResumeData } from './types'
 
 const getClientsByTier = (clients: Workplace[] = [], tier?: TIERS) => {

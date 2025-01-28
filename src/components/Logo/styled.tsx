@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { Image } from '../../styles/global'
 import { LogoProps } from './types'
 

@@ -1,8 +1,13 @@
-import { CompanyHeader, Job } from './types'
-import { JobName, JobCompany, JobDuration, CompanyDescription } from './styled'
-import { ExperienceHeading } from './styled'
 import { formatDate } from '../../../utils/utils'
 import { MutedNormalFontWeight } from '../../Header/styled'
+import {
+  CompanyDescription,
+  ExperienceHeading,
+  JobCompany,
+  JobDuration,
+  JobName
+} from './styled'
+import { CompanyHeader, Job } from './types'
 
 const JobDurationComponent = (props: Pick<Job, 'startDate' | 'endDate'>) => {
   const start = formatDate(new Date(props.startDate))

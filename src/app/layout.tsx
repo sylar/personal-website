@@ -1,4 +1,5 @@
 import { Suspense } from 'react'
+
 import StyledComponentsRegistry from '../lib/styled-components.registry'
 import ClientThemeProvider from '../styles/ClientThemeProvider'
 

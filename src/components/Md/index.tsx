@@ -1,15 +1,16 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
+import ReactMarkdown from 'react-markdown'
+
 import {
   Heading,
-  Title,
-  Subtitle,
-  Paragraph,
   Image,
-  UL,
-  LI
+  LI,
+  Paragraph,
+  Subtitle,
+  Title,
+  UL
 } from '../../styles/global'
-import ReactMarkdown from 'react-markdown'
 
 const defaultcomponents = {
   p: ({ node: _node, ...props }) => <Paragraph {...props} />,

@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components'
-import { Div, Article, LI, H6, H5, Paragraph } from '../../../styles/global'
-import { BlockHeading, BlockList } from '../styled'
+
+import { Article, Div, H5, H6, LI, Paragraph } from '../../../styles/global'
 import { Muted } from '../../Header/styled'
+import { BlockHeading, BlockList } from '../styled'
 
 export const JobName = styled(H5)<{ $isClient: boolean }>`
   text-transform: capitalize;

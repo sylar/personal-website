@@ -1,5 +1,6 @@
 import { Project } from 'next/dist/build/swc/types'
 import { LinkProps } from 'next/link'
+
 import { Company, Job } from '../components/Blocks/Experience/types'
 
 export type EducationEntry = {

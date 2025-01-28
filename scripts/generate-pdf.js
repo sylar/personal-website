@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
-
 const puppeteer = require('puppeteer')
 const { mkdir } = require('fs/promises')
 const path = require('path')

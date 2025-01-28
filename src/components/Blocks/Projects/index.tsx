@@ -1,9 +1,9 @@
 'use client'
 
-import { ProjectsBlockProps } from './types'
-import Md from '../../Md'
 import { LI } from '../../../styles/global'
+import Md from '../../Md'
 import { ProjectBlockList } from './styled'
+import { ProjectsBlockProps } from './types'
 
 const ProjectsBlock = (props: ProjectsBlockProps) => {
   return (

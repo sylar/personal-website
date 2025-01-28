@@ -4,9 +4,9 @@ import { getResumeCondensed } from '../../../context/resumeCondensed.context'
 import { formatDate } from '../../../utils/utils'
 import SectionBlock from '../Section'
 import {
+  PreviousWorkplaceList,
   PreviousWorkplacesListItem,
   PreviousWorkplacesLists,
-  PreviousWorkplaceList,
   PreviousWorkplaceTimePeriod
 } from './styled'
 

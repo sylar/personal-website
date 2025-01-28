@@ -1,8 +1,8 @@
 'use client'
 
+import { Sizes } from '../../styles/global'
 import RoundLogo from './RoundLogo'
 import { LogoContainer } from './styled'
-import { Sizes } from '../../styles/global'
 
 const LogoComponent = () => (
   <LogoContainer>

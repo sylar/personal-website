@@ -1,8 +1,8 @@
 'use client'
 
-import { EducationBlockProps } from './types'
 import { Span } from '../../../styles/global'
 import { EducationEntry } from './styled'
+import { EducationBlockProps } from './types'
 
 const EducationBlockComponent = ({ education }: EducationBlockProps) => {
   return (

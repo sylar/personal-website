@@ -1,18 +1,18 @@
-import HeaderComponent from '../../components/Header'
-import { personalData } from '../../data/personal'
-import { projectsData } from '../../data/projects'
-import SectionBlock from '../../components/Blocks/Section'
-import EducationBlock from '../../components/Blocks/Education'
-import ProjectsBlock from '../../components/Blocks/Projects'
-import SummarySection from '../../components/Blocks/Summary'
-import SkillsBox from '../../components/Blocks/Skills'
-
-import Head from 'next/head'
 import { Metadata } from 'next'
+import Head from 'next/head'
+import Link from 'next/link'
+
+import EducationBlock from '../../components/Blocks/Education'
 import ExperienceSection from '../../components/Blocks/Experience'
 import PreviousWorplacesSection from '../../components/Blocks/Experience/previous'
+import ProjectsBlock from '../../components/Blocks/Projects'
+import SectionBlock from '../../components/Blocks/Section'
+import SkillsBox from '../../components/Blocks/Skills'
+import SummarySection from '../../components/Blocks/Summary'
+import HeaderComponent from '../../components/Header'
 import { Muted } from '../../components/Header/styled'
-import Link from 'next/link'
+import { personalData } from '../../data/personal'
+import { projectsData } from '../../data/projects'
 import { ResumeMutedContainer } from '../../styles/global'
 
 export const metadata: Metadata = {
@@ -62,8 +62,8 @@ const ResumePage = async ({ searchParams }) => {
             download
             href={
               isDetailedView
-                ? 'https://sylar-personal-website.s3.eu-west-2.amazonaws.com/resume/Andrei+Constantinescu+Detailed+Resume.pdf'
-                : 'https://sylar-personal-website.s3.eu-west-2.amazonaws.com/resume/Andrei+Constantinescu+Resume.pdf'
+                ? 'https://sylar-personal-website.s3.eu-west-2.amazonaws.com/resume/Andrei Constantinescu Detailed Resume.pdf'
+                : 'https://sylar-personal-website.s3.eu-west-2.amazonaws.com/resume/Andrei Constantinescu Resume.pdf'
             }
           >
             Download resume
