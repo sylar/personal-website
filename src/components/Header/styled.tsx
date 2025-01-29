@@ -15,7 +15,6 @@ export const Header = styled(Section)`
   @media print {
     justify-content: space-between;
     flex-direction: row-reverse;
-    margin-top: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
   }
 `
 export const HeaderTitle = styled(H5)`

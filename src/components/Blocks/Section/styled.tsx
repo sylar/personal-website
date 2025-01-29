@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Section, Subtitle } from '../../../styles/global'
 
 export const SectionBlock = styled(Section)`
+  
   @media screen {
     margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(2.3)};
   }

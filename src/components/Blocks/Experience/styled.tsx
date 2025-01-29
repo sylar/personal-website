@@ -69,6 +69,7 @@ export const CompanyDescription = styled(Paragraph)`
     margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(0.25)};
   }
 `
+
 export const MainExperienceBlock = styled(Article)`
   @media screen {
     margin-bottom: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
@@ -78,6 +79,7 @@ export const MainExperienceBlock = styled(Article)`
   }
 `
 export const ExperienceBlock = styled(Article)<{ $isCondensed?: boolean }>`
+  page-break-inside: avoid;
   ${({ $isCondensed }) =>
     $isCondensed &&
     css`

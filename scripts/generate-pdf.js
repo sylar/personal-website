@@ -68,7 +68,14 @@ async function generatePDFWithPuppeteer() {
 
     // Generate PDF
     await page.pdf({
-      path: resumePath
+      path: resumePath,
+      format: 'A4',
+      margin: {
+        top: '8mm',  // Ensure top margin is applied
+        bottom: '8mm',
+        right: '8mm',
+        left: '8mm',
+      },
     })
 
     console.log(`PDF generated: Resume`)
@@ -82,7 +89,14 @@ async function generatePDFWithPuppeteer() {
 
     // Generate PDF
     await page.pdf({
-      path: detailedResumePath
+      path: detailedResumePath,
+      format: 'A4',
+      margin: {
+        top: '8mm',  // Ensure top margin is applied
+        bottom: '8mm',
+        right: '8mm',
+        left: '8mm',
+      },
     })
 
     console.log(`PDF generated: Detailed Resume`)
