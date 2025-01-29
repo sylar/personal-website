@@ -1,7 +1,6 @@
 import { formatDate } from '../../../utils/utils'
 import { MutedNormalFontWeight } from '../../Header/styled'
 import {
-  CompanyDescription,
   ExperienceHeading,
   JobCompany,
   JobDuration,
@@ -24,6 +23,7 @@ const ExperienceBlockHeadingComponent = (props: CompanyHeader) => {
     <ExperienceHeading>
       <JobCompany $isClient={props.isClient}>
         <JobName $isClient={props.isClient}>
+          <strong>{props.type}</strong>
           {props.companyName}
           {props?.companyIndustry && (
             <MutedNormalFontWeight>
@@ -38,9 +38,6 @@ const ExperienceBlockHeadingComponent = (props: CompanyHeader) => {
           ></JobDurationComponent>
         )}
       </JobCompany>
-      {!props.isClient && props?.companyDescription?.length > 0 && (
-        <CompanyDescription>{props.companyDescription}</CompanyDescription>
-      )}
     </ExperienceHeading>
   )
 }

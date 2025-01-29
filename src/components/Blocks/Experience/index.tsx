@@ -37,6 +37,7 @@ const ExperienceBlockComponent = ({
         startDate={experienceItem.startDate}
         endDate={experienceItem.endDate}
         companyUrl={experienceItem.companyUrl}
+        type={experienceItem.type}
       />
       <ExperienceBlockContent
         experienceItem={experienceItem}

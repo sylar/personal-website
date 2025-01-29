@@ -20,6 +20,7 @@ const CondensedExperienceBlockContent = ({
           startDate={client.startDate}
           endDate={client.endDate}
           companyUrl={client.companyUrl}
+          type = {client.type}
           isClient
         />
         <ExperienceBlockContent

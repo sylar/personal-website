@@ -6,6 +6,7 @@ import { BlockHeading, BlockList } from '../styled'
 
 export const JobName = styled(H5)<{ $isClient: boolean }>`
   text-transform: capitalize;
+  font-weight: initial;
   display: flex;
   gap: 0.25em;
   ${({ $isClient, theme }) =>
@@ -21,6 +22,9 @@ export const JobName = styled(H5)<{ $isClient: boolean }>`
         margin-top: 0.75rem;
       }
   `}
+  span { 
+    font-transform: capitalize;
+  }
   @media print {
     ${({ $isClient }) =>
       !$isClient &&

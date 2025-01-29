@@ -1,15 +1,10 @@
-export const resumeCondensed = [
+import { Experience } from '../components/Blocks/Experience/types'
+
+export const resumeCondensed: Experience[] = [
   {
-    companyName: 'Own Contracting Company',
-    type: 'freelance',
-    jobTitle: 'Software Consultant',
-    startDate: 1501974000000,
-    companyDescription:
-      'Delivered impactful web solutions across fintech, media, energy, and insurance, specializing in React, Node.js, and scalable web architectures.',
-    clients: [
-      {
+    
         companyName: 'UnlikelyAI',
-        type: 'client',
+        type: 'contract',
         companyDescription:
           'Unlikely AI is a deep tech startup working to create a world where highly intelligent automated systems enable humanity to flourish and benefit us all',
         startDate: 1712790000000,
@@ -29,7 +24,7 @@ export const resumeCondensed = [
       },
       {
         companyName: 'Balyasny Asset Management LLP',
-        type: 'client',
+        type: 'contract',
         companyDescription:
           "Balyasny Asset Management is an American hedge fund headquartered in Chicago founded in 2001 in Chicago by Dmitry Balyasny, Scott Schroeder and Taylor O'Malley",
         startDate: 1665360000000,
@@ -49,7 +44,7 @@ export const resumeCondensed = [
       },
       {
         companyName: 'CMC Markets plc',
-        type: 'client',
+        type: 'contract',
         companyDescription:
           'CMC Markets is a UK-based financial services company that offers online trading in shares, spread betting, cfds  and foreign exchange across world markets.',
         startDate: 1626260400000,
@@ -71,7 +66,7 @@ export const resumeCondensed = [
       },
       {
         companyName: 'BP plc',
-        type: 'client',
+        type: 'contract',
         companyDescription:
           'BP plc is one of the world\'s seven oil and gas "supermajors" headquartered in London, UK.',
         startDate: 1583107200000,
@@ -91,7 +86,7 @@ export const resumeCondensed = [
       },
       {
         companyName: 'Partners Capital LLP',
-        type: 'client',
+        type: 'contract',
         companyDescription:
           'Partners Capital Investment Group, LLC is an Outsourced Investment Office that serves endowments, foundations, pensions, investment professionals, and high-net-worth families in Europe, North America and Asia.',
         startDate: 1567724400000,
@@ -110,7 +105,7 @@ export const resumeCondensed = [
       },
       {
         companyName: 'Kaluza',
-        type: 'client',
+        type: 'contract',
         companyDescription:
           'Kaluza has developed the technology that will enable the coordination and control of millions of connected devices, creating a fully distributed energy system and 100% penetration of renewable power.',
         startDate: 1559775600000,
@@ -130,7 +125,7 @@ export const resumeCondensed = [
       },
       {
         companyName: 'NowTV - Sky UK',
-        type: 'client',
+        type: 'contract',
         companyDescription:
           'Sky UK (formerly British Sky Broadcasting Limited, BSkyB and Sky) is a British telecommunications company which serves the United Kingdom owned by Comcast.',
         startDate: 1541462400000,
@@ -149,7 +144,7 @@ export const resumeCondensed = [
       },
       {
         companyName: 'uSwitch',
-        type: 'client',
+        type: 'contract',
         companyDescription:
           'uSwitch Limited is a UK-based price comparison service and switching website founded in 2000.',
         startDate: 1533510000000,
@@ -168,7 +163,7 @@ export const resumeCondensed = [
       },
       {
         companyName: 'The Sun - News UK',
-        type: 'client',
+        type: 'contract',
         companyDescription:
           'The Sun is a tabloid newspaper published in the United Kingdom and the Republic of Ireland.',
         startDate: 1520294400000,
@@ -188,7 +183,7 @@ export const resumeCondensed = [
       },
       {
         companyName: 'AIG',
-        type: 'client',
+        type: 'contract',
         companyDescription:
           'American International Group, Inc., also known as AIG, is an American multinational finance and insurance corporation with operations in more than 80 countries and jurisdictions.',
         startDate: 1509926400000,
@@ -199,7 +194,7 @@ export const resumeCondensed = [
 - Optimized performance and API interactions using **Redux-Saga** and memoization strategies for a seamless user experience.
       `,
         tasksDetails: `
-- Contributed to a client-centric **multi-tenancy insurance quote generation platform**, enhancing business efficiency and customer service.
+- Contributed to a contract-centric **multi-tenancy insurance quote generation platform**, enhancing business efficiency and customer service.
 - Implemented **Redux-Saga** for effective management of asynchronous API interactions, ensuring a smooth user experience.
 - Utilized **memoization strategies** to maintain optimal performance during the quote generation process.
 `,
@@ -208,7 +203,7 @@ export const resumeCondensed = [
       },
       {
         companyName: 'Third Space Learning',
-        type: 'client',
+        type: 'contract',
         companyDescription:
           'Third Space Learning is making high quality 1-to-1 maths teaching more accessible than ever before for pupils from year 1 through year 6.',
         startDate: 1501974000000,
@@ -225,9 +220,7 @@ export const resumeCondensed = [
 `,
         tier: 2,
         companyIndustry: 'Education'
-      }
-    ]
-  },
+      },
   {
     companyName: 'Beamly',
     jobTitle: 'software engineer',
