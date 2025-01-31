@@ -120,7 +120,7 @@ export const resumeCondensed: Experience[] = [
 - Curated a **Storybook** component library to streamline collaboration between design and development teams, enhancing UI consistency and development efficiency.
 - **Mentored junior team members**, facilitating knowledge transfer and fostering a collaborative codebase understanding.
 `,
-    tier: 2
+    tier: 1
   },
   {
     companyName: 'NowTV (Sky UK)',
@@ -197,7 +197,7 @@ export const resumeCondensed: Experience[] = [
 - Implemented **Redux-Saga** for effective management of asynchronous API interactions, ensuring a smooth user experience.
 - Utilized **memoization strategies** to maintain optimal performance during the quote generation process.
 `,
-    tier: 1,
+    tier: 2,
     companyIndustry: 'Insurance'
   },
   {
