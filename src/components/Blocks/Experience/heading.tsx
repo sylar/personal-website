@@ -4,7 +4,8 @@ import {
   ExperienceHeading,
   JobCompany,
   JobDuration,
-  JobName
+  JobName,
+  JobRole
 } from './styled'
 import { CompanyHeader, Job } from './types'
 
@@ -31,12 +32,15 @@ const ExperienceBlockHeadingComponent = (props: CompanyHeader) => {
             </MutedNormalFontWeight>
           )}
         </JobName>
+        
+        <JobRole>{props.jobTitle}</JobRole>
         {!props.isClient && (
           <JobDurationComponent
             startDate={props.startDate}
             endDate={props.endDate}
           ></JobDurationComponent>
         )}
+       
       </JobCompany>
     </ExperienceHeading>
   )

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-import { Article, Div, H5, H6, LI, Paragraph } from '../../../styles/global'
+import { Article, Div, H5, H6, LI, Paragraph, Span } from '../../../styles/global'
 import { Muted } from '../../Header/styled'
 import { BlockHeading, BlockList } from '../styled'
 
@@ -8,6 +8,14 @@ export const JobName = styled(H5)<{ $isClient: boolean }>`
   text-transform: capitalize;
   font-weight: initial;
   display: flex;
+  
+  @media (max-width: 730px) {
+    strong {
+      flex-basis: 100%;
+    } 
+  }
+
+  flex-wrap: wrap;
   gap: 0.25em;
   ${({ $isClient, theme }) =>
     $isClient &&
@@ -53,6 +61,7 @@ export const TasksList = styled(Div)`
 export const JobCompany = styled(Div)<{ $isClient: boolean }>`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: baseline;
   ${({ $isClient }) =>
     !$isClient &&
@@ -135,4 +144,14 @@ export const PreviousWorkplaceList = styled(BlockList)`
   @media (max-width: 730px) {
     flex-basis: 100%; /* Stack on smaller screens */
   }
+`
+
+export const JobRole = styled(Span)`
+  text-transform: capitalize;
+  @media (max-width: 730px) {
+    strong {
+      flex-basis: 100%;
+    } 
+  }
+
 `
