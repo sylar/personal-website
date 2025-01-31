@@ -1,6 +1,14 @@
 import styled, { css } from 'styled-components'
 
-import { Article, Div, H5, H6, LI, Paragraph, Span } from '../../../styles/global'
+import {
+  Article,
+  Div,
+  H5,
+  H6,
+  LI,
+  Paragraph,
+  Span
+} from '../../../styles/global'
 import { Muted } from '../../Header/styled'
 import { BlockHeading, BlockList } from '../styled'
 
@@ -110,8 +118,6 @@ export const PreviousWorkplaceTimePeriod = styled(Muted)`
   color: initial;
   font-size: ${(props) => props.theme.typography.lineHeightSpacing(0.5)};
   line-height: ${(props) => props.theme.typography.lineHeightSpacing(0.75)};
-  align-self: self-end;
-  margin-left: ${(props) => props.theme.typography.lineHeightSpacing(0.25)};
   @media print {
     display: block;
     color: initial;
@@ -119,15 +125,17 @@ export const PreviousWorkplaceTimePeriod = styled(Muted)`
 `
 
 export const PreviousWorkplacesLists = styled(Div)`
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  width: 100%;
 `
 
 export const PreviousWorkplacesListItem = styled(LI)`
   display: flex;
+  flex-direction: column;
   list-style-type: none;
+  text-transform: capitalize;
   strong {
     text-transform: capitalize;
     margin-right: 0.2em;
@@ -151,7 +159,18 @@ export const JobRole = styled(Span)`
   @media (max-width: 730px) {
     strong {
       flex-basis: 100%;
-    } 
+    }
   }
+`
 
+export const PreviousWorkplaceName = styled(Span)`
+  font-size: inherit;
+  span {
+    font-size: intial;
+  }
+`
+export const PreviousWorkplaceJobTitle = styled(Span)`
+  @media print {
+    display: none;
+  }
 `
