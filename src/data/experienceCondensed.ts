@@ -2,6 +2,24 @@ import { Experience } from '../components/Blocks/Experience/types'
 
 export const resumeCondensed: Experience[] = [
   {
+    companyName: 'Citibank UK',
+    type: 'contract',
+    companyDescription:
+      'Citigroup Inc. is an American multinational investment bank and financial services corporation headquartered in New York City.',
+    startDate: 1743465600000,
+    jobTitle: 'React Front End Developer',
+    companyIndustry: 'Financial',
+    tasks: `
+- Upgraded **ag-Grid** to latest version while maintaining **complete feature parity** with previous implementation, delivering increased **stability** and **performance**.
+- Optimized front office application architecture through strategic code refactoring and **performance enhancements**.
+`,
+    tasksDetails: `
+- **Executed ag-Grid migration** to latest version with **100% feature parity**, eliminating technical debt and improving **load times by 35%**.
+- **Redesigned component architecture** with modern **React** patterns and **RxJS** observables, implementing performance optimizations that enhanced workflow efficiency.
+`,
+    tier: 1
+  },
+  {
     companyName: 'UnlikelyAI',
     type: 'contract',
     companyDescription:
@@ -11,7 +29,7 @@ export const resumeCondensed: Experience[] = [
     endDate: 1716591600000,
     companyIndustry: 'AI',
     tasks: `
-- Revamped a chat-based application using **React** and **Tailwind**, delivering a **fast** and **intuitive** user experience.  
+- Revamped a chat-based application using **React** and **Tailwind**, delivering a **fast** and **intuitive** user experience.
 - Built an interactive graph-based interface with **React** and **canvas**, enhancing data visualization and communication.
 `,
     tasksDetails: `
@@ -19,7 +37,7 @@ export const resumeCondensed: Experience[] = [
 - Implemented a new UI, prioritizing **fast performance** and **intuitive usability**, to deliver a seamless and engaging experience.
 - Contributed to an interactive graph-based interface, leveraging on **React** and **canvas** to create visually engaging data visualizations that effectively communicated complex information.
 `,
-    tier: 1
+    tier: 2
   },
   {
     companyName: 'Balyasny Asset Management LLP',
@@ -31,7 +49,7 @@ export const resumeCondensed: Experience[] = [
     jobTitle: 'UI Developer',
     companyIndustry: 'Financial',
     tasks: `
-- Built internal trading analysis tools using **ReactJS**, **NextJS**, **GraphQL**, and **Ag-grid**, improving interaction speeds by **25%** and reducing bundle size by **20%**.  
+- Built internal trading analysis tools using **ReactJS**, **NextJS**, **GraphQL**, and **Ag-grid**, improving interaction speeds by **25%** and reducing bundle size by **20%**.
 - Contributed to a centralized **monorepo**, simplifying maintenance and ensuring consistent code and UI quality.
 `,
     tasksDetails: `
@@ -51,8 +69,8 @@ export const resumeCondensed: Experience[] = [
     companyIndustry: 'Trading',
     jobTitle: 'software consultant',
     tasks: `
-- Built a **real-time collaborative whiteboard tool** with **ReactJS**, **WebSockets**, and **Canvas API**, fostering seamless team collaboration.  
-- Enhanced performance by **40%** through optimized rendering pipelines, ensuring a lag-free user experience.  
+- Built a **real-time collaborative whiteboard tool** with **ReactJS**, **WebSockets**, and **Canvas API**, fostering seamless team collaboration.
+- Enhanced performance by **40%** through optimized rendering pipelines, ensuring a lag-free user experience.
 - Orchestrated **SwiftUI** integrations, delivering native responsiveness while maintaining web robustness.
 `,
     tasksDetails: `
@@ -61,7 +79,7 @@ export const resumeCondensed: Experience[] = [
 - Orchestrated native **wkWebkitViews SwiftUI** integrations, balancing native responsiveness with web robustness.
 - Elevated web performance within native apps by **30%**, and reduced bundle size by **20%** via strategic **tree shaking** and **code splitting**.
 `,
-    tier: 1
+    tier: 2
   },
   {
     companyName: 'BP plc',
@@ -73,7 +91,7 @@ export const resumeCondensed: Experience[] = [
     companyIndustry: 'Energy',
     jobTitle: 'software consultant',
     tasks: `
-- Developed a **framework-agnostic Payments SDK** in **TypeScript** with 90% test coverage and built a **ReactJS** sandbox app to ensure reliability across payment scenarios.  
+- Developed a **framework-agnostic Payments SDK** in **TypeScript** with 90% test coverage and built a **ReactJS** sandbox app to ensure reliability across payment scenarios.
 - Enhanced security by implementing an **AWS-based user login monitor** with automated alerts and notifications.`,
     tasksDetails: `
 - Architected a versatile **framework-agnostic Payments SDK** supporting diverse payment methods, powered by **Typescript** with a 90% unit test coverage via Jest.
@@ -93,7 +111,7 @@ export const resumeCondensed: Experience[] = [
     companyIndustry: 'Financial',
     jobTitle: 'frontend developer',
     tasks: `
-- Developed a **ReactJS** and **TypeScript** application, replacing Excel-based processes and improving responsiveness by **35%** through optimized state management.  
+- Developed a **ReactJS** and **TypeScript** application, replacing Excel-based processes and improving responsiveness by **35%** through optimized state management.
 - Implemented an **end-to-end testing regime with Cypress**, ensuring feature reliability and system integrity.`,
     tasksDetails: `
 - Engineered robust frontend features for a digital transformation project, converting Excel-based processes to a **ReactJS** and **Typescript** driven application.
@@ -112,7 +130,7 @@ export const resumeCondensed: Experience[] = [
     companyIndustry: 'Energy',
     jobTitle: 'senior frontend developer',
     tasks: `
-- Built a real-time analytics dashboard with **NodeJS**, **Kafka**, and custom UK map visualizations using **GeoJSON**, **WebGL**, and **D3.js**.  
+- Built a real-time analytics dashboard with **NodeJS**, **Kafka**, and custom UK map visualizations using **GeoJSON**, **WebGL**, and **D3.js**.
 - Curated a **Storybook** component library and mentored junior team members, improving UI consistency and team collaboration.`,
     tasksDetails: `
 - Pioneered the development of a real-time dashboard for smart device analytics, integrating with **NodeJS** and **Kafka** streams for live data feeds.
@@ -120,7 +138,7 @@ export const resumeCondensed: Experience[] = [
 - Curated a **Storybook** component library to streamline collaboration between design and development teams, enhancing UI consistency and development efficiency.
 - **Mentored junior team members**, facilitating knowledge transfer and fostering a collaborative codebase understanding.
 `,
-    tier: 1
+    tier: 2
   },
   {
     companyName: 'NowTV (Sky UK)',
@@ -132,7 +150,7 @@ export const resumeCondensed: Experience[] = [
     companyIndustry: 'Media',
     jobTitle: 'senior developer',
     tasks: `
-- Improved content delivery pipelines by **5%** and enhanced testing coverage with **Jest** and Ruby-based functional tests.  
+- Improved content delivery pipelines by **5%** and enhanced testing coverage with **Jest** and Ruby-based functional tests.
 - Delivered new features like a VOD content rail and implemented a custom **A/B testing framework** with **Optimizely**.`,
     tasksDetails: `
 - Collaborated in an agile setup to alleviate technical debt, achieving a **5% efficiency gain** in content delivery pipelines across multiple devices.
@@ -170,11 +188,11 @@ export const resumeCondensed: Experience[] = [
     companyIndustry: 'Education',
     jobTitle: 'full stack developer',
     tasks: `
-- Created interactive features like live sports metrics and video galleries, boosting **user engagement** on The Sun’s platform.  
+- Created interactive features like live sports metrics and video galleries, boosting **user engagement** on The Sun's platform.
 - Led the launch of the **2018 FIFA World Cup feature page**, handling peak traffic of over **2 million** users while optimizing ad performance with **header bidding**.
      `,
     tasksDetails: `
-- Developed interactive features such as live sports metrics and video galleries, significantly **enhancing user engagement** on The Sun’s digital platform.
+- Developed interactive features such as live sports metrics and video galleries, significantly **enhancing user engagement** on The Sun's digital platform.
 - Successfully orchestrated the launch of the **2018 FIFA World Cup feature page**, catering to peak viewership of over **2 million**.
 - Implemented performance optimizations and tracking enhancements, leading to more efficient ad loading via **header bidding** and granular insights into user metrics.
 `,
@@ -189,7 +207,7 @@ export const resumeCondensed: Experience[] = [
     endDate: 1517875200000,
     jobTitle: 'frontend developer',
     tasks: `
-- Developed a **multi-tenancy insurance quote platform**, improving business efficiency and customer service.  
+- Developed a **multi-tenancy insurance quote platform**, improving business efficiency and customer service.
 - Optimized performance and API interactions using **Redux-Saga** and memoization strategies for a seamless user experience.
       `,
     tasksDetails: `
@@ -209,7 +227,7 @@ export const resumeCondensed: Experience[] = [
     endDate: 1507244400000,
     jobTitle: 'full stack developer',
     tasks: `
-- Built interactive **React** and **Apollo** educational apps, boosting engagement and learning outcomes.  
+- Built interactive **React** and **Apollo** educational apps, boosting engagement and learning outcomes.
 - Streamlined development with **Styled-JSX** and integrated **GraphQL** for real-time data and dynamic content.
       `,
     tasksDetails: `
@@ -229,7 +247,7 @@ export const resumeCondensed: Experience[] = [
     startDate: 1478390400000,
     endDate: 1501974000000,
     tasks: `
-- Engineered interactive marketing platforms, **driving engagement** and delivering **actionable insights** through data analytics.  
+- Engineered interactive marketing platforms, **driving engagement** and delivering **actionable insights** through data analytics.
 - Improved cross-platform experiences with responsive design and boosted performance by **30%** through advanced optimization techniques.`,
     tasksDetails: `
 - Orchestrated the front-end engineering of interactive marketing campaign platforms, **driving user engagement** and providing **actionable insights** through data analytics.
@@ -248,7 +266,7 @@ export const resumeCondensed: Experience[] = [
     jobTitle: 'software engineer',
     companyIndustry: 'Education',
     tasks: `
-- Improved user onboarding for the Kano platform with streamlined, user-tested enhancements.  
+- Improved user onboarding for the Kano platform with streamlined, user-tested enhancements.
 - Built the Kano web store using **Vue.js**, **Shopify**, and **Node.js**, adding features like delivery estimators and product bundlers to optimize marketing efforts.
   `,
     tasksDetails: `
@@ -268,7 +286,7 @@ export const resumeCondensed: Experience[] = [
     jobTitle: 'software engineer',
     companyIndustry: 'Education',
     tasks: `
-- Developed interactive textbooks using **Backbone.js**, **Jade**, and **Stylus**, improving student engagement and collaboration.  
+- Developed interactive textbooks using **Backbone.js**, **Jade**, and **Stylus**, improving student engagement and collaboration.
 - Built the 2014 Romanian Presidential campaign website for Monica Macovei, showcasing expertise in **modern web development**.
   `,
     tasksDetails: `

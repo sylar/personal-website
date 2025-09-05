@@ -12,7 +12,7 @@ const ExperienceSection = ({
 }: Pick<ExperienceBlockContentType, 'isDetailedView'>) => {
   const { displayedWorkplaces } = getResumeCondensed()
   return (
-    <SectionBlock title="Experience">
+    <SectionBlock title="Highlights">
       {displayedWorkplaces.map((item, key) => (
         <ExperienceBlockComponent
           key={`xp_block_${key}`}

@@ -42,7 +42,9 @@ export const personalData = {
       'Jest',
       'Cypress',
       'Webpack',
-      'Babel'
+      'Babel',
+      'RxJS',
+      'Ag-Grid'
     ]
   }
 }
