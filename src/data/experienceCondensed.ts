@@ -10,12 +10,14 @@ export const resumeCondensed: Experience[] = [
     jobTitle: 'React Front End Developer',
     companyIndustry: 'Financial',
     tasks: `
-- Upgraded **ag-Grid** to latest version while maintaining **complete feature parity** with previous implementation, delivering increased **stability** and **performance**.
-- Optimized front office application architecture through strategic code refactoring and **performance enhancements**.
+- **Rebuilt critical UI components** for commodities trading workflows using modern **React patterns** and **ag-Grid's latest version**, delivering a **35% faster, more responsive interface** with complete feature parity.
+- **Architected performant React components** with optimized rendering strategies for **real-time market data**, reducing unnecessary re-renders and significantly improving application **responsiveness** under high-frequency updates.
 `,
-    tasksDetails: `
-- **Executed ag-Grid migration** to latest version with **100% feature parity**, eliminating technical debt and improving **load times by 35%**.
-- **Redesigned component architecture** with modern **React** patterns and **RxJS** observables, implementing performance optimizations that enhanced workflow efficiency.
+tasksDetails: `
+- **Engineered complete ag-Grid UI migration** to latest version using **React hooks** and **functional components**, achieving **100% feature parity** while improving **grid rendering performance by 35%** and enhancing **UI responsiveness** for **large datasets** (10,000+ rows) in trading positions and market data views.
+- **Redesigned component architecture** implementing **React.memo**, **useMemo**, and **useCallback** optimization patterns alongside **RxJS** observables for efficient **real-time data rendering**, resulting in **smoother interactions**, **reduced UI lag**, and **faster updates** across complex trading workflows.
+- **Enhanced UI reliability** through robust error boundaries, skeleton loading states, and optimistic UI updates, ensuring **traders experience minimal friction** and **consistent interface behavior** during data-intensive operations.
+- **Maintained feature parity** with legacy implementation while modernizing the codebase, ensuring **seamless user experience** for production traders.
 `,
     tier: 1
   },
