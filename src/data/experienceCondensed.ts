@@ -9,11 +9,11 @@ export const resumeCondensed: Experience[] = [
     startDate: 1743465600000,
     jobTitle: 'React Front End Developer',
     companyIndustry: 'Financial',
-    tasksDetails: `
+    tasks: `
 - **Rebuilt critical UI components** for commodities trading workflows using modern **React patterns** and **ag-Grid's latest version**, delivering a **35% faster, more responsive interface** with complete feature parity.
 - **Architected performant React components** with optimized rendering strategies for **real-time market data**, reducing unnecessary re-renders and significantly improving application **responsiveness** under high-frequency updates.
 `,
-tasks: `
+tasksDetails: `
 - **Engineered complete ag-Grid UI migration** to latest version using **React hooks** and **functional components**, achieving **100% feature parity** while improving **grid rendering performance by 35%** and enhancing **UI responsiveness** for **large datasets** (10,000+ rows) in trading positions and market data views.
 - **Redesigned component architecture** implementing **React.memo**, **useMemo**, and **useCallback** optimization patterns alongside **RxJS** observables for efficient **real-time data rendering**, resulting in **smoother interactions**, **reduced UI lag**, and **faster updates** across complex trading workflows.
 - **Enhanced UI reliability** through robust error boundaries, skeleton loading states, and optimistic UI updates, ensuring **traders experience minimal friction** and **consistent interface behavior** during data-intensive operations.
