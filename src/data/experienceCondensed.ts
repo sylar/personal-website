@@ -7,6 +7,7 @@ export const resumeCondensed: Experience[] = [
     companyDescription:
       'Citigroup Inc. is an American multinational investment bank and financial services corporation headquartered in New York City.',
     startDate: 1743465600000,
+    endDate: 1766620799999,
     jobTitle: 'React Front End Developer',
     companyIndustry: 'Financial',
     tasks: `
