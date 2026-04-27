@@ -15,10 +15,10 @@ export const resumeCondensed: Experience[] = [
 - **Architected performant React components** with optimized rendering strategies for **real-time market data**, reducing unnecessary re-renders and significantly improving application **responsiveness** under high-frequency updates.
 `,
 tasksDetails: `
-- **Engineered complete ag-Grid UI migration** to latest version using **React hooks** and **functional components**, achieving **100% feature parity** while improving **grid rendering performance by 35%** and enhancing **UI responsiveness** for **large datasets** (10,000+ rows) in trading positions and market data views.
-- **Redesigned component architecture** implementing **React.memo**, **useMemo**, and **useCallback** optimization patterns alongside **RxJS** observables for efficient **real-time data rendering**, resulting in **smoother interactions**, **reduced UI lag**, and **faster updates** across complex trading workflows.
-- **Enhanced UI reliability** through robust error boundaries, skeleton loading states, and optimistic UI updates, ensuring **traders experience minimal friction** and **consistent interface behavior** during data-intensive operations.
-- **Maintained feature parity** with legacy implementation while modernizing the codebase, ensuring **seamless user experience** for production traders.
+- **Engineered complete ag-Grid UI migration** to latest version using **React hooks** and **functional components**, achieving **100% feature parity** while improving **grid rendering performance by 35%** and enhancing **UI responsiveness** for **large datasets** (10,000+ rows) in commodities trading positions and market data views.
+- **Redesigned component architecture** implementing **React.memo**, **useMemo**, and **useCallback** optimization patterns alongside **RxJS** observables for efficient **real-time data rendering**, resulting in **smoother interactions**, **reduced UI lag**, and **faster updates** across complex commodities trading workflows.
+- **Enhanced UI reliability** through robust error boundaries, skeleton loading states, and optimistic UI updates, ensuring **commodities traders experience minimal friction** and **consistent interface behavior** during data-intensive operations.
+- **Maintained feature parity** with legacy implementation while modernizing the codebase, ensuring **seamless user experience** for production commodities traders.
 `,
     tier: 1
   },
