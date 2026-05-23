@@ -56,7 +56,7 @@ tasksDetails: `
 - Contributed to a centralized **monorepo**, simplifying maintenance and ensuring consistent code and UI quality.
 `,
     tasksDetails: `
-- **Orchestrated the creation** and refinement of complex internal trading analysis tools using **ReactJS**, **NextJS**, **GraphQL** and **Ag-grid**, elevating our analytical prowess.
+- **Orchestrated the creation** and refinement of complex internal trading analysis tools using **ReactJS**, **NextJS**, **GraphQL** and **Ag-grid**.
 - **Optimized application efficiency** by downsizing bundle size by **20%** and enhanced user interaction speeds by **25%** through strategic code optimizations and advanced caching techniques.
 - **Facilitated consistent code and UI quality** across projects by contributing to the development of a centralized **monorepo**, simplifying maintenance and updates.
 `,
